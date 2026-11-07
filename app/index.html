@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="theme-color" content="#0d0f12">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Flipper-Guide">
+<title>Flipper-Guide</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div id="app">
+  <!-- Bibliothek -->
+  <section id="library" class="screen" hidden>
+    <header class="lib-head">
+      <h1>Flipper-Guide</h1>
+      <p class="muted">Meine Tische</p>
+    </header>
+    <div id="libList" class="lib-list"></div>
+    <p class="lib-foot muted" id="libOffline"></p>
+  </section>
+
+  <!-- Tisch -->
+  <section id="table" class="screen" hidden>
+    <header class="topbar">
+      <button class="icon-btn" id="btnLib" aria-label="Zur Tischauswahl">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" /></svg>
+      </button>
+      <div class="title">
+        <div class="t-name" id="tName"></div>
+        <div class="t-sub" id="tSub"></div>
+      </div>
+      <div class="seg seg-sm" id="viewSeg" role="tablist" aria-label="Ansicht"></div>
+    </header>
+
+    <div id="stage" class="stage">
+      <div id="pfWrap" class="pf-wrap">
+        <img id="pfImg" alt="Spielfeld" draggable="false">
+        <svg id="pfSvg" class="pf-svg" aria-hidden="true"></svg>
+      </div>
+      <div class="stage-ui">
+        <div id="stepBanner" class="step-banner" hidden></div>
+        <div class="stage-btns">
+          <button class="fab" id="btnFit" aria-label="Ganzes Spielfeld zeigen">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+          </button>
+          <button class="fab" id="btnClear" aria-label="Markierung ausblenden" hidden>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+          </button>
+        </div>
+        <div class="nav-btns" id="navBtns" hidden>
+          <button class="pill ghost" id="btnPrev">‹ Zurück</button>
+          <button class="pill primary" id="btnNext">Weiter ›</button>
+        </div>
+        <div id="corrBar" class="corr-bar" hidden>
+          <span>Korrekturmodus: markierten Schuss mit dem Finger verschieben</span>
+          <button class="pill ghost sm" id="btnCorrReset">Zurücksetzen</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="sheet" class="sheet">
+      <div class="grab" id="grab" aria-label="Liste vergrößern"><span></span></div>
+      <nav class="tabs" id="tabs" role="tablist"></nav>
+      <div class="sheet-body" id="sheetBody"></div>
+    </div>
+  </section>
+</div>
+
+<div id="toast" class="toast" hidden></div>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+_quellen/
+__pycache__/
+*.pyc
+.impeccable/

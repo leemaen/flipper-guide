@@ -1,0 +1,1291 @@
+{
+ "table": {
+  "id": "lotr",
+  "name": "The Lord of the Rings",
+  "short": "LotR",
+  "manufacturer": "Stern Pinball",
+  "year": 2003,
+  "system": "Stern Whitestar",
+  "design": "George Gomez",
+  "editions": "Stern 2003 (Standard und Limited Edition mit gleichem Spielfeld). Virtuell: VPW „Valinor Edition“ 1.6 mit Original-ROM „lotr“ (PinMAME, USA).",
+  "ruleVersion": "Regeln nach Larry Scott, Rulesheet 1.1 (Feb./März 2004): ROM 5.01 mit Nachträgen zu ROM 8.0. Laut Rulesheet ist 8.0 der letzte offizielle Stand. Einen neueren Stand habe ich nicht gefunden, aber auch nicht ausgeschlossen.",
+  "accent": "#c9a227",
+  "contentDate": "2026-11-07"
+ },
+ "sources": [
+  {
+   "id": "manual",
+   "title": "Stern Pinball: The Lord of the Rings – Operations/Service Manual (2003)",
+   "url": "https://sternpinball.com/wp-content/uploads/2022/01/Lord_of_the_Rings_Manual.pdf",
+   "use": "Offizieller Spielfeldplan mit allen Schaltern (Abschn. 3, S. 17), Instruction Card (Abschn. 2, S. 6), Schalter- und Lampennamen."
+  },
+  {
+   "id": "rules",
+   "title": "Larry Scott (metallik): Lord of the Rings Pinball Rulesheet 1.1, Feb. 2004, mit Valinor-Teil von The_Black_Knight (21.03.2004)",
+   "url": "https://pinballnirvana.com/forums/resources/lord-of-the-rings-stern-2003-vp8.2993",
+   "use": "Alle Regeln, Werte und Abläufe. Basis ROM 5.01, Nachträge zu ROM 8.0. Der Autor weist selbst auf mögliche Fehler hin. Werte gelten für Werkseinstellungen."
+  },
+  {
+   "id": "rules10",
+   "title": "Dasselbe Rulesheet, Version 1.0 (09.02.2004), auf GameFAQs",
+   "url": "https://gamefaqs.gamespot.com/pinball/920523-the-lord-of-the-rings/faqs/30041",
+   "use": "Gegenprüfung des Textes."
+  },
+  {
+   "id": "vpw",
+   "title": "VPW: Lord of the Rings – Valinor Edition 1.6 (Tischdatei, gespeichert 30.11.2024)",
+   "url": "https://vpuniverse.com/files/file/8828-lord-of-the-rings-valinor-edition-stern-2003-vpw/",
+   "use": "Exakte Positionen von Schaltern, Rampen und Flippern. Daraus werden die Markierungen in beide Bilder umgerechnet. Das Bild der VPW-Ansicht ist das Vorschaubild dieser Tischdatei."
+  },
+  {
+   "id": "photo",
+   "title": "Foto echter Tisch: Gameroom Gorilla, Verkaufsanzeige „Lord Of The Rings – Super Clean“ (Okt. 2021)",
+   "url": "https://gameroomgorilla.com/?p=102057",
+   "use": "Spielfeld-Draufsicht des echten Stern-Tisches (Originalfoto, nur auf das Spielfeld zugeschnitten)."
+  }
+ ],
+ "views": {
+  "real": {
+   "label": "Echter Tisch",
+   "note": "Originalfoto eines Stern-LotR. Leicht schräg von vorn aufgenommen; der obere Bereich spiegelt in der Glasscheibe. Verdeckte Stellen sind in den Texten benannt."
+  },
+  "vpw": {
+   "label": "VPX (VPW 1.6)",
+   "note": "Vorschaubild der VPW Valinor Edition 1.6. Achtung: VPW hat ein neu gezeichnetes Artwork, und einige Einsätze (Gefährten, Ring-Anzeige) sitzen anders als am echten Tisch. Rampen, Orbits und Schalter liegen gleich. Einsatz-Markierungen gibt es deshalb nur in der Ansicht „Echter Tisch“."
+  }
+ },
+ "shots": {
+  "left_orbit": {
+   "name": "Linker Orbit",
+   "en": "Left Orbit",
+   "kind": "Orbit",
+   "flipper": "R",
+   "what": "Bahn ganz links außen. Der Eingang liegt oben am Ende der beiden roten Pfeile links (nicht die Pfeile selbst).",
+   "returns": "Normal läuft die Kugel oben quer über das Spielfeld in den Barad-dûr (Auswurf oben rechts). In manchen Modi lenkt ein Pfosten sie nach Orthanc. Schwache Schüsse fallen in die O-R-C-Bahnen oder nach Orthanc.",
+   "awards": [
+    "Gift of the Elves abholen (über Barad-dûr)",
+    "Pippin (Fellowship)",
+    "Fellowship-Start, wenn alle 9 Gefährten da sind"
+   ],
+   "visibility": "Eingang im Foto erkennbar; Bahnverlauf oben teils unter Drahtbahnen.",
+   "sources": [
+    "rules",
+    "manual",
+    "vpw"
+   ]
+  },
+  "left_ramp": {
+   "name": "Linke Rampe",
+   "en": "Left Ramp",
+   "kind": "Rampe",
+   "flipper": "R",
+   "what": "Rampe links. Eingang über der ersten Pfeil-/Ring-Reihe (Man, Dwarf, Elf). Die Kugel fährt hoch, wendet oben und kommt über die Drahtbahn links herunter.",
+   "returns": "Drahtbahn → linke Inlane → linker Flipper.",
+   "awards": [
+    "Ring (Elf/Dwarf/Man, je nach Einsatz)",
+    "Legolas (Fellowship)",
+    "Jackpot in Return of the King",
+    "Ramp-Schuss für Gandalf vs Saruman und Balrog-Phase"
+   ],
+   "visibility": "Eingang sichtbar, oberer Wendepunkt unter Plastik.",
+   "sources": [
+    "rules",
+    "manual",
+    "vpw"
+   ]
+  },
+  "inner_orbit": {
+   "name": "Innerer Orbit",
+   "en": "Inner Orbit",
+   "kind": "Orbit",
+   "flipper": "R",
+   "what": "Bahn zwischen linker Rampe und Ring-Rampe, über der zweiten Ring-Reihe. Wertung schon nach der ersten Kurve, auch schwache Schüsse zählen.",
+   "returns": "Läuft oben herum und kommt über den rechten Orbit wieder herunter. Ist der Abzweig offen (z. B. War of the Ents), geht sie direkt nach Orthanc.",
+   "awards": [
+    "Ring",
+    "Gandalf (Fellowship)",
+    "Jackpot in Return of the King",
+    "Super Jackpot 2 in The Two Towers"
+   ],
+   "visibility": "Eingang sichtbar.",
+   "sources": [
+    "rules",
+    "manual",
+    "vpw"
+   ]
+  },
+  "ring_ramp": {
+   "name": "Ring-Rampe (Mitte)",
+   "en": "Ring Ramp / Center Ring Shot",
+   "kind": "Rampe",
+   "flipper": "beide",
+   "what": "Messingrampe in der Mitte, leicht links. Am Eingang sitzt ein Spinner. Starke Schüsse springen am Rampenende in den Ring in der Rückwand, wo ein Magnet die Kugel fängt.",
+   "returns": "Schwache Schüsse fallen oben herunter Richtung Barad-dûr oder O-R-C. Aus dem Ring zieht der Magnet die Kugel nach rechts → Gollum-Drahtbahn → Schwert → rechte Inlane, oder lässt sie vorne fallen.",
+   "awards": [
+    "Mode Start (wenn nach 3 Elbenringen beleuchtet)",
+    "1 Elbenring (wenn Mode Start nicht leuchtet)",
+    "Ring Bonus (Spinner +1000 pro Drehung)",
+    "Frodo (Fellowship)",
+    "Destroy the Ring",
+    "Jackpot in Ring Frenzy und Ring Multiball",
+    "1. Super Jackpot in The Two Towers"
+   ],
+   "visibility": "Eingang direkt vor dem Balrog sichtbar.",
+   "sources": [
+    "rules",
+    "manual",
+    "vpw"
+   ]
+  },
+  "the_ring": {
+   "name": "Der Ring (Rückwand)",
+   "en": "The Ring",
+   "kind": "Ziel",
+   "flipper": null,
+   "what": "Großer Ring mit Magnet in der Rückwand. Erreichbar nur über die Ring-Rampe. Kein eigener Schuss, sondern das Ziel am Ende der Ring-Rampe.",
+   "returns": "Siehe Ring-Rampe.",
+   "awards": [
+    "Siehe Ring-Rampe"
+   ],
+   "visibility": "Gut sichtbar (Rückwand). Die Markierung ist direkt im Bild gemessen, weil der Ring erhöht sitzt.",
+   "override": {
+    "real": {
+     "circle": [
+      965,
+      428,
+      46
+     ]
+    },
+    "vpw": {
+     "circle": [
+      405,
+      182,
+      48
+     ]
+    }
+   },
+   "sources": [
+    "rules",
+    "manual"
+   ]
+  },
+  "balrog": {
+   "name": "Balrog",
+   "en": "Balrog",
+   "kind": "Spielfigur/Ziel",
+   "flipper": "beide",
+   "what": "Große rote Figur in der Mitte, normalerweise rechts neben der Ring-Rampe geparkt. In der Fellowship-Phase „Balrog“ schwenkt sie vor die Ring-Rampe. Nur kräftige Treffer mittig auf die Figur zählen, nicht die Pfosten daneben.",
+   "returns": "Prallt zurück ins Spielfeld.",
+   "awards": [
+    "Balrog-Treffer im Fellowship-Multiball (500K, 9. Treffer = 5M + Gift)"
+   ],
+   "visibility": "Sichtbar. Markiert ist die Position, in der der Balrog in der Fellowship-Phase vor der Ring-Rampe steht (aus der Tischgeometrie). Geparkt steht er rechts daneben.",
+   "sources": [
+    "rules",
+    "manual"
+   ]
+  },
+  "palantir": {
+   "name": "Palantír",
+   "en": "Palantir",
+   "kind": "Ziel",
+   "flipper": "R",
+   "what": "Weißer Würfel-Zielstein rechts neben der Ring-Rampe, unter der Glaskugel. Der runde Einsatz „Palantir“ darunter ist nur die Anzeige.",
+   "returns": "Prallt zurück. Vom linken Flipper prallt die Kugel leicht durch die Mitte ab (Rulesheet).",
+   "awards": [
+    "Wenn beleuchtet: hilfreiche Belohnung, z. B. Add-A-Ball im Multiball, 10 s Ball Saver, +30 s 2X Scoring, Ring/Seelen/Gefährte gutschreiben",
+    "Erhöht ein grünes Licht der Paths of the Dead"
+   ],
+   "visibility": "Sichtbar.",
+   "sources": [
+    "rules",
+    "manual"
+   ]
+  },
+  "gollum": {
+   "name": "Gollum's Cave (rechter VUK)",
+   "en": "Gollum's Cave / Right VUK / Right Saucer",
+   "kind": "VUK",
+   "flipper": "L",
+   "what": "Loch zwischen Palantír und rechter Rampe, unter den Drahtbahnen. Belohnungen zählen nur, wenn die Kugel direkt vom Flipper hineinfällt, nicht über Orbits oder Bumper.",
+   "returns": "Der VUK schießt die Kugel hoch → Drahtbahn → Schwert-Rampe → rechte Inlane.",
+   "awards": [
+    "Gollum-Multiball starten (nach 9 Menschenringen)",
+    "Extra Ball / Special, wenn beleuchtet",
+    "Gimli (Fellowship)",
+    "Return-of-the-King-Start",
+    "Super-Awards (Spinner, Pops, Ramps, Loops, Everything)"
+   ],
+   "visibility": "Das Loch selbst liegt unter Drahtbahnen und ist im Foto nur teilweise sichtbar.",
+   "sources": [
+    "rules",
+    "manual",
+    "vpw"
+   ]
+  },
+  "right_ramp": {
+   "name": "Rechte Rampe (Schwert-Rampe)",
+   "en": "Right Ramp / Sword Ramp",
+   "kind": "Rampe",
+   "flipper": "L",
+   "what": "Rampe rechts, Eingang über der rechten Pfeil-/Ring-Reihe („Aragorn“). Oben trifft die Kugel meist ein weißes Ziel und kommt über das große Schwert herunter. Gezählt wird unter dem Schwertgriff.",
+   "returns": "Schwert → rechte Inlane → rechter Flipper. Liegen gelockte Bälle auf dem Schwert und ist kein Lock beleuchtet, wird einer freigegeben. Darauf gefasst sein!",
+   "awards": [
+    "Lock für The Two Towers (wenn „Lock“ leuchtet)",
+    "Ring",
+    "Aragorn (Fellowship)",
+    "Jackpot in Return of the King",
+    "Combo-Schuss in Kill the Witchking"
+   ],
+   "visibility": "Eingang sichtbar, Schwert gut sichtbar.",
+   "sources": [
+    "rules",
+    "manual",
+    "vpw"
+   ]
+  },
+  "right_orbit": {
+   "name": "Rechter Orbit",
+   "en": "Right Orbit",
+   "kind": "Orbit",
+   "flipper": "L",
+   "what": "Bahn rechts außen, über der rechten äußeren Ring-Reihe („Merry“).",
+   "returns": "Läuft oben herum und kommt über den linken Orbit zurück auf die linke Seite. Schwache Schüsse fallen in O-R-C oder Orthanc.",
+   "awards": [
+    "Ring",
+    "Merry (Fellowship)",
+    "Flipper-Skillshot (nach starkem Abschuss)",
+    "Jackpot in Return of the King"
+   ],
+   "visibility": "Eingang sichtbar.",
+   "sources": [
+    "rules",
+    "manual",
+    "vpw"
+   ]
+  },
+  "barad_dur": {
+   "name": "Barad-dûr (Auswurf oben rechts)",
+   "en": "Barad-Dur / Top Saucer",
+   "kind": "Auswurf (Saucer)",
+   "flipper": null,
+   "what": "Loch oben rechts unter dem dunklen Turm. Nicht direkt anspielbar: Man erreicht es über den linken Orbit, manchmal durch abprallende Ring-Schüsse.",
+   "returns": "Wirft die Kugel wieder aufs Spielfeld.",
+   "awards": [
+    "Fellowship-Multiball starten (jede Kugel hier startet ihn)",
+    "Gift of the Elves abholen",
+    "Turm-Treffer: Belohnungen beim 3., 7., 12. und jedem weiteren 5. Treffer (u. a. Hold Ring Bonus, Light Extra Ball)",
+    "Palantír wieder beleuchten",
+    "Return-of-the-King-Start"
+   ],
+   "visibility": "Im Foto unter dem Turm verdeckt; Position aus Schalterplan.",
+   "sources": [
+    "rules",
+    "manual",
+    "vpw"
+   ]
+  },
+  "orthanc": {
+   "name": "Orthanc (VUK hinter der linken Rampe)",
+   "en": "Orthanc Tower VUK",
+   "kind": "VUK",
+   "flipper": null,
+   "what": "Loch unter dem weißen Turm oben links, hinter der linken Rampe. Erreichbar über den inneren Orbit, wenn der Abzweig offen ist, über die Orbits mit Umlenkpfosten, über sehr schwache Orbit-Schüsse oder per Tower-Skillshot.",
+   "returns": "Schießt die Kugel auf die Paths of the Dead (Mini-Spielfeld oben links). Das sammelt Seelen für Return of the King.",
+   "awards": [
+    "Seelen (Return of the King)",
+    "War of the Ents: 6 Treffer gewinnen",
+    "Gandalf vs Saruman: Turm-Schüsse",
+    "Tower-Skillshot 250K",
+    "Return-of-the-King-Start"
+   ],
+   "visibility": "Im Foto verdeckt; Position aus Schalterplan (Schalter 41).",
+   "sources": [
+    "rules",
+    "manual",
+    "vpw"
+   ]
+  },
+  "potd": {
+   "name": "Paths of the Dead (Seelen-Anzeige)",
+   "en": "Paths of the Dead",
+   "kind": "Mini-Spielfeld",
+   "flipper": null,
+   "what": "Mini-Spielfeld oben links mit vier Schaltern. Markiert ist die Tafel mit den vier grünen Lichtern in der Rückwand: aus = 100, an = 250, blinkend = 500 Seelen pro Schalter. Das Mini-Spielfeld selbst ist im Foto kaum zu sehen.",
+   "returns": "Endet im Auenland bzw. auf der Drahtbahn zur linken Inlane.",
+   "awards": [
+    "Seelen für Return of the King (5.000 nötig)"
+   ],
+   "visibility": "Tafel sichtbar, Mini-Spielfeld weitgehend verdeckt.",
+   "override": {
+    "real": {
+     "circle": [
+      836,
+      370,
+      38
+     ]
+    },
+    "vpw": {
+     "circle": [
+      170,
+      140,
+      52
+     ]
+    }
+   },
+   "sources": [
+    "rules",
+    "manual"
+   ]
+  },
+  "shire": {
+   "name": "Auenland (The Shire / Hobbiton)",
+   "en": "The Shire / Hobbiton / Left VUK",
+   "kind": "Mulde mit VUK",
+   "flipper": "R",
+   "what": "Große offene Mulde links unter der Drahtbahn. Hinten sitzt eine weiße Zielscheibe, unten ein VUK.",
+   "returns": "Der VUK befördert die Kugel über die Drahtbahn zur linken Inlane.",
+   "awards": [
+    "Mystery (nach 7 Zwergenringen)",
+    "300 Seelen + 50 pro Besuch der Paths of the Dead (ab ROM 5.00)",
+    "Sam (Fellowship)",
+    "Zielscheibe hinten: wechselt das Elben-Geschenk, erhöht ein Seelen-Licht"
+   ],
+   "visibility": "Sichtbar.",
+   "sources": [
+    "rules",
+    "manual",
+    "vpw"
+   ]
+  },
+  "spot_ring": {
+   "name": "Spot-Ring-Ziel",
+   "en": "Spot Ring Target",
+   "kind": "Ziel",
+   "flipper": "L",
+   "what": "Großes weißes Ziel rechts außen unter dem rechten Orbit. Der Pfeil „Spot Ring“ zeigt darauf.",
+   "returns": "Prallt zurück.",
+   "awards": [
+    "1 Ring zufälliger Art (wenn beleuchtet; die linke Inlane beleuchtet es neu)",
+    "Erhöht ein Seelen-Licht"
+   ],
+   "visibility": "Am Rand, teils hinter Figuren.",
+   "sources": [
+    "rules",
+    "manual",
+    "vpw"
+   ]
+  },
+  "jets": {
+   "name": "Jet Bumper",
+   "en": "Pop Bumpers",
+   "kind": "Bumper",
+   "flipper": null,
+   "what": "Drei Bumper mit roten Kappen unter den O-R-C-Bahnen, über Gollum's Cave.",
+   "returns": "Die Kugel springt zwischen den Bumpern und fällt oft in Gollum's Cave.",
+   "awards": [
+    "Boromir (Fellowship) nach genug Treffern",
+    "Super Pops"
+   ],
+   "visibility": "Sichtbar.",
+   "sources": [
+    "rules",
+    "manual",
+    "vpw"
+   ]
+  },
+  "orc_lanes": {
+   "name": "O-R-C-Bahnen",
+   "en": "O-R-C Lanes",
+   "kind": "Bahnen",
+   "flipper": null,
+   "what": "Drei Rollover-Bahnen über den Bumpern. Beleuchtete Bahn mit den Flipperknöpfen verschieben.",
+   "returns": "In die Bumper.",
+   "awards": [
+    "O-R-C komplett: Bonus-Multiplikator +1",
+    "Lane-Skillshot: +5X Bonus"
+   ],
+   "visibility": "Im Foto unter Spiegelung, Position aus Schalterplan.",
+   "sources": [
+    "rules",
+    "manual",
+    "vpw"
+   ]
+  },
+  "keep_lanes": {
+   "name": "K-E-E-P-Bahnen (In-/Outlanes)",
+   "en": "K-E-E-P Lanes",
+   "kind": "Bahnen",
+   "flipper": null,
+   "what": "K = linke Outlane, E = linke Inlane, E = rechte Inlane, P = rechte Outlane.",
+   "returns": "Inlanes zum Flipper, Outlanes ins Aus.",
+   "awards": [
+    "K-E-E-P komplett → Sword Lock leuchtet (The Two Towers)",
+    "Linke Inlane beleuchtet Spot Ring neu"
+   ],
+   "visibility": "Sichtbar.",
+   "sources": [
+    "rules",
+    "manual"
+   ]
+  },
+  "plunger": {
+   "name": "Abschuss (Skillshot)",
+   "en": "Plunger / Skill Shot",
+   "kind": "Abschuss",
+   "flipper": null,
+   "what": "Abschussbahn rechts. Drei Skillshots: leicht → blinkende O-R-C-Bahn, mittel → Orthanc, stark → um den linken Orbit, dann rechter Orbit vom Flipper.",
+   "returns": "Je nach Stärke: O-R-C/Bumper, Orthanc → Paths of the Dead, oder linker Orbit.",
+   "awards": [
+    "Lane: +5X Bonus",
+    "Tower: 250K (+50K je weiterem) und Seelen",
+    "Flipper: 1,25M"
+   ],
+   "visibility": "Sichtbar.",
+   "sources": [
+    "rules",
+    "manual"
+   ],
+   "override": {
+    "real": {
+     "poly": [
+      [
+       1432,
+       1000
+      ],
+      [
+       1474,
+       1000
+      ],
+      [
+       1474,
+       1300
+      ],
+      [
+       1432,
+       1300
+      ]
+     ]
+    }
+   }
+  }
+ },
+ "strategies": [
+  {
+   "id": "solid",
+   "title": "Solide spielen",
+   "subtitle": "Sicher zum ersten Multiball und Punkte mitnehmen",
+   "steps": [
+    {
+     "title": "Beim Abschuss: Tower-Skillshot",
+     "shots": [
+      "plunger",
+      "orthanc",
+      "potd"
+     ],
+     "prep": "Mittelstark abschießen, sodass die Kugel nach Orthanc fällt.",
+     "go": "Orthanc → Paths of the Dead.",
+     "why": "250K und gleich Seelen für Return of the King. Zu schwach: O-R-C-Bahn (+5X Bonus) ist auch in Ordnung.",
+     "sources": [
+      "rules"
+     ]
+    },
+    {
+     "title": "Ringe an den vier Ringschüssen",
+     "shots": [
+      "left_ramp",
+      "inner_orbit",
+      "right_ramp",
+      "right_orbit"
+     ],
+     "prep": "Schauen, welcher Ring-Einsatz an welchem Schuss leuchtet.",
+     "go": "Den Schuss treffen. Danach leuchten kurz alle vier für zwei weitere Ringe derselben Art: gleich noch einen hinterher.",
+     "why": "3 Elben → Mode Start, 7 Zwerge → Mystery, 9 Menschen → Gollum-Multiball. Das ist der Motor des Spiels.",
+     "sources": [
+      "rules"
+     ]
+    },
+    {
+     "title": "Two Towers vorbereiten: K-E-E-P und Locks",
+     "shots": [
+      "keep_lanes",
+      "right_ramp"
+     ],
+     "prep": "K-E-E-P über die vier In-/Outlanes vervollständigen, nur im Einzelballspiel möglich.",
+     "go": "Wenn „Lock“ leuchtet: rechte Schwert-Rampe vom linken Flipper. Drei Locks starten den Multiball.",
+     "why": "Beim ersten Mal lassen sich Locks ansparen. Der Multiball ist gut planbar, weil man ihn selbst auslöst.",
+     "sources": [
+      "rules"
+     ]
+    },
+    {
+     "title": "Modus starten, bevor ein Multiball läuft",
+     "shots": [
+      "ring_ramp"
+     ],
+     "prep": "Mode Start leuchtet (3 Elbenringe). Mit den Flipperknöpfen einen Modus wählen.",
+     "go": "Ring-Rampe hoch in den Ring.",
+     "why": "Ein laufender Modus läuft im Film-Multiball weiter, mit mehreren Kugeln leichter. Während eines Film-Multiballs kann man keinen Modus starten.",
+     "sources": [
+      "rules"
+     ]
+    },
+    {
+     "title": "Gollum-Multiball dazunehmen",
+     "shots": [
+      "gollum"
+     ],
+     "prep": "9 Menschenringe sammeln, dann leuchtet Gollum Multiball.",
+     "go": "Gollum's Cave vom linken Flipper, direkt hinein.",
+     "why": "Eine Kugel mehr, ohne dass etwas anderes endet. Sméagol-Phasen verdoppeln, Gollum-Phasen halbieren alle Punkte (Wechsel alle 7 s). Im Schnitt ×1,25.",
+     "sources": [
+      "rules"
+     ]
+    },
+    {
+     "title": "Fellowship nebenbei sammeln",
+     "shots": [
+      "left_orbit",
+      "barad_dur"
+     ],
+     "prep": "Blinkende Gefährten über ihre Schüsse holen (siehe Multibälle → Fellowship).",
+     "go": "Wenn alle neun da sind: linker Orbit → Barad-dûr.",
+     "why": "Jede Kugel im Barad-dûr startet ihn, auch ein abgeprallter Ring-Schuss.",
+     "sources": [
+      "rules"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "high",
+   "title": "Auf Highscore",
+   "subtitle": "Multiplikatoren stapeln, wenn die Basis sitzt",
+   "steps": [
+    {
+     "title": "Gollum vor dem Film-Multiball",
+     "shots": [
+      "gollum"
+     ],
+     "prep": "Gollum Multiball aufheben, bis ein Film-Multiball startklar ist.",
+     "go": "Zuerst Gollum's Cave, dann den Film-Multiball starten.",
+     "why": "Film-Multiball mit 4 statt 3 Kugeln. In The Two Towers zählt das als Triple Jackpot statt Double.",
+     "sources": [
+      "rules"
+     ]
+    },
+    {
+     "title": "Two Towers: Jackpots ohne Pause",
+     "shots": [
+      "left_orbit",
+      "left_ramp",
+      "inner_orbit",
+      "ring_ramp",
+      "gollum",
+      "right_ramp",
+      "right_orbit"
+     ],
+     "prep": "Alle Schüsse leuchten für Jackpot.",
+     "go": "Jackpots direkt hintereinander, höchstens 3 s Pause, sonst fällt die Nummer auf 1 zurück.",
+     "why": "Jackpot × Kugelzahl (Double/Triple) × Nummer bis 7. Triple Jackpot 7 = 21-fach.",
+     "sources": [
+      "rules"
+     ]
+    },
+    {
+     "title": "Return of the King: in Reihenfolge",
+     "shots": [
+      "left_ramp",
+      "inner_orbit",
+      "right_ramp",
+      "right_orbit"
+     ],
+     "prep": "Jeder Ringschuss zeigt 1–4 Lampen: Jackpot, Double, Triple, 4X.",
+     "go": "Pro Level vom niedrigsten zum höchsten Jackpot schießen.",
+     "why": "In Reihenfolge erhöht sich der Multiplikator jedes nächsten Levels um 1. Nach 7 Levels folgen 4 Super Jackpots (1M × Multiplikator).",
+     "sources": [
+      "rules"
+     ]
+    },
+    {
+     "title": "2X Scoring und Palantír",
+     "shots": [
+      "barad_dur",
+      "palantir"
+     ],
+     "prep": "Das Elben-Geschenk „2X Scoring“ blinkend stellen (Zielscheibe hinten im Auenland).",
+     "go": "Über den linken Orbit in Barad-dûr abholen, am besten kurz vor einem Multiball. Palantír verlängert oft um 30 s.",
+     "why": "60 s alle Punkte doppelt, zusätzlich zu allen anderen Multiplikatoren.",
+     "sources": [
+      "rules"
+     ]
+    },
+    {
+     "title": "Victory Laps komplett holen",
+     "shots": [
+      "left_orbit",
+      "left_ramp",
+      "inner_orbit",
+      "ring_ramp",
+      "gollum",
+      "right_ramp",
+      "right_orbit"
+     ],
+     "prep": "Nach einem gewonnenen Film-Multiball leuchten alle 7 Hauptschüsse.",
+     "go": "Alle sieben treffen, bevor man den Ring schießt.",
+     "why": "Dann steigt der Grundwert aller weiteren Runden um 50K.",
+     "sources": [
+      "rules"
+     ]
+    },
+    {
+     "title": "Destroy the Ring erst zum Schluss",
+     "shots": [
+      "ring_ramp"
+     ],
+     "prep": "Vorher möglichst alle 6 Modi spielen; There and Back Again braucht sie.",
+     "go": "Wenn alle drei Film-Multibälle gespielt sind: Ring-Rampe.",
+     "why": "Nach Destroy the Ring gehen die Film-Multibälle zurück, und nicht gespielte Modi fehlen für Valinor.",
+     "sources": [
+      "rules"
+     ]
+    }
+   ]
+  }
+ ],
+ "multiballs": [
+  {
+   "id": "ttt",
+   "name": "The Two Towers",
+   "tag": "Film-Multiball",
+   "balls": "2 Kugeln + gelockte (bis 4 mit Gollum/Add-A-Ball)",
+   "prep": [
+    {
+     "title": "K-E-E-P vervollständigen",
+     "shots": [
+      "keep_lanes"
+     ],
+     "text": "Die vier In-/Outlanes überrollen. Geht nur im Einzelballspiel. In späteren Durchgängen wechseln die Buchstaben teils bei jedem Überrollen.",
+     "sources": [
+      "rules"
+     ]
+    },
+    {
+     "title": "Lock an der Schwert-Rampe",
+     "shots": [
+      "right_ramp"
+     ],
+     "text": "Wenn „Lock“ leuchtet: rechte Rampe vom linken Flipper. Beim ersten Multiball lassen sich mehrere K-E-E-P ansparen. Danach muss jeder Lock einzeln beleuchtet und geholt werden. Die Bälle liegen wirklich auf dem Schwert.",
+     "sources": [
+      "rules"
+     ]
+    }
+   ],
+   "start": {
+    "title": "Dritter Lock startet",
+    "shots": [
+     "right_ramp"
+    ],
+    "text": "Der dritte Ball auf dem Schwert startet „A new power is rising… TO WAR!“",
+    "sources": [
+     "rules"
+    ]
+   },
+   "score": [
+    {
+     "title": "Alle Schüsse = Jackpot",
+     "shots": [
+      "left_orbit",
+      "left_ramp",
+      "inner_orbit",
+      "ring_ramp",
+      "gollum",
+      "right_ramp",
+      "right_orbit"
+     ],
+     "text": "Jeder getroffene Jackpot erlischt, die Nummer steigt (bis 7). Mehr als 3 s Pause setzt auf 1 zurück. Basis 100K → 112,5K → 125K → 137,5K je Kampfphase; × 2 (3 Kugeln) bzw. × 3 (4 Kugeln) × Nummer.",
+     "sources": [
+      "rules"
+     ]
+    },
+    {
+     "title": "Super Jackpot im Ring",
+     "shots": [
+      "ring_ramp"
+     ],
+     "text": "Am Ende der letzten Phase leuchtet der Ring für den Super Jackpot (meist 1,5–2,5M). Der erste Super gewinnt den Multiball und gibt ein Elben-Geschenk.",
+     "sources": [
+      "rules"
+     ]
+    },
+    {
+     "title": "Weitere Supers paarweise",
+     "shots": [
+      "inner_orbit",
+      "gollum",
+      "left_ramp",
+      "right_ramp",
+      "left_orbit",
+      "right_orbit"
+     ],
+     "text": "Danach: innerer Orbit + Gollum, dann beide Rampen, dann beide Orbits. Nach dem ersten des Paares bleiben ca. 5 s für den zweiten.",
+     "sources": [
+      "rules"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fotr",
+   "name": "Fellowship of the Ring",
+   "tag": "Film-Multiball",
+   "balls": "Mehrball, Ball Saver in der Troll-Phase",
+   "prep": [
+    {
+     "title": "Neun Gefährten holen",
+     "shots": [
+      "left_orbit",
+      "shire",
+      "left_ramp",
+      "gollum",
+      "inner_orbit",
+      "ring_ramp",
+      "right_orbit",
+      "right_ramp",
+      "jets"
+     ],
+     "text": "Pippin = linker Orbit · Sam = Auenland · Legolas = linke Rampe · Gimli = Gollum's Cave · Gandalf = innerer Orbit · Frodo = Ring-Rampe · Merry = rechter Orbit · Aragorn = rechte Rampe · Boromir = Jet Bumper. Nur blinkende Gefährten zählen. Im ersten Durchgang blinken alle, später nur einige.",
+     "sources": [
+      "rules"
+     ]
+    }
+   ],
+   "start": {
+    "title": "Linker Orbit → Barad-dûr",
+    "shots": [
+     "left_orbit",
+     "barad_dur"
+    ],
+    "text": "Wenn die Reihe langsam blinkt: linker Orbit. Jede Kugel im Barad-dûr startet den Multiball.",
+    "sources": [
+     "rules"
+    ]
+   },
+   "score": [
+    {
+     "title": "Cave Troll (nur wenn eingeschaltet)",
+     "shots": [
+      "left_orbit",
+      "left_ramp",
+      "inner_orbit",
+      "ring_ramp",
+      "gollum",
+      "right_ramp",
+      "right_orbit"
+     ],
+     "text": "Beginnt mit „This isn't a mine… it's a tomb!“: alle Schüsse Jackpot, 5 Jackpots töten den Troll. Werksseitig meist aus. Dann geht es direkt mit dem Balrog los.",
+     "sources": [
+      "rules"
+     ]
+    },
+    {
+     "title": "Balrog treffen",
+     "shots": [
+      "balrog"
+     ],
+     "text": "Der Balrog schwenkt vor die Ring-Rampe. Mittig und kräftig treffen: 500K.",
+     "sources": [
+      "rules"
+     ]
+    },
+    {
+     "title": "Danach eine Rampe",
+     "shots": [
+      "left_ramp",
+      "right_ramp"
+     ],
+     "text": "Linke oder rechte Rampe (750K) bringt einen Gefährten über die Brücke. 8× wiederholen, Gandalf kommt zuletzt. Der 9. Balrog-Treffer zerstört ihn: 5M + Elben-Geschenk.",
+     "sources": [
+      "rules"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rotk",
+   "name": "Return of the King",
+   "tag": "Film-Multiball",
+   "balls": "Mehrball",
+   "prep": [
+    {
+     "title": "5.000 Seelen sammeln",
+     "shots": [
+      "orthanc",
+      "potd",
+      "shire"
+     ],
+     "text": "Jede Kugel in Orthanc (im Einzelballspiel) geht über die Paths of the Dead: 100/250/500 Seelen pro Schalter je nach grünem Licht. Auenland: 300 + 50 pro bisherigem Besuch.",
+     "sources": [
+      "rules"
+     ]
+    },
+    {
+     "title": "Seelen-Lichter hochdrehen",
+     "shots": [
+      "shire",
+      "right_ramp",
+      "palantir",
+      "spot_ring"
+     ],
+     "text": "Jedes weiße Ziel erhöht ein Licht: Zielscheibe hinten im Auenland, Ziel oben in der rechten Rampe, Palantír, Spot Ring. Bumper mischen die Reihenfolge.",
+     "sources": [
+      "rules"
+     ]
+    }
+   ],
+   "start": {
+    "title": "Orthanc, Barad-dûr oder Gollum's Cave",
+    "shots": [
+     "orthanc",
+     "barad_dur",
+     "gollum"
+    ],
+    "text": "Ab 5.000 Seelen startet jedes dieser drei Löcher den Multiball.",
+    "sources": [
+     "rules"
+    ]
+   },
+   "score": [
+    {
+     "title": "Vier Ringschüsse = Jackpots",
+     "shots": [
+      "left_ramp",
+      "inner_orbit",
+      "right_ramp",
+      "right_orbit"
+     ],
+     "text": "1 Lampe = Jackpot, 2 = Double, 3 = Triple, 4 = 4X. Basis 250K + 50K pro Level.",
+     "sources": [
+      "rules"
+     ]
+    },
+    {
+     "title": "In Reihenfolge = höherer Multiplikator",
+     "shots": [
+      "left_ramp",
+      "inner_orbit",
+      "right_ramp",
+      "right_orbit"
+     ],
+     "text": "Niedrigster zuerst, höchster zuletzt → nächster Level startet einen Multiplikator höher. 7 Levels, dann 4 Super Jackpots (1M × Multiplikator). Level 7 gibt ein Elben-Geschenk.",
+     "sources": [
+      "rules"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gollum",
+   "name": "Gollum Multiball",
+   "tag": "Zusatz-Multiball",
+   "balls": "+1 Kugel (nicht exklusiv)",
+   "prep": [
+    {
+     "title": "9 Menschenringe",
+     "shots": [
+      "left_ramp",
+      "inner_orbit",
+      "right_ramp",
+      "right_orbit",
+      "spot_ring"
+     ],
+     "text": "Ringe der Menschen an den vier Ringschüssen oder per Spot Ring sammeln.",
+     "sources": [
+      "rules"
+     ]
+    }
+   ],
+   "start": {
+    "title": "Gollum's Cave",
+    "shots": [
+     "gollum"
+    ],
+    "text": "Vom Flipper direkt hinein. Nicht während Film-Multiball, Ring Multiball oder Destroy the Ring, aber während Modi.",
+    "sources": [
+     "rules"
+    ]
+   },
+   "score": [
+    {
+     "title": "Sméagol-Phasen nutzen",
+     "shots": [],
+     "text": "Alle 7 s Wechsel: Gollum = Punkte halb, Sméagol = Punkte doppelt (außer Bonus). Große Schüsse in Sméagol-Phasen legen.",
+     "sources": [
+      "rules"
+     ]
+    },
+    {
+     "title": "Film-Multiball wiederbeleben",
+     "shots": [
+      "gollum"
+     ],
+     "text": "Nach dem Ende eines Film-Multiballs bleiben ca. 5 s (vor der Schluss-Fanfare): Gollum starten → der Film-Multiball läuft mit zwei Kugeln weiter.",
+     "sources": [
+      "rules"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dtr",
+   "name": "Destroy the Ring",
+   "tag": "Wizard-Modus",
+   "balls": "1–2 Kugeln",
+   "prep": [
+    {
+     "title": "Alle drei Film-Multibälle spielen",
+     "shots": [],
+     "text": "Gewinnen ist nicht nötig. Danach können keine Modi starten, bis Destroy the Ring geholt ist.",
+     "sources": [
+      "rules"
+     ]
+    }
+   ],
+   "start": {
+    "title": "Ring-Rampe",
+    "shots": [
+     "ring_ramp"
+    ],
+    "text": "Ring-Rampe in den Ring.",
+    "sources": [
+     "rules"
+    ]
+   },
+   "score": [
+    {
+     "title": "Vier Ringschüsse",
+     "shots": [
+      "left_ramp",
+      "inner_orbit",
+      "right_ramp",
+      "right_orbit"
+     ],
+     "text": "Jeden einmal: 1M, 1,5M, 2M, 2,5M.",
+     "sources": [
+      "rules"
+     ]
+    },
+    {
+     "title": "Ring: Kugel wird festgehalten",
+     "shots": [
+      "ring_ramp"
+     ],
+     "text": "Ring-Rampe für 3M. Der Ring hält die Kugel, eine neue kommt ins Spiel.",
+     "sources": [
+      "rules"
+     ]
+    },
+    {
+     "title": "Gefangene Kugel herausschießen",
+     "shots": [
+      "ring_ramp"
+     ],
+     "text": "Mit der neuen Kugel die gefangene aus dem Ring schießen: 5M, Ring zerstört, Elben-Geschenk. Ab ROM 8.0 kann der Betreiber eine Ein-Kugel-Variante einstellen (dann einfach noch einmal den Ring treffen). Kugelverlust in irgendeiner Phase beendet den Modus.",
+     "sources": [
+      "rules"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ringmb",
+   "name": "Ring Multiball",
+   "tag": "Elben-Geschenk",
+   "balls": "Mehrball (exklusiv)",
+   "prep": [
+    {
+     "title": "Geschenk „Ring Multiball“ wählen",
+     "shots": [
+      "shire"
+     ],
+     "text": "Mit der Zielscheibe hinten im Auenland das blinkende Geschenk wechseln.",
+     "sources": [
+      "rules"
+     ]
+    }
+   ],
+   "start": {
+    "title": "Abholen in Barad-dûr",
+    "shots": [
+     "left_orbit",
+     "barad_dur"
+    ],
+    "text": "Über den linken Orbit in Barad-dûr.",
+    "sources": [
+     "rules"
+    ]
+   },
+   "score": [
+    {
+     "title": "Immer wieder den Ring",
+     "shots": [
+      "ring_ramp"
+     ],
+     "text": "600K, +50K pro Treffer bis 1M. Ein vorher gestarteter Modus läuft weiter.",
+     "sources": [
+      "rules"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "valinor",
+   "name": "Valinor",
+   "tag": "Letzter Wizard-Modus",
+   "balls": "4 Kugeln",
+   "prep": [
+    {
+     "title": "Voraussetzungen (Bericht vom 21.03.2004)",
+     "shots": [],
+     "text": "Alle drei Film-Multibälle komplett, je mit Super Jackpot · alle 6 Modi gespielt · There and Back Again gespielt · alle 6 Elben-Geschenke · Destroy the Ring (meist zweimal). Nur ein Spielerbericht, nicht offiziell bestätigt.",
+     "sources": [
+      "rules"
+     ]
+    }
+   ],
+   "start": {
+    "title": "Startet direkt nach Destroy the Ring",
+    "shots": [
+     "ring_ramp"
+    ],
+    "text": "Wenn alles erfüllt ist.",
+    "sources": [
+     "rules"
+    ]
+   },
+   "score": [
+    {
+     "title": "Keine belegten Details",
+     "shots": [],
+     "text": "Zu Ablauf und Werten von Valinor habe ich keine verlässliche Quelle gefunden.",
+     "sources": []
+    }
+   ]
+  }
+ ],
+ "modes": [
+  {
+   "id": "ringwraiths",
+   "name": "Escape the Ringwraiths",
+   "film": "Fellowship",
+   "time": "Countdown",
+   "steps": [
+    {
+     "title": "Ziele in fester Reihenfolge",
+     "shots": [
+      "gollum",
+      "inner_orbit",
+      "left_ramp",
+      "right_ramp"
+     ],
+     "text": "1M zählt herunter. Reihenfolge: Gollum's Cave → innerer Orbit → linke Rampe → rechte Rampe (Ende). Die rechte Rampe gibt jederzeit ca. +200K. Bei 200K endet der Modus erfolglos."
+    }
+   ]
+  },
+  {
+   "id": "saruman",
+   "name": "Gandalf vs Saruman",
+   "film": "Fellowship",
+   "time": "30 s",
+   "steps": [
+    {
+     "title": "4 Rampen-Schüsse",
+     "shots": [
+      "left_ramp",
+      "right_ramp"
+     ],
+     "text": "250K, 500K, 750K, 1M. Direkt aufeinanderfolgende Rampen zählen doppelt."
+    },
+    {
+     "title": "Orthanc, Gollum, Orthanc",
+     "shots": [
+      "orthanc",
+      "gollum"
+     ],
+     "text": "Orthanc 1,25M → wandernder Schuss ab Gollum's Cave 1,5M → Orthanc 2M zum Sieg."
+    }
+   ]
+  },
+  {
+   "id": "wargs",
+   "name": "Warg Battle",
+   "film": "Two Towers",
+   "time": "30 s",
+   "steps": [
+    {
+     "title": "Linke Rampe, dann alle",
+     "shots": [
+      "left_ramp",
+      "left_orbit",
+      "inner_orbit",
+      "ring_ramp",
+      "gollum",
+      "right_ramp",
+      "right_orbit"
+     ],
+     "text": "Linke Rampe 300K, dann leuchten alle 7 Hauptschüsse (ohne Auenland). Jeder Treffer tötet einen Warg, Wert +100K."
+    }
+   ]
+  },
+  {
+   "id": "ents",
+   "name": "War of the Ents",
+   "film": "Two Towers",
+   "time": "30 s",
+   "steps": [
+    {
+     "title": "6 × Orthanc",
+     "shots": [
+      "left_orbit",
+      "right_orbit",
+      "inner_orbit",
+      "orthanc"
+     ],
+     "text": "Beide äußeren Orbits (750K) und der innere Orbit (geht direkt nach Orthanc, 500K) leuchten. 6 Kugeln in Orthanc gewinnen. Jeder Orthanc-Treffer bringt Seelen über die Paths of the Dead."
+    }
+   ]
+  },
+  {
+   "id": "shelob",
+   "name": "Attack of Shelob",
+   "film": "Return of the King",
+   "time": "Shelob holt auf",
+   "steps": [
+    {
+     "title": "Links – rechts im Wechsel",
+     "shots": [
+      "left_orbit",
+      "left_ramp",
+      "inner_orbit",
+      "gollum",
+      "right_ramp",
+      "right_orbit"
+     ],
+     "text": "Links (linker Orbit, linke Rampe, innerer Orbit) 500K, dann rechts (Gollum, rechte Rampe, rechter Orbit) 500K, im Wechsel ohne die schon getroffenen: 750K, 750K, 1M, 1M. Zu langsam = Shelob frisst Frodo."
+    }
+   ]
+  },
+  {
+   "id": "witchking",
+   "name": "Kill the Witchking",
+   "film": "Return of the King",
+   "time": "30 s",
+   "steps": [
+    {
+     "title": "Combo ×4",
+     "shots": [
+      "left_ramp",
+      "right_orbit",
+      "right_ramp"
+     ],
+     "text": "Linke Rampe oder rechter Orbit (500K) → kurz danach rechte Rampe (1M) = ein Treffer. 4 Combos gewinnen."
+    }
+   ]
+  },
+  {
+   "id": "taba",
+   "name": "There and Back Again",
+   "film": "nach allen 6 Modi",
+   "time": "60 s",
+   "steps": [
+    {
+     "title": "Ring → beliebiger Schuss",
+     "shots": [
+      "ring_ramp",
+      "left_orbit",
+      "left_ramp",
+      "inner_orbit",
+      "gollum",
+      "right_ramp",
+      "right_orbit"
+     ],
+     "text": "Ring (1M) wählt einen Modus. Danach gibt ein beleuchteter Schuss dessen damaliges Ergebnis noch einmal. Jeder benutzte Schuss fällt weg. Alle 6 + Ring: 5M + Elben-Geschenk."
+    }
+   ]
+  },
+  {
+   "id": "frenzy",
+   "name": "Ring Frenzy",
+   "film": "alle Ringarten voll",
+   "time": "10 s (verlängert sich)",
+   "steps": [
+    {
+     "title": "Einsätze leeren, dann Ring",
+     "shots": [
+      "left_ramp",
+      "inner_orbit",
+      "right_ramp",
+      "right_orbit",
+      "ring_ramp"
+     ],
+     "text": "Jeder Ringschuss-Einsatz 100/125/150K und +10 s. Volle Reihe = Jackpot-Multiplikator +1 (max. 5). Ring-Rampe holt den Jackpot (ab 600K) und beendet."
+    }
+   ]
+  }
+ ],
+ "modesIntro": "Sechs Modi, zwei pro Film. Auswahl mit den Flipperknöpfen, Start mit der Ring-Rampe, wenn „Mode Start“ leuchtet (3 Elbenringe). Immer nur ein Modus gleichzeitig. Jeder Modus ist einmal spielbar. Gewonnen = Elben-Geschenk. Modi laufen in einem danach gestarteten Film-Multiball und in Gollum weiter.",
+ "glossary": [
+  {
+   "term": "Orbit / Loop",
+   "text": "Bahn, die außen um das Spielfeld herumführt und auf der anderen Seite zurückkommt."
+  },
+  {
+   "term": "Rampe",
+   "text": "Ansteigende Bahn. Die Kugel kommt meist über eine Drahtbahn zu einem Flipper zurück."
+  },
+  {
+   "term": "VUK",
+   "text": "Vertical Up-Kicker: Loch, das die Kugel senkrecht nach oben in eine andere Bahn schießt."
+  },
+  {
+   "term": "Saucer / Auswurf",
+   "text": "Flaches Loch, das die Kugel kurz hält und wieder auswirft."
+  },
+  {
+   "term": "Inlane / Outlane",
+   "text": "Bahnen neben den Flippern: Inlane führt zum Flipper, Outlane ins Aus."
+  },
+  {
+   "term": "Einsatz (Insert)",
+   "text": "Beleuchtetes Feld im Spielfeld. Nur Anzeige, kein Ziel."
+  },
+  {
+   "term": "Lock",
+   "text": "Kugel wird für einen späteren Multiball festgehalten."
+  },
+  {
+   "term": "Jackpot / Super Jackpot",
+   "text": "Große Wertung im Multiball."
+  },
+  {
+   "term": "Stacking",
+   "text": "Zwei Dinge gleichzeitig laufen lassen, z. B. Modus + Multiball."
+  },
+  {
+   "term": "Skillshot",
+   "text": "Bonus für einen genau dosierten Abschuss."
+  },
+  {
+   "term": "SDTM",
+   "text": "„Straight down the middle“: Kugel fällt mittig zwischen den Flippern ins Aus."
+  }
+ ],
+ "limits": [
+  "Regelwerte gelten für Werkseinstellungen. Betreiber können viel verstellen (z. B. Cave Troll, Destroy the Ring mit einer Kugel).",
+  "Das Rulesheet beruht auf ROM 5.01 mit Nachträgen zu 8.0. Abweichungen in späteren Ständen sind möglich.",
+  "Welcher Flipper für einen Schuss empfohlen wird, ist aus der Geometrie abgeleitet (Kreuzschuss) und nicht im Rulesheet belegt. Ausnahme Palantír: Vom linken Flipper prallt die Kugel laut Rulesheet leicht mittig ab.",
+  "Die Linien zeigen die Zielrichtung und den Bahnverlauf laut Tischgeometrie, keine echte Flugbahn der Kugel.",
+  "Orthanc, Barad-dûr, Gollum's Cave und die O-R-C-Bahnen sind im Foto teilweise verdeckt bzw. gespiegelt. Ihre Position stammt aus dem Schalterplan.",
+  "Valinor: nur ein Spielerbericht zu den Voraussetzungen, keine belegten Details zum Ablauf."
+ ]
+}

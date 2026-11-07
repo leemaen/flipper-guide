@@ -1,0 +1,17 @@
+{
+  "name": "Flipper-Guide",
+  "short_name": "Flipper",
+  "description": "Persönliche Flipper-Strategie: Schüsse, Multibälle, Modi – offline am Tisch.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0c0e11",
+  "theme_color": "#0c0e11",
+  "lang": "de",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
