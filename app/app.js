@@ -384,7 +384,7 @@
     const aimEls = [];
     let idx = 0, t0 = performance.now();
     const seglen = pts => { const L = [0]; for (let i = 1; i < pts.length; i++) L.push(L[i - 1] + Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1])); return L; };
-    const speed = v.w * 0.42; // Bildpixel pro Sekunde (halbes Tempo gegenüber der ersten Fassung)
+    const speed = v.w * 0.21; // Bildpixel pro Sekunde (auf Wunsch zweimal halbiert)
     const setup = () => {
       aimEls.forEach(e => e.remove()); aimEls.length = 0;
       const q = seqs[idx];
@@ -392,7 +392,7 @@
       if (!single) for (const sg of q.segs) { const l = s('polyline', { class: 'path', points: sg.pts.map(p => p.join(',')).join(' ') }); layer.insertBefore(l, ballG); aimEls.push(l); }
       q.segs.forEach(sg => { sg.L = seglen(sg.pts); });
       q.total = q.segs.reduce((a, sg) => a + sg.L[sg.L.length - 1], 0);
-      q.aimDur = q.aims.length ? 1700 : 300;
+      q.aimDur = q.aims.length ? 2200 : 400;
       q.runDur = q.total / speed * 1000;
       q.dur = q.aimDur + q.runDur + 1400;
     };
