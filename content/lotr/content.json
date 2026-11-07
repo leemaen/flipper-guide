@@ -42,6 +42,12 @@
    "title": "Foto echter Tisch: Gameroom Gorilla, Verkaufsanzeige „Lord Of The Rings – Super Clean“ (Okt. 2021)",
    "url": "https://gameroomgorilla.com/?p=102057",
    "use": "Spielfeld-Draufsicht des echten Stern-Tisches (Originalfoto, nur auf das Spielfeld zugeschnitten)."
+  },
+  {
+   "id": "ball",
+   "title": "Kugelbild: „Stainless steel bearing ball 60mm G100 (removed camera)“, Lucasbosch, Wikimedia Commons, CC BY-SA 3.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Stainless_steel_1.4034_X46Cr13_bearing_ball_60mm_G100_removed_camera.jpg",
+   "use": "Freigestellt, verkleinert und abgedunkelt als animierte Flipperkugel (Bearbeitung ebenfalls CC BY-SA 3.0)."
   }
  ],
  "views": {
@@ -72,7 +78,8 @@
     "rules",
     "manual",
     "vpw"
-   ]
+   ],
+   "icon": "pippin"
   },
   "left_ramp": {
    "name": "Linke Rampe",
@@ -92,7 +99,8 @@
     "rules",
     "manual",
     "vpw"
-   ]
+   ],
+   "icon": "legolas"
   },
   "inner_orbit": {
    "name": "Innerer Orbit",
@@ -112,7 +120,8 @@
     "rules",
     "manual",
     "vpw"
-   ]
+   ],
+   "icon": "gandalf"
   },
   "ring_ramp": {
    "name": "Ring-Rampe (Mitte)",
@@ -135,7 +144,8 @@
     "rules",
     "manual",
     "vpw"
-   ]
+   ],
+   "icon": "frodo"
   },
   "the_ring": {
    "name": "Der Ring (Rückwand)",
@@ -221,7 +231,8 @@
     "rules",
     "manual",
     "vpw"
-   ]
+   ],
+   "icon": "gimli"
   },
   "right_ramp": {
    "name": "Rechte Rampe (Schwert-Rampe)",
@@ -242,7 +253,8 @@
     "rules",
     "manual",
     "vpw"
-   ]
+   ],
+   "icon": "aragorn"
   },
   "right_orbit": {
    "name": "Rechter Orbit",
@@ -262,7 +274,8 @@
     "rules",
     "manual",
     "vpw"
-   ]
+   ],
+   "icon": "merry"
   },
   "barad_dur": {
    "name": "Barad-dûr (Auswurf oben rechts)",
@@ -356,7 +369,8 @@
     "rules",
     "manual",
     "vpw"
-   ]
+   ],
+   "icon": "sam"
   },
   "spot_ring": {
    "name": "Spot-Ring-Ziel",
@@ -392,7 +406,8 @@
     "rules",
     "manual",
     "vpw"
-   ]
+   ],
+   "icon": "boromir"
   },
   "orc_lanes": {
    "name": "O-R-C-Bahnen",
@@ -754,10 +769,21 @@
       "right_ramp",
       "jets"
      ],
-     "text": "Pippin = linker Orbit · Sam = Auenland · Legolas = linke Rampe · Gimli = Gollum's Cave · Gandalf = innerer Orbit · Frodo = Ring-Rampe · Merry = rechter Orbit · Aragorn = rechte Rampe · Boromir = Jet Bumper. Nur blinkende Gefährten zählen. Im ersten Durchgang blinken alle, später nur einige.",
+     "text": "Nur blinkende Gefährten zählen. Im ersten Durchgang blinken alle, später nur einige. Im Spielfeld steht an jeder Bahn das Symbol des Gefährten, so wie es unten in der Gefährten-Reihe leuchtet.",
      "sources": [
       "rules"
-     ]
+     ],
+     "badges": {
+      "left_orbit": "pippin",
+      "shire": "sam",
+      "left_ramp": "legolas",
+      "gollum": "gimli",
+      "inner_orbit": "gandalf",
+      "ring_ramp": "frodo",
+      "right_orbit": "merry",
+      "right_ramp": "aragorn",
+      "jets": "boromir"
+     }
     }
    ],
    "start": {
@@ -1287,5 +1313,52 @@
   "Die Linien zeigen die Zielrichtung und den Bahnverlauf laut Tischgeometrie, keine echte Flugbahn der Kugel.",
   "Orthanc, Barad-dûr, Gollum's Cave und die O-R-C-Bahnen sind im Foto teilweise verdeckt bzw. gespiegelt. Ihre Position stammt aus dem Schalterplan.",
   "Valinor: nur ein Spielerbericht zu den Voraussetzungen, keine belegten Details zum Ablauf."
- ]
+ ],
+ "icons": {
+  "pippin": {
+   "name": "Pippin",
+   "img": "img/lotr/fs-pippin.png",
+   "note": "Symbol aus der Gefährten-Reihe des echten Tisches"
+  },
+  "merry": {
+   "name": "Merry",
+   "img": "img/lotr/fs-merry.png",
+   "note": "Symbol aus der Gefährten-Reihe des echten Tisches"
+  },
+  "sam": {
+   "name": "Sam",
+   "img": "img/lotr/fs-sam.png",
+   "note": "Symbol aus der Gefährten-Reihe des echten Tisches"
+  },
+  "aragorn": {
+   "name": "Aragorn",
+   "img": "img/lotr/fs-aragorn.png",
+   "note": "Symbol aus der Gefährten-Reihe des echten Tisches"
+  },
+  "frodo": {
+   "name": "Frodo",
+   "img": "img/lotr/fs-frodo.png",
+   "note": "Symbol aus der Gefährten-Reihe des echten Tisches"
+  },
+  "gandalf": {
+   "name": "Gandalf",
+   "img": "img/lotr/fs-gandalf.png",
+   "note": "Symbol aus der Gefährten-Reihe des echten Tisches"
+  },
+  "legolas": {
+   "name": "Legolas",
+   "img": "img/lotr/fs-legolas.png",
+   "note": "Symbol aus der Gefährten-Reihe des echten Tisches"
+  },
+  "gimli": {
+   "name": "Gimli",
+   "img": "img/lotr/fs-gimli.png",
+   "note": "Symbol aus der Gefährten-Reihe des echten Tisches"
+  },
+  "boromir": {
+   "name": "Boromir",
+   "img": "img/lotr/fs-boromir.png",
+   "note": "Symbol aus der Gefährten-Reihe des echten Tisches"
+  }
+ }
 }

@@ -80,7 +80,9 @@ a { color: var(--accent); }
 @keyframes dash { to { stroke-dashoffset: -30; } }
 .path { fill: none; stroke: var(--path); stroke-width: 2.5; vector-effect: non-scaling-stroke; stroke-opacity: .55; stroke-linecap: round; stroke-linejoin: round; }
 .path.p2 { stroke-dasharray: 3 6; }
-.ball { fill: #fff; stroke: var(--path); vector-effect: non-scaling-stroke; stroke-width: 2; filter: drop-shadow(0 0 6px var(--path)); }
+.ball-img { filter: drop-shadow(0 0 1px rgba(0,0,0,.6)); }
+.ball-shadow { fill: #000; opacity: .45; filter: blur(2px); }
+.ballg { transition: opacity .15s; }
 .flip-dot { fill: #fff; opacity: .9; }
 .ins-mark { fill: rgba(87, 214, 168, .15); stroke: var(--insert); stroke-width: 2.5; stroke-dasharray: 5 4; vector-effect: non-scaling-stroke; }
 .hit { fill: transparent; stroke: none; pointer-events: all; cursor: pointer; }
@@ -222,3 +224,33 @@ textarea.export { width: 100%; min-height: 120px; background: var(--bg); color: 
   .shot-outline.pulse, .aim.run, .ring { animation: none; }
   .pf-wrap.anim { transition: none; }
 }
+
+/* Abzeichen (Symbole) in Beschriftungen */
+.lbl { display: flex; align-items: center; gap: 7px; }
+.lbl .ico { width: 30px; height: 30px; border-radius: 50%; flex: none; box-shadow: 0 0 0 1.5px rgba(0,0,0,.6); }
+.lbl .lt { display: block; }
+.lbl.compact .ico { width: 26px; height: 26px; margin-left: -2px; }
+
+/* Schritt-Hinweis aufklappbar */
+.step-banner { cursor: pointer; }
+.step-banner .bt { display: flex; gap: 6px; align-items: baseline; }
+.step-banner .more { margin-left: auto; color: var(--muted); transition: transform .2s; }
+.step-banner .bd { display: none; margin-top: 6px; font-size: 13.5px; color: var(--text); }
+.step-banner .bd div { margin-top: 4px; }
+.step-banner .bd em { font-style: normal; color: var(--faint); font-size: 12px; margin-right: 4px; }
+.step-banner.open .bd { display: block; }
+.step-banner.open .more { transform: rotate(180deg); }
+
+/* Vollbild */
+#table.fs .topbar, #table.fs .sheet { display: none; }
+#table.fs .stage { position: fixed; inset: 0; z-index: 30; height: 100dvh; }
+#table.fs .step-banner { top: calc(var(--safe-t) + 10px); max-height: 60dvh; overflow-y: auto; }
+#table.fs .stage-btns { top: calc(var(--safe-t) + 10px); }
+#table.fs .nav-btns { bottom: calc(var(--safe-b) + 14px); }
+#table.fs .corr-bar { bottom: calc(var(--safe-b) + 66px); }
+.icon-row .ir { display: flex; align-items: center; gap: 8px; }
+.icon-row img { width: 34px; height: 34px; border-radius: 50%; }
+.lbl.compact .lt b { font-size: 12.5px; }
+.lbl.compact .lt i { font-size: 10.5px; }
+.lbl.compact .ico { width: 24px; height: 24px; }
+.lbl.compact { gap: 6px; }

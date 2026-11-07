@@ -204,10 +204,20 @@
     el.addEventListener('wheel', e => { e.preventDefault(); zoomAt(e.clientX, e.clientY, e.deltaY < 0 ? 1.15 : 1 / 1.15); }, { passive: false });
     window.addEventListener('resize', () => { if (!$('#table').hidden) { st.sel ? focusSel(false) : fitAll(false); } });
     $('#btnFit').onclick = () => fitAll();
+    $('#btnFs').onclick = () => toggleFs();
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && $('#table').classList.contains('fs')) toggleFs(false); });
     $('#btnClear').onclick = () => clearSel();
     $('#btnNext').onclick = () => stepNav(1);
     $('#btnPrev').onclick = () => stepNav(-1);
     $('#btnCorrReset').onclick = () => { if (!st.sel) return; st.sel.items.forEach(it => setCorr(it.key, [0, 0], true)); redraw(); toast('Korrektur zurückgesetzt'); };
+  }
+  function toggleFs(on) {
+    const t = $('#table'); on = on ?? !t.classList.contains('fs');
+    t.classList.toggle('fs', on);
+    $('#btnFs').setAttribute('aria-label', on ? 'Vollbild verlassen' : 'Vollbild');
+    $('#btnFs').innerHTML = on ? '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/></svg>' : '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>';
+    try { if (on && document.documentElement.requestFullscreen && !document.fullscreenElement) document.documentElement.requestFullscreen().catch(() => {}); if (!on && document.fullscreenElement) document.exitFullscreen().catch(() => {}); } catch { /* iOS: CSS-Vollbild reicht */ }
+    setTimeout(() => (st.sel && st.sel.items.length ? focusSel(false) : fitAll(false)), 60);
   }
   function zoomAt(cx, cy, f, animate) {
     const r = stage().getBoundingClientRect();
@@ -238,7 +248,7 @@
     items = items.map(it => ({ ...it, key: `${it.kind}:${it.id}` }));
     const avail = items.filter(it => geomFor(it.kind, it.id));
     const missing = items.filter(it => !geomFor(it.kind, it.id));
-    st.sel = { items: avail, banner: opts.banner || null, numbered: opts.numbered ?? avail.length > 1 };
+    st.sel = { items: avail, banner: opts.banner || null, numbered: opts.numbered ?? avail.length > 1, badges: opts.badges || null };
     if (missing.length && !avail.length) toast(st.view === 'vpw' ? 'In der VPX-Ansicht nicht markiert – auf „Echt“ wechseln.' : 'Für diesen Schritt gibt es keine feste Stelle im Spielfeld.');
     else if (missing.length) toast('Einige Stellen sind in dieser Ansicht nicht markiert.');
     $('#btnClear').hidden = !avail.length && !opts.banner;
@@ -285,7 +295,8 @@
           }
           svg.append(grp);
           const top = topPoint(g.outline.flat().map(p => [p[0] + o[0], p[1] + o[1]]));
-          labels.push({ c: g.center ? [g.center[0] + o[0], g.center[1] + o[1]] : top, name: sh.name, en: sh.en, num: st.sel.numbered ? i + 1 : null, kind: 'shot', key: it.key });
+          const bdg = st.sel.badges && st.sel.badges[it.id] && st.data.icons && st.data.icons[st.sel.badges[it.id]];
+          labels.push({ c: g.center ? [g.center[0] + o[0], g.center[1] + o[1]] : top, name: bdg ? bdg.name : sh.name, en: bdg ? sh.name : sh.en, sub: bdg ? sh.name : null, icon: bdg ? bdg.img : null, num: !bdg && st.sel.numbered ? i + 1 : null, kind: 'shot', key: it.key });
         } else {
           const r = g.r * v.w;
           for (const p of shiftPts(g.points, o)) {
@@ -323,7 +334,7 @@
     }
     const order = items.filter(it => !it.L.ringOnly).sort((a, b) => a.c[1] - b.c[1]);
     for (const it of order) {
-      const L = it.L, w = compact ? Math.min(160, 30 + L.name.length * 6.6) : Math.min(260, 40 + Math.max(L.name.length, L.en.length * 0.85) * 7.4), hh = compact ? 26 : 44;
+      const L = it.L, w = compact ? (L.icon ? 30 : 0) + Math.min(170, 24 + Math.max(L.name.length * 6.6, L.sub ? L.sub.length * 5.4 : 0)) : Math.min(260, (L.icon ? 38 : 0) + 30 + Math.max(L.name.length, (L.sub || L.en).length * 0.85) * 7.4), hh = compact ? (L.sub ? 34 : 26) : 44;
       const cands = [[0, -(hh / 2 + 26)], [0, hh / 2 + 26], [-(w / 2 + 24), 0], [w / 2 + 24, 0], [0, -(hh / 2 + 62)], [0, hh / 2 + 62], [-(w / 2 + 24), -40], [w / 2 + 24, -40]];
       let best = null, bestScore = Infinity;
       for (const [dx, dy] of cands) {
@@ -341,7 +352,8 @@
       ln.setAttribute('class', L.kind === 'ins' ? 'ins' : '');
       lineSvg.append(ln);
       const el = h('div', { class: 'lbl' + (L.kind === 'ins' ? ' ins' : '') + (compact ? ' compact' : ''), style: `left:${best.x}px;top:${best.y}px`, 'data-hit': L.key },
-        h('b', {}, L.num ? h('span', { class: 'num' }, String(L.num)) : null, L.name), compact ? null : h('i', {}, L.en));
+        L.icon ? h('img', { class: 'ico', src: L.icon, alt: '' }) : null,
+        h('span', { class: 'lt' }, h('b', {}, L.num ? h('span', { class: 'num' }, String(L.num)) : null, L.name), (compact && !L.sub) ? null : h('i', {}, L.sub || L.en)));
       layer.append(el);
     }
   }
@@ -354,45 +366,67 @@
     const toPx = (pts, o) => pts.map(p => [(p[0] + o[0]) * v.w, (p[1] + o[1]) * v.h]);
     const seqs = items.map(it => {
       const g = geomFor('shot', it.id), o = getCorr(it.key);
-      return { aims: (g.aim || []).map(a => toPx(a, o)), path: g.path ? toPx(g.path, o) : null, path2: g.path2 ? toPx(g.path2, o) : null };
+      const segs = [];
+      if (g.path) segs.push({ pts: toPx(g.path, o), d: (g.pathBall || []).map(x => x * v.w) });
+      if (g.path2) segs.push({ pts: toPx(g.path2, o), d: (g.path2Ball || []).map(x => x * v.w) });
+      return { aims: (g.aim || []).map(a => toPx(a, o)), segs };
     });
-    // statische Bahnlinien (bei Einzelschuss) – leicht sichtbar
-    if (single) {
-      const q = seqs[0];
-      if (q.path) layer.append(s('polyline', { class: 'path', points: q.path.map(p => p.join(',')).join(' ') }));
-      if (q.path2) layer.append(s('polyline', { class: 'path p2', points: q.path2.map(p => p.join(',')).join(' ') }));
-    }
-    const aimEls = [], ball = s('circle', { class: 'ball', r: Math.max(7, v.w * 0.009), cx: -99, cy: -99 });
-    layer.append(ball);
+    if (single) for (const [i, sg] of seqs[0].segs.entries()) layer.append(s('polyline', { class: 'path' + (i ? ' p2' : ''), points: sg.pts.map(p => p.join(',')).join(' ') }));
+    // Kugel: Foto einer polierten Stahlkugel, maßstabsgetreu (1 1/16 Zoll), mit Schatten und kurzer Spur
+    const ballG = s('g', { class: 'ballg' });
+    const TRAIL = 4, trail = [];
+    for (let i = TRAIL; i >= 1; i--) { const t = s('image', { href: 'img/ball.png', class: 'trail', opacity: (0.22 * (1 - i / (TRAIL + 1))).toFixed(2) }); trail.push(t); ballG.append(t); }
+    const shadow = s('ellipse', { class: 'ball-shadow' });
+    const ball = s('image', { href: 'img/ball.png', class: 'ball-img' });
+    ballG.append(shadow); ballG.append(ball);
+    layer.append(ballG); ballG.style.opacity = 0;
+    const aimEls = [];
     let idx = 0, t0 = performance.now();
-    const len = pts => { let L = 0; for (let i = 1; i < pts.length; i++) L += Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]); return L; };
-    const at = (pts, d) => { for (let i = 1; i < pts.length; i++) { const sl = Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]); if (d <= sl) { const k = d / sl; return [pts[i - 1][0] + (pts[i][0] - pts[i - 1][0]) * k, pts[i - 1][1] + (pts[i][1] - pts[i - 1][1]) * k]; } d -= sl; } return pts[pts.length - 1]; };
-    const speed = v.w * 0.9; // px pro Sekunde (im Bild)
+    const seglen = pts => { const L = [0]; for (let i = 1; i < pts.length; i++) L.push(L[i - 1] + Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1])); return L; };
+    const speed = v.w * 0.42; // Bildpixel pro Sekunde (halbes Tempo gegenüber der ersten Fassung)
     const setup = () => {
       aimEls.forEach(e => e.remove()); aimEls.length = 0;
       const q = seqs[idx];
-      for (const a of q.aims) { const l = s('polyline', { class: 'aim run', points: a.map(p => p.join(',')).join(' ') }); layer.insertBefore(l, ball); aimEls.push(l); }
-      if (!single && q.path) { const l = s('polyline', { class: 'path', points: q.path.map(p => p.join(',')).join(' ') }); layer.insertBefore(l, ball); aimEls.push(l); }
-      const segs = [];
-      if (q.path) segs.push(q.path);
-      if (q.path2) segs.push(q.path2);
-      q.segs = segs; q.total = segs.reduce((a, p) => a + len(p), 0);
-      q.aimDur = q.aims.length ? 1100 : 0;
+      for (const a of q.aims) { const l = s('polyline', { class: 'aim run', points: a.map(p => p.join(',')).join(' ') }); layer.insertBefore(l, ballG); aimEls.push(l); }
+      if (!single) for (const sg of q.segs) { const l = s('polyline', { class: 'path', points: sg.pts.map(p => p.join(',')).join(' ') }); layer.insertBefore(l, ballG); aimEls.push(l); }
+      q.segs.forEach(sg => { sg.L = seglen(sg.pts); });
+      q.total = q.segs.reduce((a, sg) => a + sg.L[sg.L.length - 1], 0);
+      q.aimDur = q.aims.length ? 1700 : 300;
       q.runDur = q.total / speed * 1000;
-      q.dur = q.aimDur + q.runDur + 900;
+      q.dur = q.aimDur + q.runDur + 1400;
     };
+    const posAt = (q, dist) => {
+      for (const sg of q.segs) {
+        const L = sg.L, tot = L[L.length - 1];
+        if (dist <= tot) {
+          let i = 1; while (i < L.length - 1 && L[i] < dist) i++;
+          const k = (dist - L[i - 1]) / Math.max(L[i] - L[i - 1], 1e-6);
+          const p0 = sg.pts[i - 1], p1 = sg.pts[i];
+          const d0 = sg.d[i - 1] || sg.d[0] || 20, d1 = sg.d[i] || d0;
+          return [p0[0] + (p1[0] - p0[0]) * k, p0[1] + (p1[1] - p0[1]) * k, d0 + (d1 - d0) * k];
+        }
+        dist -= tot;
+      }
+      const sg = q.segs[q.segs.length - 1]; const p = sg.pts[sg.pts.length - 1]; return [p[0], p[1], sg.d[sg.d.length - 1] || 20];
+    };
+    const place = (el, p) => { el.setAttribute('x', p[0] - p[2] / 2); el.setAttribute('y', p[1] - p[2] / 2); el.setAttribute('width', p[2]); el.setAttribute('height', p[2]); };
     setup();
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const tick = now => {
       const q = seqs[idx]; let t = now - t0;
       if (t > q.dur) { idx = (idx + 1) % seqs.length; t0 = now; setup(); t = 0; }
       const tr = t - q.aimDur;
-      if (!reduce && q.total && tr >= 0 && tr <= q.runDur) {
-        let d = tr / q.runDur * q.total, p = null;
-        for (const sg of q.segs) { const L = len(sg); if (d <= L) { p = at(sg, d); break; } d -= L; }
-        p = p || q.segs[q.segs.length - 1].slice(-1)[0];
-        ball.setAttribute('cx', p[0]); ball.setAttribute('cy', p[1]); ball.style.opacity = 1;
-      } else ball.style.opacity = 0;
+      if (!reduce && q.total && tr >= 0 && tr <= q.runDur + 500) {
+        const e = Math.min(tr / q.runDur, 1);
+        const ease = e < 0.5 ? 2 * e * e : 1 - Math.pow(-2 * e + 2, 2) / 2; // sanft anrollen und auslaufen
+        const dist = ease * q.total;
+        const p = posAt(q, dist);
+        place(ball, p);
+        shadow.setAttribute('cx', p[0] + p[2] * 0.12); shadow.setAttribute('cy', p[1] + p[2] * 0.22);
+        shadow.setAttribute('rx', p[2] * 0.5); shadow.setAttribute('ry', p[2] * 0.42);
+        trail.forEach((el, i) => place(el, posAt(q, Math.max(0, dist - (TRAIL - i) * p[2] * 0.45))));
+        ballG.style.opacity = tr > q.runDur ? Math.max(0, 1 - (tr - q.runDur) / 500) : Math.min(1, tr / 200);
+      } else ballG.style.opacity = 0;
       st.anim.raf = requestAnimationFrame(tick);
     };
     st.anim = { raf: requestAnimationFrame(tick) };
@@ -407,11 +441,17 @@
     cards.forEach((c, i) => c.classList.toggle('sel', i === st.seqIdx));
     cards[st.seqIdx]?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
     const b = $('#stepBanner'); b.hidden = false; b.innerHTML = '';
-    b.append(h('span', { class: 'k' }, `${st.seqIdx + 1}/${list.length}`), step.title);
+    const det = h('div', { class: 'bd' });
+    if (step.prep) det.append(h('div', {}, h('em', {}, 'Vorbereiten '), step.prep));
+    if (step.go) det.append(h('div', {}, h('em', {}, 'Wohin '), step.go));
+    if (step.why) det.append(h('div', {}, h('em', {}, 'Bringt '), step.why));
+    if (step.text) det.append(h('div', {}, step.text));
+    b.append(h('div', { class: 'bt' }, h('span', { class: 'k' }, `${st.seqIdx + 1}/${list.length}`), h('span', {}, step.title), h('span', { class: 'more', 'aria-hidden': 'true' }, '▾')), det);
+    b.onclick = () => b.classList.toggle('open');
     $('#navBtns').hidden = list.length < 2;
     $('#btnPrev').disabled = st.seqIdx === 0; $('#btnPrev').style.opacity = st.seqIdx === 0 ? .4 : 1;
     $('#btnNext').textContent = st.seqIdx === list.length - 1 ? 'Fertig ✓' : 'Weiter ›';
-    select((step.shots || []).map(id => ({ kind: 'shot', id })), { banner: step.title });
+    select((step.shots || []).map(id => ({ kind: 'shot', id })), { banner: step.title, badges: step.badges });
   }
   function stepNav(d) {
     if (!st.seq) return;
@@ -532,6 +572,7 @@
         const card = h('div', { class: 'card detail' },
           h('h3', {}, sh.name), h('div', { class: 'en' }, `${sh.en} · ${sh.kind}`),
           sh.flipper ? h('div', { class: 'row' }, h('span', { class: 'k' }, 'Schießen von'), FL[sh.flipper] + (sh.flipper !== 'beide' ? ' (aus der Geometrie abgeleitet)' : '')) : h('div', { class: 'row' }, h('span', { class: 'k' }, 'Schießen von'), 'nicht direkt – siehe Beschreibung'),
+          sh.icon && st.data.icons[sh.icon] ? h('div', { class: 'row icon-row' }, h('span', { class: 'k' }, 'Sammelt'), h('span', { class: 'ir' }, h('img', { src: st.data.icons[sh.icon].img, alt: '' }), st.data.icons[sh.icon].name + ' (Symbol wie in der Gefährten-Reihe)')) : null,
           h('div', { class: 'row' }, h('span', { class: 'k' }, 'Was ist das?'), sh.what),
           h('div', { class: 'row' }, h('span', { class: 'k' }, 'Wohin läuft die Kugel?'), sh.returns),
           h('div', { class: 'row' }, h('span', { class: 'k' }, 'Bringt'), h('ul', {}, sh.awards.map(a => h('li', {}, a)))),

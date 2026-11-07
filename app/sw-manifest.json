@@ -1,5 +1,5 @@
 {
- "version": "b92558819fb9",
+ "version": "7c2c99b55571",
  "assets": [
   "./",
   "app.css",
@@ -12,9 +12,19 @@
   "icons/icon-192.png",
   "icons/icon-512.png",
   "icons/icon.svg",
+  "img/ball.png",
   "img/lotr-real.jpg",
   "img/lotr-thumb.jpg",
   "img/lotr-vpw16.jpg",
+  "img/lotr/fs-aragorn.png",
+  "img/lotr/fs-boromir.png",
+  "img/lotr/fs-frodo.png",
+  "img/lotr/fs-gandalf.png",
+  "img/lotr/fs-gimli.png",
+  "img/lotr/fs-legolas.png",
+  "img/lotr/fs-merry.png",
+  "img/lotr/fs-pippin.png",
+  "img/lotr/fs-sam.png",
   "sw-manifest.json"
  ]
 }

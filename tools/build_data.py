@@ -60,10 +60,20 @@ def proj(view, pts):
     p = apply(v['H'], pts)
     return [[round((x-x0)/(x1-x0), 4), round((y-y0)/(y1-y0), 4)] for x, y in p]
 
+def ball_d(view, pts):
+    """Kugeldurchmesser (50 VPX-Einheiten = 1 1/16 Zoll) je Bahnpunkt, normiert auf die Bildbreite."""
+    v = VIEWS[view]; x0, y0, x1, y1 = v['crop']
+    out = []
+    for x, y in pts:
+        a, b, c = apply(v['H'], [(x - 25, y), (x + 25, y), (x, y + 25)])
+        d = (math.hypot(*(b - a)) + 2 * math.hypot(*(c - (a + b) / 2))) / 2
+        out.append(round(d / (x1 - x0), 4))
+    return out
+
 def build():
     out = {'table': content['table'], 'sources': content['sources'], 'views': {}, 'shots': {}, 'inserts': {},
            'strategies': content['strategies'], 'multiballs': content['multiballs'], 'modes': content['modes'], 'modesIntro': content.get('modesIntro', ''),
-           'glossary': content.get('glossary', []), 'limits': content.get('limits', [])}
+           'icons': content.get('icons', {}), 'glossary': content.get('glossary', []), 'limits': content.get('limits', [])}
     for vk, v in VIEWS.items():
         x0, y0, x1, y1 = v['crop']
         out['views'][vk] = {'image': 'img/' + v['out'], 'w': x1-x0, 'h': y1-y0, **content['views'][vk]}
@@ -82,10 +92,10 @@ def build():
                 fl = meta.get('flipper')
                 if fl:
                     gv['aim'] = [proj(vk, [geo['flippers'][k]['aim'], items[0]['c']]) for k in (['L', 'R'] if fl == 'beide' else [fl])]
-                if 'path' in g:
-                    gv['path'] = proj(vk, g['path'])
-                if 'path2' in g:
-                    gv['path2'] = proj(vk, g['path2'])
+                for pk in ('path', 'path2'):
+                    if pk in g:
+                        gv[pk] = proj(vk, g[pk])
+                        gv[pk + 'Ball'] = ball_d(vk, g[pk])
             ov = meta.get('override', {}).get(vk)
             if ov:  # direkt gemessene Bildkoordinaten (Pixel im Original) fuer erhoehte/verdeckte Objekte
                 x0, y0, x1, y1 = VIEWS[vk]['crop']
