@@ -1,7 +1,8 @@
-"""Projiziert die VPX-Geometrie in beide Spielfeldbilder und schreibt app/data/lotr.json.
+"""Projiziert die Tisch-Geometrie in die Spielfeldbilder und schreibt app/data/<tisch>.json.
 
-Aufruf (im Projektordner):  py -3 -I tools/build_data.py [--check]
---check rendert zusätzlich Prüfbilder nach _quellen/pages/check_*.png
+Aufruf (im Projektordner):  py -3 -I tools/build_data.py <tisch> [--check]
+Konfiguration je Tisch: content/<tisch>/build.json (Ansichten, Homographien, Bildausschnitte).
+--check rendert Prüfbilder nach _quellen/pages/check_<tisch>_<ansicht>.png
 """
 import json, math, os, sys, shutil
 sys.path.insert(0, os.path.dirname(__file__))
@@ -9,22 +10,38 @@ from homography import apply
 import numpy as np
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-geo = json.load(open(os.path.join(ROOT, 'content/lotr/geometry.json'), encoding='utf-8'))
-content = json.load(open(os.path.join(ROOT, 'content/lotr/content.json'), encoding='utf-8'))
-inserts = json.load(open(os.path.join(ROOT, 'content/lotr/inserts.json'), encoding='utf-8'))
+TABLE = next((a for a in sys.argv[1:] if not a.startswith('--')), 'lotr')
+CD = os.path.join(ROOT, 'content', TABLE)
+geo = json.load(open(os.path.join(CD, 'geometry.json'), encoding='utf-8'))
+content = json.load(open(os.path.join(CD, 'content.json'), encoding='utf-8'))
+inserts = json.load(open(os.path.join(CD, 'inserts.json'), encoding='utf-8'))
+cfg = json.load(open(os.path.join(CD, 'build.json'), encoding='utf-8'))
+VIEWS = {}
+for vk, v in cfg['views'].items():
+    VIEWS[vk] = dict(v, H=np.array(json.load(open(os.path.join(ROOT, v['H'])))), crop=tuple(v['crop']))
+INS_VIEW = cfg.get('insertsView', 'real')
 
-VIEWS = {
-    'real': {
-        'H': np.array(json.load(open(os.path.join(ROOT, 'tools/H_photo.json')))),
-        'src': '_quellen/fotos/gorilla-top-down.jpg', 'crop': (590, 280, 1550, 1720),
-        'out': 'lotr-real.jpg', 'quality': 90,
-    },
-    'vpw': {
-        'H': np.array(json.load(open(os.path.join(ROOT, 'tools/H_vpw.json')))),
-        'src': '_quellen/vpx/vpw16_screenshot.png', 'crop': (0, 0, 1000, 2132),
-        'out': 'lotr-vpw16.jpg', 'quality': 88,
-    },
-}
+# Geometrie wahlweise in Bildpixeln einer Ansicht erfasst -> in VPX-Koordinaten umrechnen
+if geo.get('space', 'vpx') != 'vpx':
+    pv = geo['space'].split(':')[1]
+    Hi = np.linalg.inv(VIEWS[pv]['H'])
+    tv = lambda p: [float(x) for x in apply(Hi, [p])[0]]
+    sc = float(geo.get('pxToVpx', 0.75))
+    def conv(e):
+        e = dict(e)
+        for k in ('c', 'toward'):
+            if k in e: e[k] = tv(e[k])
+        for k in ('len', 'w', 'r'):
+            if k in e: e[k] = e[k] * sc
+        if 'items' in e: e['items'] = [conv(i) for i in e['items']]
+        return e
+    for sh in geo['shots'].values():
+        sh['entrance'] = conv(sh['entrance'])
+        for pk in ('path', 'path2'):
+            if pk in sh: sh[pk] = [tv(p) for p in sh[pk]]
+    for f in geo['flippers'].values():
+        for k in ('pivot', 'aim'):
+            if k in f and geo.get('flipperSpace', 'vpx') != 'vpx': f[k] = tv(f[k])
 
 def unit(a, b):
     dx, dy = b[0]-a[0], b[1]-a[1]; n = math.hypot(dx, dy) or 1
@@ -91,7 +108,9 @@ def build():
                 gv['center'] = proj(vk, [items[0]['c']])[0] if len(items) == 1 else proj(vk, [tuple(np.mean([it['c'] for it in items], axis=0))])[0]
                 fl = meta.get('flipper')
                 if fl:
-                    gv['aim'] = [proj(vk, [geo['flippers'][k]['aim'], items[0]['c']]) for k in (['L', 'R'] if fl == 'beide' else [fl])]
+                    keys = ['L', 'R'] if fl == 'beide' else (fl if isinstance(fl, list) else [fl])
+                    gv['aim'] = [proj(vk, [geo['flippers'][k]['aim'], items[0]['c']]) for k in keys]
+                    gv['aimBall'] = [ball_d(vk, [geo['flippers'][k]['aim'], items[0]['c']]) for k in keys]
                 for pk in ('path', 'path2'):
                     if pk in g:
                         gv[pk] = proj(vk, g[pk])
@@ -111,17 +130,17 @@ def build():
             s['geom'][vk] = gv
         s.pop('override', None)
         out['shots'][sid] = s
-    # Einsaetze: Pixel im Originalfoto -> normiert (nur Ansicht 'real')
-    x0, y0, x1, y1 = VIEWS['real']['crop']
+    # Einsaetze: Pixel im Bild der Einsatz-Ansicht -> normiert
+    x0, y0, x1, y1 = VIEWS[INS_VIEW]['crop']
     for iid, ins in inserts.items():
         d = dict(ins)
-        d['geom'] = {'real': {'points': [[round((p[0]-x0)/(x1-x0), 4), round((p[1]-y0)/(y1-y0), 4)] for p in ins['px']],
+        d['geom'] = {INS_VIEW: {'points': [[round((p[0]-x0)/(x1-x0), 4), round((p[1]-y0)/(y1-y0), 4)] for p in ins['px']],
                               'r': round(ins.get('r', 14)/(x1-x0), 4)}}
         d.pop('px', None); d.pop('r', None)
         out['inserts'][iid] = d
     os.makedirs(os.path.join(ROOT, 'app/data'), exist_ok=True)
     os.makedirs(os.path.join(ROOT, 'app/img'), exist_ok=True)
-    json.dump(out, open(os.path.join(ROOT, 'app/data/lotr.json'), 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
+    json.dump(out, open(os.path.join(ROOT, f'app/data/{TABLE}.json'), 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
     from PIL import Image
     for vk, v in VIEWS.items():
         im = Image.open(os.path.join(ROOT, v['src'])).convert('RGB').crop(v['crop'])
@@ -148,12 +167,12 @@ def check(out):
                 d.polygon([P(p) for p in o], outline=(255, 140, 0))
             if g.get('center'):
                 c = P(g['center']); d.text((c[0]+6, c[1]-8), sid, fill=(255, 230, 0), font=f)
-        if vk == 'real':
+        if vk == INS_VIEW:
             for iid, ins in out['inserts'].items():
-                for p in ins['geom']['real']['points']:
-                    c = P(p); r = ins['geom']['real']['r']*W
+                for p in ins['geom'][vk]['points']:
+                    c = P(p); r = ins['geom'][vk]['r']*W
                     d.ellipse([c[0]-r, c[1]-r, c[0]+r, c[1]+r], outline=(0, 255, 120), width=2)
-        im.save(os.path.join(ROOT, f'_quellen/pages/check_{vk}.png'))
+        im.save(os.path.join(ROOT, f'_quellen/pages/check_{TABLE}_{vk}.png'))
 
 if __name__ == '__main__':
     o = build()

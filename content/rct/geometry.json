@@ -1,0 +1,33 @@
+{
+  "_note": "Eingänge in Pixeln des VPW-2.4-Vorschaubilds (1275 x 2559) erfasst und per inverser Homographie in VPX-Koordinaten umgerechnet. Grundlage: Schalter- und Rampen-Soundtrigger-Positionen aus der VPW-Tischdatei (ramptrigger006 = Flying Ghost, ramptrigger001 = Flying Turns, ramptrigger0001/004 = Chicago Loop), gegengeprüft mit dem Stern-Schalterplan (Handbuch S. 3-17) und den Pfeil-Einsätzen. Flipper in VPX-Koordinaten.",
+  "space": "px:vpw",
+  "pxToVpx": 0.75,
+  "flippers": {
+    "L":  { "pivot": [311, 1766], "aim": [381, 1770] },
+    "R":  { "pivot": [625, 1766], "aim": [555, 1770] },
+    "UR": { "pivot": [833, 707],  "aim": [775, 723] },
+    "ML": { "pivot": [130, 1124], "aim": [166, 1142] }
+  },
+  "shots": {
+    "chicago_loop": { "entrance": { "type": "lane", "c": [410, 1092], "toward": [404, 930], "len": 70, "w": 54 } },
+    "flying_ghost": { "entrance": { "type": "lane", "c": [800, 640], "toward": [786, 430], "len": 80, "w": 70 } },
+    "flying_turns": { "entrance": { "type": "lane", "c": [968, 648], "toward": [984, 440], "len": 80, "w": 78 } },
+    "rocket":       { "entrance": { "type": "lane", "c": [646, 540], "toward": [659, 452], "len": 60, "w": 60 } },
+    "ghost_target": { "entrance": { "type": "rect", "c": [862, 666], "toward": [862, 600], "len": 18, "w": 44 } },
+    "kiosk":        { "entrance": { "type": "multi", "items": [ { "type": "rect", "c": [912, 1684], "toward": [943, 1620], "len": 40, "w": 66 }, { "type": "circle", "c": [943, 1644], "r": 30 } ] } },
+    "skill_hole":   { "entrance": { "type": "circle", "c": [1058, 1205], "r": 32 } },
+    "eat":          { "entrance": { "type": "multi", "items": [ { "type": "rect", "c": [983, 1307], "toward": [920, 1300], "len": 16, "w": 50 }, { "type": "rect", "c": [966, 1369], "toward": [903, 1362], "len": 16, "w": 50 }, { "type": "rect", "c": [949, 1431], "toward": [886, 1424], "len": 16, "w": 50 } ] } },
+    "rd":           { "entrance": { "type": "multi", "items": [ { "type": "rect", "c": [465, 924], "toward": [530, 912], "len": 16, "w": 50 }, { "type": "rect", "c": [478, 983], "toward": [543, 971], "len": 16, "w": 50 }, { "type": "rect", "c": [491, 1043], "toward": [556, 1031], "len": 16, "w": 50 } ] } },
+    "maintenance":  { "entrance": { "type": "rect", "c": [1036, 712], "toward": [986, 752], "len": 20, "w": 56 } },
+    "dummy":        { "entrance": { "type": "multi", "items": [ { "type": "rect", "c": [220, 549], "toward": [250, 600], "len": 16, "w": 44 }, { "type": "rect", "c": [371, 598], "toward": [400, 650], "len": 16, "w": 44 } ] } },
+    "left_orbit":   { "entrance": { "type": "lane", "c": [150, 640], "toward": [146, 560], "len": 70, "w": 56 } },
+    "right_loop":   { "entrance": { "type": "lane", "c": [1178, 500], "toward": [1178, 420], "len": 80, "w": 56 } },
+    "mini_feed":    { "entrance": { "type": "lane", "c": [318, 1215], "toward": [310, 1150], "len": 60, "w": 50 } },
+    "top_lanes":    { "entrance": { "type": "multi", "items": [ { "type": "rect", "c": [183, 339], "toward": [183, 280], "len": 70, "w": 36 }, { "type": "rect", "c": [290, 343], "toward": [290, 284], "len": 70, "w": 36 }, { "type": "rect", "c": [396, 343], "toward": [396, 284], "len": 70, "w": 36 } ] } },
+    "bumpers":      { "entrance": { "type": "multi", "items": [ { "type": "circle", "c": [129, 1017], "r": 44 }, { "type": "circle", "c": [137, 774], "r": 44 }, { "type": "circle", "c": [365, 865], "r": 44 } ] } },
+    "lock_lane":    { "entrance": { "type": "lane", "c": [86, 2115], "toward": [86, 2000], "len": 150, "w": 46 } },
+    "outlanes":     { "entrance": { "type": "multi", "items": [ { "type": "rect", "c": [173, 2066], "toward": [173, 1990], "len": 60, "w": 38 }, { "type": "rect", "c": [255, 1929], "toward": [255, 1850], "len": 60, "w": 38 }, { "type": "rect", "c": [1001, 1945], "toward": [1001, 1866], "len": 60, "w": 38 }, { "type": "rect", "c": [1104, 2023], "toward": [1104, 1944], "len": 60, "w": 38 } ] } },
+    "plunger":      { "entrance": { "type": "lane", "c": [1186, 2300], "toward": [1186, 2150], "len": 150, "w": 46 } },
+    "upper_flipper":{ "entrance": { "type": "circle", "c": [1097, 1004], "r": 40 } }
+  }
+}

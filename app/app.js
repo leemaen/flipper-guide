@@ -57,7 +57,7 @@
     for (const t of st.tables) {
       list.append(h('button', { class: 'lib-card', style: `--card-accent:${t.accent}`, onclick: () => (location.hash = t.id) },
         h('div', { class: 'thumb', style: `background-image:url(${t.thumb})` }),
-        h('div', { class: 'meta' }, h('div', { class: 'n' }, t.name), h('div', { class: 's' }, `${t.manufacturer} ${t.year}`),
+        h('div', { class: 'meta' }, h('div', { class: 'nm' }, t.name), h('div', { class: 's' }, `${t.manufacturer} ${t.year}`),
           h('div', { class: 's' }, t.versions), h('div', { class: 'ok', 'data-offline': t.id }, ''))));
     }
     offlineStatus().then(ok => {
@@ -78,7 +78,7 @@
     $('#tName').textContent = T.name;
     $('#tSub').textContent = `${T.manufacturer} ${T.year} · ${T.system}`;
     document.title = T.name + ' – Flipper-Guide';
-    if (!st.data.views[st.view]) st.view = 'real';
+    if (!st.data.views[st.view]) st.view = Object.keys(st.data.views)[0];
     renderViewSeg(); renderTabs(); setupStage(); setupSheet();
     loadImage();
   }
@@ -88,6 +88,7 @@
     for (const [k, v] of Object.entries(st.data.views)) {
       seg.append(h('button', { role: 'tab', 'aria-selected': String(k === st.view), onclick: () => { if (st.view === k) return; st.view = k; store.set('view', k); renderViewSeg(); loadImage(); } },
         k === 'real' ? 'Echt' : 'VPX'));
+    seg.hidden = Object.keys(st.data.views).length < 2;
     }
   }
 
@@ -249,7 +250,7 @@
     const avail = items.filter(it => geomFor(it.kind, it.id));
     const missing = items.filter(it => !geomFor(it.kind, it.id));
     st.sel = { items: avail, banner: opts.banner || null, numbered: opts.numbered ?? avail.length > 1, badges: opts.badges || null };
-    if (missing.length && !avail.length) toast(st.view === 'vpw' ? 'In der VPX-Ansicht nicht markiert – auf „Echt“ wechseln.' : 'Für diesen Schritt gibt es keine feste Stelle im Spielfeld.');
+    if (missing.length && !avail.length) toast(st.view === 'vpw' && st.data.views.real ? 'In der VPX-Ansicht nicht markiert – auf „Echt“ wechseln.' : 'Für diesen Schritt gibt es keine feste Stelle im Spielfeld.');
     else if (missing.length) toast('Einige Stellen sind in dieser Ansicht nicht markiert.');
     $('#btnClear').hidden = !avail.length && !opts.banner;
     $('#corrBar').hidden = !(st.corrMode && avail.length === 1);
@@ -582,7 +583,7 @@
       } else {
         const ins = st.data.inserts[D.id];
         body.append(h('div', { class: 'card detail' }, h('h3', { style: 'color:var(--insert)' }, ins.name), h('div', { class: 'en' }, `${ins.en} · Anzeige, kein Ziel`), h('div', { class: 'row' }, ins.text),
-          st.view !== 'real' ? h('div', { class: 'row muted' }, 'Nur in der Ansicht „Echt“ markiert (VPW hat diese Einsätze anders angeordnet).') : null));
+          !ins.geom[st.view] ? h('div', { class: 'row muted' }, 'In dieser Ansicht nicht markiert (VPW hat diese Einsätze anders angeordnet).') : null));
       }
     }
     body.append(h('div', { class: 'sec-h' }, 'Schüsse und Ziele'));

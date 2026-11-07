@@ -1,0 +1,2 @@
+{ "views": { "vpw": { "H": "tools/rct/H_vpw.json", "src": "_quellen/rct/vpw24_screenshot.png", "crop": [0, 0, 1275, 2559], "out": "rct-vpw24.jpg", "quality": 86 } },
+  "insertsView": "vpw" }

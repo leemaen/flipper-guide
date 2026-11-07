@@ -1,5 +1,5 @@
 {
- "version": "7c2c99b55571",
+ "version": "c49b3c02a85e",
  "assets": [
   "./",
   "app.css",
@@ -7,6 +7,7 @@
   "index.html",
   "manifest.webmanifest",
   "data/lotr.json",
+  "data/rct.json",
   "data/tables.json",
   "icons/icon-180.png",
   "icons/icon-192.png",
@@ -16,6 +17,8 @@
   "img/lotr-real.jpg",
   "img/lotr-thumb.jpg",
   "img/lotr-vpw16.jpg",
+  "img/rct-thumb.jpg",
+  "img/rct-vpw24.jpg",
   "img/lotr/fs-aragorn.png",
   "img/lotr/fs-boromir.png",
   "img/lotr/fs-frodo.png",

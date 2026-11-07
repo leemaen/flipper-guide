@@ -1,0 +1,29 @@
+{
+ "views": {
+  "real": {
+   "H": "tools/H_photo.json",
+   "src": "_quellen/fotos/gorilla-top-down.jpg",
+   "crop": [
+    590,
+    280,
+    1550,
+    1720
+   ],
+   "out": "lotr-real.jpg",
+   "quality": 90
+  },
+  "vpw": {
+   "H": "tools/H_vpw.json",
+   "src": "_quellen/vpx/vpw16_screenshot.png",
+   "crop": [
+    0,
+    0,
+    1000,
+    2132
+   ],
+   "out": "lotr-vpw16.jpg",
+   "quality": 88
+  }
+ },
+ "insertsView": "real"
+}

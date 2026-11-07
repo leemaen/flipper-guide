@@ -40,9 +40,9 @@ a { color: var(--accent); }
 .lib-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 14px; }
 .lib-card { text-align: left; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; padding: 0; }
 .lib-card .thumb { aspect-ratio: 3 / 4; background: #000 center / cover no-repeat; }
-.lib-card .n { color: var(--card-accent, var(--table)); }
+.lib-card .nm { color: var(--card-accent, var(--table)); }
 .lib-card .meta { padding: 10px 12px 12px; }
-.lib-card .n { font-weight: 650; font-size: 16px; line-height: 1.2; }
+.lib-card .nm { font-weight: 650; font-size: 16px; line-height: 1.2; }
 .lib-card .s { color: var(--muted); font-size: 13px; margin-top: 3px; }
 .lib-card .ok { color: var(--insert); font-size: 12px; margin-top: 6px; }
 .lib-foot { font-size: 13px; margin-top: 22px; }

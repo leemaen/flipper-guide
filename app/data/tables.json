@@ -1,3 +1,22 @@
 [
-  { "id": "lotr", "name": "The Lord of the Rings", "manufacturer": "Stern", "year": 2003, "versions": "Echt + VPX (VPW 1.6)", "accent": "#c9a227", "thumb": "img/lotr-thumb.jpg", "data": "data/lotr.json" }
+ {
+  "id": "lotr",
+  "name": "The Lord of the Rings",
+  "manufacturer": "Stern",
+  "year": 2003,
+  "versions": "Echt + VPX (VPW 1.6)",
+  "accent": "#c9a227",
+  "thumb": "img/lotr-thumb.jpg",
+  "data": "data/lotr.json"
+ },
+ {
+  "id": "rct",
+  "name": "RollerCoaster Tycoon",
+  "manufacturer": "Stern",
+  "year": 2002,
+  "versions": "VPX (VPW 2.4) · echter Tisch: gleiche Regeln",
+  "accent": "#e8473b",
+  "thumb": "img/rct-thumb.jpg",
+  "data": "data/rct.json"
+ }
 ]
