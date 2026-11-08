@@ -1,0 +1,17 @@
+{
+ "views": {
+  "real": {
+   "H": "tools/deadpool/H_photo.json",
+   "src": "_quellen/deadpool/fotos/stern_dp_pro_playfield.png",
+   "crop": [
+    130,
+    140,
+    1255,
+    2290
+   ],
+   "out": "deadpool-real.jpg",
+   "quality": 86
+  }
+ },
+ "insertsView": "real"
+}

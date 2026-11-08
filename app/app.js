@@ -38,6 +38,11 @@
       st.tables = await (await fetch('data/tables.json')).json();
     } catch (e) { document.body.innerHTML = '<p style="padding:24px">Daten konnten nicht geladen werden. Bitte einmal mit Internet öffnen.</p>'; return; }
     window.addEventListener('hashchange', route);
+    // Zurück zur Tischauswahl: Verlaufsschritt zurück, wenn wir aus der Bibliothek kamen (Browser-Zurück bleibt stimmig), sonst Hash leeren
+    $('#btnLib').onclick = () => {
+      if (st.fromLib) { st.fromLib = false; history.back(); }
+      else { history.replaceState(null, '', location.pathname + location.search); route(); }
+    };
     route();
   }
   function route() {
@@ -51,11 +56,12 @@
   // ---------- Bibliothek ----------
   function showLibrary() {
     store.set('libVisited', true);
-    stopAnim();
+    st.fromLib = false; stopAnim(); closeGuideMenu(); document.title = 'Flipper-Guide';
+    if ($('#table').classList.contains('fs')) toggleFs(false);
     $('#table').hidden = true; $('#library').hidden = false;
     const list = $('#libList'); list.innerHTML = '';
     for (const t of st.tables) {
-      list.append(h('button', { class: 'lib-card', style: `--card-accent:${t.accent}`, onclick: () => (location.hash = t.id) },
+      list.append(h('button', { class: 'lib-card', style: `--card-accent:${t.accent}`, onclick: () => { st.fromLib = true; location.hash = t.id; } },
         h('div', { class: 'thumb', style: `background-image:url(${t.thumb})` }),
         h('div', { class: 'meta' }, h('div', { class: 'nm' }, t.name), h('div', { class: 's' }, `${t.manufacturer} ${t.year}`),
           h('div', { class: 's' }, t.versions), h('div', { class: 'ok', 'data-offline': t.id }, ''))));
@@ -206,6 +212,9 @@
     window.addEventListener('resize', () => { if (!$('#table').hidden) { st.sel ? focusSel(false) : fitAll(false); } });
     $('#btnFit').onclick = () => fitAll();
     $('#btnFs').onclick = () => toggleFs();
+    $('#btnGuide').onclick = () => openGuideMenu();
+    $('#btnGuideStart').onclick = () => openGuideMenu();
+    $('#btnGuideClose').onclick = () => closeGuideMenu();
     document.addEventListener('keydown', e => { if (e.key === 'Escape' && $('#table').classList.contains('fs')) toggleFs(false); });
     $('#btnClear').onclick = () => clearSel();
     $('#btnNext').onclick = () => stepNav(1);
@@ -215,6 +224,8 @@
   function toggleFs(on) {
     const t = $('#table'); on = on ?? !t.classList.contains('fs');
     t.classList.toggle('fs', on);
+    if (!on) $('#guideMenu').hidden = true;
+    updateGuideStart();
     $('#btnFs').setAttribute('aria-label', on ? 'Vollbild verlassen' : 'Vollbild');
     $('#btnFs').innerHTML = on ? '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/></svg>' : '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>';
     try { if (on && document.documentElement.requestFullscreen && !document.fullscreenElement) document.documentElement.requestFullscreen().catch(() => {}); if (!on && document.fullscreenElement) document.exitFullscreen().catch(() => {}); } catch { /* iOS: CSS-Vollbild reicht */ }
@@ -260,6 +271,7 @@
     st.sel = null; st.seq = null; st.seqIdx = -1;
     $('#btnClear').hidden = true; $('#navBtns').hidden = true; $('#stepBanner').hidden = true; $('#corrBar').hidden = true;
     document.querySelectorAll('.card.sel').forEach(c => c.classList.remove('sel'));
+    updateGuideStart();
     document.querySelectorAll('.chip.on, .shot-btn.on').forEach(c => c.classList.remove('on'));
     redraw(); fitAll();
   }
@@ -453,7 +465,34 @@
     $('#btnPrev').disabled = st.seqIdx === 0; $('#btnPrev').style.opacity = st.seqIdx === 0 ? .4 : 1;
     $('#btnNext').textContent = st.seqIdx === list.length - 1 ? 'Fertig ✓' : 'Weiter ›';
     select((step.shots || []).map(id => ({ kind: 'shot', id })), { banner: step.title, badges: step.badges });
+    updateGuideStart();
   }
+  // ---------- Guide-Auswahl im Vollbild ----------
+  function guideGroups() {
+    const D = st.data, g = [];
+    if (D.strategies?.length) g.push(['Strategie', D.strategies.map(S => [S.title, S.subtitle, S.steps])]);
+    if (D.multiballs?.length) g.push(['Multibälle', D.multiballs.map(mb => [mb.name, mb.tag, [...mb.prep, mb.start, ...mb.score].filter(Boolean)])]);
+    if (D.modes?.length) g.push(['Modi', D.modes.filter(m => m.steps?.length).map(m => [m.name, m.film || '', m.steps])]);
+    return g;
+  }
+  function openGuideMenu() {
+    const list = $('#guideList'); list.innerHTML = '';
+    for (const [grp, items] of guideGroups()) {
+      if (!items.length) continue;
+      list.append(h('div', { class: 'gm-grp' }, grp));
+      for (const [title, sub, steps] of items) {
+        list.append(h('button', { class: 'gm-item', onclick: () => { closeGuideMenu(); setSeq(steps, 0, []); } },
+          h('span', { class: 'gm-t' }, title), h('span', { class: 'gm-s' }, `${sub ? sub + ' · ' : ''}${steps.length} Schritte`)));
+      }
+    }
+    $('#guideMenu').hidden = false; $('#btnGuideStart').hidden = true;
+  }
+  function closeGuideMenu() { const m = $('#guideMenu'); if (m) m.hidden = true; updateGuideStart(); }
+  function updateGuideStart() {
+    const b = $('#btnGuideStart'); if (!b) return;
+    b.hidden = !($('#table').classList.contains('fs') && !st.seq && $('#guideMenu').hidden);
+  }
+
   function stepNav(d) {
     if (!st.seq) return;
     const n = st.seqIdx + d;

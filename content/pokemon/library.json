@@ -1,0 +1,10 @@
+{
+ "id": "pokemon",
+ "name": "Pokémon",
+ "manufacturer": "Stern",
+ "year": 2026,
+ "versions": "Echter Tisch (Pro)",
+ "accent": "#f4d56c",
+ "thumb": "img/pokemon-thumb.jpg",
+ "data": "data/pokemon.json"
+}

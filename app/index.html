@@ -50,6 +50,9 @@
           <button class="fab" id="btnFs" aria-label="Vollbild">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
           </button>
+          <button class="fab fs-only" id="btnGuide" aria-label="Guide wählen">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01"/></svg>
+          </button>
           <button class="fab" id="btnFit" aria-label="Ganzes Spielfeld zeigen">
             <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="2"/><circle cx="12" cy="9" r="1.6"/></svg>
           </button>
@@ -60,6 +63,11 @@
         <div class="nav-btns" id="navBtns" hidden>
           <button class="pill ghost" id="btnPrev">‹ Zurück</button>
           <button class="pill primary" id="btnNext">Weiter ›</button>
+        </div>
+        <button class="pill primary fs-start" id="btnGuideStart" hidden>Guide wählen</button>
+        <div id="guideMenu" class="guide-menu" hidden role="dialog" aria-label="Guide wählen">
+          <div class="gm-head"><span>Guide wählen</span><button class="pill ghost sm" id="btnGuideClose">Schließen</button></div>
+          <div class="gm-body" id="guideList"></div>
         </div>
         <div id="corrBar" class="corr-bar" hidden>
           <span>Korrekturmodus: markierten Schuss mit dem Finger verschieben</span>

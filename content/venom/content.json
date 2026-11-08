@@ -1,0 +1,143 @@
+{
+  "table": {
+    "id": "venom", "name": "Venom", "short": "Venom", "manufacturer": "Stern Pinball", "year": 2023,
+    "system": "Stern SPIKE 2", "design": "Brian Eddy",
+    "editions": "Pro-Ausführung (dieser Guide): Doppelganger wird virtuell über die linke Schleife besiegt, kein Doppelganger-Mechanismus, keine Shot-Umbauten je Host. Premium/LE weichen ab.",
+    "ruleVersion": "Regeln nach dem offiziellen Wiki-Rulesheet (pinballrulesheets.com), Stand Code 1.06. Neuere Software kann abweichen.",
+    "accent": "#4a7bd0", "contentDate": "2026-11-08"
+  },
+  "sources": [
+    { "id": "manual", "title": "Stern Pinball: Venom Pro – Manual 500-55U1-01 (2023)", "url": "https://wp.sternpinball.com/wp-content/uploads/2023/11/Venom_Pro_web.pdf", "use": "Schalterliste und -plan (S. 14–17), Lampenliste und -plan (S. 18–24). Zuordnung der Pfeilspalten zu den Schüssen." },
+    { "id": "photo", "title": "Stern Pinball: Spielfeldfoto Venom Pro (Produktseite, Datei „Venom-Pro-Playfield“)", "url": "https://site-assets.plasmic.app/712c5be8f7c051b0d1d80a6ff7e02e8f.webp", "use": "Spielfeldansicht; alle Markierungen sind in diesem Foto vermessen." },
+    { "id": "rules", "title": "Venom Rulesheet (Wiki, Code 1.06)", "url": "https://pinballrulesheets.com/stern/venom-rulesheet", "use": "Alle Regeln und Abläufe, mit Pro-Unterschieden." },
+    { "id": "ball", "title": "Kugelbild: Lucasbosch, Wikimedia Commons, CC BY-SA 3.0", "url": "https://commons.wikimedia.org/wiki/File:Stainless_steel_1.4034_X46Cr13_bearing_ball_60mm_G100_removed_camera.jpg", "use": "Animierte Flipperkugel (bearbeitet, CC BY-SA 3.0)." }
+  ],
+  "views": {
+    "real": { "label": "Echter Tisch (Pro)", "note": "Herstellerfoto des Pro-Spielfelds. Die Rampen oben sind durchsichtig; Bumper, obere Bahnen und die Lock-Behälter sind teils verdeckt." }
+  },
+  "shots": {
+    "left_orbit": { "name": "Linker Orbit (Ryker's Prison)", "en": "Left Orbit", "kind": "Orbit", "flipper": "R",
+      "what": "Linke Pfeilspalte „Ryker's Prison“. Der Eingang liegt über dem obersten Pfeil.",
+      "returns": "Läuft oben links herum (Schalter 51). Ganz oben im Orbit liegt eine Mulde (Secret-Hideout-Skillshot).",
+      "awards": ["Mini-Modus- und Lock-Schuss je nach Host", "Peter Parker: Kombo linker Orbit → linke Rampe → linke Schleife → Scoop"],
+      "visibility": "Eingang sichtbar.", "sources": ["manual", "rules", "photo"] },
+    "left_ramp": { "name": "Linke Rampe (Alchemax)", "en": "Left Ramp", "kind": "Rampe", "flipper": "R",
+      "what": "Zweite Spalte von links, „Alchemax“, mit dem Einsatz „Change Host“.",
+      "returns": "Rampe nach oben links (Schalter 68 „Left Ramp Made“).",
+      "awards": ["Host wechseln (wenn „Change Host“ leuchtet)", "Mayhem Phase 1: im Wechsel mit dem Scoop schnelle Jackpots", "Phage: Kombo-Start"],
+      "visibility": "Eingang sichtbar.", "sources": ["manual", "rules", "photo"] },
+    "carnage": { "name": "Carnage (gefangene Kugel)", "en": "Carnage Captive Ball", "kind": "gefangene Kugel", "flipper": "R",
+      "what": "Silberne Kugel über der roten Carnage-Spalte. Treffer schieben Carnage die Bahn hoch nach Ravencroft.",
+      "returns": "Prallt zurück; die gefangene Kugel läuft in der Bahn hoch (Schalter 72–75).",
+      "awards": ["Carnage ganz zurück = Carnage-Modus an der Center Ramp", "Carnage Multiball: Super Jackpot beleuchten", "Toxin: Jackpots 2x/3x"],
+      "visibility": "Sichtbar.", "sources": ["manual", "rules", "photo"] },
+    "center_ramp": { "name": "Center Ramp (Police Station)", "en": "Center Ramp", "kind": "Rampe", "flipper": "beide",
+      "what": "Spalte „Police Station“ links neben dem Glockenturm, unten der Einsatz „Start“.",
+      "returns": "Rampe als Schleife (Schalter 70), danach direkt Kombo zum Glockenturm möglich.",
+      "awards": ["Battles starten", "Carnage-Modi, Rampage, Klyntar starten", "Glockenturm beleuchten (2, dann 3 … Rampen)"],
+      "visibility": "Eingang sichtbar.", "sources": ["manual", "rules", "photo"] },
+    "bell_tower": { "name": "Glockenturm-Ziel", "en": "Bell Tower Target", "kind": "Ziel", "flipper": "L",
+      "what": "Schmales Ziel am Fuß des Glockenturms, in der schmalen Spalte zwischen Center Ramp und linker Schleife.",
+      "returns": "Prallt zurück (Schalter 62).",
+      "awards": ["+1x Playfield (bis 7x), wenn beleuchtet", "Mehr Zeit in Battles", "Bell Tower Frenzy"],
+      "visibility": "Lage aus Foto und Lampenplan; schmales Ziel, Unsicherheit ca. 15 px.", "sources": ["manual", "rules", "photo"] },
+    "left_loop": { "name": "Linke Schleife (Life Foundation, Pro: Doppelganger)", "en": "Left Loop", "kind": "Schleife", "flipper": "L",
+      "what": "Breite Spalte „Life Foundation“ rechts neben dem Glockenturm. Der Eingang liegt über dem obersten Pfeil.",
+      "returns": "Schleife nach oben (Schalter 60 „Left Loop Enter“).",
+      "awards": ["Pro: Doppelganger besiegen", "Rampage: Doppelganger-Treffer", "Mini-Modus- und Lock-Schuss je nach Host"],
+      "visibility": "Eingang sichtbar.", "sources": ["manual", "rules", "photo"] },
+    "mini_targets": { "name": "Mini-Ziele (rot)", "en": "Mini Targets", "kind": "Ziele", "flipper": "L",
+      "what": "Zwei kleine rote Spiral-Ziele links und rechts der Scoop-Spalte.",
+      "returns": "Prallen zurück (Schalter 63, 64).",
+      "awards": ["Infected: rotes Ziel treffen, dann schnell noch einmal"],
+      "visibility": "Lage aus Foto und Lampenplan; Unsicherheit ca. 20 px.", "sources": ["manual", "rules", "photo"] },
+    "scoop": { "name": "Scoop (Daily Bugle)", "en": "Scoop", "kind": "Scoop", "flipper": "L",
+      "what": "Loch oben am Ende der Spalte „Daily Bugle“ (mit Extra Ball und Jackpot).",
+      "returns": "Ein VUK wirft die Kugel wieder aus (Schalter 76, 79).",
+      "awards": ["Mystery", "Extraball", "Scream (Videomodus)", "Special Attack in Battles", "Toxin Team-Up starten", "Carnage-Multiball-Super-Jackpot"],
+      "visibility": "Öffnung im Foto erkennbar, teils unter der Mystery-Tafel (Unsicherheit ca. 20 px).", "sources": ["manual", "rules", "photo"] },
+    "right_loop": { "name": "Rechte Schleife (Argo-Lab)", "en": "Right Loop", "kind": "Schleife", "flipper": "L",
+      "what": "Zweite Spalte von rechts, „Argo-Lab“.",
+      "returns": "Schleife (Schalter 90 „Right Loop Entrance“).",
+      "awards": ["Mini-Modus- und Lock-Schuss je nach Host", "Gwen Stacy: Doppelganger-Skillshot"],
+      "visibility": "Eingang sichtbar.", "sources": ["manual", "rules", "photo"] },
+    "right_orbit": { "name": "Rechter Orbit (The Vault)", "en": "Right Orbit", "kind": "Orbit", "flipper": "L",
+      "what": "Rechte Spalte „The Vault“. Der Eingang liegt über dem obersten Pfeil.",
+      "returns": "Läuft oben herum (Schalter 55).",
+      "awards": ["Lasher-Battle", "Phage: beleuchtet den Glockenturm", "Skillshot je nach Host"],
+      "visibility": "Eingang sichtbar.", "sources": ["manual", "rules", "photo"] },
+    "side_targets": { "name": "Rote Seitenziele", "en": "Left / Right Target", "kind": "Ziele", "flipper": "beide",
+      "what": "Je ein rotes Spiral-Ziel links (über dem Hybrid-Feld) und rechts (über „The Infected“).",
+      "returns": "Prallen zurück (Schalter 28, 39).",
+      "awards": ["Infected: rotes Ziel, dann schnell noch einmal", "4 Infected = Bonus-X, 15 = Extraball, 20 = Scream"],
+      "visibility": "Sichtbar.", "sources": ["manual", "rules", "photo"] }
+  },
+  "strategies": [
+    { "id": "solid", "title": "Solide spielen", "subtitle": "Mini-Modi, Mayhem Multiball, Carnage",
+      "steps": [
+        { "title": "Host wählen", "shots": [], "prep": "Zu Beginn jeder Kugel.", "go": "Mit dem rechten Flipper wählen. Eddie Brock startet mit 2 Mayhem-Locks und hat den wertvolleren Mayhem Multiball.", "why": "Hosts ändern Skillshots, Mini-Modi und Locks.", "sources": ["rules"] },
+        { "title": "Skillshot", "shots": [], "prep": "Abschussbahn.", "go": "In die blinkende obere Bahn (+2 Bonus-X) oder den Host-Skillshot wählen.", "why": "Bonus und je nach Host Mini-Modus oder Mystery.", "sources": ["rules"] },
+        { "title": "Mini-Modi spielen", "shots": ["left_orbit", "left_ramp", "center_ramp", "left_loop", "scoop", "right_loop", "right_orbit"], "prep": "Gelb, blau oder weiß blinkende Pfeile.", "go": "Einen blinkenden Pfeil treffen, dann schnell den zweiten Schuss gleicher Farbe.", "why": "Jeder Mini-Modus beleuchtet einen Mayhem-Lock. Drei = Battle oder Host-Wechsel.", "sources": ["rules"] },
+        { "title": "Mayhem Multiball", "shots": ["left_ramp", "scoop"], "prep": "Grüne Lock-Schüsse leuchten.", "go": "Grüne Schüsse locken (links/rechts in die Behälter). Phase 1: linke Rampe und Scoop im Wechsel.", "why": "Schnelle Jackpots, dann alle Schüsse als Jackpots; Super besiegt einen Boss.", "sources": ["rules"] },
+        { "title": "Carnage zurückschicken", "shots": ["carnage", "center_ramp"], "prep": "Kein Battle beleuchtet.", "go": "Carnage-Kugel treffen, bis sie oben ist. Dann Center Ramp.", "why": "Carnage Multiball (danach Hurry-Up, Blood Lust).", "sources": ["rules"] },
+        { "title": "Infected und Extraball", "shots": ["side_targets", "mini_targets", "scoop"], "prep": "—", "go": "Rote Ziele doppelt treffen. Ab 15 Infected leuchtet Extraball am Scoop.", "why": "Bonus-X, Extraball, Scream.", "sources": ["rules"] }
+      ] },
+    { "id": "high", "title": "Auf Highscore", "subtitle": "Playfield-X am Glockenturm, Battles, Toxin",
+      "steps": [
+        { "title": "Center Ramp → Glockenturm", "shots": ["center_ramp", "bell_tower"], "prep": "—", "go": "Center Ramp 2x (dann 3x …), danach den beleuchteten Glockenturm.", "why": "+1x Playfield bis 7x. 4 Rampen vorher = Bell Tower Frenzy.", "sources": ["rules"] },
+        { "title": "Battles", "shots": ["center_ramp", "scoop", "bell_tower"], "prep": "Drei Mini-Modi des Hosts, Level 10.", "go": "Center Ramp. Blinkende Schüsse, Scoop für Special Attack (5x Schaden), Glockenturm für Zeit.", "why": "Alle vier Bosse = Hybrid; dann Grendel (Level 20) und Knull (Level 30).", "sources": ["rules"] },
+        { "title": "Bosse über Mayhem besiegen", "shots": ["left_ramp", "scoop"], "prep": "Battle-Bosse in die Locks bringen.", "go": "Super Jackpot im Mayhem Multiball.", "why": "Jeder Super besiegt den zuerst gelockten Boss.", "sources": ["rules"] },
+        { "title": "Toxin Team-Up", "shots": ["scoop", "carnage"], "prep": "Nach Mayhem- oder Carnage-Multiball oder Doppelganger.", "go": "Scoop. 6 Jackpots (Carnage-Kugel = 2x/3x), dann Super am Scoop (25M) = 2-Ball.", "why": "Mini-Wizard; schaltet Host-Kombos frei.", "sources": ["rules"] },
+        { "title": "Doppelganger (Pro)", "shots": ["left_loop"], "prep": "Doppelganger greift an (nach Infected).", "go": "Linke Schleife.", "why": "3 Doppelganger = Rampage an der Center Ramp.", "sources": ["rules"] }
+      ] }
+  ],
+  "multiballs": [
+    { "id": "mayhem", "name": "Mayhem Multiball", "tag": "Haupt-Multiball", "balls": "bis 6 Kugeln gelockt (Action-Taste halten)",
+      "prep": [ { "title": "Locks beleuchten", "shots": ["left_orbit", "left_ramp", "center_ramp", "left_loop", "scoop", "right_loop", "right_orbit"], "text": "Mini-Modi beleuchten Locks (je Host schon einige zu Beginn). Nicht möglich, solange ein Battle leuchtet.", "sources": ["rules"] },
+               { "title": "Grüne Schüsse locken", "shots": [], "text": "Zwei grüne Schüsse: einer in den linken, einer in den rechten Behälter. Welche grün sind, wechselt – kein fester Pin. Zahl und Lage der Kugeln bestimmen die Perks (Battle-Credit, 2x XP, +1x Playfield).", "sources": ["rules"] } ],
+      "start": { "title": "Mit dem letzten Lock", "shots": [], "text": "Start nach den Locks; Action-Taste halten bricht ab und lockt bis zu 6.", "sources": ["rules"] },
+      "score": [
+        { "title": "Phase 1: Quick Jackpots", "shots": ["left_ramp", "scoop"], "text": "Ein Ball: linke Rampe und Scoop im Wechsel, bis zu 9 Quick Jackpots. Ball Save aktiv.", "sources": ["rules"] },
+        { "title": "Phase 2: alle Schüsse", "shots": ["left_orbit", "left_ramp", "center_ramp", "left_loop", "scoop", "right_loop", "right_orbit"], "text": "Alle leuchtenden Jackpots, dann Super Jackpot (besiegt einen Boss). Danach doppelt, dann dreifach.", "sources": ["rules"] }
+      ] },
+    { "id": "carnage", "name": "Carnage Multiball", "tag": "Carnage-Modus 1", "balls": "nicht angegeben",
+      "prep": [ { "title": "Carnage zurückschicken", "shots": ["carnage"], "text": "Gefangene Kugel treffen, bis Carnage in Ravencroft ist.", "sources": ["rules"] } ],
+      "start": { "title": "Center Ramp", "shots": ["center_ramp"], "text": "Center Ramp startet den Carnage-Modus (erst Multiball, dann Hurry-Up, dann Blood Lust).", "sources": ["rules"] },
+      "score": [ { "title": "Carnage erneut, dann Scoop", "shots": ["carnage", "scoop", "side_targets", "mini_targets"], "text": "Carnage nochmals ganz zurück = Super Jackpot am Scoop. Andere Schüsse und Infected erhöhen den Wert.", "sources": ["rules"] } ] },
+    { "id": "toxin", "name": "Toxin Team-Up", "tag": "Mini-Wizard", "balls": "1, dann 2 Kugeln",
+      "prep": [ { "title": "Mayhem, Carnage MB oder Doppelganger", "shots": ["left_loop", "carnage"], "text": "Eines davon starten bzw. besiegen.", "sources": ["rules"] } ],
+      "start": { "title": "Scoop", "shots": ["scoop"], "text": "Scoop startet Toxin.", "sources": ["rules"] },
+      "score": [ { "title": "6 Jackpots, Super am Scoop", "shots": ["carnage", "scoop"], "text": "Drei zufällige Schüsse je 2 Jackpots, Carnage-Kugel multipliziert kurz. Super 25M am Scoop fügt eine Kugel hinzu.", "sources": ["rules"] } ] },
+    { "id": "klyntar", "name": "Klyntar Multiball", "tag": "Wizard-Modus", "balls": "2 Kugeln, Ball Save bis zum Ende",
+      "prep": [ { "title": "Alle Hauptziele", "shots": [], "text": "Knull besiegt, Rampage, Blood Lust, Toxin, Scream, Host Hurry-Up und Bell Tower Frenzy gestartet.", "sources": ["rules"] } ],
+      "start": { "title": "Center Ramp", "shots": ["center_ramp"], "text": "Center Ramp.", "sources": ["rules"] },
+      "score": [ { "title": "16 Hurry-ups", "shots": ["left_ramp", "center_ramp", "scoop", "right_orbit"], "text": "Linke Rampe, Center Ramp, Scoop und rechter Orbit je vier Stufen.", "sources": ["rules"] } ] }
+  ],
+  "modes": [
+    { "id": "riot", "name": "Riot", "film": "Battle", "time": "Zeit", "steps": [ { "title": "Rot und Blau", "shots": ["scoop"], "text": "Rote Schüsse wandern nach rechts, blaue nach links. Beide treffen; sind beide Farben an einem Schuss, großer Schaden + Special Attack am Scoop." } ] },
+    { "id": "agony", "name": "Agony", "film": "Battle", "time": "Zeit", "steps": [ { "title": "Rote Schüsse doppelt", "shots": ["bell_tower", "scoop"], "text": "Rot blinkende Schüsse zweimal, grüne sofort abräumen. Glockenturm beleuchtet neu." } ] },
+    { "id": "phage", "name": "Phage", "film": "Battle", "time": "Zeit", "steps": [ { "title": "Linke Rampe oder rechter Orbit", "shots": ["left_ramp", "right_orbit", "bell_tower", "center_ramp"], "text": "Linke Rampe startet eine Kombo; rechter Orbit beleuchtet den Glockenturm, dann die drei mittleren Schüsse. Special Attack: alle drei mittleren." } ] },
+    { "id": "lasher", "name": "Lasher", "film": "Battle", "time": "Zeit", "steps": [ { "title": "Orbits", "shots": ["left_orbit", "right_orbit"], "text": "Beide Orbits; Lasher springt zwischen ihnen. Schüsse daneben machen weniger Schaden." } ] },
+    { "id": "grendel", "name": "Grendel", "film": "Großer Boss", "time": "Zeit", "steps": [ { "title": "Leuchtende Schüsse", "shots": ["bell_tower"], "text": "Ein Schuss beleuchtet die anderen. Rote = Special Attack. Bei Angriff Flipper vertauscht – blauen Schuss treffen. Letzte Phase 2-Ball." } ] },
+    { "id": "knull", "name": "Knull", "film": "Großer Boss", "time": "Zeit", "steps": [ { "title": "Blau, Gelb, Rot", "shots": ["bell_tower"], "text": "Blau = wenig, Gelb = mittel, Rot = viel Schaden. Letzte Phase 2-Ball, Sudden Death." } ] },
+    { "id": "rampage", "name": "Rampage", "film": "Doppelganger", "time": "kurz", "steps": [ { "title": "Blau, dann Doppelganger", "shots": ["center_ramp", "left_loop"], "text": "Nach 3 Doppelgangern an der Center Ramp. Erst blaue Schüsse für den Wert, dann so oft wie möglich die linke Schleife (Pro)." } ] },
+    { "id": "scream", "name": "Scream", "film": "Videomodus", "time": "–", "steps": [ { "title": "Scoop", "shots": ["scoop"], "text": "Nach 20 Infected am Scoop. Flipper-Tasten besiegen Infected links/rechts." } ] }
+  ],
+  "modesIntro": "Battles leuchten nach drei Mini-Modi des Hosts (ab Level 10) an der Center Ramp. Jeder Boss hat zwei Lebensbalken; blinkende Schüsse machen Schaden, der Scoop ist Special Attack (5x), der Glockenturm gibt Zeit. Die blinkenden Schüsse wechseln – Pins nur für feste Schüsse.",
+  "glossary": [
+    { "term": "Host", "text": "Figur, die Venom trägt (Eddie, Flash, Gwen, Peter). Ändert Regeln und Schüsse." },
+    { "term": "Mini-Modus", "text": "Zwei Schüsse derselben Farbe kurz nacheinander." },
+    { "term": "Infected", "text": "Rotes Ziel zweimal schnell treffen." },
+    { "term": "Doppelganger", "text": "Gegner auf der rechten Seite; beim Pro über die linke Schleife besiegt." },
+    { "term": "Ravencroft", "text": "Gefängnis oben links, Ziel der Carnage-Kugel." },
+    { "term": "Einsatz (Insert)", "text": "Beleuchtetes Feld im Spielfeld. Nur Anzeige, kein Ziel." }
+  ],
+  "limits": [
+    "Kein VPX zum Abgleich: alle Markierungen sind im Herstellerfoto gemessen. Scoop, Glockenturm-Ziel und Mini-Ziele haben 15–20 px Unsicherheit.",
+    "Die Zuordnung der Pfeilspalten (Ortsnamen) zu den Schüssen stammt aus dem Lampenplan des Pro-Handbuchs; das Rulesheet nennt nur die Schussnamen.",
+    "Lock-Behälter, Bumper und obere Bahnen haben keinen Pin (Mechanik verdeckt bzw. nicht direkt angespielt).",
+    "Grüne Lock-Schüsse und Mini-Modus-Farben wechseln je Host – kein fester Pin.",
+    "Das Rulesheet spricht von fünf roten Infected-Zielen; im Pro-Schalterplan sind vier rote Ziele eindeutig (28, 39, 63, 64). Das fünfte ist nicht zugeordnet.",
+    "Flipper-Empfehlungen sind aus der Lage abgeleitet."
+  ]
+}

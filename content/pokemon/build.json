@@ -1,0 +1,2 @@
+{ "views": { "real": { "H": "tools/pokemon/H_real.json", "src": "_quellen/pokemon/pf.png", "crop": [170, 180, 1160, 2080], "out": "pokemon-real.jpg", "quality": 88 } },
+  "insertsView": "real" }

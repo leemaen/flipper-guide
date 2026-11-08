@@ -1,0 +1,10 @@
+{
+ "id": "venom",
+ "name": "Venom",
+ "manufacturer": "Stern",
+ "year": 2023,
+ "versions": "Echter Tisch (Pro)",
+ "accent": "#4a7bd0",
+ "thumb": "img/venom-thumb.jpg",
+ "data": "data/venom.json"
+}

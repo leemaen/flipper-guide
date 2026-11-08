@@ -1,0 +1,17 @@
+{
+ "views": {
+  "real": {
+   "H": "tools/batman66/H_photo.json",
+   "src": "_quellen/batman66/fotos/stern_b66_prem_playfield.png",
+   "crop": [
+    180,
+    160,
+    1300,
+    2330
+   ],
+   "out": "batman66-real.jpg",
+   "quality": 86
+  }
+ },
+ "insertsView": "real"
+}

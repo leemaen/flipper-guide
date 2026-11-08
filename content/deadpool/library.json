@@ -1,0 +1,10 @@
+{
+ "id": "deadpool",
+ "name": "Deadpool (Pro)",
+ "manufacturer": "Stern",
+ "year": 2018,
+ "versions": "Echter Tisch (Pro) · VPX-Fassung mit eigenen Regeln: eigener Eintrag",
+ "accent": "#c8102e",
+ "thumb": "img/deadpool-thumb.jpg",
+ "data": "data/deadpool.json"
+}

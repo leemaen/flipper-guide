@@ -18,5 +18,85 @@
   "accent": "#e8473b",
   "thumb": "img/rct-thumb.jpg",
   "data": "data/rct.json"
+ },
+ {
+  "id": "kingkong",
+  "name": "King Kong: Myth of Terror Island",
+  "manufacturer": "Stern",
+  "year": 2025,
+  "versions": "Echter Tisch (Pro)",
+  "accent": "#e9a761",
+  "thumb": "img/kingkong-thumb.jpg",
+  "data": "data/kingkong.json"
+ },
+ {
+  "id": "pokemon",
+  "name": "Pokémon",
+  "manufacturer": "Stern",
+  "year": 2026,
+  "versions": "Echter Tisch (Pro)",
+  "accent": "#f4d56c",
+  "thumb": "img/pokemon-thumb.jpg",
+  "data": "data/pokemon.json"
+ },
+ {
+  "id": "venom",
+  "name": "Venom",
+  "manufacturer": "Stern",
+  "year": 2023,
+  "versions": "Echter Tisch (Pro)",
+  "accent": "#4a7bd0",
+  "thumb": "img/venom-thumb.jpg",
+  "data": "data/venom.json"
+ },
+ {
+  "id": "acdc",
+  "name": "AC/DC (LUCI Premium)",
+  "manufacturer": "Stern",
+  "year": 2013,
+  "versions": "VPX (LUCI Premium VR 1.1.3, Original-ROM) · echter Tisch: gleiche Regeln",
+  "accent": "#d4241c",
+  "thumb": "img/acdc-thumb.jpg",
+  "data": "data/acdc.json"
+ },
+ {
+  "id": "deadpool",
+  "name": "Deadpool (Pro)",
+  "manufacturer": "Stern",
+  "year": 2018,
+  "versions": "Echter Tisch (Pro) · VPX-Fassung mit eigenen Regeln: eigener Eintrag",
+  "accent": "#c8102e",
+  "thumb": "img/deadpool-thumb.jpg",
+  "data": "data/deadpool.json"
+ },
+ {
+  "id": "deadpool-vpx",
+  "name": "Deadpool (VPX, JP Salas)",
+  "manufacturer": "JP Salas / Stern-Tribute",
+  "year": 2021,
+  "versions": "VPX (JP's Deadpool 6.1.0, eigene Regeln, kein Original-ROM)",
+  "accent": "#c8102e",
+  "thumb": "img/deadpool-vpx-thumb.jpg",
+  "data": "data/deadpool-vpx.json"
+ },
+ {
+  "id": "batman66",
+  "name": "Batman 66 (Premium)",
+  "manufacturer": "Stern",
+  "year": 2016,
+  "versions": "Echter Tisch (Premium/LE, keine Pro) · VPX-Tribute: eigener Eintrag",
+  "accent": "#7b3fbf",
+  "thumb": "img/batman66-thumb.jpg",
+  "data": "data/batman66.json"
+ },
+ {
+  "id": "batman66-vpx",
+  "name": "Batman 66 (VPX Tribute)",
+  "manufacturer": "Mr H & Daphishbowl / Stern-Tribute",
+  "year": 2021,
+  "versions": "VPX (Stern Tribute 1.1.0, Script-Regeln nach dem Original, kein ROM)",
+  "accent": "#7b3fbf",
+  "thumb": "img/batman66-vpx-thumb.jpg",
+  "data": "data/batman66-vpx.json"
  }
 ]

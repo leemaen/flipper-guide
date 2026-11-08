@@ -1,0 +1,10 @@
+{
+ "id": "kingkong",
+ "name": "King Kong: Myth of Terror Island",
+ "manufacturer": "Stern",
+ "year": 2025,
+ "versions": "Echter Tisch (Pro)",
+ "accent": "#e9a761",
+ "thumb": "img/kingkong-thumb.jpg",
+ "data": "data/kingkong.json"
+}

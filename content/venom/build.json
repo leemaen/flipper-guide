@@ -1,0 +1,2 @@
+{ "views": { "real": { "H": "tools/venom/H_real.json", "src": "_quellen/venom/pf.png", "crop": [230, 150, 1250, 1990], "out": "venom-real.jpg", "quality": 88 } },
+  "insertsView": "real" }

@@ -1,14 +1,19 @@
 """Erzeugt app/sw-manifest.json und app/sw.js mit Dateiliste und Inhalts-Version."""
-import hashlib, json, os
+import hashlib, json, os, subprocess, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 APP = os.path.join(ROOT, 'app')
 skip = {'sw.js', 'sw-manifest.json', '.nojekyll'}
+# --staged: nur Dateien, die im Git-Index stehen (für Veröffentlichungen, während unfertige Tische im Ordner liegen)
+only = None
+if '--staged' in sys.argv:
+    out = subprocess.run(['git', '-C', ROOT, 'ls-files', '--cached', '--', 'app'], capture_output=True, text=True, check=True).stdout
+    only = {l[4:] for l in out.splitlines() if l.startswith('app/')}
 assets, hsh = [], hashlib.sha256()
 for dp, dn, fn in os.walk(APP):
     dn.sort()
     for f in sorted(fn):
         rel = os.path.relpath(os.path.join(dp, f), APP).replace(os.sep, '/')
-        if rel in skip: continue
+        if rel in skip or (only is not None and rel not in only): continue
         data = open(os.path.join(dp, f), 'rb').read()
         hsh.update(rel.encode()); hsh.update(data)
         assets.append(rel)

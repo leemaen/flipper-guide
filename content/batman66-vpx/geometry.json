@@ -1,0 +1,440 @@
+{
+ "_note": "Eingänge in Pixeln des Stern-Premium-Fotos (Prem Playfield.webp, 1476x2500) vermessen: Pfeil-Inserts liegen davor, markiert ist die Bahnmündung. Ziele, Bumper, Bahnen, Spinner und Penguin-Scoop aus der Tribute-VPX per Homographie (RMS 4,0 px, 36 Inserts) übertragen und mit dem Stern-Schalterplan (Handbuch 500-55I3-01 S. 14-16) abgeglichen. Die Drehscheiben-Ziele (Bat Computer / Crime Analyzer, Schalter 71/72) sitzen auf der drehenden Scheibe und sind nicht markiert. Hier in VPX-Koordinaten umgerechnet.",
+ "space": "vpx",
+ "flippers": {
+  "L": {
+   "pivot": [
+    271.0,
+    1778.8
+   ],
+   "aim": [
+    347,
+    1792
+   ]
+  },
+  "R": {
+   "pivot": [
+    593.9,
+    1778.8
+   ],
+   "aim": [
+    518,
+    1792
+   ]
+  }
+ },
+ "shots": {
+  "left_orbit": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     57.4,
+     505.1
+    ],
+    "toward": [
+     53.4,
+     438.2
+    ],
+    "len": 46.0,
+    "w": 44.2
+   }
+  },
+  "left_ramp": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     168.8,
+     593.8
+    ],
+    "toward": [
+     150.8,
+     536.0
+    ],
+    "len": 42.3,
+    "w": 60.7
+   }
+  },
+  "turntable": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     321.7,
+     494.8
+    ],
+    "toward": [
+     321.1,
+     440.1
+    ],
+    "len": 36.8,
+    "w": 66.2
+   }
+  },
+  "right_ramp": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     499.7,
+     588.9
+    ],
+    "toward": [
+     518.7,
+     532.5
+    ],
+    "len": 42.3,
+    "w": 60.7
+   }
+  },
+  "spinner": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     596.1,
+     620.7
+    ],
+    "toward": [
+     598.6,
+     560.8
+    ],
+    "len": 31.3,
+    "w": 42.3
+   }
+  },
+  "penguin": {
+   "entrance": {
+    "type": "circle",
+    "c": [
+     754.3,
+     679.7
+    ],
+    "r": 22.1
+   }
+  },
+  "gordon": {
+   "entrance": {
+    "type": "rect",
+    "c": [
+     649.4,
+     710.2
+    ],
+    "toward": [
+     638.7,
+     743.1
+    ],
+    "len": 12.9,
+    "w": 33.1
+   }
+  },
+  "right_orbit": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     829.1,
+     666.3
+    ],
+    "toward": [
+     834.6,
+     600.8
+    ],
+    "len": 46.0,
+    "w": 44.2
+   }
+  },
+  "gadget": {
+   "entrance": {
+    "type": "multi",
+    "items": [
+     {
+      "type": "rect",
+      "c": [
+       69.1,
+       956.1
+      ],
+      "toward": [
+       99.9,
+       956.3
+      ],
+      "len": 11.0,
+      "w": 40.5
+     },
+     {
+      "type": "rect",
+      "c": [
+       69.1,
+       1020.5
+      ],
+      "toward": [
+       99.7,
+       1020.7
+      ],
+      "len": 11.0,
+      "w": 40.5
+     },
+     {
+      "type": "rect",
+      "c": [
+       69.1,
+       1085.5
+      ],
+      "toward": [
+       99.5,
+       1085.7
+      ],
+      "len": 11.0,
+      "w": 40.5
+     },
+     {
+      "type": "rect",
+      "c": [
+       69.1,
+       1152.4
+      ],
+      "toward": [
+       99.4,
+       1152.6
+      ],
+      "len": 11.0,
+      "w": 40.5
+     },
+     {
+      "type": "rect",
+      "c": [
+       69.1,
+       1217.0
+      ],
+      "toward": [
+       99.3,
+       1217.1
+      ],
+      "len": 11.0,
+      "w": 40.5
+     },
+     {
+      "type": "rect",
+      "c": [
+       69.1,
+       1283.3
+      ],
+      "toward": [
+       99.1,
+       1283.5
+      ],
+      "len": 11.0,
+      "w": 40.5
+     }
+    ]
+   }
+  },
+  "tv": {
+   "entrance": {
+    "type": "multi",
+    "items": [
+     {
+      "type": "rect",
+      "c": [
+       781.5,
+       1173.9
+      ],
+      "toward": [
+       751.3,
+       1170.4
+      ],
+      "len": 11.0,
+      "w": 40.5
+     },
+     {
+      "type": "rect",
+      "c": [
+       788.6,
+       1233.9
+      ],
+      "toward": [
+       758.6,
+       1230.4
+      ],
+      "len": 11.0,
+      "w": 40.5
+     },
+     {
+      "type": "rect",
+      "c": [
+       796.3,
+       1292.4
+      ],
+      "toward": [
+       766.4,
+       1288.9
+      ],
+      "len": 11.0,
+      "w": 40.5
+     }
+    ]
+   }
+  },
+  "bumpers": {
+   "entrance": {
+    "type": "multi",
+    "items": [
+     {
+      "type": "circle",
+      "c": [
+       799.1,
+       378.6
+      ],
+      "r": 40.5
+     },
+     {
+      "type": "circle",
+      "c": [
+       696.1,
+       564.7
+      ],
+      "r": 40.5
+     },
+     {
+      "type": "circle",
+      "c": [
+       596.3,
+       380.2
+      ],
+      "r": 40.5
+     }
+    ]
+   }
+  },
+  "pow": {
+   "entrance": {
+    "type": "rect",
+    "c": [
+     603.3,
+     457.7
+    ],
+    "toward": [
+     603.1,
+     494.1
+    ],
+    "len": 11.0,
+    "w": 31.3
+   }
+  },
+  "bat_lanes": {
+   "entrance": {
+    "type": "multi",
+    "items": [
+     {
+      "type": "rect",
+      "c": [
+       591.4,
+       198.6
+      ],
+      "toward": [
+       593.9,
+       129.2
+      ],
+      "len": 51.5,
+      "w": 29.4
+     },
+     {
+      "type": "rect",
+      "c": [
+       676.1,
+       218.7
+      ],
+      "toward": [
+       679.0,
+       149.5
+      ],
+      "len": 51.5,
+      "w": 29.4
+     },
+     {
+      "type": "rect",
+      "c": [
+       759.9,
+       237.6
+      ],
+      "toward": [
+       763.1,
+       168.5
+      ],
+      "len": 51.5,
+      "w": 29.4
+     }
+    ]
+   }
+  },
+  "lanes": {
+   "entrance": {
+    "type": "multi",
+    "items": [
+     {
+      "type": "rect",
+      "c": [
+       52.2,
+       1598.3
+      ],
+      "toward": [
+       50.3,
+       1535.0
+      ],
+      "len": 53.4,
+      "w": 31.3
+     },
+     {
+      "type": "rect",
+      "c": [
+       125.4,
+       1558.3
+      ],
+      "toward": [
+       123.8,
+       1494.6
+      ],
+      "len": 53.4,
+      "w": 31.3
+     },
+     {
+      "type": "rect",
+      "c": [
+       739.7,
+       1557.7
+      ],
+      "toward": [
+       740.7,
+       1494.1
+      ],
+      "len": 53.4,
+      "w": 31.3
+     },
+     {
+      "type": "rect",
+      "c": [
+       813.1,
+       1598.0
+      ],
+      "toward": [
+       814.5,
+       1534.7
+      ],
+      "len": 53.4,
+      "w": 31.3
+     }
+    ]
+   }
+  },
+  "plunger": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     902.6,
+     1786.1
+    ],
+    "toward": [
+     903.5,
+     1682.9
+    ],
+    "len": 156.4,
+    "w": 40.5
+   }
+  }
+ }
+}

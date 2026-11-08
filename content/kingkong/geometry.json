@@ -1,0 +1,30 @@
+{
+ "_note": "Geometrie in Pixeln des Stern-Pro-Spielfeldfotos (_quellen/kingkong/pf.png, 1319x2560, Quelle site-assets.plasmic.app/35d0bd1c...webp). Keine VPX vorhanden: Eingänge direkt im Foto mit Gitter-Ausschnitten vermessen und gegen Schalter-/Lampenplan des Pro-Handbuchs (S. 20/26, Homographie tools/kingkong/fit_lights.py, Restfehler ca. 25 px) zugeordnet. Einheits-Homographie; 50 px entsprechen etwa einem Kugeldurchmesser im unteren Feld (oben wegen Perspektive etwas weniger).",
+ "space": "px:real", "pxToVpx": 1, "flipperSpace": "px",
+ "flippers": {
+  "L":  { "pivot": [488, 1878], "aim": [548, 1893] },
+  "R":  { "pivot": [818, 1878], "aim": [758, 1893] },
+  "UL": { "pivot": [312, 1062], "aim": [348, 1073] },
+  "UR": { "pivot": [990, 1088], "aim": [979, 1148] }
+ },
+ "shots": {
+  "left_orbit":  { "entrance": { "type": "lane", "c": [302, 628], "toward": [296, 560], "len": 60, "w": 52 } },
+  "cliffs_ramp": { "entrance": { "type": "lane", "c": [403, 645], "toward": [408, 575], "len": 60, "w": 52 } },
+  "center_ramp": { "entrance": { "type": "lane", "c": [649, 705], "toward": [651, 640], "len": 60, "w": 52 } },
+  "center_lane": { "entrance": { "type": "lane", "c": [760, 668], "toward": [762, 605], "len": 56, "w": 50 } },
+  "u_turn":      { "entrance": { "type": "lane", "c": [690, 862], "toward": [655, 832], "len": 52, "w": 48 } },
+  "side_ramp":   { "entrance": { "type": "lane", "c": [618, 912], "toward": [585, 900], "len": 50, "w": 70 } },
+  "gong":        { "entrance": { "type": "lane", "c": [873, 875], "toward": [877, 815], "len": 70, "w": 50 } },
+  "right_orbit": { "entrance": { "type": "lane", "c": [990, 905], "toward": [997, 835], "len": 60, "w": 50 } },
+  "kong_cave":   { "entrance": { "type": "circle", "c": [1064, 1330], "r": 26 } },
+  "pit":         { "entrance": { "type": "multi", "items": [
+                    { "type": "circle", "c": [535, 1325], "r": 20 }, { "type": "circle", "c": [535, 1370], "r": 20 }, { "type": "circle", "c": [522, 1415], "r": 20 } ] } },
+  "drops":       { "entrance": { "type": "multi", "items": [
+                    { "type": "rect", "c": [450, 848], "toward": [457, 868], "len": 40, "w": 16 }, { "type": "rect", "c": [469, 898], "toward": [476, 918], "len": 40, "w": 16 },
+                    { "type": "rect", "c": [489, 948], "toward": [496, 968], "len": 40, "w": 16 }, { "type": "rect", "c": [508, 998], "toward": [515, 1018], "len": 40, "w": 16 } ] } },
+  "river":       { "entrance": { "type": "lane", "c": [238, 905], "toward": [236, 980], "len": 60, "w": 46 } },
+  "mini_flipper":{ "entrance": { "type": "circle", "c": [335, 1068], "r": 34 } },
+  "upper_right_flipper": { "entrance": { "type": "circle", "c": [983, 1150], "r": 34 } },
+  "magnet":      { "entrance": { "type": "circle", "c": [454, 1347], "r": 40 } }
+ }
+}

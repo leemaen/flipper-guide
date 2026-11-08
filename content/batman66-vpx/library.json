@@ -1,0 +1,10 @@
+{
+ "id": "batman66-vpx",
+ "name": "Batman 66 (VPX Tribute)",
+ "manufacturer": "Mr H & Daphishbowl / Stern-Tribute",
+ "year": 2021,
+ "versions": "VPX (Stern Tribute 1.1.0, Script-Regeln nach dem Original, kein ROM)",
+ "accent": "#7b3fbf",
+ "thumb": "img/batman66-vpx-thumb.jpg",
+ "data": "data/batman66-vpx.json"
+}

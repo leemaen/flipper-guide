@@ -1,0 +1,21 @@
+{
+ "_note": "Geometrie in Pixeln des Stern-Pro-Spielfeldfotos (_quellen/venom/pf.png, 1476x2500, Quelle site-assets.plasmic.app/712c5be8...webp, Datei 'Venom-Pro-Playfield'). Keine VPX: Eingänge im Foto mit Gitter-Ausschnitten vermessen, Zuordnung der Bahnen über Lampen- und Schalterplan des Pro-Handbuchs (S. 17/24; Reihenfolge der Pfeilspalten). Einheits-Homographie, 50 px ~ ein Kugeldurchmesser.",
+ "space": "px:real", "pxToVpx": 1, "flipperSpace": "px",
+ "flippers": {
+  "L": { "pivot": [502, 1800], "aim": [566, 1824] },
+  "R": { "pivot": [858, 1800], "aim": [794, 1824] }
+ },
+ "shots": {
+  "left_orbit":   { "entrance": { "type": "lane", "c": [410, 788], "toward": [405, 728], "len": 56, "w": 52 } },
+  "left_ramp":    { "entrance": { "type": "lane", "c": [502, 805], "toward": [498, 748], "len": 52, "w": 52 } },
+  "carnage":      { "entrance": { "type": "circle", "c": [574, 790], "r": 26 } },
+  "center_ramp":  { "entrance": { "type": "lane", "c": [667, 785], "toward": [670, 725], "len": 56, "w": 52 } },
+  "bell_tower":   { "entrance": { "type": "rect", "c": [731, 668], "toward": [745, 668], "len": 34, "w": 16 } },
+  "left_loop":    { "entrance": { "type": "lane", "c": [790, 682], "toward": [795, 620], "len": 56, "w": 52 } },
+  "mini_targets": { "entrance": { "type": "multi", "items": [ { "type": "circle", "c": [848, 692], "r": 18 }, { "type": "circle", "c": [939, 724], "r": 18 } ] } },
+  "scoop":        { "entrance": { "type": "circle", "c": [915, 556], "r": 28 } },
+  "right_loop":   { "entrance": { "type": "lane", "c": [996, 688], "toward": [1000, 628], "len": 56, "w": 52 } },
+  "right_orbit":  { "entrance": { "type": "lane", "c": [1092, 688], "toward": [1098, 628], "len": 56, "w": 52 } },
+  "side_targets": { "entrance": { "type": "multi", "items": [ { "type": "circle", "c": [448, 1126], "r": 20 }, { "type": "circle", "c": [995, 1168], "r": 20 } ] } }
+ }
+}

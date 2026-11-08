@@ -1,0 +1,10 @@
+{
+ "id": "deadpool-vpx",
+ "name": "Deadpool (VPX, JP Salas)",
+ "manufacturer": "JP Salas / Stern-Tribute",
+ "year": 2021,
+ "versions": "VPX (JP's Deadpool 6.1.0, eigene Regeln, kein Original-ROM)",
+ "accent": "#c8102e",
+ "thumb": "img/deadpool-vpx-thumb.jpg",
+ "data": "data/deadpool-vpx.json"
+}

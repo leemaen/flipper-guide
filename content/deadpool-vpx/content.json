@@ -1,0 +1,842 @@
+{
+ "table": {
+  "id": "deadpool-vpx",
+  "name": "Deadpool (VPX, JP Salas)",
+  "short": "Deadpool VPX",
+  "manufacturer": "JP Salas (Tribute an Stern)",
+  "year": 2021,
+  "system": "VPX, eigenes Script (kein Original-ROM)",
+  "design": "Spielfeld nach George Gomez (Stern 2018); Script/Regeln: jpsalas, Änderungen 6.1.0 von leon1638",
+  "editions": "JP's Deadpool 6.1.0 (14.01.2026, VPX 8). Laut Autor „Table, graphics and rules by me“ – die Regeln sind nachempfunden, nicht die Stern-Software. Spielfeld wie Stern Pro (Katana-Rampe, 3 Fallziele). Den echten Stern-Tisch findest du als eigenen Eintrag „Deadpool (Pro)“.",
+  "ruleVersion": "Regeln aus dem Tischscript (script.vbs der Version 6.1.0) und der Spielanleitungs-Textur „rulescard“ im Tisch. Die Karte ist eine Kopie der Stern-Karte und beschreibt einige Dinge (z. B. Quests), die das Script so nicht umsetzt – maßgeblich ist hier das Script.",
+  "accent": "#c8102e",
+  "contentDate": "2026-11-08"
+ },
+ "sources": [
+  {
+   "id": "script",
+   "title": "JP's Deadpool 6.1.0 – Tischscript (script.vbs)",
+   "url": "https://www.vpforums.org/",
+   "use": "Regeln: Battles (StartChooseBattle, Z. 4806 ff.), Lock/Ninja-Multiball (Lock_Hit, Z. 5432), Disco (CheckDisco), Berserker (CheckBerserker, Z. 5550), Waffen (Checkweapons, Z. 5358), Ninja-Sterne (CheckNinjaStars), Katanarama (CheckKatanarama), Lil Deadpool (Z. 4350 ff.), Scoop (HellHouse_Hit, Z. 4578)."
+  },
+  {
+   "id": "card",
+   "title": "Spielanleitung im Tisch (Textur „rulescard“, Kopie der Stern-Karte)",
+   "url": "https://www.vpforums.org/",
+   "use": "Überblick der Spielelemente."
+  },
+  {
+   "id": "log",
+   "title": "Änderungsprotokoll im Tisch (Tischbeschreibung 6.1.0)",
+   "url": "https://www.vpforums.org/",
+   "use": "Lil-DP-Multiball nach 2 Treffern, Battle nach jedem neuen Ball bereit, Ballretter in Multibällen."
+  },
+  {
+   "id": "vpx",
+   "title": "VPX: JP's Deadpool 6.1.0 (jpsalas)",
+   "url": "https://www.vpforums.org/",
+   "use": "Schalter-, Ziel-, Flipper- und Lichtpositionen; Draufsicht aus der Tischdatei gerendert."
+  },
+  {
+   "id": "ball",
+   "title": "Kugelbild: Lucasbosch, Wikimedia Commons, CC BY-SA 3.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Stainless_steel_1.4034_X46Cr13_bearing_ball_60mm_G100_removed_camera.jpg",
+   "use": "Animierte Flipperkugel (bearbeitet, CC BY-SA 3.0)."
+  }
+ ],
+ "views": {
+  "vpx": {
+   "label": "VPX (JP 6.1.0)",
+   "note": "Draufsicht aus den 3D-Modellen der Tischdatei gerendert (ohne Beleuchtung). Katana und Drahtbahnen teils nur schematisch."
+  }
+ },
+ "shots": {
+  "left_orbit": {
+   "name": "Linker Orbit (Dazzler-Spinner)",
+   "en": "Left Orbit / Dazzler Spinner",
+   "kind": "Orbit mit Spinner",
+   "flipper": "R",
+   "what": "Bahn ganz links außen mit dem Dazzler-Spinner (Schalter 39) am Eingang, über dem DISCO-Insert.",
+   "returns": "Läuft links hoch (Schalter „Left Orbit“ 40) und oben herum.",
+   "awards": [
+    "Disco: 50 Drehungen = Disco Loops, 100 = Disco-Multiball",
+    "Berserker Rage (25 Spinner-Drehungen)",
+    "Katanarama-Time-Schuss"
+   ],
+   "visibility": "Eingang sichtbar, der Orbit oben teils unter Drahtbahnen.",
+   "sources": [
+    "script",
+    "vpx"
+   ]
+  },
+  "u_turn": {
+   "name": "Colossus-U-Turn",
+   "en": "U-Turn / Colossus Loop (Lower Inside Loop)",
+   "kind": "Schleife",
+   "flipper": "R",
+   "what": "Kleine Schleife links (Schalter 43 „Lower Inside Loop“ oben links). Die Kugel macht eine Kehre und läuft auf das Colossal-Jackpot-Ziel.",
+   "returns": "Kommt aus der Schleife zurück und trifft bei vollem Durchlauf das Colossal-Jackpot-Ziel.",
+   "awards": [
+    "Special, wenn beleuchtet (Schalter „colossus loop“)",
+    "Laut Spielanleitung: Colossal Jackpot vom Colossus-Loop aus"
+   ],
+   "visibility": "Die Mündung liegt unter den Drahtbahnen der linken Rampe. Ich konnte sie weder im Foto noch in der Tischdatei eindeutig bestimmen – daher keine Markierung.",
+   "sources": [
+    "script",
+    "card"
+   ]
+  },
+  "left_ramp": {
+   "name": "Linke Rampe",
+   "en": "Left Ramp",
+   "kind": "Rampe",
+   "flipper": "R",
+   "what": "Metallrampe links der Mitte; Eingang unten an der Rampenklappe, rechts neben dem Dazzler-Orbit.",
+   "returns": "Führt nach oben links (Opto 42) und über die Drahtbahn zurück zur linken Rückführbahn.",
+   "awards": [
+    "Katana-Diamanten (Katanarama Time)",
+    "Mystique-Battle und Sauron-Jackpots",
+    "Disco-Multiball: Super Jackpot"
+   ],
+   "visibility": "Eingang sichtbar.",
+   "sources": [
+    "script",
+    "vpx"
+   ]
+  },
+  "scoop": {
+   "name": "Hell-House-Scoop",
+   "en": "Hell House Scoop",
+   "kind": "Scoop",
+   "flipper": "R",
+   "what": "Loch links der Mitte unter dem Schild „Shoot here!“ (Schalter 44), über dem BATTLE-Pfeil.",
+   "returns": "Wirft die Kugel wieder aus.",
+   "awards": [
+    "Battle wählen (Flippertasten) und starten – zu jedem neuen Ball bereit",
+    "Waffen-Jackpot (1M), Extraball, Mystery",
+    "Mechsuit-Multiball starten / Super Jackpot"
+   ],
+   "visibility": "Sichtbar.",
+   "sources": [
+    "script",
+    "vpx"
+   ]
+  },
+  "center_loop": {
+   "name": "Wolverine-Loop (mittlerer Spinner)",
+   "en": "Center Loop / Wolverine Spinner",
+   "kind": "Loop mit Spinner",
+   "flipper": "L",
+   "what": "Bahn in der Mitte oben mit dem Wolverine-Spinner (Schalter 46) am Eingang, vor Pfeil und Waffen-Insert.",
+   "returns": "Läuft oben in die Bahnen/Bumper.",
+   "awards": [
+    "Berserker Rage (25 Spinner-Drehungen)",
+    "Katanarama-Time-Schuss"
+   ],
+   "visibility": "Eingang sichtbar; dahinter unter Drahtbahn.",
+   "sources": [
+    "script",
+    "vpx"
+   ]
+  },
+  "right_ramp": {
+   "name": "Rechte Katana-Rampe",
+   "en": "Right Katana Ramp (Lock)",
+   "kind": "Rampe mit Lock",
+   "flipper": "L",
+   "what": "Rampe rechts, die im großen Katana-Griff nach oben führt. Eingang unten links vor der Klinge.",
+   "returns": "Im Griff sitzt der Lock (Schalter 61–64). Sonst läuft die Kugel oben quer nach links.",
+   "awards": [
+    "Lock für Ninja-Multiball (3 Kugeln)",
+    "Ninja-Multiball: Super Jackpot (6× Jackpot) am Lock",
+    "Katana-Diamanten"
+   ],
+   "visibility": "Eingang sichtbar, Katana-Klinge davor.",
+   "sources": [
+    "script",
+    "vpx"
+   ]
+  },
+  "right_orbit": {
+   "name": "Rechter Orbit",
+   "en": "Right Orbit",
+   "kind": "Orbit",
+   "flipper": "L",
+   "what": "Bahn rechts außen neben der Katana (Schalter 71 weiter oben).",
+   "returns": "Läuft rechts hoch und oben herum.",
+   "awards": [
+    "Chimichangas (alle 10 = +1 Playfield X)",
+    "Katanarama-Time-Schuss"
+   ],
+   "visibility": "Eingang im Foto teils von der Katana-Klinge verdeckt.",
+   "sources": [
+    "script",
+    "vpx"
+   ]
+  },
+  "oof": {
+   "name": "O-O-F-Fallziele",
+   "en": "OOF Drop Targets (3-bank)",
+   "kind": "3 Fallziele",
+   "flipper": "beide",
+   "what": "Drei Fallziele vor dem Lil-Deadpool-Ziel (Schalter 48–50).",
+   "returns": "Fallen und geben Lil Deadpool frei.",
+   "awards": [
+    "Lil-Deadpool-Ziel freilegen",
+    "Lil-Deadpool-Multiball starten (gefangene Kugel freischießen)"
+   ],
+   "visibility": "Sichtbar.",
+   "sources": [
+    "script",
+    "vpx"
+   ]
+  },
+  "lildp": {
+   "name": "Lil-Deadpool-Ziel",
+   "en": "Lil’ Deadpool Standup",
+   "kind": "Ziel",
+   "flipper": "beide",
+   "what": "Ziel hinter den O-O-F-Fallzielen unter der Lil-Deadpool-Figur (Schalter 53).",
+   "returns": "Prallt zurück; bei grünem Insert wird die Kugel hinter den Fallzielen gefangen.",
+   "awards": [
+    "2 Treffer (je Modus +1, höchstens 4) → Lil-Deadpool-Multiball",
+    "Jackpots im Lil-Deadpool-Multiball"
+   ],
+   "visibility": "Nur bei gefallenen Fallzielen erreichbar.",
+   "sources": [
+    "card",
+    "script",
+    "vpx"
+   ]
+  },
+  "colossal": {
+   "name": "Colossal-Jackpot-Ziel",
+   "en": "Colossal Jackpot Target",
+   "kind": "Ziel",
+   "flipper": null,
+   "what": "Ziel links neben dem Lil-Deadpool-Aufbau (Schalter 52 „Super Jackpot Target“). Wird über den U-Turn getroffen.",
+   "returns": "Prallt zurück.",
+   "awards": [
+    "Colossal Jackpot (laut Spielanleitung); im Script nur als Punkte-Ziel geführt"
+   ],
+   "visibility": "Sichtbar.",
+   "sources": [
+    "card",
+    "script",
+    "vpx"
+   ]
+  },
+  "snikt": {
+   "name": "SNIKT!-Ziel",
+   "en": "SNIKT! Target (Top Target)",
+   "kind": "Ziel",
+   "flipper": "L",
+   "what": "Kleines Ziel oben neben dem Wolverine-Loop beim linken Bumper (Schalter 66).",
+   "returns": "Prallt ab – im Idealfall direkt in die rechte Katana-Rampe.",
+   "awards": [
+    "Nur 1.000 Punkte – die SNIKT-Combo mit Playfield-X-Bonus des echten Tisches gibt es im Script nicht"
+   ],
+   "visibility": "Klein, teils verdeckt.",
+   "sources": [
+    "card",
+    "script",
+    "vpx"
+   ]
+  },
+  "dead": {
+   "name": "D-E-A-D-Ziele",
+   "en": "D-E-A-D Standups",
+   "kind": "4 Ziele",
+   "flipper": "R",
+   "what": "Vier Ziele links am Rand, rechts daneben die D-E-A-D-Inserts.",
+   "returns": "Prallen zurück.",
+   "awards": [
+    "DEAD komplett → Battle (Spielanleitung)",
+    "DEADPOOL komplett → Mystery"
+   ],
+   "visibility": "Sichtbar.",
+   "sources": [
+    "card",
+    "script",
+    "vpx"
+   ]
+  },
+  "pool": {
+   "name": "P-O-O-L-Ziele",
+   "en": "P-O-O-L Standups",
+   "kind": "4 Ziele",
+   "flipper": "L",
+   "what": "Vier Ziele rechts am Rand, links daneben die P-O-O-L-Inserts.",
+   "returns": "Prallen zurück.",
+   "awards": [
+    "POOL komplett → Lock beleuchtet (Spielanleitung)",
+    "DEADPOOL komplett → Mystery"
+   ],
+   "visibility": "Sichtbar.",
+   "sources": [
+    "card",
+    "script",
+    "vpx"
+   ]
+  },
+  "top_lanes": {
+   "name": "B-A-M!-Bahnen",
+   "en": "BAM! Top Lanes",
+   "kind": "4 Bahnen",
+   "flipper": null,
+   "what": "Vier Bahnen oben unter dem BAM!-Schriftzug.",
+   "returns": "Kugel fällt in die Bumper.",
+   "awards": [
+    "Lane-Skillshot (blinkende Bahn beim Abschuss)",
+    "Alle 4 → Bonus-Multiplikator"
+   ],
+   "visibility": "Sichtbar, unter Drahtbahn.",
+   "sources": [
+    "script",
+    "vpx"
+   ]
+  },
+  "bumpers": {
+   "name": "Pop-Bumper",
+   "en": "Pop Bumpers",
+   "kind": "3 Bumper",
+   "flipper": null,
+   "what": "Drei Bumper (Ninja-Sterne) in der Mitte oben.",
+   "returns": "Kugel springt zwischen den Bumpern.",
+   "awards": [
+    "Ninja-Sterne beleuchten (blaue Schüsse)"
+   ],
+   "visibility": "Sichtbar.",
+   "sources": [
+    "script",
+    "vpx"
+   ]
+  },
+  "boom_lanes": {
+   "name": "B-O-O-M-Bahnen",
+   "en": "BOOM In/Outlanes",
+   "kind": "4 Bahnen",
+   "flipper": null,
+   "what": "Rückführ- und Außenbahnen links und rechts.",
+   "returns": "Außen = Aus (links ggf. Regeneration).",
+   "awards": [
+    "BOOM komplett → Boom-Knopf (Spot des wertvollsten Schusses)"
+   ],
+   "visibility": "Sichtbar.",
+   "sources": [
+    "script",
+    "vpx"
+   ]
+  },
+  "plunger": {
+   "name": "Abschuss",
+   "en": "Shooter Lane",
+   "kind": "Abschuss",
+   "flipper": null,
+   "what": "Abschussbahn rechts.",
+   "returns": "Kugel läuft rechts hoch in die BAM!-Bahnen.",
+   "awards": [
+    "Lane-Skillshot 2,5M + 250K je Skillshot"
+   ],
+   "visibility": "Sichtbar.",
+   "sources": [
+    "script",
+    "vpx"
+   ]
+  }
+ },
+ "strategies": [
+  {
+   "id": "solid",
+   "title": "Solide spielen",
+   "subtitle": "Battle zu jedem Ball, Ninja-Multiball, Lil Deadpool",
+   "steps": [
+    {
+     "title": "Battle am Scoop",
+     "shots": [
+      "scoop"
+     ],
+     "prep": "Battle ist zu jedem neuen Ball bereit.",
+     "go": "Hell-House-Scoop (Hell House Scoop), mit den Flippertasten einen Gegner wählen, Abschussknopf bestätigt.",
+     "why": "Fünf Gegner wählbar: Juggernaut, Mystique, Sabretooth, T-Rex, Megalodon.",
+     "sources": [
+      "script",
+      "log"
+     ]
+    },
+    {
+     "title": "Ninja-Multiball",
+     "shots": [
+      "right_ramp"
+     ],
+     "prep": "Lock leuchtet.",
+     "go": "Dreimal die rechte Katana-Rampe.",
+     "why": "Dritter Lock startet den Multiball (Ballretter an). Jackpot = 500K + 50K je Ninja-Stern.",
+     "sources": [
+      "script"
+     ]
+    },
+    {
+     "title": "Lil-Deadpool-Multiball",
+     "shots": [
+      "oof",
+      "lildp"
+     ],
+     "prep": "O-O-F-Fallziele abräumen.",
+     "go": "Lil-Deadpool-Ziel 2-mal treffen.",
+     "why": "Startet Lil-Deadpool-Multiball; danach braucht es je einen Treffer mehr (max. 4).",
+     "sources": [
+      "script",
+      "log"
+     ]
+    },
+    {
+     "title": "Extraball",
+     "shots": [
+      "scoop"
+     ],
+     "prep": "30 Waffen oder 50 Ninja-Sterne.",
+     "go": "Extraball am Scoop abholen.",
+     "why": "Beide Zähler beleuchten den Extraball am Scoop.",
+     "sources": [
+      "script"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "high",
+   "title": "Auf Highscore",
+   "subtitle": "Playfield X über Zähler, Sauron und Mr. Sinister",
+   "steps": [
+    {
+     "title": "Playfield X sammeln",
+     "shots": [
+      "right_orbit",
+      "bumpers",
+      "left_orbit",
+      "left_ramp",
+      "center_loop",
+      "right_ramp",
+      "scoop"
+     ],
+     "prep": "Zähler laufen über das ganze Spiel.",
+     "go": "Chimichangas (rechter Orbit), Ninja-Sterne (Bumper → blaue Schüsse), Waffen (weiße Schüsse → Scoop).",
+     "why": "Je 10 Chimichangas, 25 Ninja-Sterne und 50 Waffen +1 Playfield X.",
+     "sources": [
+      "script"
+     ]
+    },
+    {
+     "title": "Waffen-Jackpot und Mechsuit",
+     "shots": [
+      "scoop"
+     ],
+     "prep": "Alle 6 Waffen leuchtet der Waffen-Jackpot (1M) am Scoop, bei 75 Waffen Mechsuit-Multiball.",
+     "go": "Scoop.",
+     "why": "Mechsuit: Super Jackpot am Scoop = 6× Jackpot.",
+     "sources": [
+      "script"
+     ]
+    },
+    {
+     "title": "Drei Battles → Sauron",
+     "shots": [
+      "scoop"
+     ],
+     "prep": "Drei Battles gewonnen.",
+     "go": "Am Scoop Sauron wählen.",
+     "why": "Sauron startet mit 2 Zusatzkugeln; grüne Schüsse treffen ihn.",
+     "sources": [
+      "script"
+     ]
+    },
+    {
+     "title": "Katanarama Time",
+     "shots": [
+      "left_ramp",
+      "right_ramp",
+      "left_orbit",
+      "right_orbit"
+     ],
+     "prep": "Rampen schießen füllt 6 Diamanten.",
+     "go": "Nach dem 6. Diamanten Orbits und Rampen.",
+     "why": "Zeitmodus (20 s + Dazzler-Bonus) mit Katanarama-Wert auf Orbits und Rampen.",
+     "sources": [
+      "script"
+     ]
+    }
+   ]
+  }
+ ],
+ "multiballs": [
+  {
+   "id": "ninja",
+   "name": "Ninja-Multiball",
+   "tag": "Lock-Multiball",
+   "balls": "3 Kugeln",
+   "prep": [
+    {
+     "title": "3 Kugeln locken",
+     "shots": [
+      "right_ramp",
+      "pool"
+     ],
+     "text": "Locks an der rechten Katana-Rampe, wenn Lock leuchtet (POOL beleuchtet ihn laut Spielanleitung).",
+     "sources": [
+      "script",
+      "card"
+     ]
+    }
+   ],
+   "start": {
+    "title": "Dritter Lock",
+    "shots": [
+     "right_ramp"
+    ],
+    "text": "Nach dem dritten Lock kommen 2 Kugeln dazu.",
+    "sources": [
+     "script"
+    ]
+   },
+   "score": [
+    {
+     "title": "Jackpots, Super am Lock",
+     "shots": [
+      "left_orbit",
+      "left_ramp",
+      "center_loop",
+      "right_orbit",
+      "right_ramp"
+     ],
+     "text": "Jackpot 500K + 50K je Ninja-Stern. Super Jackpot an der rechten Rampe (Lock) = 6× Jackpot, danach +1M.",
+     "sources": [
+      "script"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lildp",
+   "name": "Lil-Deadpool-Multiball",
+   "tag": "Lil Deadpool",
+   "balls": "2 Kugeln",
+   "prep": [
+    {
+     "title": "Fallziele + 2 Treffer",
+     "shots": [
+      "oof",
+      "lildp"
+     ],
+     "text": "O-O-F abräumen, Lil-Deadpool-Ziel 2-mal (je Modus +1, max. 4).",
+     "sources": [
+      "script",
+      "log"
+     ]
+    }
+   ],
+   "start": {
+    "title": "Lil-Deadpool-Ziel",
+    "shots": [
+     "lildp"
+    ],
+    "text": "Der letzte nötige Treffer startet den Multiball.",
+    "sources": [
+     "script"
+    ]
+   },
+   "score": [
+    {
+     "title": "Jackpots, dann Hauptschüsse",
+     "shots": [
+      "lildp",
+      "left_orbit",
+      "left_ramp",
+      "center_loop",
+      "right_orbit"
+     ],
+     "text": "Jackpots am Lil-Deadpool-Ziel, im zweiten Teil an den Hauptschüssen; zuletzt Spinner je 500K.",
+     "sources": [
+      "script"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "disco",
+   "name": "Disco Loops / Disco-Multiball",
+   "tag": "Spinner",
+   "balls": "1 bzw. 2 Kugeln",
+   "prep": [
+    {
+     "title": "Dazzler-Spinner",
+     "shots": [
+      "left_orbit"
+     ],
+     "text": "Zählt nicht während eines Battles: 50 Drehungen = Disco Loops (Zeitmodus), 100 = Disco-Multiball (+1 Kugel), dann von vorn.",
+     "sources": [
+      "script"
+     ]
+    }
+   ],
+   "start": {
+    "title": "Automatisch",
+    "shots": [
+     "left_orbit"
+    ],
+    "text": "Startet beim Erreichen der Drehungen.",
+    "sources": [
+     "script"
+    ]
+   },
+   "score": [
+    {
+     "title": "Spinner erhöht den Super Jackpot",
+     "shots": [
+      "left_orbit",
+      "left_ramp"
+     ],
+     "text": "Im Disco-Multiball +100K Super Jackpot je Drehung; beleuchtete Schüsse treffen.",
+     "sources": [
+      "script"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sauron",
+   "name": "Sauron",
+   "tag": "Battle-Multiball",
+   "balls": "3 Kugeln",
+   "prep": [
+    {
+     "title": "Drei Battles gewinnen",
+     "shots": [
+      "scoop"
+     ],
+     "text": "Danach ist Sauron als sechster Gegner wählbar.",
+     "sources": [
+      "script"
+     ]
+    }
+   ],
+   "start": {
+    "title": "Scoop, Sauron wählen",
+    "shots": [
+     "scoop"
+    ],
+    "text": "Startet mit 2 Zusatzkugeln.",
+    "sources": [
+     "script"
+    ]
+   },
+   "score": [
+    {
+     "title": "Grüne Schüsse",
+     "shots": [],
+     "text": "„Shoot green shots to attack Sauron“ – welche Schüsse grün sind, zeigt der Tisch.",
+     "sources": [
+      "script"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mech",
+   "name": "Mechsuit-Multiball",
+   "tag": "Waffen",
+   "balls": "Multiball",
+   "prep": [
+    {
+     "title": "75 Waffen",
+     "shots": [
+      "left_orbit",
+      "left_ramp",
+      "center_loop",
+      "right_ramp",
+      "right_orbit",
+      "scoop"
+     ],
+     "text": "Weiße Waffen-Schüsse; alle 75 Waffen wird Mechsuit beleuchtet.",
+     "sources": [
+      "script"
+     ]
+    }
+   ],
+   "start": {
+    "title": "Scoop",
+    "shots": [
+     "scoop"
+    ],
+    "text": "Am Hell-House-Scoop.",
+    "sources": [
+     "script"
+    ]
+   },
+   "score": [
+    {
+     "title": "Super am Scoop",
+     "shots": [
+      "scoop"
+     ],
+     "text": "Super Jackpot = 6× Mechsuit-Jackpot, danach +1M.",
+     "sources": [
+      "script"
+     ]
+    }
+   ]
+  }
+ ],
+ "modesIntro": "Am Hell-House-Scoop wählst du einen Gegner (Flippertasten, Abschussknopf bestätigt). Nach 3 Siegen ist Sauron wählbar, nach 6 Siegen Mr. Sinister. Quests wie am echten Tisch gibt es nicht – T-Rex und Megalodon sind hier Battles.",
+ "modes": [
+  {
+   "id": "jugg",
+   "name": "Juggernaut",
+   "film": "Battle",
+   "time": "Lebensbalken",
+   "steps": [
+    {
+     "title": "Blinkende Schüsse",
+     "shots": [
+      "center_loop"
+     ],
+     "text": "Laut Änderungsprotokoll macht der Wolverine-Loop Schaden. Danach Scoop."
+    }
+   ]
+  },
+  {
+   "id": "myst",
+   "name": "Mystique",
+   "film": "Battle",
+   "time": "Lebensbalken",
+   "steps": [
+    {
+     "title": "Blinkende Schüsse",
+     "shots": [],
+     "text": "Blinkende Schüsse und Display beachten; Ablauf im Detail nicht ausgewertet."
+    }
+   ]
+  },
+  {
+   "id": "sabre",
+   "name": "Sabretooth",
+   "film": "Battle",
+   "time": "Lebensbalken",
+   "steps": [
+    {
+     "title": "Orbits",
+     "shots": [
+      "left_orbit",
+      "right_orbit"
+     ],
+     "text": "Laut Änderungsprotokoll nehmen linker und rechter Loop Schaden."
+    }
+   ]
+  },
+  {
+   "id": "trex",
+   "name": "T-Rex",
+   "film": "Battle",
+   "time": "Lebensbalken",
+   "steps": [
+    {
+     "title": "Blinkende Schüsse",
+     "shots": [],
+     "text": "Hier ein Battle (am echten Tisch eine Quest). Ablauf nicht ausgewertet."
+    }
+   ]
+  },
+  {
+   "id": "mega",
+   "name": "Megalodon",
+   "film": "Battle",
+   "time": "Lebensbalken",
+   "steps": [
+    {
+     "title": "Blinkende Schüsse",
+     "shots": [],
+     "text": "Hier ein Battle (am echten Tisch eine Quest). Ablauf nicht ausgewertet."
+    }
+   ]
+  },
+  {
+   "id": "sinister",
+   "name": "Mr. Sinister",
+   "film": "Finale",
+   "time": "–",
+   "steps": [
+    {
+     "title": "Blinkende Schüsse",
+     "shots": [],
+     "text": "„Shoot flashing shots to attack Mr. Sinister“. Nach 6 gewonnenen Battles wählbar."
+    }
+   ]
+  },
+  {
+   "id": "katana",
+   "name": "Katanarama Time",
+   "film": "Rampen",
+   "time": "20 s + Bonus",
+   "steps": [
+    {
+     "title": "6 Diamanten",
+     "shots": [
+      "left_ramp",
+      "right_ramp",
+      "left_orbit",
+      "right_orbit"
+     ],
+     "text": "Rampen füllen die Diamanten; dann Orbits und Rampen."
+    }
+   ]
+  },
+  {
+   "id": "berserk",
+   "name": "Berserker Rage",
+   "film": "Spinner",
+   "time": "Zeitmodus",
+   "steps": [
+    {
+     "title": "Spinner",
+     "shots": [
+      "left_orbit",
+      "center_loop"
+     ],
+     "text": "Nach 25 Spinner-Drehungen; danach steigt der Wert je Drehung um 10K."
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "term": "Team-Up",
+   "text": "Helfer (Dazzler, Colossus, Wolverine, Domino) – je zwei Schüsse auf ihren Schuss."
+  },
+  {
+   "term": "Final Shot",
+   "text": "Scoop-Schuss, der einen besiegten Gegner erledigt."
+  },
+  {
+   "term": "Waffen (Weapons)",
+   "text": "Weiße Schüsse sammeln, am Scoop einlösen."
+  },
+  {
+   "term": "Boom-Knopf",
+   "text": "Knopf vorn; spottet den wertvollsten Schuss."
+  },
+  {
+   "term": "Playfield X",
+   "text": "Spielfeld-Multiplikator 2x–5x."
+  },
+  {
+   "term": "Einsatz (Insert)",
+   "text": "Beleuchtetes Feld im Spielfeld. Nur Anzeige, kein Ziel."
+  }
+ ],
+ "limits": [
+  "Regeln aus dem Tischscript ausgewertet, nicht aus einem Rulesheet. Battle-Abläufe im Detail sind nicht vollständig beschrieben.",
+  "Die Spielanleitung im Tisch ist eine Kopie der Stern-Karte und passt nicht überall zum Script (z. B. Quests, SNIKT).",
+  "Die Mündung des Colossus-U-Turns ist nicht markiert.",
+  "Flipper-Empfehlungen aus der Lage abgeleitet."
+ ]
+}

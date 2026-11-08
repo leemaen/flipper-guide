@@ -1,0 +1,218 @@
+{
+ "dead_ins": {
+  "name": "D-E-A-D",
+  "en": "(D)EAD … DEA(D) inserts (lamps 30-33)",
+  "text": "Zeigen die vier DEAD-Ziele links. DEAD komplett beleuchtet BATTLE am Scoop.",
+  "px": [
+   [
+    395,
+    1255
+   ],
+   [
+    394,
+    1310
+   ],
+   [
+    392,
+    1365
+   ],
+   [
+    390,
+    1417
+   ]
+  ],
+  "r": 17
+ },
+ "pool_ins": {
+  "name": "P-O-O-L",
+  "en": "(P)OOL … POO(L) inserts (lamps 35-38)",
+  "text": "Zeigen die vier POOL-Ziele rechts. POOL komplett beleuchtet den Lock an der rechten Rampe.",
+  "px": [
+   [
+    960,
+    1257
+   ],
+   [
+    960,
+    1310
+   ],
+   [
+    959,
+    1365
+   ],
+   [
+    960,
+    1417
+   ]
+  ],
+  "r": 17
+ },
+ "battles": {
+  "name": "Gegner: Juggernaut · Mystique · Sabretooth",
+  "en": "Juggernaut / Mystique / Sabretooth (lamps 18-20)",
+  "text": "Die drei Battles. Gewonnene Battles leuchten; alle drei beleuchten Sauron-Multiball.",
+  "px": [
+   [
+    505,
+    1582
+   ],
+   [
+    652,
+    1582
+   ],
+   [
+    803,
+    1582
+   ]
+  ],
+  "r": 18
+ },
+ "quests": {
+  "name": "Quests: T-Rex · Megalodon",
+  "en": "T-Rex / Megalodon (lamps 21, 22)",
+  "text": "Die beiden Quests (Zeitreisen).",
+  "px": [
+   [
+    570,
+    1680
+   ],
+   [
+    730,
+    1680
+   ]
+  ],
+  "r": 18
+ },
+ "pfx": {
+  "name": "Spielfeld-Multiplikator",
+  "en": "2X · 3X · 4X · 5X (lamps 23-26)",
+  "text": "Aktueller Playfield-X.",
+  "px": [
+   [
+    652,
+    1838
+   ],
+   [
+    578,
+    1810
+   ],
+   [
+    723,
+    1810
+   ],
+   [
+    652,
+    1782
+   ]
+  ],
+  "r": 16
+ },
+ "sauron_ins": {
+  "name": "Sauron",
+  "en": "Sauron (lamp 40)",
+  "text": "Sauron-Multiball (nach allen drei Battles).",
+  "px": [
+   [
+    850,
+    1488
+   ]
+  ],
+  "r": 16
+ },
+ "sinister_ins": {
+  "name": "Mr. Sinister",
+  "en": "Mr Sinister (lamp 41)",
+  "text": "Finale (Wizard-Modus).",
+  "px": [
+   [
+    793,
+    1365
+   ]
+  ],
+  "r": 16
+ },
+ "eb_ins": {
+  "name": "Extraball",
+  "en": "Extra Ball (lamp 68)",
+  "text": "Extraball am Scoop abholbereit.",
+  "px": [
+   [
+    570,
+    932
+   ]
+  ],
+  "r": 16
+ },
+ "mystery_ins": {
+  "name": "Mystery",
+  "en": "Mystery (lamp 67)",
+  "text": "Mystery am Scoop (nach DEADPOOL komplett).",
+  "px": [
+   [
+    579,
+    991
+   ]
+  ],
+  "r": 16
+ },
+ "quest_ins": {
+  "name": "Quest",
+  "en": "Quest (lamp 66)",
+  "text": "Quest am Scoop abholbereit.",
+  "px": [
+   [
+    591,
+    1061
+   ]
+  ],
+  "r": 16
+ },
+ "lock_ins": {
+  "name": "Lock",
+  "en": "Lock (lamp 93)",
+  "text": "Lock an der rechten Katana-Rampe beleuchtet.",
+  "px": [
+   [
+    943,
+    975
+   ]
+  ],
+  "r": 18
+ },
+ "oof_ins": {
+  "name": "O-O-F-Fallziele",
+  "en": "3-Bank Drop Target L/C/R (lamps 77-79)",
+  "text": "Die drei Fallziele vor Lil Deadpool.",
+  "px": [
+   [
+    704,
+    1014
+   ],
+   [
+    750,
+    1036
+   ],
+   [
+    800,
+    1054
+   ]
+  ],
+  "r": 15
+ },
+ "center_ins": {
+  "name": "Wolverine-Loop: Pfeil + Waffe",
+  "en": "Center Loop Arrow (lamps 105-107) / Weapon (104)",
+  "text": "Pfeil und Waffen-Insert vor dem mittleren Spinner.",
+  "px": [
+   [
+    634,
+    571
+   ],
+   [
+    632,
+    622
+   ]
+  ],
+  "r": 16
+ }
+}

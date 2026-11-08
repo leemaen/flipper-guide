@@ -1,0 +1,486 @@
+{
+ "_note": "VPX-Koordinaten der Tischdatei JP's Deadpool 6.1.0 (Spielfeld = Stern Pro; Homographie auf das Stern-Pro-Foto RMS 3,3 px über 28 Inserts, tools/deadpool/fit_H.py). Eingänge aus Schaltern/Rampen der Tischdatei, gegengeprüft mit dem Stern-Pro-Schalterplan (Handbuch 500-55K1-01 S. 16): Dazzler-Spinner 39 = Spinner001, linke Rampe = Ramp003/Ramp018 (Opto 42 oben), Hell-House-Scoop 44, Wolverine-Spinner 46 = Spinner002, rechte Katana-Rampe mit Lock 61-64 = Ramp012/Kicker lock, rechter Orbit 71 = Trigger005, Lil-Deadpool-Ziel 53 = Target012, Colossal-Jackpot-Ziel 52 = Target013, Top Target 66 (SNIKT) = Target014. Colossus-U-Turn (Schalter 43 = Trigger011): Mündung nicht eindeutig bestimmbar, daher ohne Marker. VPX-Ansicht: Wolverine-Spinner an der Position der Tischdatei (dort ca. 45 Einheiten tiefer als am echten Tisch).",
+ "space": "vpx",
+ "flippers": {
+  "L": {
+   "pivot": [
+    274.5,
+    1786.9
+   ],
+   "aim": [
+    350,
+    1800
+   ]
+  },
+  "R": {
+   "pivot": [
+    592.2,
+    1786.9
+   ],
+   "aim": [
+    516,
+    1800
+   ]
+  }
+ },
+ "shots": {
+  "left_orbit": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     98,
+     840
+    ],
+    "toward": [
+     92,
+     770
+    ],
+    "len": 44,
+    "w": 66
+   }
+  },
+  "left_ramp": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     201,
+     818
+    ],
+    "toward": [
+     185,
+     770
+    ],
+    "len": 50,
+    "w": 84
+   }
+  },
+  "scoop": {
+   "entrance": {
+    "type": "circle",
+    "c": [
+     294,
+     474
+    ],
+    "r": 28
+   }
+  },
+  "center_loop": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     385,
+     262
+    ],
+    "toward": [
+     384,
+     210
+    ],
+    "len": 40,
+    "w": 54
+   }
+  },
+  "right_ramp": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     812,
+     720
+    ],
+    "toward": [
+     811,
+     640
+    ],
+    "len": 56,
+    "w": 68
+   }
+  },
+  "right_orbit": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     902,
+     760
+    ],
+    "toward": [
+     900,
+     680
+    ],
+    "len": 56,
+    "w": 54
+   }
+  },
+  "oof": {
+   "entrance": {
+    "type": "multi",
+    "items": [
+     {
+      "type": "rect",
+      "c": [
+       497,
+       784
+      ],
+      "toward": [
+       485,
+       809
+      ],
+      "len": 14,
+      "w": 46
+     },
+     {
+      "type": "rect",
+      "c": [
+       548,
+       808
+      ],
+      "toward": [
+       536,
+       833
+      ],
+      "len": 14,
+      "w": 46
+     },
+     {
+      "type": "rect",
+      "c": [
+       599,
+       832
+      ],
+      "toward": [
+       587,
+       857
+      ],
+      "len": 14,
+      "w": 46
+     }
+    ]
+   }
+  },
+  "lildp": {
+   "entrance": {
+    "type": "rect",
+    "c": [
+     608,
+     698
+    ],
+    "toward": [
+     596,
+     723
+    ],
+    "len": 14,
+    "w": 40
+   }
+  },
+  "colossal": {
+   "entrance": {
+    "type": "rect",
+    "c": [
+     465,
+     701
+    ],
+    "toward": [
+     440,
+     712
+    ],
+    "len": 14,
+    "w": 36
+   }
+  },
+  "snikt": {
+   "entrance": {
+    "type": "rect",
+    "c": [
+     452,
+     372
+    ],
+    "toward": [
+     430,
+     392
+    ],
+    "len": 14,
+    "w": 36
+   }
+  },
+  "dead": {
+   "entrance": {
+    "type": "multi",
+    "items": [
+     {
+      "type": "rect",
+      "c": [
+       112,
+       1094
+      ],
+      "toward": [
+       140,
+       1094
+      ],
+      "len": 12,
+      "w": 40
+     },
+     {
+      "type": "rect",
+      "c": [
+       112,
+       1153
+      ],
+      "toward": [
+       140,
+       1153
+      ],
+      "len": 12,
+      "w": 40
+     },
+     {
+      "type": "rect",
+      "c": [
+       112,
+       1212
+      ],
+      "toward": [
+       140,
+       1212
+      ],
+      "len": 12,
+      "w": 40
+     },
+     {
+      "type": "rect",
+      "c": [
+       112,
+       1272
+      ],
+      "toward": [
+       140,
+       1272
+      ],
+      "len": 12,
+      "w": 40
+     }
+    ]
+   }
+  },
+  "pool": {
+   "entrance": {
+    "type": "multi",
+    "items": [
+     {
+      "type": "rect",
+      "c": [
+       798,
+       1094
+      ],
+      "toward": [
+       770,
+       1094
+      ],
+      "len": 12,
+      "w": 40
+     },
+     {
+      "type": "rect",
+      "c": [
+       798,
+       1153
+      ],
+      "toward": [
+       770,
+       1153
+      ],
+      "len": 12,
+      "w": 40
+     },
+     {
+      "type": "rect",
+      "c": [
+       798,
+       1212
+      ],
+      "toward": [
+       770,
+       1212
+      ],
+      "len": 12,
+      "w": 40
+     },
+     {
+      "type": "rect",
+      "c": [
+       798,
+       1272
+      ],
+      "toward": [
+       770,
+       1272
+      ],
+      "len": 12,
+      "w": 40
+     }
+    ]
+   }
+  },
+  "top_lanes": {
+   "entrance": {
+    "type": "multi",
+    "items": [
+     {
+      "type": "rect",
+      "c": [
+       506,
+       196
+      ],
+      "toward": [
+       508,
+       140
+      ],
+      "len": 56,
+      "w": 32
+     },
+     {
+      "type": "rect",
+      "c": [
+       590,
+       207
+      ],
+      "toward": [
+       592,
+       151
+      ],
+      "len": 56,
+      "w": 32
+     },
+     {
+      "type": "rect",
+      "c": [
+       673,
+       220
+      ],
+      "toward": [
+       675,
+       164
+      ],
+      "len": 56,
+      "w": 32
+     },
+     {
+      "type": "rect",
+      "c": [
+       756,
+       231
+      ],
+      "toward": [
+       758,
+       175
+      ],
+      "len": 56,
+      "w": 32
+     }
+    ]
+   }
+  },
+  "bumpers": {
+   "entrance": {
+    "type": "multi",
+    "items": [
+     {
+      "type": "circle",
+      "c": [
+       518,
+       387
+      ],
+      "r": 44
+     },
+     {
+      "type": "circle",
+      "c": [
+       669,
+       483
+      ],
+      "r": 44
+     },
+     {
+      "type": "circle",
+      "c": [
+       501,
+       633
+      ],
+      "r": 44
+     }
+    ]
+   }
+  },
+  "boom_lanes": {
+   "entrance": {
+    "type": "multi",
+    "items": [
+     {
+      "type": "rect",
+      "c": [
+       56,
+       1569
+      ],
+      "toward": [
+       56,
+       1510
+      ],
+      "len": 56,
+      "w": 32
+     },
+     {
+      "type": "rect",
+      "c": [
+       128,
+       1570
+      ],
+      "toward": [
+       128,
+       1510
+      ],
+      "len": 56,
+      "w": 32
+     },
+     {
+      "type": "rect",
+      "c": [
+       740,
+       1570
+      ],
+      "toward": [
+       740,
+       1510
+      ],
+      "len": 56,
+      "w": 32
+     },
+     {
+      "type": "rect",
+      "c": [
+       812,
+       1569
+      ],
+      "toward": [
+       812,
+       1510
+      ],
+      "len": 56,
+      "w": 32
+     }
+    ]
+   }
+  },
+  "plunger": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     907,
+     1800
+    ],
+    "toward": [
+     907,
+     1700
+    ],
+    "len": 160,
+    "w": 40
+   }
+  }
+ }
+}

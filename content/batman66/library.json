@@ -1,0 +1,10 @@
+{
+ "id": "batman66",
+ "name": "Batman 66 (Premium)",
+ "manufacturer": "Stern",
+ "year": 2016,
+ "versions": "Echter Tisch (Premium/LE, keine Pro) · VPX-Tribute: eigener Eintrag",
+ "accent": "#7b3fbf",
+ "thumb": "img/batman66-thumb.jpg",
+ "data": "data/batman66.json"
+}

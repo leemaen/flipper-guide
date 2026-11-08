@@ -1,0 +1,318 @@
+{
+ "king_kong_letters": {
+  "name": "Buchstaben K-I-N-G K-O-N-G",
+  "en": "KING KONG letters",
+  "text": "Acht runde Buchstaben-Einsätze im Bogen über dem Tor. Sie zeigen, welche Buchstaben du schon hast. Buchstaben gibt es u. a. für jeden neuen Skillshot, für Cliffs-Rampen (3., 15.) und am Gong, wenn die grüne Leiste im Display voll ist. Alle acht = T-Rex Battle leuchtet.",
+  "px": [
+   [
+    462,
+    1534
+   ],
+   [
+    503,
+    1492
+   ],
+   [
+    550,
+    1459
+   ],
+   [
+    600,
+    1441
+   ],
+   [
+    700,
+    1441
+   ],
+   [
+    750,
+    1457
+   ],
+   [
+    797,
+    1492
+   ],
+   [
+    837,
+    1532
+   ]
+  ],
+  "r": 22
+ },
+ "climb_arrows": {
+  "name": "Gelbe CLIMB-Pfeile",
+  "en": "Climb arrows",
+  "text": "Gelbe Pfeile mit der Aufschrift CLIMB vor den Schüssen (markiert sind die sechs im Foto eindeutig erkennbaren; der am rechten Orbit liegt unter Drahtbahnen). Welche leuchten, wechselt (zu Beginn 4 zufällige). Jeder leuchtende Treffer bringt 25 ft am Gebäude. Getroffen wird der Eingang hinter dem Pfeil, nicht der Pfeil.",
+  "px": [
+   [
+    307,
+    735
+   ],
+   [
+    400,
+    773
+   ],
+   [
+    648,
+    814
+   ],
+   [
+    757,
+    790
+   ],
+   [
+    760,
+    920
+   ],
+   [
+    725,
+    965
+   ]
+  ],
+  "r": 15
+ },
+ "shot_arrows": {
+  "name": "Weiße Schusspfeile (Farbanzeige)",
+  "en": "Shot arrows (RGB)",
+  "text": "Weiße Pfeile über den CLIMB-Pfeilen. Sie leuchten farbig: blau = Insel-Pfeil (Pro: Szenen-Start), rot = Jackpot, grün = Kong-Award, gold = Schatzsuche. Die Farbe wechselt mit dem Spielstand – deshalb gibt es in der App keinen festen Pin für „blaue“ oder „goldene“ Schüsse.",
+  "px": [
+   [
+    307,
+    683
+   ],
+   [
+    400,
+    707
+   ],
+   [
+    648,
+    761
+   ],
+   [
+    760,
+    722
+   ],
+   [
+    715,
+    895
+   ],
+   [
+    966,
+    961
+   ]
+  ],
+  "r": 16
+ },
+ "building": {
+  "name": "Gebäude 100 ft bis 1200 ft",
+  "en": "Building floors",
+  "text": "Das Gebäude in der Mitte zeigt, wie hoch Kong geklettert ist. 100 ft = 5M + Kartenteil, 200 ft = Island Lock + Extraball leuchten, 300 ft = 10M + NYC Event 1, 400 ft = KING-KONG-Buchstabe, 500 ft = Island Lock (Rulesheet 0.97).",
+  "px": [
+   [
+    600,
+    1370
+   ],
+   [
+    650,
+    1370
+   ],
+   [
+    700,
+    1370
+   ],
+   [
+    600,
+    1313
+   ],
+   [
+    650,
+    1313
+   ],
+   [
+    700,
+    1313
+   ],
+   [
+    625,
+    1257
+   ],
+   [
+    681,
+    1257
+   ],
+   [
+    620,
+    1208
+   ],
+   [
+    683,
+    1208
+   ],
+   [
+    615,
+    1148
+   ],
+   [
+    685,
+    1148
+   ]
+  ],
+  "r": 16
+ },
+ "biplanes": {
+  "name": "Doppeldecker 1–4",
+  "en": "Biplane 1–4",
+  "text": "Zeigt, wie viele Doppeldecker in Biplane Attack schon abgeschossen sind. Die Side Ramp (Seitenrampe) treibt sie voran (Aufdruck „Side Ramp advances Biplane“).",
+  "px": [
+   [
+    760,
+    1310
+   ],
+   [
+    732,
+    1255
+   ],
+   [
+    740,
+    1195
+   ],
+   [
+    745,
+    1140
+   ]
+  ],
+  "r": 15
+ },
+ "lost_temple": {
+  "name": "Anzeige „Lost Temple“",
+  "en": "Lost Temple insert",
+  "text": "Runder Einsatz unter dem Center-Lane-Pfeil. Lost Temple leuchtet nach Punchback-Ziel oder Kong Cave (solange ein Fallziel offen ist). Gestartet wird dann über den rechten Orbit.",
+  "px": [
+   [
+    763,
+    846
+   ]
+  ],
+  "r": 20
+ },
+ "nyc_island_lock": {
+  "name": "„NYC Event“ und „Island Lock“",
+  "en": "NYC Event / Island Lock",
+  "text": "Zwei runde Einsätze in der Bahn des rechten Orbits. Leuchten sie, ist am rechten Orbit ein NYC Event bzw. ein Island Lock bereit.",
+  "px": [
+   [
+    999,
+    844
+   ],
+   [
+    991,
+    894
+   ]
+  ],
+  "r": 20
+ },
+ "island_scene": {
+  "name": "Anzeige „Island Scene“",
+  "en": "Island Scene insert",
+  "text": "Runder Einsatz in der Gong-Bahn unter der weißen Scheibe. Zeigt eine startbereite Insel-Szene an.",
+  "px": [
+   [
+    868,
+    888
+   ]
+  ],
+  "r": 18
+ },
+ "log_bridge": {
+  "name": "Anzeige „Log Bridge“",
+  "en": "Log Bridge",
+  "text": "Blauer Einsatz links. Die Baumstammbrücke ist eine versteckte Weiche am Fluss-Eingang: Action-Taste kurz vor dem Fluss drücken, dann rollt die Kugel zum kleinen linken Flipper.",
+  "px": [
+   [
+    263,
+    810
+   ]
+  ],
+  "r": 18
+ },
+ "x_inserts": {
+  "name": "Orange X-Einsätze (2x Scoring)",
+  "en": "Orange X targets",
+  "text": "Orange Felder mit X vor den vier X-Zielen. Alle vier treffen, dann das wandernde orange Ziel: startet 2x Scoring (Rulesheet). Welches Ziel auf dem Pro das wandernde ist, ist im Pro-Handbuch nicht eindeutig benannt.",
+  "px": [
+   [
+    363,
+    690
+   ],
+   [
+    716,
+    755
+   ],
+   [
+    807,
+    938
+   ]
+  ],
+  "r": 14
+ },
+ "gate": {
+  "name": "Tor: sechs Hauptziele",
+  "en": "Gate (8th Wonder objectives)",
+  "text": "Die sechs Felder an den Torpfosten über den Flippern: Kong Multiball, T-Rex defeated, Biplanes destroyed (links), Climb complete, Island Scenes, Spider Pit cleared (rechts). Alle sechs = 8th Wonder (Wizard-Modus).",
+  "px": [
+   [
+    566,
+    1590
+   ],
+   [
+    565,
+    1645
+   ],
+   [
+    552,
+    1738
+   ],
+   [
+    748,
+    1590
+   ],
+   [
+    755,
+    1645
+   ],
+   [
+    762,
+    1738
+   ]
+  ],
+  "r": 18
+ },
+ "two_x": {
+  "name": "2X an den Rückläufen",
+  "en": "Return lane 2X",
+  "text": "Laut Lampenliste „Left/Right Return 2X“. Bedeutung im Rulesheet nicht beschrieben.",
+  "px": [
+   [
+    398,
+    1825
+   ],
+   [
+    905,
+    1825
+   ]
+  ],
+  "r": 14
+ },
+ "kong_cave_ins": {
+  "name": "Anzeige „Kong Cave“",
+  "en": "Kong Cave insert",
+  "text": "Rundes Schild in der Bahn rechts. Darunter liegt das Loch der Kong Cave.",
+  "px": [
+   [
+    1055,
+    1222
+   ]
+  ],
+  "r": 18
+ }
+}

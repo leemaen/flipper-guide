@@ -1,0 +1,17 @@
+{
+ "views": {
+  "vpx": {
+   "H": "tools/deadpool/H_vpx.json",
+   "src": "_quellen/deadpool/vpx_top.png",
+   "crop": [
+    0,
+    0,
+    1000,
+    2221
+   ],
+   "out": "deadpool-vpx.jpg",
+   "quality": 86
+  }
+ },
+ "insertsView": "vpx"
+}

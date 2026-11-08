@@ -1,0 +1,2 @@
+{ "views": { "vpx": { "H": "tools/acdc/H_vpx.json", "src": "_quellen/acdc/vpx_top.png", "crop": [0, 0, 1001, 2224], "out": "acdc-vpx.jpg", "quality": 86 } },
+  "insertsView": "vpx" }

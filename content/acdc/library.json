@@ -1,0 +1,10 @@
+{
+ "id": "acdc",
+ "name": "AC/DC (LUCI Premium)",
+ "manufacturer": "Stern",
+ "year": 2013,
+ "versions": "VPX (LUCI Premium VR 1.1.3, Original-ROM) · echter Tisch: gleiche Regeln",
+ "accent": "#d4241c",
+ "thumb": "img/acdc-thumb.jpg",
+ "data": "data/acdc.json"
+}

@@ -1,0 +1,175 @@
+{
+  "table": {
+    "id": "kingkong", "name": "King Kong: Myth of Terror Island", "short": "King Kong", "manufacturer": "Stern Pinball", "year": 2025,
+    "system": "Stern SPIKE 2", "design": "Keith Elwin",
+    "editions": "Pro-Ausführung (dieser Guide). Premium/LE haben einen beweglichen Gong und einen echten Zug-Lock; das gilt hier nicht.",
+    "ruleVersion": "Regeln nach dem offiziellen Wiki-Rulesheet (pinballrulesheets.com, Original auf Tilt Forums), Stand Code 0.97. Terror on the Tower und 8th Wonder sind dort noch „TBD“. Neuere Software kann abweichen.",
+    "accent": "#e9a761", "contentDate": "2026-11-08"
+  },
+  "sources": [
+    { "id": "manual", "title": "Stern Pinball: King Kong: Myth of Terror Island Pro – Manual 500-55Z5-01 (2025)", "url": "https://wp.sternpinball.com/wp-content/uploads/2025/05/KingKong_Pro_web.pdf", "use": "Schalterliste und Schalterplan (S. 17–20), Lampenliste und Lampenplan (S. 21–26), Spulen (S. 15). Zuordnung der Eingänge und Einsätze." },
+    { "id": "photo", "title": "Stern Pinball: Spielfeldfoto King Kong Pro (Produktseite)", "url": "https://site-assets.plasmic.app/35d0bd1cf2a6725a90fd82291112f1f8.webp", "use": "Spielfeldansicht; alle Markierungen sind in diesem Foto vermessen." },
+    { "id": "rules", "title": "King Kong: Myth of Terror Island Rulesheet (Wiki, Code 0.97)", "url": "https://pinballrulesheets.com/stern/king-kong-myth-of-terror-island-rulesheet", "use": "Alle Regeln, Werte und Abläufe. Pro-Unterschiede sind dort ausdrücklich genannt." },
+    { "id": "ball", "title": "Kugelbild: Lucasbosch, Wikimedia Commons, CC BY-SA 3.0", "url": "https://commons.wikimedia.org/wiki/File:Stainless_steel_1.4034_X46Cr13_bearing_ball_60mm_G100_removed_camera.jpg", "use": "Animierte Flipperkugel (bearbeitet, CC BY-SA 3.0)." }
+  ],
+  "views": {
+    "real": { "label": "Echter Tisch (Pro)", "note": "Herstellerfoto des Pro-Spielfelds, leicht schräg von vorn. Der obere Bereich ist perspektivisch etwas gestaucht; Drahtbahnen verdecken Teile der Rampeneingänge. Verdeckte Stellen sind in den Texten benannt." }
+  },
+  "shots": {
+    "left_orbit": { "name": "Linker Orbit (Spinner)", "en": "Left Orbit / Left Spinner", "kind": "Orbit", "flipper": "R",
+      "what": "Bahn ganz links außen. Der Eingang liegt über dem linken weißen Pfeil und dem gelben CLIMB-Pfeil. Im Orbit sitzt der linke Spinner.",
+      "returns": "Läuft oben um das Spielfeld nach rechts. Schwache Schüsse können in die versteckte Bananen-Bahn unter Kong fallen.",
+      "awards": ["Linker Spinner (Biplane Attack, Stage Fright Phase 4)", "Barrel Roll: linker Orbit → Side Ramp", "Climb-Schuss, wenn gelb"],
+      "visibility": "Eingang im Foto sichtbar. Schalter 55 (Eingang) und 63 (Spinner) laut Handbuch.", "sources": ["manual", "rules", "photo"] },
+    "cliffs_ramp": { "name": "Cliffs-Rampe (linke Rampe)", "en": "Cliffs Ramp / Left Ramp", "kind": "Rampe", "flipper": "UL",
+      "what": "Rampe links über dem zweiten weißen Pfeil. Gespielt wird sie vom kleinen linken Flipper (Mini-Flipper) in der Spielfeldmitte links.",
+      "returns": "Rampe nach oben links (Schalter 56 „Left Ramp Made“).",
+      "awards": ["Cliff Awards: 3./15. = KING-KONG-Buchstabe, 6./20. = Cliffhanger, 25. = Extraball", "Island Jackpot beleuchten (2-Ball-Szene)", "Cross the Chasm: Seeleute retten"],
+      "visibility": "Eingang sichtbar, Rampenbahn darüber teils unter Plastik.", "sources": ["manual", "rules", "photo"] },
+    "center_ramp": { "name": "Center Ramp (Zug / Kong Lock)", "en": "Center Ramp", "kind": "Rampe", "flipper": "beide",
+      "what": "Rampe links der Mitte über dem dritten weißen Pfeil. Sie führt hoch zum Zug. Beim Pro werden die Kong-Locks nur gezählt, die Kugel bleibt nicht liegen.",
+      "returns": "Über die Rampe zurück zu einem Flipper (Schalter 54 „Center Ramp Made“).",
+      "awards": ["Kong Lock (wenn beleuchtet)", "Relock im Kong Multiball: 2x Jackpots für 20 s", "Climb-Schuss, wenn gelb"],
+      "visibility": "Eingang sichtbar.", "sources": ["manual", "rules", "photo"] },
+    "center_lane": { "name": "Center Lane (mittlerer Spinner)", "en": "Center Lane / Center Spinner", "kind": "Bahn mit Spinner", "flipper": "beide",
+      "what": "Schmale Bahn in der Mitte über dem Pfeil vor „Lost Temple“. Oben leuchtet das weiße Loch. In der Bahn sitzt der zweite Spinner (im Handbuch „Right Spinner“, im Rulesheet meist „Center Spinner“).",
+      "returns": "Läuft als Schleife oben herum.",
+      "awards": ["Rapids: Center-Spinner-Schleifen bauen den Wert", "Stage Fright Phase 2 (80 Spinner-Drehungen)", "Kong Multiball, 1. Runde: Jackpot nach einem Fallziel"],
+      "visibility": "Eingang sichtbar. Schalter 58 (Eingang) und 71 (Spinner).", "sources": ["manual", "rules", "photo"] },
+    "u_turn": { "name": "U-Turn (obere Schleife)", "en": "U-Turn / Upper Loop", "kind": "Bahn", "flipper": "UR",
+      "what": "Eingang rechts der Mitte über dem schräg gestellten weißen Pfeil. Gespielt vom oberen rechten Flipper nach links oben.",
+      "returns": "Die Bahn macht eine Kehre (U-Turn, Schalter 62).",
+      "awards": ["River beleuchten (Einzelball)", "Super Jackpot in Manhattan Rampage (Multiball)", "Escape the Swamp: 3x"],
+      "visibility": "Eingang unter mehreren Drahtbahnen; Lage aus Pfeilrichtung und Lampenplan (Unsicherheit ca. 20 px).", "sources": ["manual", "rules", "photo"] },
+    "side_ramp": { "name": "Side Ramp (Biplane-Rampe)", "en": "Side Ramp / Biplane Ramp", "kind": "Rampe", "flipper": "UR",
+      "what": "Rampe mit dem silbernen Einlaufblech links der Mitte. Vom oberen rechten Flipper quer nach links schießen. Davor die gelben Pfeile „Biplane“ und CLIMB.",
+      "returns": "Rampe hoch zum Doppeldecker (Schalter 57 „Biplane Ramp Made“).",
+      "awards": ["3 Treffer starten Biplane Attack, dort Jackpot", "Super Jackpot im Kong Multiball (nach einem Jackpot)", "Super Sweep (nach Fallzielen über den linken Orbit)"],
+      "visibility": "Einlaufblech sichtbar; die Rampe selbst ist durchsichtig.", "sources": ["manual", "rules", "photo"] },
+    "gong": { "name": "Gong-Schuss (Pro: Gong-Ziel)", "en": "Gong (Pro: Gong Hit Target)", "kind": "Ziel", "flipper": "beide",
+      "what": "Bahn rechts der Mitte mit der weißen runden Scheibe und dem Einsatz „Island Scene“. Beim Pro gibt es keinen beweglichen Gong, der Treffer wird über das Gong-Ziel (Schalter 67) erkannt.",
+      "returns": "Prallt zurück; je nach Modus nimmt ein VUK dahinter die Kugel auf.",
+      "awards": ["KING-KONG-Buchstabe, wenn die grüne Leiste voll ist", "+15 s für eine laufende Insel-Szene", "T-Rex Battle starten (nach KING KONG)", "Save Ann: Gong-Wert"],
+      "visibility": "Sichtbar. Dass die weiße Scheibe das Gong-Ziel ist, ist aus Lage und Schalterplan abgeleitet.", "sources": ["manual", "rules", "photo"] },
+    "right_orbit": { "name": "Rechter Orbit", "en": "Right Orbit", "kind": "Orbit", "flipper": "L",
+      "what": "Bahn rechts mit den Einsätzen „NYC Event“ und „Island Lock“. Der weiße Pfeil davor zeigt auf den Eingang.",
+      "returns": "Läuft oben zu Kong; dort sitzt das Punchback-Ziel. Ist Island Lock an, fällt die Kugel in ein verstecktes Loch und kommt zum rechten Flipper.",
+      "awards": ["Island Lock (wenn beleuchtet)", "NYC Event starten", "Pro: King Kong Multiball starten (nach Lock 3)", "Lost Temple starten"],
+      "visibility": "Eingang sichtbar; Bahnverlauf oben unter Drahtbahnen.", "sources": ["manual", "rules", "photo"] },
+    "kong_cave": { "name": "Kong Cave", "en": "Kong Cave VUK", "kind": "Loch (VUK)", "flipper": "L",
+      "what": "Loch ganz rechts unter dem Schild „Kong Cave“, rechts neben dem oberen rechten Flipper. Die Kugel kommt von oben durch die Bahn (Rollover über dem Loch) und fällt hinein.",
+      "returns": "Ein VUK wirft die Kugel wieder aus.",
+      "awards": ["Extraball (wenn beleuchtet)", "Island Mystery", "Schatzsuche: letzter Schuss", "Deadeye starten", "Rapids auszahlen"],
+      "visibility": "Loch im Foto unter einem Drahtkorb erkennbar. Wie man es am besten anspielt, steht im Rulesheet nicht. Ein Treffer ohne Hilfe des oberen Flippers gibt in manchen Modi Bonus.", "sources": ["manual", "rules", "photo"] },
+    "pit": { "name": "Spider Pit (3 Ziele)", "en": "Spider Pit targets", "kind": "Ziele", "flipper": "R",
+      "what": "Drei runde türkise Ziele rechts neben der silbernen Magnetscheibe links unten. Die Magnetscheibe selbst ist kein Ziel.",
+      "returns": "Prallen zurück; in einigen Modi hält der Magnet die Kugel.",
+      "awards": ["Pit Multiball: 3 Treffer beleuchten, 1 startet (später +2)", "Island Jackpot kassieren", "Skillshot (Abschuss auf die Pit-Ziele)"],
+      "visibility": "Sichtbar. Schalter 31–33 „Pit Target Top/Mid/Bot“.", "sources": ["manual", "rules", "photo"] },
+    "drops": { "name": "4 Fallziele (Kong-Bank)", "en": "4-Bank Drop Targets", "kind": "Fallziele", "flipper": "UL",
+      "what": "Schräge Reihe aus vier Fallzielen links der Mitte, rechts neben den Glyphen-Einsätzen. Gut erreichbar vom kleinen linken Flipper. Dahinter das Ziel „Island Treasure“.",
+      "returns": "Fallen; Bank wird nach Abräumen neu gestellt.",
+      "awards": ["Light Kong Lock (wenn blinkend)", "King Kombos starten", "Bonus-X +1 pro Abräumen", "River beleuchten", "Kong Multiball: Jackpots beleuchten"],
+      "visibility": "Im Foto liegen die Ziele flach (gefallen); Lage aus Foto und Schalterplan (42–45). Unsicherheit ca. 15 px.", "sources": ["manual", "rules", "photo"] },
+    "river": { "name": "River (Fluss-Bahn links)", "en": "River Lane", "kind": "Bahn", "flipper": "UR",
+      "what": "Bahn ganz links unter dem Einsatz „Log Bridge“. Vom oberen rechten Flipper quer über das Feld.",
+      "returns": "Die Kugel läuft links hinunter (Schalter 41 „River Enter“, 30 „River Exit“). Mit der Log-Bridge-Weiche geht sie zum Mini-Flipper.",
+      "awards": ["River Awards: 3/9/12 = Island Mystery, 5/15 = Rapids, 8 = Extraball", "Super Skillshot (Abschuss in die River-Bahn)", "Deadeye Jackpot"],
+      "visibility": "Eingang im Foto nur ungefähr bestimmbar (Drahtbahnen); Lage nach Schalterplan. Unsicherheit ca. 25 px.", "sources": ["manual", "rules", "photo"] },
+    "mini_flipper": { "name": "Mini-Flipper (oben links)", "en": "Upper Left Flipper", "kind": "Flipper", "flipper": null,
+      "what": "Kleiner Flipper links in der Mitte. Von hier: Cliffs-Rampe und Fallziele.", "returns": "—", "awards": ["Orientierung"],
+      "visibility": "Sichtbar.", "sources": ["manual", "photo"] },
+    "upper_right_flipper": { "name": "Oberer rechter Flipper", "en": "Upper Right Flipper", "kind": "Flipper", "flipper": null,
+      "what": "Flipper rechts in der Spielfeldmitte, links neben der Kong-Cave-Bahn. Von hier: Side Ramp, U-Turn, River.", "returns": "—", "awards": ["Orientierung"],
+      "visibility": "Sichtbar.", "sources": ["manual", "photo"] },
+    "magnet": { "name": "Pit-Magnet", "en": "Spider Pit Magnet", "kind": "Magnet", "flipper": null,
+      "what": "Silberne runde Scheibe links unten. Hält die Kugel in Pit- und Island-Jackpot-Phasen. Kein Ziel.", "returns": "—",
+      "awards": ["Island Jackpot ×2: die gehaltene Kugel mit der anderen in die Pit-Ziele schießen (5 s)"],
+      "visibility": "Sichtbar.", "sources": ["manual", "rules", "photo"] }
+  },
+  "strategies": [
+    { "id": "solid", "title": "Solide spielen", "subtitle": "Multibälle früh holen, Extraball mitnehmen",
+      "steps": [
+        { "title": "Skillshot: Pit-Ziele", "shots": ["pit"], "prep": "Kugel liegt in der Abschussbahn.", "go": "So abschießen, dass die Kugel in die Pit-Ziele fällt (Skill Shot).", "why": "Skillshot, mehr Ball-Save-Zeit und ein KING-KONG-Buchstabe für jeden neuen Skillshot.", "sources": ["rules"] },
+        { "title": "Spider Pit Multiball", "shots": ["pit"], "prep": "Keine.", "go": "Pit-Ziele vom rechten Flipper: 3 Treffer beleuchten, der 4. startet.", "why": "Schneller Mehrball. Der rechte Rücklauf gibt kurz doppelten Pit-Fortschritt.", "sources": ["rules"] },
+        { "title": "Kong Lock beleuchten", "shots": ["drops"], "prep": "„Light Kong Lock“ blinkt.", "go": "Alle vier Fallziele abräumen, gut vom Mini-Flipper.", "why": "Beim ersten Mal leuchten alle drei Locks an der Center Ramp.", "sources": ["rules"] },
+        { "title": "3 Locks, dann Start am rechten Orbit", "shots": ["center_ramp", "right_orbit"], "prep": "Lock leuchtet.", "go": "Center Ramp dreimal. Beim Pro danach den rechten Orbit.", "why": "Startet King Kong Multiball (Pro: virtuelle Locks).", "sources": ["rules"] },
+        { "title": "Klettern bis 200 ft", "shots": ["left_orbit", "cliffs_ramp", "center_ramp", "center_lane", "u_turn", "side_ramp", "right_orbit"], "prep": "Gelbe CLIMB-Pfeile leuchten (wechselnd).", "go": "Nur gelb leuchtende Schüsse treffen. Jeder bringt 25 ft.", "why": "200 ft = Island Lock und Extraball leuchten.", "sources": ["rules"] },
+        { "title": "Extraball holen", "shots": ["kong_cave"], "prep": "Extraball leuchtet.", "go": "Kong Cave rechts.", "why": "Extraball.", "sources": ["rules"] }
+      ] },
+    { "id": "high", "title": "Auf Highscore", "subtitle": "Kong-Super-Jackpots, Giant Spider, Insel-Szenen als Multiball",
+      "steps": [
+        { "title": "Insel-Szenen als 2-Ball", "shots": ["right_orbit"], "prep": "Island Lock leuchtet (200/500/900 ft).", "go": "Rechten Orbit treffen, danach eine Insel-Szene starten.", "why": "Die Szene läuft als 2-Ball-Multiball mit Island Jackpot und Victory Challenge.", "sources": ["rules"] },
+        { "title": "Island Jackpot", "shots": ["cliffs_ramp", "pit"], "prep": "2-Ball-Szene läuft, ein Fortschrittsschuss ist geschafft.", "go": "Cliffs-Rampe beleuchtet, dann Pit-Ziele kassieren. Danach die gehaltene Kugel in 5 s mit der anderen in die Pit-Ziele.", "why": "5M + Szenenwert, mit dem Nachschuss doppelt.", "sources": ["rules"] },
+        { "title": "Kong Multiball: Super Jackpots", "shots": ["drops", "center_lane", "cliffs_ramp", "side_ramp"], "prep": "Kong Multiball läuft.", "go": "Fallziele für Jackpots (1. Runde: Center Lane oder Punchback; danach alle Fallziele → Cliffs-Rampe 2x). Nach jedem Jackpot sofort die Side Ramp.", "why": "Super Jackpot an der Side Ramp. Zeitfenster wird mit jedem Jackpot kürzer.", "sources": ["rules"] },
+        { "title": "Relock für 2x", "shots": ["center_ramp"], "prep": "Alle grünen Pfeile im Kong Multiball geholt.", "go": "Center Ramp.", "why": "Alle Jackpots und Super Jackpots 20 s lang doppelt.", "sources": ["rules"] },
+        { "title": "Giant Spider abwarten", "shots": ["pit", "center_ramp", "cliffs_ramp", "side_ramp"], "prep": "Nur noch ein Pit-Treffer bis zum Start; das leuchtende Tier wechselt alle 10 s.", "go": "Mit dem Start warten, bis Giant Spider (unterstes Tier) leuchtet. Dann 30 Schalter, Rampen für Multiplikator, Jackpot am Pit.", "why": "Bis 25M × 4. Danach Spider Queen.", "sources": ["rules"] },
+        { "title": "Schatzsuche", "shots": ["kong_cave"], "prep": "Karte voll (Kartenteile aus Szenen, Klettern usw.).", "go": "Kong Cave startet. Dann den goldenen Pfeilen folgen (wechseln) und zum Schluss Kong Cave.", "why": "Jackpot ab 20M × Anzahl Schätze, plus Schatz-Perk.", "sources": ["rules"] }
+      ] }
+  ],
+  "multiballs": [
+    { "id": "kong", "name": "King Kong Multiball", "tag": "Haupt-Multiball", "balls": "3 Kugeln (Pro: virtuelle Locks)",
+      "prep": [
+        { "title": "Kong Lock beleuchten", "shots": ["drops"], "text": "Bei blinkendem „Light Kong Lock“ alle Fallziele abräumen. Beim ersten Mal leuchten alle drei Locks, danach jeweils einer.", "sources": ["rules"] },
+        { "title": "Drei Locks", "shots": ["center_ramp"], "text": "Center Ramp je Lock. Beim Pro bleibt keine Kugel im Zug liegen.", "sources": ["rules"] }
+      ],
+      "start": { "title": "Pro: rechter Orbit", "shots": ["right_orbit"], "text": "Nach Lock 3 leuchtet beim Pro der rechte Orbit zum Start.", "sources": ["rules"] },
+      "score": [
+        { "title": "Jackpots beleuchten", "shots": ["drops", "center_lane", "cliffs_ramp"], "text": "1. Runde: ein Fallziel beleuchtet Center Lane und Punchback-Ziel (1x). Danach: alle Fallziele → Cliffs-Rampe (2x). Rote Pfeile = Jackpot.", "sources": ["rules"] },
+        { "title": "Super Jackpot", "shots": ["side_ramp"], "text": "Nach einem Jackpot die Side Ramp. Vorherige Side Ramps erhöhen den Multiplikator.", "sources": ["rules"] },
+        { "title": "Relock 2x / Add-a-Ball", "shots": ["center_ramp", "gong"], "text": "Alle grünen Pfeile + Center Ramp = 20 s doppelt. Zweimal Gong = eine Kugel dazu (einmal pro Multiball).", "sources": ["rules"] }
+      ] },
+    { "id": "pit", "name": "Spider Pit Multibälle", "tag": "3 Varianten", "balls": "nicht angegeben",
+      "prep": [ { "title": "Pit-Ziele", "shots": ["pit"], "text": "Erster Start: 4 Pit-Treffer (3 beleuchten, 1 startet). Spätere: 2 mehr. Rechter Rücklauf = kurz doppelter Fortschritt.", "sources": ["rules"] } ],
+      "start": { "title": "Letzter Pit-Treffer", "shots": ["pit"], "text": "Das leuchtende Tier wechselt alle 10 s: 2-Legged Lizard, Octopus Insect, Giant Spider (von oben nach unten).", "sources": ["rules"] },
+      "score": [
+        { "title": "2-Legged Lizard", "shots": ["pit", "magnet"], "text": "Pit dreimal = Jackpot leuchtet. Dann Pit, und die vom Magnet gehaltene Kugel in die Ziele schießen.", "sources": ["rules"] },
+        { "title": "Octopus Insect", "shots": ["pit"], "text": "Alle drei rechten Pit-Ziele = Jackpot am Pit. Rote Schüsse erhöhen den Wert.", "sources": ["rules"] },
+        { "title": "Giant Spider", "shots": ["pit", "center_ramp", "cliffs_ramp", "side_ramp"], "text": "30 Schalter (+5 je Jackpot) beleuchten den Jackpot. Jede beleuchtete Rampe einmal: +1x, max. 4x (bis 25M × 4).", "sources": ["rules"] }
+      ] },
+    { "id": "queen", "name": "Spider Queen", "tag": "4. Pit-Multiball", "balls": "3 Kugeln",
+      "prep": [ { "title": "Alle drei Pit-Multibälle gespielt", "shots": ["pit"], "text": "Der vierte Pit-Multiball ist immer Spider Queen.", "sources": ["rules"] } ],
+      "start": { "title": "Pit", "shots": ["pit"], "text": "Wie die anderen Pit-Multibälle.", "sources": ["rules"] },
+      "score": [ { "title": "Zufällige Hauptschüsse, dann Pit", "shots": ["pit"], "text": "Leuchtende Hauptschüsse (wechselnd) als Jackpots, dann Super Jackpot am Pit (ab 5M + 50 % der drei Pit-Multibälle). Unter 4 Kugeln: Island-Treasure-Ziel hinter den Fallzielen gibt eine Kugel dazu (max. 2).", "sources": ["rules"] } ] },
+    { "id": "island", "name": "Island-Lock-Szenen", "tag": "2-Ball-Szene", "balls": "2 Kugeln",
+      "prep": [ { "title": "Klettern", "shots": ["left_orbit", "cliffs_ramp", "center_ramp", "center_lane", "u_turn", "side_ramp", "right_orbit"], "text": "Gelbe CLIMB-Schüsse bis 200 ft (später 500 ft, 900 ft). Welche gelb sind, wechselt.", "sources": ["rules"] } ],
+      "start": { "title": "Rechter Orbit, dann Szene", "shots": ["right_orbit"], "text": "Bei leuchtendem Island Lock den rechten Orbit. Die nächste Insel-Szene läuft dann als 2-Ball.", "sources": ["rules"] },
+      "score": [
+        { "title": "Island Jackpot", "shots": ["cliffs_ramp", "pit"], "text": "Nach einem Fortschrittsschuss: Cliffs-Rampe beleuchtet, Pit kassiert (5M + Szenenwert).", "sources": ["rules"] },
+        { "title": "Victory Challenge", "shots": ["gong"], "text": "Szene erfüllt und noch 2 Kugeln: alle Schüsse leuchten (5 % / 10 % der Szenensumme), am Ende Gong für 50 %.", "sources": ["rules"] }
+      ] },
+    { "id": "trex", "name": "T-Rex Battle", "tag": "Mini-Wizard", "balls": "Multiball (Boss: 4 Kugeln)",
+      "prep": [ { "title": "KING KONG buchstabieren", "shots": ["pit", "cliffs_ramp", "gong"], "text": "Alle acht Buchstaben: Skillshots, Cliffs-Rampen (3., 15.), Gong bei voller grüner Leiste.", "sources": ["rules"] } ],
+      "start": { "title": "Gong", "shots": ["gong"], "text": "Nächster Gong-Schuss im Einzelball ohne Modus startet T-Rex Battle.", "sources": ["rules"] },
+      "score": [
+        { "title": "Blinkende Pfeile, dann Pummel", "shots": ["side_ramp", "pit"], "text": "Gleichfarbige blinkende Pfeile abräumen (Side Ramp spottet zufällig), dann Pit: Kugel wird gehalten, Action-Taste hämmern. Je T-Rex zwei Pummel, dritter Pit-Treffer besiegt ihn. Slingshots meiden (15 = erst Gong treffen).", "sources": ["rules"] }
+      ] }
+  ],
+  "modes": [
+    { "id": "save_ann", "name": "Save Ann", "film": "Insel-Szene", "time": "60 s", "steps": [ { "title": "Gong aufladen", "shots": ["gong"], "text": "Leuchtende Schüsse erhöhen den Gong-Wert. Gong dreimal, dann letzter Gong-Schuss als Hurry-up." } ] },
+    { "id": "chasm", "name": "Cross the Chasm", "film": "Insel-Szene", "time": "60 s", "steps": [ { "title": "River, dann Cliffs", "shots": ["river", "cliffs_ramp", "u_turn"], "text": "River hebt die Weiche und beleuchtet kurz die Cliffs-Rampe. Cliffs rettet einen Seemann; U-Turn direkt danach multipliziert. 6 Seeleute." } ] },
+    { "id": "ptero", "name": "Pterodactyl Attack", "film": "Insel-Szene", "time": "60 s", "steps": [ { "title": "Ziel, dann Kong Cave", "shots": ["drops", "kong_cave"], "text": "Beleuchtetes Ziel treffen (beim Premium bewegliches Fallziel; welches Ziel der Pro nutzt, ist nicht eindeutig), dann Kong Cave. 3 Cave-Awards." } ] },
+    { "id": "stego", "name": "Stegosaurus Encounter", "film": "Insel-Szene", "time": "60 s", "steps": [ { "title": "7 Schüsse", "shots": ["center_lane", "center_ramp", "gong", "left_orbit", "side_ramp"], "text": "Langsam blinkend = leicht, schnell blinkend = schwer (+1x). Leicht: Center Lane, Center Ramp, Gong, linker Orbit, Side Ramp, Center Ramp, Punchback. Schwer: Cliffs, U-Turn, Kong Cave, linker Orbit, U-Turn." } ] },
+    { "id": "swamp", "name": "Escape the Swamp", "film": "Insel-Szene", "time": "60 s", "steps": [ { "title": "Punchback-Jackpot", "shots": ["right_orbit", "side_ramp", "u_turn", "river"], "text": "Blinkende Schüsse bauen den Punchback-Jackpot am rechten Orbit (Ziel unter Kong). Danach ein Schuss vom oberen Flipper multipliziert: Side Ramp 2x, U-Turn 3x, River 4x. 3 Jackpots." } ] },
+    { "id": "gate", "name": "Crash the Gate", "film": "Mini-Wizard", "time": "90 s", "steps": [ { "title": "5 Hurry-ups am Gong", "shots": ["gong", "cliffs_ramp", "drops", "center_lane", "side_ramp"], "text": "Nach allen 5 Szenen. Jeder Szenen-Schuss startet ein Hurry-up am Gong. Danach Side Ramp = Super Jackpot." } ] },
+    { "id": "biplane", "name": "Biplane Attack", "film": "Seitenmodus", "time": "30 s", "steps": [ { "title": "Side Ramp", "shots": ["side_ramp", "left_orbit", "center_lane"], "text": "3 Side Ramps starten. Spinner (abwechselnd beleuchtet) erhöhen den Jackpot an der Side Ramp. 5 Doppeldecker = Ziel fürs Tor." } ] },
+    { "id": "nyc", "name": "NYC Events", "film": "Stadt-Modi", "time": "je nach Wahl", "steps": [ { "title": "Rechter Orbit", "shots": ["right_orbit"], "text": "Alle Climb-Schüsse einer Etage → NYC Event am rechten Orbit. Wahl mit linkem Flipper: 3-Ball (1x), begrenzte Flips (2x) oder Zeit (3x). Stage Fright, Window Shopping, Manhattan Rampage." } ] }
+  ],
+  "modesIntro": "Pro: Insel-Szenen leuchten über blaue Insel-Pfeile (1 für die erste Szene, je Szene einer mehr, max. 5). Gestartet wird an dem Schuss, der die Szene beleuchtet hat (Rulesheet 0.97). Die blauen Pfeile wechseln, daher kein fester Pin. Jede Szene 60 s, Gong verlängert einmal um 15 s.",
+  "glossary": [
+    { "term": "Climb", "text": "Gelbe Pfeile. Treffer lassen Kong am Gebäude klettern (ft)." },
+    { "term": "Island Lock", "text": "Macht die nächste Insel-Szene zum 2-Ball-Multiball." },
+    { "term": "Punchback-Ziel", "text": "Ziel unter der Kong-Figur am Ende des rechten Orbits (Schalter 73 „Kick Target“)." },
+    { "term": "Log Bridge", "text": "Versteckte Weiche am River. Action-Taste lenkt die Kugel zum Mini-Flipper." },
+    { "term": "VUK", "text": "Loch, das die Kugel senkrecht wieder hochschießt." },
+    { "term": "Einsatz (Insert)", "text": "Beleuchtetes Feld im Spielfeld. Nur Anzeige, kein Ziel." }
+  ],
+  "limits": [
+    "Kein VPX zum Abgleich: Alle Markierungen sind im Herstellerfoto gemessen. U-Turn, River und Fallziele sind teils verdeckt (Unsicherheit 15–25 px, im Text genannt).",
+    "Das Punchback-Ziel, die versteckte Bananen-Bahn und das Island-Treasure-Ziel liegen unter Kong bzw. hinter den Fallzielen und sind im Foto nicht sichtbar – kein Pin.",
+    "Blaue (Szenen), rote (Jackpot), grüne und goldene (Schatzsuche) Pfeile wechseln – kein fester Pin.",
+    "Welches Ziel beim Pro das wandernde orange 2x-Ziel bzw. das Pterodaktylus-Ziel ist, steht weder im Pro-Handbuch noch eindeutig im Rulesheet.",
+    "Terror on the Tower und 8th Wonder sind im Rulesheet 0.97 noch nicht beschrieben.",
+    "Flipper-Empfehlungen sind aus der Lage abgeleitet, wo das Rulesheet keine nennt."
+  ]
+}

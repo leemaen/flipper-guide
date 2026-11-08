@@ -1,0 +1,354 @@
+{
+ "note_arrows": {
+  "name": "Noten-Pfeile (Song-Schüsse)",
+  "en": "Note shot arrows (RGB): L. Loop top/bot, L. Ramp, Bell top/bot, R. Ramp, R. Loop mid/bot",
+  "text": "Farbige Pfeile vor den fünf Hauptschüssen. Blinkende Noten-Schüsse bringen Punkte und Song-Fortschritt; im Multiball zeigen sie Jackpots bzw. Add-a-Ball. Je Orbit und an der Bell sitzen zwei Pfeile.",
+  "px": [
+   [
+    134.8,
+    671.3
+   ],
+   [
+    181.2,
+    851.6
+   ],
+   [
+    323.0,
+    828.7
+   ],
+   [
+    420.4,
+    489.5
+   ],
+   [
+    436.9,
+    639.1
+   ],
+   [
+    693.0,
+    847.1
+   ],
+   [
+    847.7,
+    789.7
+   ],
+   [
+    810.5,
+    908.6
+   ]
+  ],
+  "r": 17
+ },
+ "axe": {
+  "name": "A-X-E-Bahnen oben",
+  "en": "Left / Center / Right Top Lane",
+  "text": "Drei Bahnen oben. A-X-E gehört zum Song „Whole Lotta Rosie“.",
+  "px": [
+   [
+    547.4,
+    106.6
+   ],
+   [
+    636.5,
+    85.6
+   ],
+   [
+    725.3,
+    64.8
+   ]
+  ],
+  "r": 14
+ },
+ "tunes": {
+  "name": "Tunes-N-Stuff",
+  "en": "Tunes - N - Stuff (lamp 96)",
+  "text": "Anzeige an der Jukebox ganz oben.",
+  "px": [
+   [
+    638.8,
+    29.7
+   ]
+  ],
+  "r": 16
+ },
+ "acdc_ins": {
+  "name": "A-C-/-D-C-Anzeigen",
+  "en": "AC/DC drop target inserts (lamps 17-21)",
+  "text": "Zeigen, welche der fünf A-C-/-D-C-Fallziele links schon gefallen sind (Song „Back in Black“, Album-Multiball, Extraball).",
+  "px": [
+   [
+    163.9,
+    1280.0
+   ],
+   [
+    175.9,
+    1220.3
+   ],
+   [
+    186.2,
+    1161.5
+   ],
+   [
+    198.8,
+    1101.3
+   ],
+   [
+    207.9,
+    1039.7
+   ]
+  ],
+  "r": 15
+ },
+ "rock_ins": {
+  "name": "R-O-C-K-Anzeigen",
+  "en": "ROCK target inserts (lamps 33-36)",
+  "text": "Zeigen die vier R-O-C-K-Ziele rechts (Song „Let There Be Rock“, Album-Multiball, Extraball).",
+  "px": [
+   [
+    808.5,
+    1012.8
+   ],
+   [
+    809.1,
+    1074.2
+   ],
+   [
+    806.4,
+    1134.2
+   ],
+   [
+    809.9,
+    1196.5
+   ]
+  ],
+  "r": 16
+ },
+ "tnt_ins": {
+  "name": "T-N-T-Anzeigen",
+  "en": "T.N.T. inserts (lamps 49-51)",
+  "text": "Die drei T-N-T-Fallziele in der Mitte (Song „T.N.T.“).",
+  "px": [
+   [
+    490.5,
+    766.8
+   ],
+   [
+    549.5,
+    789.8
+   ],
+   [
+    606.6,
+    812.3
+   ]
+  ],
+  "r": 16
+ },
+ "tnt_arrow": {
+  "name": "T.N.T.-Pfeil",
+  "en": "T.N.T. Arrow wht./note (lamp 24)",
+  "text": "Pfeil unter den T-N-T-Fallzielen.",
+  "px": [
+   [
+    507.0,
+    894.8
+   ]
+  ],
+  "r": 15
+ },
+ "bolts": {
+  "name": "Blitze (Thunder-Ziele)",
+  "en": "Lightning bolts: L. Ramp standup L/R, R. Ramp standup (lamps 22, 23, 41)",
+  "text": "Blitz-Anzeigen vor den drei kleinen Thunder-Zielen neben den Rampen (Song „Thunderstruck“).",
+  "px": [
+   [
+    253.2,
+    854.1
+   ],
+   [
+    389.8,
+    802.6
+   ],
+   [
+    760.9,
+    865.5
+   ]
+  ],
+  "r": 13
+ },
+ "fire_ins": {
+  "name": "F-I-R-E-Bahnen",
+  "en": "F-I-R-E in/outlane inserts (lamps 12, 13, 43, 44)",
+  "text": "F-I-R-E in den Außen- und Rückführbahnen. FIRE komplett qualifiziert die Kanonen-Features.",
+  "px": [
+   [
+    57.1,
+    1525.2
+   ],
+   [
+    133.2,
+    1498.0
+   ],
+   [
+    772.9,
+    1500.9
+   ],
+   [
+    851.9,
+    1525.4
+   ]
+  ],
+  "r": 13
+ },
+ "pf_x": {
+  "name": "2X / 3X Spielfeld",
+  "en": "2X (lamp 14) / 3X (lamp 42)",
+  "text": "Spielfeld-Multiplikator (über die Bell).",
+  "px": [
+   [
+    239.8,
+    1497.1
+   ],
+   [
+    670.6,
+    1493.4
+   ]
+  ],
+  "r": 15
+ },
+ "mb_ins": {
+  "name": "Multiball-Anzeigen",
+  "en": "Jam Multiball · Album Multiball · Tour Multiball (lamps 1, 4, 11)",
+  "text": "Zeigen, welcher Multiball beleuchtet ist bzw. läuft.",
+  "px": [
+   [
+    330.3,
+    1689.3
+   ],
+   [
+    451.8,
+    1675.4
+   ],
+   [
+    579.5,
+    1692.0
+   ]
+  ],
+  "r": 15
+ },
+ "super_ins": {
+  "name": "Super-Features",
+  "en": "Super Targets · Super Lanes · Super Combos · Super Loops (lamps 2, 3, 10, 9)",
+  "text": "Die vier Super-Features (mehr Punkte für Ziele, Bahnen, Combos, Loops).",
+  "px": [
+   [
+    368.1,
+    1750.2
+   ],
+   [
+    388.2,
+    1818.8
+   ],
+   [
+    541.5,
+    1753.2
+   ],
+   [
+    523.2,
+    1819.1
+   ]
+  ],
+  "r": 14
+ },
+ "cannon_ins": {
+  "name": "Kanonen-Features",
+  "en": "Cannon Fodder · Cannon Volley · Cannon Chaos (lamps 5-7)",
+  "text": "Durch F-I-R-E qualifiziert, über die Kanone gespielt.",
+  "px": [
+   [
+    453.5,
+    1736.4
+   ],
+   [
+    453.6,
+    1787.6
+   ],
+   [
+    453.8,
+    1837.8
+   ]
+  ],
+  "r": 14
+ },
+ "rock_again": {
+  "name": "Rock Again",
+  "en": "Rock Again (lamp 8, Shoot Again)",
+  "text": "Ball-Retter / Shoot Again.",
+  "px": [
+   [
+    455.4,
+    1896.3
+   ]
+  ],
+  "r": 14
+ },
+ "eb_ins": {
+  "name": "Extraball",
+  "en": "Extra Ball (lamp 40)",
+  "text": "Leuchtet, wenn der Extraball am rechten Loop abholbereit ist.",
+  "px": [
+   [
+    880.3,
+    674.2
+   ]
+  ],
+  "r": 15
+ },
+ "special_ins": {
+  "name": "Special",
+  "en": "Special (lamp 38)",
+  "text": "Special-Anzeige.",
+  "px": [
+   [
+    699.7,
+    1050.3
+   ]
+  ],
+  "r": 14
+ },
+ "lpf_arrows": {
+  "name": "Pfeile im unteren Spielfeld",
+  "en": "Lower PF L./R. loop arrows (lamps 25, 37)",
+  "text": "Pfeile vor den beiden Loops im unteren Spielfeld (Hell).",
+  "px": [
+   [
+    284.4,
+    1139.5
+   ],
+   [
+    625.5,
+    1138.7
+   ]
+  ],
+  "r": 14
+ },
+ "face": {
+  "name": "Gesicht (unteres Spielfeld)",
+  "en": "Face left eye · right eye · mouth (lamps 81, 82, 84)",
+  "text": "Augen und Mund im unteren Spielfeld.",
+  "px": [
+   [
+    387.7,
+    1188.8
+   ],
+   [
+    520.5,
+    1190.3
+   ],
+   [
+    452.4,
+    1345.4
+   ]
+  ],
+  "r": 16
+ }
+}

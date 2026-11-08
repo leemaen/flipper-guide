@@ -1,0 +1,2 @@
+{ "views": { "real": { "H": "tools/kingkong/H_real.json", "src": "_quellen/kingkong/pf.png", "crop": [170, 180, 1160, 2080], "out": "kingkong-real.jpg", "quality": 88 } },
+  "insertsView": "real" }

@@ -1,0 +1,160 @@
+{
+  "table": {
+    "id": "pokemon", "name": "Pokémon", "short": "Pokémon", "manufacturer": "Stern Pinball", "year": 2026,
+    "system": "Stern SPIKE 3", "design": "George Gomez, Jack Danger",
+    "editions": "Pro-Ausführung (dieser Guide): fester Poké Ball an der linken Rampe, Psyduck-Ziel statt Scoop, kein Whirlpool. Premium/LE weichen ab.",
+    "ruleVersion": "Regeln nach dem offiziellen Wiki-Rulesheet (pinballrulesheets.com), Stand Code 0.87. Einzelne Fang-Reihenfolgen ab dem 5. Fang sind dort noch offen („?“). Neuere Software kann abweichen.",
+    "accent": "#f4d56c", "contentDate": "2026-11-08"
+  },
+  "sources": [
+    { "id": "manual", "title": "Stern Pinball: Pokémon Pro – Manual 500-55AG-01 (2026)", "url": "https://wp.sternpinball.com/wp-content/uploads/2026/09/Pokemon_Pro_web.pdf", "use": "Schalterliste und -plan (S. 17–20), Lampenliste und Vektor-Lampenplan (S. 21–25). Zuordnung von Eingängen und Einsätzen." },
+    { "id": "photo", "title": "Stern Pinball: Spielfeldfoto Pokémon Pro (Produktseite)", "url": "https://site-assets.plasmic.app/2003d33a41aea5d0effd3a9fd3eecf1c.webp", "use": "Spielfeldansicht; alle Markierungen sind in diesem Foto vermessen. Bildrechte © 2026 Pokémon / Nintendo / Creatures / GAME FREAK." },
+    { "id": "rules", "title": "Pokémon Rulesheet (Wiki, Code 0.87)", "url": "https://pinballrulesheets.com/stern/pokemon-rulesheet", "use": "Alle Regeln und Abläufe, mit Pro-Unterschieden." },
+    { "id": "ball", "title": "Kugelbild: Lucasbosch, Wikimedia Commons, CC BY-SA 3.0", "url": "https://commons.wikimedia.org/wiki/File:Stainless_steel_1.4034_X46Cr13_bearing_ball_60mm_G100_removed_camera.jpg", "use": "Animierte Flipperkugel (bearbeitet, CC BY-SA 3.0)." }
+  ],
+  "views": {
+    "real": { "label": "Echter Tisch (Pro)", "note": "Herstellerfoto des Pro-Spielfelds. Klare Plastikrampen oben links verdecken Bumper und Zuläufe; verdeckte Stellen sind im Text genannt." }
+  },
+  "icons": {
+    "bulbasaur": { "name": "Bulbasaur", "img": "img/pokemon-ic-bulbasaur.png", "note": "Bildkarte aus der grünen Bahn des echten Tisches" },
+    "squirtle": { "name": "Squirtle", "img": "img/pokemon-ic-squirtle.png", "note": "Bildkarte aus der blauen Bahn des echten Tisches" },
+    "pikachu": { "name": "Pikachu", "img": "img/pokemon-ic-pikachu.png", "note": "Bildkarte aus der gelben Bahn des echten Tisches" },
+    "charmander": { "name": "Charmander", "img": "img/pokemon-ic-charmander.png", "note": "Bildkarte aus der orangen Bahn des echten Tisches" }
+  },
+  "shots": {
+    "left_orbit": { "name": "Linker Orbit (Bulbasaur)", "en": "Left Orbit", "kind": "Orbit", "flipper": "R", "icon": "bulbasaur",
+      "what": "Grüne Bahn ganz links, links neben dem roten Poké Ball. Der Eingang liegt über dem pinken Pfeil.",
+      "returns": "Läuft oben links herum (Schalter 44 „Left Orbit“).",
+      "awards": ["Bulbasaur-Story (3 Treffer)", "Bulbasaur Loops (TEAM-Feature)", "Fang-Schuss bei Fang 3"],
+      "visibility": "Eingang sichtbar.", "sources": ["manual", "rules", "photo"] },
+    "left_ramp": { "name": "Linke Rampe (Squirtle / Poké Ball)", "en": "Left Ramp / Poké Ball", "kind": "Rampe", "flipper": "R", "icon": "squirtle",
+      "what": "Blaue Bahn rechts unter dem großen roten Poké Ball. Der Eingang liegt direkt unter dem Ball über dem pinken Pfeil.",
+      "returns": "Klare Rampe nach oben links (Schalter 29 Eingang, 45/30 „Made“).",
+      "awards": ["Letzter Schuss bei CATCH! (Pokémon fangen)", "Victory Bonus nach einem Rival Battle (10 s)", "Squirtle-Story", "Squirtle Prize Pool (Pro: 5M + 1,25M je Treffer)"],
+      "visibility": "Eingang teils vom Poké Ball überdeckt; Lage aus Pfeil, Schalter 29 und Lampenplan (Unsicherheit ca. 15 px).", "sources": ["manual", "rules", "photo"] },
+    "center_lane": { "name": "Mittelbahn unter Meowth", "en": "Center Lane (Team Rocket)", "kind": "Bahn", "flipper": "beide",
+      "what": "Bahn genau in der Mitte, über dem pinken Pfeil und unter dem großen R am Meowth-Ballon.",
+      "returns": "Läuft unter dem Ballon hindurch.",
+      "awards": ["Team Rocket Multiball starten", "Super Jackpot (Team Rocket, Mimikyu, Charizard)", "Arena-Bonus kassieren (Rival Battle)", "Spottet fehlende BATTLE-Ziele"],
+      "visibility": "Einlauf über dem Pfeil sichtbar; der Weg unter dem Ballon nicht.", "sources": ["manual", "rules", "photo"] },
+    "meowth": { "name": "Meowth-Ballon", "en": "Meowth Balloon", "kind": "bewegliches Ziel", "flipper": "beide",
+      "what": "Große Meowth-Figur oben in der Mitte. Nach BATTLE senkt sich der Ballon, dann die Figur treffen. Die Bahn darunter ist ein eigener Schuss.",
+      "returns": "Prallt zurück (Schalter 59 „Meowth Hit Opto“).",
+      "awards": ["4 Treffer (später 5) beleuchten Team Rocket Multiball", "Jackpot in Team Rocket Multiball"],
+      "visibility": "Sichtbar; im Foto in einer der beiden Stellungen (oben/unten nicht erkennbar).", "sources": ["manual", "rules", "photo"] },
+    "battle_left": { "name": "BATTLE-Ziele links (B-A-T)", "en": "BATTLE targets left", "kind": "Ziele", "flipper": "R",
+      "what": "Drei Ziele im roten Rahmen links am Meowth-Ballon.",
+      "returns": "Prallen zurück (Schalter 51–53).",
+      "awards": ["BATTLE senkt den Meowth-Ballon", "Fang 1: linke BATTLE-Ziele", "Add-a-Ball mit Action-Taste (grün)"],
+      "visibility": "Lage aus Rahmen, Lampenplan und Schalterplan; Unsicherheit ca. 15 px.", "sources": ["manual", "rules", "photo"] },
+    "battle_right": { "name": "BATTLE-Ziele rechts (T-L-E)", "en": "BATTLE targets right", "kind": "Ziele", "flipper": "L",
+      "what": "Drei Ziele im roten Rahmen rechts am Meowth-Ballon.",
+      "returns": "Prallen zurück (Schalter 54–56).",
+      "awards": ["BATTLE senkt den Meowth-Ballon", "Fang 4: rechte BATTLE-Ziele", "Mimikyu: Jackpots neu beleuchten"],
+      "visibility": "Lage aus Rahmen, Lampenplan und Schalterplan; Unsicherheit ca. 15 px.", "sources": ["manual", "rules", "photo"] },
+    "captive_ball": { "name": "Pokédex (gefangene Kugel)", "en": "Pokédex Captive Ball", "kind": "gefangene Kugel", "flipper": "L",
+      "what": "Kurze Bahn rechts neben der Team-Rocket-Fläche, links der gelben Pikachu-Bahn. Darin liegen die silbernen Kugeln. Feld „Scan“ links davor.",
+      "returns": "Prallt zurück (Schalter 71–73, ganz hinten das Ziel für 2x).",
+      "awards": ["Pokémon scannen (CATCH! startet)", "Super Jackpot (Raichu, Story-Abschlüsse)", "Pokédex Assist sammeln", "25 Treffer = Extraball", "Kombo abschließen (Poké Bälle)"],
+      "visibility": "Silberne Kugeln sichtbar.", "sources": ["manual", "rules", "photo"] },
+    "right_ramp": { "name": "Rechte Rampe (Pikachu)", "en": "Right Ramp", "kind": "Rampe", "flipper": "L", "icon": "pikachu",
+      "what": "Gelbe Bahn rechts der Mitte. Der Eingang liegt über dem pinken Pfeil, darüber die Drahtrampe zu Pikachu.",
+      "returns": "Drahtrampe (Schalter 76 „Right Ramp Made“, 74 hält die Kugel).",
+      "awards": ["Pikachu-Story: Raichu (2-Ball), Mimikyu (3-Ball)", "Pikachu Hurry-Up (TEAM)", "Mini-Wizard wählen (nach 4 Story-Modi einer Stufe)"],
+      "visibility": "Eingang sichtbar.", "sources": ["manual", "rules", "photo"] },
+    "right_orbit": { "name": "Rechter Orbit (Charmander)", "en": "Right Orbit / Spinner", "kind": "Orbit", "flipper": "L", "icon": "charmander",
+      "what": "Orange Bahn rechts außen. Der Eingang liegt über dem Feuer-Feld; im Orbit sitzt der Spinner.",
+      "returns": "Läuft oben herum (Schalter 80 „Right Orbit“, 78 Spinner).",
+      "awards": ["Charmander-Story (Spinner-Jackpot)", "Charmander Super Spinner (TEAM)", "Fang-Schuss bei Fang 4"],
+      "visibility": "Eingang sichtbar.", "sources": ["manual", "rules", "photo"] },
+    "town_scoop": { "name": "Town Scoop", "en": "Town Scoop (Right Eject)", "kind": "Scoop", "flipper": "L",
+      "what": "Loch rechts unter dem Schild „Town“. Der pinke Pfeil unten rechts zeigt darauf.",
+      "returns": "Wirft die Kugel wieder aus (Schalter 41 „Right Eject“).",
+      "awards": ["Rival Battle starten (nach einem Fang)", "Reisen (alle vier Aufgaben)", "Mystery", "Extraball", "Arena Battle"],
+      "visibility": "Lage unter dem Town-Schild; das Loch selbst ist vom Schild verdeckt (Unsicherheit ca. 20 px).", "sources": ["manual", "rules", "photo"] },
+    "psyduck": { "name": "Psyduck-Ziel", "en": "Psyduck Target (Pro)", "kind": "Ziel", "flipper": null,
+      "what": "Psyduck-Figur am linken Rand über den Trainingszielen. Beim Pro ein Ziel (Premium: Scoop).",
+      "returns": "Prallt zurück (Schalter 40).",
+      "awards": ["Sneak-in-Award (zufällige Treffer, ab 500K)", "Super Secret Skillshot"],
+      "visibility": "Sichtbar; dass die Figur das Ziel ist, folgt aus Lage und Schalterplan.", "sources": ["manual", "rules", "photo"] },
+    "berries": { "name": "Beeren-Ziele (links, Mitte, rechts)", "en": "Berry Targets", "kind": "Ziele", "flipper": "beide",
+      "what": "Drei kleine Ziele mit Beeren-Symbol: links neben der linken Rampe, Mitte über dem Team-Rocket-Schild, rechts bei der gefangenen Kugel.",
+      "returns": "Prallen zurück (Schalter 27, 28, 70).",
+      "awards": ["2x Playfield: links und rechts je 2x, dann Mitte (blinkend)", "Mitte: +5 s 2x Playfield", "Bulbasaur 1: Schüsse neu beleuchten"],
+      "visibility": "Lage aus Lampenplan und Foto; Unsicherheit ca. 15 px.", "sources": ["manual", "rules", "photo"] },
+    "pokeball": { "name": "Poké Ball (fest)", "en": "Poké Ball (Pro, fixed)", "kind": "Deko / Anzeige", "flipper": null,
+      "what": "Großer roter Ball über dem Eingang der linken Rampe. Beim Pro fest montiert, kein Ziel.",
+      "returns": "—", "awards": ["Leuchtet beim Fang-Schuss (linke Rampe)"],
+      "visibility": "Sichtbar.", "sources": ["manual", "rules", "photo"] }
+  },
+  "strategies": [
+    { "id": "solid", "title": "Solide spielen", "subtitle": "Pikachu-Multiball früh, Pokémon fangen, Rival Battle",
+      "steps": [
+        { "title": "Super-Skillshot auf die Mittelbahn", "shots": ["center_lane"], "prep": "Linken Flipper halten.", "go": "Voll abschießen und die Mittelbahn treffen.", "why": "Super Skillshot (2x). Räumt BATTLE ab und senkt den Meowth-Ballon.", "sources": ["rules"] },
+        { "title": "Pikachu vs. Raichu", "shots": ["right_ramp"], "prep": "Einzelball.", "go": "Rechte Rampe dreimal.", "why": "Startet den ersten Pikachu-Modus als 2-Ball-Multiball.", "sources": ["rules"], "badges": { "right_ramp": "pikachu" } },
+        { "title": "Gelbe Jackpots, Super an der Pokédex-Kugel", "shots": ["left_orbit", "left_ramp", "right_ramp", "right_orbit", "captive_ball"], "prep": "Raichu-Multiball läuft.", "go": "Gelb leuchtende Schüsse, dann die gefangene Kugel. Hart treffen = hinteres Ziel 2x.", "why": "3 Super Jackpots schließen den Modus ab.", "sources": ["rules"] },
+        { "title": "Scannen und fangen", "shots": ["captive_ball", "left_ramp"], "prep": "Action-Taste leuchtet lila (Pokémon entdeckt).", "go": "Gefangene Kugel = Scan. Dann die lila Ziele (wechseln je Fang) und zum Schluss immer die linke Rampe.", "why": "Fang erhöht den nächsten Story-Multiplikator und beleuchtet den Rival Battle.", "sources": ["rules"] },
+        { "title": "Rival Battle", "shots": ["town_scoop", "left_ramp"], "prep": "Battle leuchtet am Town Scoop.", "go": "Town Scoop. Blinkende Schüsse und BATTLE-Ziele treffen. Nach dem Sieg 10 s Zeit für die linke Rampe.", "why": "Victory Bonus und +1x auf Team Rocket.", "sources": ["rules"] },
+        { "title": "Extraball", "shots": ["town_scoop"], "prep": "Extraball leuchtet (3 Story-Modi, 50 Poké Bälle oder 25 Pokédex-Treffer).", "go": "Town Scoop.", "why": "Extraball.", "sources": ["rules"] }
+      ] },
+    { "id": "high", "title": "Auf Highscore", "subtitle": "Story-Modi mit Multiplikator, Team Rocket, Mini-Wizards",
+      "steps": [
+        { "title": "Erst fangen, dann Story", "shots": ["captive_ball", "left_ramp"], "prep": "Bis zu drei Fänge vor dem nächsten Story-Modus.", "go": "Fangen, dann erst den Story-Schuss dreimal.", "why": "Jeder Fang +1x für den nächsten Story-Modus (max. 3x).", "sources": ["rules"] },
+        { "title": "Alle vier Story-Modi", "shots": ["left_orbit", "left_ramp", "right_ramp", "right_orbit"], "prep": "Trainingsziele für Boost/+20 s.", "go": "Jeden Starter-Schuss dreimal (Stufe 1), danach fünfmal (Stufe 2).", "why": "Jeder Abschluss gibt einen Schuss-Multiplikator; vier Modi einer Stufe = Mini-Wizard an der rechten Rampe.", "sources": ["rules"], "badges": { "left_orbit": "bulbasaur", "left_ramp": "squirtle", "right_ramp": "pikachu", "right_orbit": "charmander" } },
+        { "title": "Team Rocket Multiball", "shots": ["battle_left", "battle_right", "meowth", "center_lane"], "prep": "Rival Battles vorher gewinnen (+1x je Sieg, max. 3x).", "go": "BATTLE, Ballon 4x, dann Mittelbahn.", "why": "6 Jackpots → Super an der Mittelbahn, danach 15 s unbegrenzte Supers an Rampen und Orbits.", "sources": ["rules"] },
+        { "title": "Reisen und Arena", "shots": ["town_scoop"], "prep": "Discover, Catch, Train, Battle erfüllt.", "go": "Town Scoop für das nächste Gebiet. Nach allen vier Gebieten: Arena Battle.", "why": "Arena Battle ist der Wizard-Modus mit sechs Gegnern.", "sources": ["rules"] },
+        { "title": "2x Playfield über Beeren", "shots": ["berries"], "prep": "—", "go": "Linke und rechte Beere je 2x, dann die blinkende Mitte.", "why": "20 s 2x Playfield; Mitte verlängert.", "sources": ["rules"] }
+      ] }
+  ],
+  "multiballs": [
+    { "id": "rocket", "name": "Team Rocket Multiball", "tag": "Haupt-Multiball", "balls": "Multiball (Kugelzahl nicht angegeben)",
+      "prep": [
+        { "title": "BATTLE abräumen", "shots": ["battle_left", "battle_right", "center_lane"], "text": "Alle sechs BATTLE-Ziele; die Mittelbahn spottet fehlende. Super-Skillshot auf die Mitte senkt den Ballon sofort.", "sources": ["rules"] },
+        { "title": "Ballon treffen", "shots": ["meowth"], "text": "Abgesenkten Ballon 4x (zweites Mal 5x).", "sources": ["rules"] }
+      ],
+      "start": { "title": "Mittelbahn", "shots": ["center_lane"], "text": "Die Bahn unter dem Ballon startet den Multiball. Ein Sneak-in unter dem Ballon beleuchtet ihn sofort.", "sources": ["rules"] },
+      "score": [
+        { "title": "Jackpots: Rampen und Ballon", "shots": ["left_ramp", "right_ramp", "meowth"], "text": "6 Jackpots (später 8) beleuchten den Super Jackpot.", "sources": ["rules"] },
+        { "title": "Super Jackpot", "shots": ["center_lane", "left_orbit", "left_ramp", "right_ramp", "right_orbit"], "text": "Mittelbahn = Super. Danach 15 s lang Rampen und Orbits = unbegrenzte Supers.", "sources": ["rules"] },
+        { "title": "Add-a-Ball", "shots": ["battle_left", "battle_right"], "text": "BATTLE abräumen, dann Action-Taste, solange sie grün blinkt.", "sources": ["rules"] }
+      ] },
+    { "id": "raichu", "name": "Pikachu vs. Raichu", "tag": "Story-Multiball", "balls": "2 Kugeln",
+      "prep": [ { "title": "Rechte Rampe 3x", "shots": ["right_ramp"], "text": "Im Einzelball.", "sources": ["rules"], "badges": { "right_ramp": "pikachu" } } ],
+      "start": { "title": "Dritter Treffer", "shots": ["right_ramp"], "text": "Startet automatisch.", "sources": ["rules"] },
+      "score": [ { "title": "Gelb, dann Pokédex", "shots": ["left_orbit", "left_ramp", "right_ramp", "right_orbit", "captive_ball"], "text": "Gelbe Schüsse = Jackpots, dann gefangene Kugel = Super (hinten 2x). 3 Supers = geschafft. Add-a-Ball über BATTLE + Action-Taste.", "sources": ["rules"] } ] },
+    { "id": "mimikyu", "name": "Pikachu vs. Mimikyu", "tag": "Story-Multiball", "balls": "3 Kugeln",
+      "prep": [ { "title": "Rechte Rampe 5x mehr", "shots": ["right_ramp"], "text": "Nach dem ersten Pikachu-Modus.", "sources": ["rules"], "badges": { "right_ramp": "pikachu" } } ],
+      "start": { "title": "Fünfter Treffer", "shots": ["right_ramp"], "text": "Startet Stufe 2.", "sources": ["rules"] },
+      "score": [ { "title": "Jackpots, BATTLE, Mitte", "shots": ["left_orbit", "left_ramp", "right_ramp", "right_orbit", "battle_left", "battle_right", "center_lane"], "text": "Rampen/Orbits = Jackpots, mit BATTLE neu beleuchten. 2 Jackpots = Super an der Mittelbahn (+Kugel, dreimal).", "sources": ["rules"] } ] },
+    { "id": "charizard", "name": "Pikachu vs. Charizard / Lucario", "tag": "Mini-Wizard", "balls": "4 Kugeln (Charizard) / bis 6 (Lucario)",
+      "prep": [ { "title": "Vier Story-Modi einer Stufe", "shots": ["left_orbit", "left_ramp", "right_ramp", "right_orbit"], "text": "Alle vier Stufe-1- (oder Stufe-2-)Modi spielen.", "sources": ["rules"] } ],
+      "start": { "title": "Rechte Rampe", "shots": ["right_ramp"], "text": "Wahl zwischen Lucario und Charizard.", "sources": ["rules"] },
+      "score": [ { "title": "Charizard: Phasen", "shots": ["left_orbit", "left_ramp", "right_ramp", "right_orbit", "captive_ball", "center_lane"], "text": "Jeder Starter-Schuss startet eine Phase, zwei leuchtende Schüsse, dann Pokédex. Alle vier Phasen = Mittelbahn für Super-Hurry-up (max. 100M).", "sources": ["rules"] } ] }
+  ],
+  "modes": [
+    { "id": "bulb1", "name": "Bulbasaur 1", "film": "Story", "time": "–", "steps": [ { "title": "Pollen sammeln", "shots": ["left_orbit", "left_ramp", "right_ramp", "right_orbit", "berries", "captive_ball"], "text": "Alle Rampen/Orbits leuchten. Mittlere Beere beleuchtet neu und kassiert. Nach 6 Schüssen Pokédex." } ] },
+    { "id": "squirt1", "name": "Squirtle 1", "film": "Story", "time": "–", "steps": [ { "title": "Linke Rampe", "shots": ["left_ramp", "captive_ball"], "text": "Linke Rampe; andere blaue Schüsse erhöhen den Rampenwert (Pro) bis 4x. Nach 3 Rampen Pokédex." } ] },
+    { "id": "char1", "name": "Charmander 1", "film": "Story", "time": "–", "steps": [ { "title": "Spinner", "shots": ["right_orbit", "left_orbit", "left_ramp", "right_ramp", "captive_ball"], "text": "Rechter Orbit = Spinner-Jackpot (30K/Drehung). Linker Orbit und Rampen multiplizieren (bis 4x). Nach 100 Drehungen Pokédex." } ] },
+    { "id": "bulb2", "name": "Bulbasaur 2", "film": "Story", "time": "–", "steps": [ { "title": "Grün und Lila ausrichten", "shots": ["captive_ball"], "text": "Flipper verschieben grünen/lila Schuss. Übereinander = 3x. Drei 3x-Awards, dann Pokédex." } ] },
+    { "id": "squirt2", "name": "Squirtle 2", "film": "Story", "time": "–", "steps": [ { "title": "Feuer löschen", "shots": ["left_ramp", "captive_ball"], "text": "Fünf brennende Schüsse löschen, dann linke Rampe, dann Pokédex." } ] },
+    { "id": "char2", "name": "Charmander 2", "film": "Story", "time": "–", "steps": [ { "title": "Rampen-Kombos", "shots": ["left_ramp", "right_ramp", "captive_ball"], "text": "Linke/rechte Rampe im Wechsel, 6 Rampen, dann Pokédex." } ] },
+    { "id": "rival", "name": "Rival Battle", "film": "Kampf", "time": "–", "steps": [ { "title": "Schaden machen", "shots": ["town_scoop", "battle_left", "battle_right", "left_ramp", "center_lane"], "text": "Start am Town Scoop. Blinkende Schüsse = Schaden, BATTLE-Ziele bauen den Arena-Bonus (Mittelbahn). Nach 3 Schaden Pokémon am Town Scoop wechseln. Sieg → 10 s linke Rampe." } ] },
+    { "id": "team", "name": "TEAM-Features", "film": "Kurzmodi", "time": "ca. 10 s", "steps": [ { "title": "Reihenfolge", "shots": ["right_ramp", "left_ramp", "right_orbit", "left_orbit"], "text": "T-E-A-M-Bahnen. Dann nacheinander: Pikachu Hurry-Up (rechte Rampe), Squirtle Prize Pool (linke Rampe), Charmander Super Spinner (rechter Orbit), Bulbasaur Loops (linker Orbit 5x)." } ] }
+  ],
+  "modesIntro": "Story-Modi: Die Rampen und Orbits gehören von links nach rechts zu Bulbasaur, Squirtle, Pikachu, Charmander. Dreimal denselben Schuss = Stufe 1, danach fünfmal = Stufe 2. Nur im Einzelball. CATCH!: die lila Ziele wechseln mit der Zahl der Fänge (1: linke BATTLE-Ziele; 2: linke, rechte Rampe; 3: Training, rechte Rampe, linker Orbit; 4: rechter Orbit, rechte BATTLE, Training, rechte Rampe), der Abschluss ist immer die linke Rampe.",
+  "glossary": [
+    { "term": "Story-Modus", "text": "Modus eines Starters, gestartet durch 3 Treffer auf seinen Schuss." },
+    { "term": "CATCH!", "text": "Hurry-up nach dem Scan: lila Ziele, dann linke Rampe." },
+    { "term": "Pokédex", "text": "Gefangene Kugel rechts der Mitte. Scan, Super Jackpots, Assists." },
+    { "term": "Town Scoop", "text": "Loch rechts unter dem Town-Schild: Battles, Reisen, Mystery, Extraball." },
+    { "term": "TEAM", "text": "Buchstaben an den unteren Bahnen; beleuchten Kurzmodi und Mystery." },
+    { "term": "Einsatz (Insert)", "text": "Beleuchtetes Feld im Spielfeld. Nur Anzeige, kein Ziel." }
+  ],
+  "limits": [
+    "Kein VPX zum Abgleich: alle Markierungen sind im Herstellerfoto gemessen. Linke Rampe (unter dem Poké Ball), Town Scoop (unter dem Schild), BATTLE- und Beeren-Ziele haben 15–20 px Unsicherheit.",
+    "Trainingsziele (links unten), Town-Ziele (rechts unten), Bumper und obere Bahnen sind im Foto verdeckt oder nicht klar erkennbar – kein fester Pin, nur die Anzeigen.",
+    "CATCH!-Ziele und Rival-Battle-Schüsse wechseln – kein fester Pin außer dem festen Abschluss an der linken Rampe.",
+    "Rulesheet 0.87: Fang-Reihenfolgen ab Fang 5 teils offen; Kugelzahl von Team Rocket Multiball nicht angegeben.",
+    "Flipper-Empfehlungen sind aus der Lage abgeleitet."
+  ]
+}

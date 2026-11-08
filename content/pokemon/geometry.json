@@ -1,0 +1,26 @@
+{
+ "_note": "Geometrie in Pixeln des Stern-Pro-Spielfeldfotos (_quellen/pokemon/pf.png, 1319x2560, Quelle site-assets.plasmic.app/2003d33a...webp). Keine VPX: Eingänge im Foto vermessen; Zuordnung über den Vektor-Lampenplan des Pro-Handbuchs (S. 25), Homographie tools/pokemon/fit_lights.py, Restfehler 8 px. Einheits-Homographie, 50 px ~ ein Kugeldurchmesser.",
+ "space": "px:real", "pxToVpx": 1, "flipperSpace": "px",
+ "flippers": {
+  "L": { "pivot": [454, 1891], "aim": [516, 1914] },
+  "R": { "pivot": [800, 1891], "aim": [738, 1914] }
+ },
+ "shots": {
+  "left_orbit":  { "entrance": { "type": "lane", "c": [300, 910], "toward": [295, 845], "len": 60, "w": 50 } },
+  "left_ramp":   { "entrance": { "type": "lane", "c": [447, 1000], "toward": [438, 945], "len": 55, "w": 52 } },
+  "center_lane": { "entrance": { "type": "lane", "c": [643, 822], "toward": [643, 762], "len": 50, "w": 50 } },
+  "meowth":      { "entrance": { "type": "circle", "c": [639, 598], "r": 72 } },
+  "battle_left": { "entrance": { "type": "multi", "items": [
+                    { "type": "rect", "c": [516, 676], "toward": [530, 650], "len": 30, "w": 16 }, { "type": "rect", "c": [539, 634], "toward": [553, 610], "len": 30, "w": 16 }, { "type": "rect", "c": [562, 600], "toward": [580, 580], "len": 30, "w": 16 } ] } },
+  "battle_right":{ "entrance": { "type": "multi", "items": [
+                    { "type": "rect", "c": [718, 600], "toward": [700, 580], "len": 30, "w": 16 }, { "type": "rect", "c": [743, 634], "toward": [729, 610], "len": 30, "w": 16 }, { "type": "rect", "c": [770, 672], "toward": [756, 648], "len": 30, "w": 16 } ] } },
+  "captive_ball":{ "entrance": { "type": "lane", "c": [792, 935], "toward": [786, 885], "len": 50, "w": 46 } },
+  "right_ramp":  { "entrance": { "type": "lane", "c": [852, 935], "toward": [858, 875], "len": 56, "w": 52 } },
+  "right_orbit": { "entrance": { "type": "lane", "c": [958, 902], "toward": [965, 840], "len": 56, "w": 50 } },
+  "town_scoop":  { "entrance": { "type": "circle", "c": [975, 1268], "r": 28 } },
+  "psyduck":     { "entrance": { "type": "circle", "c": [322, 1186], "r": 26 } },
+  "berries":     { "entrance": { "type": "multi", "items": [
+                    { "type": "circle", "c": [398, 1056], "r": 18 }, { "type": "circle", "c": [538, 978], "r": 18 }, { "type": "circle", "c": [764, 963], "r": 18 } ] } },
+  "pokeball":    { "entrance": { "type": "circle", "c": [394, 925], "r": 74 } }
+ }
+}

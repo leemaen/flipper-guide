@@ -1,0 +1,198 @@
+{
+ "villains": {
+  "name": "Schurken: Catwoman · Joker · Penguin · Riddler",
+  "en": "Major villain inserts",
+  "text": "Die vier Hauptschurken. Verhaftete Schurken leuchten.",
+  "px": [
+   [
+    596.2,
+    1597.5
+   ],
+   [
+    660.0,
+    1550.0
+   ],
+   [
+    756.2,
+    1545.0
+   ],
+   [
+    810.0,
+    1597.5
+   ]
+  ],
+  "r": 22
+ },
+ "batsignal": {
+  "name": "Bat-Signal",
+  "en": "Bat-Signal insert",
+  "text": "Großes Insert über den Flippern.",
+  "px": [
+   [
+    703.8,
+    1640.0
+   ]
+  ],
+  "r": 20
+ },
+ "gadget_ins": {
+  "name": "G-A-D-G-E-T",
+  "en": "GADGET inserts",
+  "text": "Zeigen die sechs GADGET-Ziele links. GADGET komplett = ein Gadget für den Action-Knopf.",
+  "px": [
+   [
+    400.0,
+    1487.5
+   ],
+   [
+    397.5,
+    1431.2
+   ],
+   [
+    397.5,
+    1375.0
+   ],
+   [
+    400.0,
+    1316.2
+   ],
+   [
+    400.0,
+    1256.2
+   ],
+   [
+    400.0,
+    1200.0
+   ]
+  ],
+  "r": 17
+ },
+ "tv_ins": {
+  "name": "TV-Anzeigen",
+  "en": "TV target inserts",
+  "text": "Zeigen die drei TV-Ziele rechts. Alle drei, dann linker Orbit = Nebenschurke (Minor Villain).",
+  "px": [
+   [
+    993.8,
+    1393.8
+   ],
+   [
+    1000.0,
+    1456.2
+   ],
+   [
+    1003.8,
+    1512.5
+   ]
+  ],
+  "r": 18
+ },
+ "joker_ins": {
+  "name": "J-O-K-E-R",
+  "en": "JOKER inserts",
+  "text": "Joker-Fortschritt; der Joker wird über die Villain-Vision-Ziele an der Drehscheibe qualifiziert.",
+  "px": [
+   [
+    543.8,
+    918.8
+   ],
+   [
+    587.5,
+    943.8
+   ],
+   [
+    631.2,
+    943.8
+   ],
+   [
+    675.0,
+    937.5
+   ],
+   [
+    712.5,
+    906.2
+   ]
+  ],
+  "r": 15
+ },
+ "crane_spots": {
+  "name": "Abrissbirnen-Stellen",
+  "en": "Crane / wrecking ball spots (purple)",
+  "text": "Fünf violette Inserts: Hier hält die Abrissbirne des Krans im Penguin-Modus. Nur Anzeige – getroffen wird die Kugel des Krans.",
+  "px": [
+   [
+    960.0,
+    1316.2
+   ],
+   [
+    860.0,
+    1316.2
+   ],
+   [
+    758.8,
+    1293.8
+   ],
+   [
+    656.2,
+    1237.5
+   ],
+   [
+    518.8,
+    1062.5
+   ]
+  ],
+  "r": 22
+ },
+ "lock_ins": {
+  "name": "Lock 1–3",
+  "en": "Lock inserts",
+  "text": "Zeigen die gelockten Kugeln für den Villain-Multiball.",
+  "px": [
+   [
+    985.0,
+    1256.2
+   ],
+   [
+    1006.2,
+    1200.0
+   ],
+   [
+    1025.0,
+    1143.8
+   ]
+  ],
+  "r": 18
+ },
+ "peng_ins": {
+  "name": "Penguin-Scoop-Anzeige",
+  "en": "The Penguin insert",
+  "text": "Vor dem Penguin-Scoop.",
+  "px": [
+   [
+    887.5,
+    1250.0
+   ]
+  ],
+  "r": 18
+ },
+ "left_ins": {
+  "name": "Riddler · TV · Extraball (links)",
+  "en": "Riddler / TV / Extra Ball inserts at the left orbit",
+  "text": "Am linken Orbit: Riddler-Schuss, Nebenschurke bereit, Extraball bereit.",
+  "px": [
+   [
+    365.0,
+    972.5
+   ],
+   [
+    385.0,
+    1075.0
+   ],
+   [
+    393.8,
+    1125.0
+   ]
+  ],
+  "r": 16
+ }
+}

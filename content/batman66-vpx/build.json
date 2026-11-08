@@ -1,0 +1,17 @@
+{
+ "views": {
+  "vpx": {
+   "H": "tools/batman66/H_vpx.json",
+   "src": "_quellen/batman66/vpx_top.png",
+   "crop": [
+    0,
+    0,
+    1000,
+    2221
+   ],
+   "out": "batman66-vpx.jpg",
+   "quality": 86
+  }
+ },
+ "insertsView": "vpx"
+}
