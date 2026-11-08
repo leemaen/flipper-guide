@@ -686,11 +686,15 @@
   // ---------- Offline ----------
   function registerSW() {
     if (!('serviceWorker' in navigator)) return;
-    navigator.serviceWorker.register('sw.js').then(reg => {
+    // Neue Version: sobald sie vollständig gespeichert und aktiv ist, lädt die Seite einmal neu (sonst sähe man sie erst beim übernächsten Öffnen)
+    const hadCtrl = !!navigator.serviceWorker.controller; let reloaded = false;
+    navigator.serviceWorker.addEventListener('controllerchange', () => { if (!hadCtrl || reloaded) return; reloaded = true; location.reload(); });
+    navigator.serviceWorker.register('sw.js', { updateViaCache: 'none' }).then(reg => {
       reg.addEventListener('updatefound', () => {
         const nw = reg.installing; if (!nw) return;
-        nw.addEventListener('statechange', () => { if (nw.state === 'installed' && navigator.serviceWorker.controller) toast('Neue Version gespeichert – wird beim nächsten Öffnen aktiv.', 4000); });
+        if (navigator.serviceWorker.controller) toast('Neue Version wird geladen …', 4000);
       });
+      document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') reg.update().catch(() => {}); });
     }).catch(() => {});
     navigator.serviceWorker.addEventListener('message', e => { if (e.data && e.data.version) window.FG_VERSION = e.data.version; });
   }
