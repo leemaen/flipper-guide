@@ -1,0 +1,10 @@
+{
+ "id": "afm",
+ "name": "Attack from Mars",
+ "manufacturer": "Bally",
+ "year": 1995,
+ "versions": "Echt + VPX (g5k 1.3.11)",
+ "accent": "#7cc242",
+ "thumb": "img/afm-thumb.jpg",
+ "data": "data/afm.json"
+}

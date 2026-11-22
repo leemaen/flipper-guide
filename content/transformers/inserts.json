@@ -1,0 +1,186 @@
+{
+ "decepticon_modes": {
+  "name": "Decepticon-Modi",
+  "en": "Megatron · Starscream · Shockwave · Blackout · Devastator",
+  "text": "Linke Spalte der Modus-Felder (Aufdruck „Decepticons“). Gespielte Modi leuchten.",
+  "px": [
+   [
+    382.7,
+    1353.7
+   ],
+   [
+    382.7,
+    1465.3
+   ],
+   [
+    382.7,
+    1576.6
+   ],
+   [
+    382.7,
+    1688.7
+   ],
+   [
+    382.7,
+    1800.3
+   ]
+  ],
+  "r": 22
+ },
+ "autobot_modes": {
+  "name": "Autobot-Modi",
+  "en": "Optimus Prime · Bumblebee · Ironhide · Mudflap & Skids · Ratchet",
+  "text": "Rechte Spalte der Modus-Felder (Aufdruck „Autobots“). Gespielte Modi leuchten.",
+  "px": [
+   [
+    532.2,
+    1355.4
+   ],
+   [
+    532.2,
+    1467.0
+   ],
+   [
+    532.2,
+    1578.2
+   ],
+   [
+    532.2,
+    1690.4
+   ],
+   [
+    532.2,
+    1801.9
+   ]
+  ],
+  "r": 22
+ },
+ "sentinel": {
+  "name": "Sentinel Prime",
+  "en": "Sentinel Prime",
+  "text": "Feld über den Modus-Spalten. Was es genau anzeigt, ist nicht belegt (laut Code-Notizen gibt es einen Sentinel-Prime-Super-Jackpot).",
+  "px": [
+   [
+    457.0,
+    1267.1
+   ]
+  ],
+  "r": 20
+ },
+ "challenge_megatron": {
+  "name": "Challenge Megatron",
+  "en": "Challenge Megatron",
+  "text": "Rundes Feld unter Megatron. Bedeutung laut Aufdruck: Megatron herausfordern. Genaue Regel nicht belegt.",
+  "px": [
+   [
+    456.0,
+    1063.3
+   ]
+  ],
+  "r": 22
+ },
+ "triangles": {
+  "name": "Dreieck-Säulen vor den Hauptschüssen",
+  "en": "Autobot / Decepticon / X triangles",
+  "text": "Fünf Säulen aus Dreiecken: vor linkem Orbit, linker Rampe, TF-Rampe, Bumblebee-Captive-Ball und rechtem Orbit (Zuordnung nach Lage). Leuchtende Autobot- bzw. Decepticon-Dreiecke zeigen, welcher Schuss den Modus weiterbringt. Getroffen wird der Eingang dahinter.",
+  "px": [
+   [
+    652.4,
+    1078.2
+   ],
+   [
+    180.3,
+    1015.7
+   ],
+   [
+    158.6,
+    937.3
+   ],
+   [
+    138.7,
+    870.5
+   ],
+   [
+    118.7,
+    808.7
+   ],
+   [
+    279.0,
+    1032.4
+   ],
+   [
+    295.3,
+    1099.0
+   ],
+   [
+    309.7,
+    1164.2
+   ],
+   [
+    538.1,
+    764.4
+   ],
+   [
+    539.2,
+    833.2
+   ],
+   [
+    537.8,
+    901.2
+   ],
+   [
+    538.0,
+    982.0
+   ],
+   [
+    624.5,
+    890.6
+   ],
+   [
+    673.1,
+    996.8
+   ],
+   [
+    690.8,
+    931.7
+   ],
+   [
+    707.4,
+    862.1
+   ],
+   [
+    734.9,
+    1188.9
+   ],
+   [
+    761.8,
+    1111.4
+   ],
+   [
+    784.9,
+    1049.1
+   ],
+   [
+    806.5,
+    982.4
+   ]
+  ],
+  "r": 13
+ },
+ "top_lane_lamps": {
+  "name": "Obere Bahnen",
+  "en": "Top lanes",
+  "text": "Lampen der oberen Rollover-Bahnen (Skill Shot, Cyber-Multiplier-Symbole).",
+  "px": [
+   [
+    210.0,
+    114.4
+   ],
+   [
+    302.0,
+    138.4
+   ]
+  ],
+  "r": 14
+ }
+}

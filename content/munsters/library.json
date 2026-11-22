@@ -1,0 +1,10 @@
+{
+ "id": "munsters",
+ "name": "The Munsters",
+ "manufacturer": "Stern",
+ "year": 2019,
+ "versions": "Echter Tisch (Pro) · VPX-Fan-Tisch hat eigene Regeln: siehe „The Munsters (VPX Original)“",
+ "accent": "#7fb640",
+ "thumb": "img/munsters-thumb.jpg",
+ "data": "data/munsters.json"
+}

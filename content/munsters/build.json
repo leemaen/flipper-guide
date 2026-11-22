@@ -1,0 +1,2 @@
+{ "views": { "real": { "H": "tools/munsters/H_real.json", "src": "_quellen/munsters/stern_topview.png", "crop": [250, 160, 1250, 2080], "out": "munsters-real.jpg", "quality": 88 } },
+  "insertsView": "real" }

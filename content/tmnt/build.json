@@ -1,0 +1,2 @@
+{ "views": { "real": { "H": "tools/tmnt/H_real.json", "src": "_quellen/tmnt/stern_topview.png", "crop": [255, 200, 1240, 2010], "out": "tmnt-real.jpg", "quality": 88 } },
+  "insertsView": "real" }

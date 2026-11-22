@@ -1,0 +1,307 @@
+{
+"Bumper1": [
+"Bumper",
+490.1,
+396.9
+],
+"Bumper2": [
+"Bumper",
+703.3,
+396.6
+],
+"Bumper3": [
+"Bumper",
+596.6,
+582.2
+],
+"LeftFlipper": [
+"Flipper",
+271.8,
+1839.0,
+122.5,
+70.0,
+114.7,
+11.5
+],
+"LRampF": [
+"Flipper",
+49.4,
+2090.0,
+12.0,
+24.0,
+50.0,
+5.0
+],
+"RightFlipper": [
+"Flipper",
+605.1,
+1839.0,
+-122.5,
+-70.0,
+114.7,
+11.5
+],
+"Gate1": [
+"Gate",
+853.7,
+111.3
+],
+"Gate2": [
+"Gate",
+58.1,
+812.9
+],
+"Gate3": [
+"Gate",
+431.8,
+150.0
+],
+"sw35Gate": [
+"Gate",
+634.9,
+1087.1
+],
+"sw36Gate": [
+"Gate",
+211.7,
+707.7
+],
+"sw8Gate": [
+"Gate",
+343.7,
+715.8
+],
+"sw41": [
+"HitTarget",
+174.1,
+1062.8,
+-89.3,
+"hit_target_rectangle"
+],
+"sw42": [
+"HitTarget",
+174.5,
+992.7,
+-89.3,
+"hit_target_rectangle"
+],
+"sw43": [
+"HitTarget",
+528.1,
+970.8,
+74.7,
+"hit_target_rectangle"
+],
+"sw44": [
+"HitTarget",
+547.0,
+1037.8,
+74.7,
+"hit_target_rectangle"
+],
+"sw55": [
+"Kicker",
+453.9,
+2098.0
+],
+"sw56": [
+"Kicker",
+785.1,
+1915.0
+],
+"sw57": [
+"Kicker",
+729.4,
+1946.3
+],
+"sw58": [
+"Kicker",
+675.2,
+1979.3
+],
+"Plunger": [
+"Plunger",
+908.8,
+2116.4
+],
+"RampTriggerL": [
+"Trigger",
+226.4,
+719.1
+],
+"RampTriggerLE": [
+"Trigger",
+751.7,
+1536.5
+],
+"RampTriggerLM": [
+"Trigger",
+800.3,
+1499.6
+],
+"RampTriggerM": [
+"Trigger",
+651.9,
+1076.8
+],
+"RampTriggerME": [
+"Trigger",
+123.6,
+1444.2
+],
+"RampTriggerUL": [
+"Trigger",
+142.0,
+160.1
+],
+"RampTriggerULE": [
+"Trigger",
+715.7,
+1700.6
+],
+"RampTriggerULM": [
+"Trigger",
+345.6,
+727.3
+],
+"RampTriggerULM2": [
+"Trigger",
+623.4,
+1604.7
+],
+"RampTriggerUR": [
+"Trigger",
+845.6,
+731.6
+],
+"RampTriggerURE": [
+"Trigger",
+469.0,
+96.8
+],
+"reflectionTrigger": [
+"Trigger",
+441.5,
+1494.8
+],
+"sw15": [
+"Trigger",
+54.9,
+435.2
+],
+"sw16": [
+"Trigger",
+185.7,
+895.2
+],
+"sw17": [
+"Trigger",
+440.0,
+836.8
+],
+"sw18": [
+"Trigger",
+332.6,
+699.1
+],
+"sw25": [
+"Trigger",
+506.7,
+211.6
+],
+"sw26": [
+"Trigger",
+598.1,
+203.3
+],
+"sw27": [
+"Trigger",
+690.1,
+192.3
+],
+"sw28": [
+"Trigger",
+781.7,
+181.6
+],
+"sw34": [
+"Trigger",
+818.9,
+777.9
+],
+"sw35": [
+"Trigger",
+642.8,
+1084.6
+],
+"sw36": [
+"Trigger",
+207.6,
+697.0
+],
+"sw37": [
+"Trigger",
+802.3,
+1286.8
+],
+"sw51": [
+"Trigger",
+55.1,
+1602.5
+],
+"sw52": [
+"Trigger",
+127.6,
+1603.0
+],
+"sw53": [
+"Trigger",
+749.6,
+1602.4
+],
+"sw54": [
+"Trigger",
+820.8,
+1602.0
+],
+"sw61": [
+"Trigger",
+305.5,
+454.7
+],
+"sw62": [
+"Trigger",
+359.4,
+196.3
+],
+"sw63": [
+"Trigger",
+405.0,
+161.0
+],
+"sw64": [
+"Trigger",
+258.5,
+276.8
+],
+"sw65": [
+"Trigger",
+810.7,
+1697.8
+],
+"sw66": [
+"Trigger",
+907.3,
+1913.9
+],
+"TriggerLF": [
+"Trigger",
+239.3,
+1844.6
+],
+"TriggerRF": [
+"Trigger",
+637.6,
+1844.6
+]
+}

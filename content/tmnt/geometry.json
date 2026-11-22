@@ -1,0 +1,424 @@
+{
+ "_note": "Eingänge in Pixeln des Stern-Herstellerfotos (Draufsicht, 1476 x 2500, sternpinball.com TMNT Pro) direkt vermessen und mit dem Schalter- und Lichterplan des Pro-Handbuchs (S. 14-17, 22) abgeglichen (Plan->Foto-Homographie tools/tmnt/plan_H.py, RMS ca. 6 px im unteren/mittleren Feld). H_real ist eine reine Skalierung 0,94 (1 Einheit = 1/0,94 px), damit die Kugel (50 Einheiten) etwa 47 px = 1 1/16 Zoll im Foto misst. Längen in Foto-px (pxToVpx = 1/0,94).",
+ "space": "px:real",
+ "pxToVpx": 1.0638,
+ "flipperSpace": "px",
+ "flippers": {
+  "L": {
+   "pivot": [
+    544,
+    1789
+   ],
+   "aim": [
+    630,
+    1852
+   ]
+  },
+  "R": {
+   "pivot": [
+    933,
+    1789
+   ],
+   "aim": [
+    848,
+    1852
+   ]
+  },
+  "UL": {
+   "pivot": [
+    398,
+    958
+   ],
+   "aim": [
+    413,
+    1003
+   ]
+  }
+ },
+ "shots": {
+  "left_orbit": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     405,
+     716
+    ],
+    "toward": [
+     398,
+     650
+    ],
+    "len": 60,
+    "w": 40
+   }
+  },
+  "left_ramp": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     512,
+     772
+    ],
+    "toward": [
+     505,
+     710
+    ],
+    "len": 46,
+    "w": 72
+   }
+  },
+  "dimx": {
+   "entrance": {
+    "type": "multi",
+    "items": [
+     {
+      "type": "rect",
+      "c": [
+       485,
+       817
+      ],
+      "toward": [
+       482,
+       780
+      ],
+      "len": 14,
+      "w": 34
+     },
+     {
+      "type": "rect",
+      "c": [
+       597,
+       792
+      ],
+      "toward": [
+       593,
+       755
+      ],
+      "len": 14,
+      "w": 34
+     }
+    ]
+   }
+  },
+  "pizza_parlor": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     603,
+     560
+    ],
+    "toward": [
+     598,
+     505
+    ],
+    "len": 50,
+    "w": 46
+   }
+  },
+  "twox": {
+   "entrance": {
+    "type": "rect",
+    "c": [
+     722,
+     768
+    ],
+    "toward": [
+     720,
+     731
+    ],
+    "len": 14,
+    "w": 32
+   }
+  },
+  "pizza_target": {
+   "entrance": {
+    "type": "rect",
+    "c": [
+     828,
+     1020
+    ],
+    "toward": [
+     826,
+     985
+    ],
+    "len": 14,
+    "w": 38
+   }
+  },
+  "center_ramp": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     808,
+     885
+    ],
+    "toward": [
+     815,
+     825
+    ],
+    "len": 50,
+    "w": 46
+   }
+  },
+  "krang_loop": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     875,
+     728
+    ],
+    "toward": [
+     915,
+     690
+    ],
+    "len": 60,
+    "w": 44
+   }
+  },
+  "right_ramp": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     898,
+     1008
+    ],
+    "toward": [
+     922,
+     945
+    ],
+    "len": 60,
+    "w": 52
+   }
+  },
+  "right_orbit": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     1038,
+     958
+    ],
+    "toward": [
+     1046,
+     890
+    ],
+    "len": 60,
+    "w": 44
+   }
+  },
+  "lair_lane": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     392,
+     1052
+    ],
+    "toward": [
+     380,
+     1000
+    ],
+    "len": 50,
+    "w": 40
+   }
+  },
+  "lair_target": {
+   "entrance": {
+    "type": "multi",
+    "items": [
+     {
+      "type": "rect",
+      "c": [
+       418,
+       1182
+      ],
+      "toward": [
+       448,
+       1182
+      ],
+      "len": 14,
+      "w": 44
+     },
+     {
+      "type": "rect",
+      "c": [
+       415,
+       1262
+      ],
+      "toward": [
+       445,
+       1262
+      ],
+      "len": 14,
+      "w": 44
+     }
+    ]
+   }
+  },
+  "april_target": {
+   "entrance": {
+    "type": "multi",
+    "items": [
+     {
+      "type": "rect",
+      "c": [
+       1075,
+       1202
+      ],
+      "toward": [
+       1045,
+       1202
+      ],
+      "len": 14,
+      "w": 44
+     },
+     {
+      "type": "rect",
+      "c": [
+       1077,
+       1288
+      ],
+      "toward": [
+       1047,
+       1288
+      ],
+      "len": 14,
+      "w": 44
+     }
+    ]
+   }
+  },
+  "pops": {
+   "entrance": {
+    "type": "multi",
+    "items": [
+     {
+      "type": "circle",
+      "c": [
+       702,
+       531
+      ],
+      "r": 30
+     },
+     {
+      "type": "circle",
+      "c": [
+       903,
+       559
+      ],
+      "r": 30
+     },
+     {
+      "type": "circle",
+      "c": [
+       760,
+       650
+      ],
+      "r": 30
+     }
+    ]
+   }
+  },
+  "upper_flipper": {
+   "entrance": {
+    "type": "circle",
+    "c": [
+     405,
+     985
+    ],
+    "r": 32
+   }
+  },
+  "inlanes": {
+   "entrance": {
+    "type": "multi",
+    "items": [
+     {
+      "type": "rect",
+      "c": [
+       362,
+       1550
+      ],
+      "toward": [
+       362,
+       1500
+      ],
+      "len": 60,
+      "w": 30
+     },
+     {
+      "type": "rect",
+      "c": [
+       431,
+       1550
+      ],
+      "toward": [
+       431,
+       1500
+      ],
+      "len": 60,
+      "w": 30
+     },
+     {
+      "type": "rect",
+      "c": [
+       1065,
+       1570
+      ],
+      "toward": [
+       1065,
+       1520
+      ],
+      "len": 60,
+      "w": 30
+     }
+    ]
+   }
+  },
+  "outlanes": {
+   "entrance": {
+    "type": "multi",
+    "items": [
+     {
+      "type": "rect",
+      "c": [
+       310,
+       1610
+      ],
+      "toward": [
+       310,
+       1560
+      ],
+      "len": 60,
+      "w": 30
+     },
+     {
+      "type": "rect",
+      "c": [
+       1135,
+       1625
+      ],
+      "toward": [
+       1135,
+       1575
+      ],
+      "len": 60,
+      "w": 30
+     }
+    ]
+   }
+  },
+  "plunger": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     1218,
+     1900
+    ],
+    "toward": [
+     1218,
+     1790
+    ],
+    "len": 140,
+    "w": 40
+   }
+  }
+ }
+}

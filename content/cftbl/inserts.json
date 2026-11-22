@@ -1,0 +1,234 @@
+{
+ "film": {
+  "name": "F-I-L-M",
+  "en": "(F)-I-L-M … F-I-L-M",
+  "text": "Vier Buchstaben über den Flippern. F = K-I-S-S, I = alle 4 Menu-Ziele, L = P-A-I-D, M = Slide (Playground-Saucer). Alle vier = Multiball bereit.",
+  "px": [
+   [
+    354.3,
+    1813.3
+   ],
+   [
+    419.9,
+    1803.3
+   ],
+   [
+    488.3,
+    1804.9
+   ],
+   [
+    554.4,
+    1817.5
+   ]
+  ],
+  "r": 14
+ },
+ "kiss": {
+  "name": "K-I-S-S und Lippen",
+  "en": "K-I-S-S / Lips (Taillight Park)",
+  "text": "Unter der Taillight-Park-Bahn links. Jeder Treffer in die Bahn bzw. der Skill Shot über den oberen linken Rollover schaltet Buchstaben weiter. Erstes K-I-S-S = F.",
+  "px": [
+   [
+    222.1,
+    1391.5
+   ],
+   [
+    231.1,
+    1332.9
+   ],
+   [
+    252.4,
+    1277.5
+   ],
+   [
+    288.8,
+    1235.1
+   ],
+   [
+    175.0,
+    1272.4
+   ]
+  ],
+  "r": 12
+ },
+ "left_lane": {
+  "name": "Start Movie · Video · Search (links)",
+  "en": "Left Start Movie / Left Video / Left Search",
+  "text": "Anzeigen an der Taillight-Park-Bahn. Blinkend: Film (Multiball) starten, Video-Modus starten, im Multiball die Kreatur suchen.",
+  "px": [
+   [
+    63.8,
+    1052.9
+   ],
+   [
+    62.9,
+    906.6
+   ],
+   [
+    113.1,
+    1158.5
+   ],
+   [
+    127.3,
+    1216.2
+   ]
+  ],
+  "r": 12
+ },
+ "right_lane": {
+  "name": "Playground-Bahn",
+  "en": "Start Movie / Video / Search / Slide / Big Millions / Playground Award / Start Mega Menu",
+  "text": "Reihe vor der Playground-Bahn rechts. Zeigt, was der Playground-Saucer gerade bringt: Slide (M), Start Mega Menu, Playground Award, Big Millions, Video, Start Movie, Search.",
+  "px": [
+   [
+    848.8,
+    1053.9
+   ],
+   [
+    848.4,
+    906.0
+   ],
+   [
+    788.7,
+    1160.4
+   ],
+   [
+    774.3,
+    1211.8
+   ],
+   [
+    744.3,
+    1300.4
+   ],
+   [
+    709.3,
+    1395.6
+   ],
+   [
+    684.0,
+    1471.9
+   ],
+   [
+    651.4,
+    1552.1
+   ]
+  ],
+  "r": 12
+ },
+ "center_lane": {
+  "name": "Center-Shot-Anzeigen",
+  "en": "Extra Ball / Move Your Car / Parking O.K. / Collect Combo",
+  "text": "In der Mitte vor dem Center Shot. Extra Ball abholen, Move Your Car, Parking O.K., Double-Feature-Combo kassieren.",
+  "px": [
+   [
+    357.9,
+    709.1
+   ],
+   [
+    357.2,
+    791.3
+   ],
+   [
+    356.0,
+    865.3
+   ],
+   [
+    356.1,
+    946.9
+   ]
+  ],
+  "r": 13
+ },
+ "menu_lamps": {
+  "name": "Menu-Anzeigen und Mega Menu",
+  "en": "Cola / Hot Dog / Popcorn / Ice Cream / Mega Menu",
+  "text": "Je eine Lampe an den vier Menu-Zielen und das Feld „Mega Menu“. Alle vier Ziele = Snack Bar offen.",
+  "px": [
+   [
+    221.9,
+    1109.6
+   ],
+   [
+    220.9,
+    1032.5
+   ],
+   [
+    504.5,
+    1012.5
+   ],
+   [
+    524.7,
+    1089.3
+   ],
+   [
+    381.2,
+    1174.2
+   ]
+  ],
+  "r": 12
+ },
+ "paid": {
+  "name": "P-A-I-D",
+  "en": "P-A-I-D lanes",
+  "text": "Vier Bahnen oben rechts. Komplett = L, Bonus-Multiplikator steigt.",
+  "px": [
+   [
+    521.9,
+    106.3
+   ],
+   [
+    615.8,
+    97.0
+   ],
+   [
+    713.2,
+    86.8
+   ],
+   [
+    808.4,
+    75.5
+   ]
+  ],
+  "r": 12
+ },
+ "combo": {
+  "name": "Double Feature Combo",
+  "en": "Build Combo / Start Combo",
+  "text": "Links unter der linken Rampe: Combo aufbauen (linke Rampe), Abschluss über den Center Shot. „Start Combo“ an der rechten Inlane.",
+  "px": [
+   [
+    237.1,
+    827.7
+   ],
+   [
+    775.6,
+    1513.6
+   ]
+  ],
+  "r": 13
+ },
+ "center_search": {
+  "name": "Search (Snack Bar)",
+  "en": "Center Search",
+  "text": "Links neben der Snack Bar: im Multiball eine der drei Suchstellen.",
+  "px": [
+   [
+    440.7,
+    925.4
+   ]
+  ],
+  "r": 13
+ },
+ "free_pass": {
+  "name": "Free Pass",
+  "en": "Free Pass",
+  "text": "Leuchtet bei aktivem Ball-Retter („Stay cool, Daddy-O“).",
+  "px": [
+   [
+    454.2,
+    1950.9
+   ]
+  ],
+  "r": 13
+ }
+}

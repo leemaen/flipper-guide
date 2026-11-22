@@ -1,0 +1,4 @@
+{ "views": {
+   "real": { "H": "tools/afm/H_real.json", "src": "_quellen/afm/fotos/AtMars_pfl.jpg", "crop": [0, 0, 556, 1150], "out": "afm-real.jpg", "quality": 92 },
+   "vpx":  { "H": "tools/afm/H_vpx.json", "src": "_quellen/afm/vpx_view_1000.png", "crop": [0, 85, 1000, 2246], "out": "afm-vpx.jpg", "quality": 84 } },
+  "insertsView": "real" }

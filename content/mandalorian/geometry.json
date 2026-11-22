@@ -1,0 +1,31 @@
+{
+ "_note": "Geometrie in Pixeln des Stern-Pro-Spielfeldfotos (_quellen/mandalorian/pro_pf.png, 1528x2560, Datei 'Mandalorian-Pro-Playfield-01' von sternpinball.com). Keine VPX vorhanden: Eingaenge im Foto per Gitter-Ausschnitt vermessen; Zuordnung ueber die Einsaetze vor den Schuessen und den Schalterplan (Fig. 3.3.1) des LE/Premium-Handbuchs 500-55S6-01 (gleiches Grundlayout, Pro: U-Turn statt rechter Mulde, Mini-Spielfeld mit einem Flipper). Foto leicht perspektivisch (oben schmaler). 50 px ~ ein Kugeldurchmesser.",
+ "space": "px:real", "pxToVpx": 1, "flipperSpace": "px",
+ "flippers": { "L": { "pivot": [512, 1878], "aim": [604, 1928] }, "R": { "pivot": [905, 1872], "aim": [816, 1928] } },
+ "shots": {
+  "left_orbit":  { "entrance": { "type": "lane", "c": [428, 878], "toward": [426, 818], "len": 60, "w": 52 } },
+  "left_scoop":  { "entrance": { "type": "lane", "c": [548, 968], "toward": [548, 918], "len": 50, "w": 52 } },
+  "left_ramp":   { "entrance": { "type": "lane", "c": [660, 968], "toward": [664, 912], "len": 56, "w": 52 } },
+  "center":      { "entrance": { "type": "lane", "c": [775, 900], "toward": [772, 842], "len": 58, "w": 52 } },
+  "uturn":       { "entrance": { "type": "lane", "c": [893, 850], "toward": [897, 792], "len": 56, "w": 50 } },
+  "x2_left":     { "entrance": { "type": "rect", "c": [946, 908], "toward": [952, 860], "len": 14, "w": 34 } },
+  "right_ramp":  { "entrance": { "type": "lane", "c": [995, 935], "toward": [1004, 878], "len": 56, "w": 52 } },
+  "right_orbit": { "entrance": { "type": "lane", "c": [1152, 800], "toward": [1162, 742], "len": 58, "w": 50 } },
+  "left_bank":   { "entrance": { "type": "multi", "items": [
+      { "type": "rect", "c": [410, 1185], "toward": [440, 1185], "len": 14, "w": 40 },
+      { "type": "rect", "c": [410, 1235], "toward": [440, 1235], "len": 14, "w": 40 },
+      { "type": "rect", "c": [410, 1283], "toward": [440, 1283], "len": 14, "w": 40 } ] } },
+  "boba_fett":   { "entrance": { "type": "multi", "items": [
+      { "type": "rect", "c": [1068, 1205], "toward": [1038, 1205], "len": 14, "w": 40 },
+      { "type": "rect", "c": [1068, 1258], "toward": [1038, 1258], "len": 14, "w": 40 } ] } },
+  "top_lanes":   { "entrance": { "type": "multi", "items": [
+      { "type": "lane", "c": [400, 548], "toward": [400, 510], "len": 40, "w": 30 },
+      { "type": "lane", "c": [470, 548], "toward": [470, 510], "len": 40, "w": 30 },
+      { "type": "lane", "c": [572, 548], "toward": [572, 510], "len": 40, "w": 30 },
+      { "type": "lane", "c": [640, 548], "toward": [640, 510], "len": 40, "w": 30 },
+      { "type": "lane", "c": [706, 548], "toward": [706, 510], "len": 40, "w": 30 } ] } },
+  "bumpers":     { "entrance": { "type": "circle", "c": [475, 705], "r": 55 } },
+  "mini_pf":     { "entrance": { "type": "circle", "c": [965, 462], "r": 95 } },
+  "plunger":     { "entrance": { "type": "rect", "c": [1198, 1520], "toward": [1198, 1420], "len": 420, "w": 34 } }
+ }
+}

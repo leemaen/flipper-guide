@@ -1,0 +1,2 @@
+{ "views": { "real": { "H": "tools/mandalorian/H_real.json", "src": "_quellen/mandalorian/pro_pf.png", "crop": [250, 140, 1275, 2060], "out": "mandalorian-real.jpg", "quality": 88 } },
+  "insertsView": "real" }

@@ -1,0 +1,386 @@
+{
+ "_note": "Schuss-Geometrie in VPX-Tischkoordinaten (964 x 2162) der Tischdatei „Creature from the Black Lagoon (Bally 1992) VPW v1.2“. Grundlage: Schalter der Tischdatei (Namen laut Bally-Handbuch, Switch Locations S. 2-41), offizielle Schuss-Karten im Handbuch (Game Rules S. C–K) und das selbst gerenderte Draufsicht-Bild der VPW-Bake-Meshes. Eingang = Mündung der Bahn bzw. Loch/Ziel.",
+ "flippers": {
+  "L": {
+   "pivot": [
+    272,
+    1839
+   ],
+   "aim": [
+    342,
+    1844
+   ]
+  },
+  "R": {
+   "pivot": [
+    605,
+    1839
+   ],
+   "aim": [
+    535,
+    1844
+   ]
+  }
+ },
+ "shots": {
+  "left_saucer": {
+   "entrance": {
+    "type": "multi",
+    "items": [
+     {
+      "type": "lane",
+      "c": [
+       178,
+       1125
+      ],
+      "toward": [
+       132,
+       965
+      ],
+      "len": 60,
+      "w": 56
+     },
+     {
+      "type": "circle",
+      "c": [
+       118,
+       852
+      ],
+      "r": 32
+     }
+    ]
+   }
+  },
+  "left_ramp": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     205,
+     745
+    ],
+    "toward": [
+     200,
+     665
+    ],
+    "len": 50,
+    "w": 84
+   }
+  },
+  "center_shot": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     340,
+     722
+    ],
+    "toward": [
+     335,
+     650
+    ],
+    "len": 40,
+    "w": 68
+   }
+  },
+  "snackbar": {
+   "entrance": {
+    "type": "circle",
+    "c": [
+     456,
+     775
+    ],
+    "r": 32
+   }
+  },
+  "menu_targets": {
+   "entrance": {
+    "type": "multi",
+    "items": [
+     {
+      "type": "rect",
+      "c": [
+       174,
+       1063
+      ],
+      "toward": [
+       234,
+       1063
+      ],
+      "len": 14,
+      "w": 46
+     },
+     {
+      "type": "rect",
+      "c": [
+       174,
+       993
+      ],
+      "toward": [
+       234,
+       993
+      ],
+      "len": 14,
+      "w": 46
+     },
+     {
+      "type": "rect",
+      "c": [
+       528,
+       971
+      ],
+      "toward": [
+       470,
+       987
+      ],
+      "len": 14,
+      "w": 46
+     },
+     {
+      "type": "rect",
+      "c": [
+       547,
+       1038
+      ],
+      "toward": [
+       489,
+       1054
+      ],
+      "len": 14,
+      "w": 46
+     }
+    ]
+   }
+  },
+  "right_ramp": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     645,
+     1062
+    ],
+    "toward": [
+     640,
+     985
+    ],
+    "len": 50,
+    "w": 84
+   }
+  },
+  "playground": {
+   "entrance": {
+    "type": "multi",
+    "items": [
+     {
+      "type": "lane",
+      "c": [
+       792,
+       1040
+      ],
+      "toward": [
+       808,
+       905
+      ],
+      "len": 60,
+      "w": 60
+     },
+     {
+      "type": "circle",
+      "c": [
+       817,
+       775
+      ],
+      "r": 28
+     }
+    ]
+   }
+  },
+  "whirlpool": {
+   "entrance": {
+    "type": "circle",
+    "c": [
+     718,
+     1714
+    ],
+    "r": 112
+   }
+  },
+  "paid_lanes": {
+   "entrance": {
+    "type": "multi",
+    "items": [
+     {
+      "type": "rect",
+      "c": [
+       507,
+       212
+      ],
+      "toward": [
+       507,
+       150
+      ],
+      "len": 60,
+      "w": 34
+     },
+     {
+      "type": "rect",
+      "c": [
+       598,
+       203
+      ],
+      "toward": [
+       598,
+       141
+      ],
+      "len": 60,
+      "w": 34
+     },
+     {
+      "type": "rect",
+      "c": [
+       690,
+       192
+      ],
+      "toward": [
+       690,
+       130
+      ],
+      "len": 60,
+      "w": 34
+     },
+     {
+      "type": "rect",
+      "c": [
+       782,
+       182
+      ],
+      "toward": [
+       782,
+       120
+      ],
+      "len": 60,
+      "w": 34
+     }
+    ]
+   }
+  },
+  "jets": {
+   "entrance": {
+    "type": "multi",
+    "items": [
+     {
+      "type": "circle",
+      "c": [
+       490,
+       397
+      ],
+      "r": 48
+     },
+     {
+      "type": "circle",
+      "c": [
+       703,
+       397
+      ],
+      "r": 48
+     },
+     {
+      "type": "circle",
+      "c": [
+       597,
+       582
+      ],
+      "r": 48
+     }
+    ]
+   }
+  },
+  "kiss_rollover": {
+   "entrance": {
+    "type": "rect",
+    "c": [
+     55,
+     435
+    ],
+    "toward": [
+     55,
+     375
+    ],
+    "len": 60,
+    "w": 36
+   }
+  },
+  "rollovers": {
+   "entrance": {
+    "type": "multi",
+    "items": [
+     {
+      "type": "rect",
+      "c": [
+       55,
+       1602
+      ],
+      "toward": [
+       55,
+       1540
+      ],
+      "len": 60,
+      "w": 36
+     },
+     {
+      "type": "rect",
+      "c": [
+       128,
+       1603
+      ],
+      "toward": [
+       128,
+       1541
+      ],
+      "len": 60,
+      "w": 36
+     },
+     {
+      "type": "rect",
+      "c": [
+       750,
+       1602
+      ],
+      "toward": [
+       750,
+       1540
+      ],
+      "len": 60,
+      "w": 36
+     },
+     {
+      "type": "rect",
+      "c": [
+       821,
+       1602
+      ],
+      "toward": [
+       821,
+       1540
+      ],
+      "len": 60,
+      "w": 36
+     }
+    ]
+   }
+  },
+  "plunger": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     908,
+     2000
+    ],
+    "toward": [
+     908,
+     1880
+    ],
+    "len": 140,
+    "w": 46
+   }
+  }
+ }
+}

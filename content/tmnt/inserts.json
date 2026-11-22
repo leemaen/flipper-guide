@@ -1,0 +1,218 @@
+{
+ "lair_ins": {
+  "name": "L-A-I-R",
+  "en": "LAIR inserts",
+  "text": "Zeigen den LAIR-Fortschritt der LAIR-Ziele links daneben. Buchstaben laufen ab. Blinkend = gesperrt bis zur nächsten Episode.",
+  "px": [
+   [
+    465,
+    1167
+   ],
+   [
+    462,
+    1222
+   ],
+   [
+    461,
+    1272
+   ],
+   [
+    459,
+    1325
+   ]
+  ],
+  "r": 22
+ },
+ "april_ins": {
+  "name": "A-P-R-I-L",
+  "en": "APRIL inserts",
+  "text": "Zeigen den APRIL-Fortschritt der APRIL-Ziele rechts daneben. Buchstaben laufen ab.",
+  "px": [
+   [
+    977,
+    1148
+   ],
+   [
+    964,
+    1195
+   ],
+   [
+    990,
+    1244
+   ],
+   [
+    976,
+    1298
+   ],
+   [
+    1004,
+    1350
+   ]
+  ],
+  "r": 22
+ },
+ "episodes": {
+  "name": "Episoden",
+  "en": "Episode inserts (lamps 28–35)",
+  "text": "Die acht Episoden-Einsätze in der Shredder-/Krang-Grafik. Der nächste Start blinkt. Reihenfolge der Punkte im Foto: Episode 1 bis 8 (nach Lichterplan).",
+  "px": [
+   [
+    692,
+    1509
+   ],
+   [
+    600,
+    1630
+   ],
+   [
+    780,
+    1600
+   ],
+   [
+    830,
+    1645
+   ],
+   [
+    632,
+    1450
+   ],
+   [
+    660,
+    1685
+   ],
+   [
+    848,
+    1417
+   ],
+   [
+    791,
+    1509
+   ]
+  ],
+  "r": 20
+ },
+ "final_battle": {
+  "name": "Final Battle",
+  "en": "Final Battle insert",
+  "text": "Leuchtet für Final Battle (Lichterplan Nr. 36).",
+  "px": [
+   [
+    645,
+    1355
+   ]
+  ],
+  "r": 28
+ },
+ "foot_combo": {
+  "name": "1-2-3 Foot",
+  "en": "Foot Combo inserts",
+  "text": "1-2-3 Foot: Start-Einsatz am inneren linken Rücklauf, dann „1“ vor der rechten Rampe, „2“ vor der Mittelrampe, „3“ vor der linken Rampe. Zweiter Weg laut Rulesheet: rechte Rampe – Krang-Loop (eigene „2“ im Loop) – Mittelrampe.",
+  "px": [
+   [
+    445,
+    1422
+   ],
+   [
+    825,
+    1195
+   ],
+   [
+    637,
+    921
+   ],
+   [
+    568,
+    935
+   ]
+  ],
+  "r": 20
+ },
+ "start_episode": {
+  "name": "Start Episode",
+  "en": "Start Episode",
+  "text": "Leuchtet, wenn eine Episode am Pizza Parlor gestartet werden kann.",
+  "px": [
+   [
+    679,
+    821
+   ]
+  ],
+  "r": 24
+ },
+ "twox_ins": {
+  "name": "2X Playfield",
+  "en": "2X Playfield",
+  "text": "Pfeil vor dem 2X-Ziel. Leuchtet, wenn 2X Playfield bereit ist.",
+  "px": [
+   [
+    724,
+    805
+   ]
+  ],
+  "r": 16
+ },
+ "turtle_power_ins": {
+  "name": "Turtle Power Multiball",
+  "en": "Turtle Power Multiball",
+  "text": "Vor der rechten Rampe. Zeigt den Weg zum Turtle Power Multiball (4× rechte Rampe).",
+  "px": [
+   [
+    811,
+    1267
+   ]
+  ],
+  "r": 26
+ },
+ "battle_again": {
+  "name": "Battle Again",
+  "en": "Battle Again",
+  "text": "Über den Outlanes: die leuchtende Seite rettet die Kugel. Die Schleudern wechseln die Seite.",
+  "px": [
+   [
+    294,
+    1511
+   ],
+   [
+    1133,
+    1511
+   ]
+  ],
+  "r": 20
+ },
+ "team_up": {
+  "name": "Team Up",
+  "en": "Team Up",
+  "text": "Zwischen den Flippern: zeigt Team-Up Multiball an.",
+  "px": [
+   [
+    730,
+    1765
+   ]
+  ],
+  "r": 24
+ },
+ "training_ins": {
+  "name": "Training",
+  "en": "Training",
+  "text": "Vor der LAIR-Bahn: leuchtet, wenn Training bereit ist.",
+  "px": [
+   [
+    580,
+    1157
+   ]
+  ],
+  "r": 18
+ },
+ "jackpoto": {
+  "name": "Jackpoto Grande",
+  "en": "Jackpoto Grande",
+  "text": "Vor der LAIR-Bahn: leuchtet, wenn der Super Jackpot (Jackpoto Grande) bereit ist.",
+  "px": [
+   [
+    645,
+    1225
+   ]
+  ],
+  "r": 22
+ }
+}

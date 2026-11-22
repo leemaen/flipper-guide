@@ -1,0 +1,26 @@
+{
+ "_note": "Geometrie in VPX-Koordinaten der Tischdatei 'The Munsters (Original 2020) v1.06b' (Tisch 952 x 2200). Schalter, Ziele, Kicker, Spinner, Bumper und Flipper direkt aus gameitems/*.json. Ansicht = Spielfeldgrafik + Plastiken der Tischdatei (FullImage/plastics*, auf 952 x 2168 skaliert), daher H = diag(1, 0,98545).",
+ "flippers": {
+  "L": { "pivot": [311, 1837], "aim": [370, 1876] },
+  "R": { "pivot": [630, 1838], "aim": [571, 1876] }
+ },
+ "shots": {
+  "left_orbit":   { "entrance": { "type": "lane", "c": [168, 900], "toward": [158, 830], "len": 60, "w": 52 } },
+  "left_ramp":    { "entrance": { "type": "lane", "c": [279, 790], "toward": [266, 720], "len": 60, "w": 90 } },
+  "spot":         { "entrance": { "type": "circle", "c": [240, 654], "r": 34 } },
+  "herman":       { "entrance": { "type": "lane", "c": [378, 620], "toward": [372, 545], "len": 60, "w": 70 } },
+  "kitty":        { "entrance": { "type": "rect", "c": [519, 489], "toward": [507, 456], "len": 14, "w": 36 } },
+  "scoop":        { "entrance": { "type": "circle", "c": [570, 702], "r": 30 } },
+  "right_ramp":   { "entrance": { "type": "lane", "c": [700, 790], "toward": [697, 715], "len": 60, "w": 90 } },
+  "right_orbit":  { "entrance": { "type": "lane", "c": [828, 800], "toward": [842, 725], "len": 60, "w": 52 } },
+  "purple":       { "entrance": { "type": "multi", "items": [ { "type": "rect", "c": [215, 831], "toward": [205, 800], "len": 14, "w": 36 }, { "type": "rect", "c": [337, 795], "toward": [326, 764], "len": 14, "w": 36 }, { "type": "rect", "c": [638, 818], "toward": [650, 787], "len": 14, "w": 36 }, { "type": "rect", "c": [764, 871], "toward": [776, 840], "len": 14, "w": 36 } ] } },
+  "dragula_lane": { "entrance": { "type": "lane", "c": [56, 1147], "toward": [56, 1080], "len": 60, "w": 50 } },
+  "dragula_target": { "entrance": { "type": "rect", "c": [126, 1250], "toward": [156, 1250], "len": 14, "w": 150 } },
+  "lily_target":  { "entrance": { "type": "rect", "c": [797, 1275], "toward": [767, 1275], "len": 14, "w": 160 } },
+  "pops":         { "entrance": { "type": "multi", "items": [ { "type": "circle", "c": [561, 412], "r": 45 }, { "type": "circle", "c": [789, 462], "r": 45 }, { "type": "circle", "c": [612, 577], "r": 45 } ] } },
+  "top_lanes":    { "entrance": { "type": "multi", "items": [ { "type": "rect", "c": [671, 323], "toward": [668, 270], "len": 50, "w": 32 }, { "type": "rect", "c": [756, 325], "toward": [753, 272], "len": 50, "w": 32 } ] } },
+  "inlanes":      { "entrance": { "type": "multi", "items": [ { "type": "rect", "c": [120, 1575], "toward": [120, 1520], "len": 60, "w": 32 }, { "type": "rect", "c": [184, 1575], "toward": [184, 1520], "len": 60, "w": 32 }, { "type": "rect", "c": [755, 1610], "toward": [755, 1555], "len": 60, "w": 32 } ] } },
+  "outlanes":     { "entrance": { "type": "multi", "items": [ { "type": "rect", "c": [53, 1655], "toward": [53, 1600], "len": 60, "w": 32 }, { "type": "rect", "c": [836, 1678], "toward": [836, 1623], "len": 60, "w": 32 } ] } },
+  "plunger":      { "entrance": { "type": "lane", "c": [902, 1960], "toward": [902, 1840], "len": 140, "w": 44 } }
+ }
+}

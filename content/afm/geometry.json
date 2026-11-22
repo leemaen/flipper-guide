@@ -1,0 +1,402 @@
+{
+ "_note": "Schuss-Geometrie in VPX-Tischkoordinaten (1024 x 2350) der Tischdatei „Attack from Mars (Bally 1995) g5k 1.3.11“. Grundlage: Schalter (Trigger/Kicker/Target-Wände) und Wände/Rampen der Tischdatei, Schalternamen laut Bally Operator Handbook 16-10206 (Jan. 1996) S. 4–5 (Switch Matrix/Locations), Pfeil-Einsätze laut Lampenliste S. 2–3. Eingänge = Mündung der Bahn zwischen den Führungswänden, unmittelbar hinter der Pfeilspitze. VPX-Ansicht: gebackene Draufsicht (Textur, reine Skalierung); Foto: Homographie aus 31 Insert-Lichtern.",
+ "flippers": {
+  "L": {
+   "pivot": [
+    303,
+    2041
+   ],
+   "aim": [
+    373,
+    2046
+   ]
+  },
+  "R": {
+   "pivot": [
+    630,
+    2041
+   ],
+   "aim": [
+    560,
+    2046
+   ]
+  }
+ },
+ "shots": {
+  "left_loop": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     84,
+     705
+    ],
+    "toward": [
+     78,
+     615
+    ],
+    "len": 70,
+    "w": 62
+   }
+  },
+  "left_ramp": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     208,
+     850
+    ],
+    "toward": [
+     186,
+     730
+    ],
+    "len": 80,
+    "w": 96
+   }
+  },
+  "lock_ramp": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     326,
+     700
+    ],
+    "toward": [
+     308,
+     615
+    ],
+    "len": 60,
+    "w": 60
+   }
+  },
+  "forcefield": {
+   "entrance": {
+    "type": "rect",
+    "c": [
+     506,
+     712
+    ],
+    "toward": [
+     506,
+     650
+    ],
+    "len": 22,
+    "w": 176
+   }
+  },
+  "saucer": {
+   "entrance": {
+    "type": "multi",
+    "items": [
+     {
+      "type": "rect",
+      "c": [
+       507,
+       497
+      ],
+      "toward": [
+       507,
+       430
+      ],
+      "len": 18,
+      "w": 44
+     },
+     {
+      "type": "circle",
+      "c": [
+       505,
+       425
+      ],
+      "r": 26
+     }
+    ]
+   }
+  },
+  "t_target": {
+   "entrance": {
+    "type": "rect",
+    "c": [
+     383,
+     746
+    ],
+    "toward": [
+     377,
+     690
+    ],
+    "len": 16,
+    "w": 50
+   }
+  },
+  "i_target": {
+   "entrance": {
+    "type": "rect",
+    "c": [
+     632,
+     749
+    ],
+    "toward": [
+     638,
+     690
+    ],
+    "len": 16,
+    "w": 50
+   }
+  },
+  "mar_targets": {
+   "entrance": {
+    "type": "multi",
+    "items": [
+     {
+      "type": "rect",
+      "c": [
+       121,
+       1462
+      ],
+      "toward": [
+       178,
+       1475
+      ],
+      "len": 14,
+      "w": 50
+     },
+     {
+      "type": "rect",
+      "c": [
+       132,
+       1403
+      ],
+      "toward": [
+       189,
+       1416
+      ],
+      "len": 14,
+      "w": 50
+     },
+     {
+      "type": "rect",
+      "c": [
+       143,
+       1343
+      ],
+      "toward": [
+       200,
+       1356
+      ],
+      "len": 14,
+      "w": 50
+     }
+    ]
+   }
+  },
+  "an_targets": {
+   "entrance": {
+    "type": "multi",
+    "items": [
+     {
+      "type": "rect",
+      "c": [
+       814,
+       1340
+      ],
+      "toward": [
+       757,
+       1353
+      ],
+      "len": 14,
+      "w": 50
+     },
+     {
+      "type": "rect",
+      "c": [
+       821,
+       1407
+      ],
+      "toward": [
+       764,
+       1420
+      ],
+      "len": 14,
+      "w": 50
+     }
+    ]
+   }
+  },
+  "sol_scoop": {
+   "entrance": {
+    "type": "circle",
+    "c": [
+     684,
+     800
+    ],
+    "r": 30
+   }
+  },
+  "right_ramp": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     775,
+     872
+    ],
+    "toward": [
+     795,
+     760
+    ],
+    "len": 80,
+    "w": 90
+   }
+  },
+  "right_loop": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     916,
+     790
+    ],
+    "toward": [
+     921,
+     700
+    ],
+    "len": 60,
+    "w": 58
+   }
+  },
+  "jets": {
+   "entrance": {
+    "type": "multi",
+    "items": [
+     {
+      "type": "circle",
+      "c": [
+       651,
+       452
+      ],
+      "r": 50
+     },
+     {
+      "type": "circle",
+      "c": [
+       834,
+       377
+      ],
+      "r": 50
+     },
+     {
+      "type": "circle",
+      "c": [
+       809,
+       582
+      ],
+      "r": 50
+     }
+    ]
+   }
+  },
+  "bonusx_lanes": {
+   "entrance": {
+    "type": "multi",
+    "items": [
+     {
+      "type": "rect",
+      "c": [
+       645,
+       273
+      ],
+      "toward": [
+       645,
+       213
+      ],
+      "len": 60,
+      "w": 34
+     },
+     {
+      "type": "rect",
+      "c": [
+       741,
+       266
+      ],
+      "toward": [
+       741,
+       206
+      ],
+      "len": 60,
+      "w": 34
+     }
+    ]
+   }
+  },
+  "rollovers": {
+   "entrance": {
+    "type": "multi",
+    "items": [
+     {
+      "type": "rect",
+      "c": [
+       63,
+       1775
+      ],
+      "toward": [
+       63,
+       1705
+      ],
+      "len": 60,
+      "w": 36
+     },
+     {
+      "type": "rect",
+      "c": [
+       131,
+       1775
+      ],
+      "toward": [
+       131,
+       1705
+      ],
+      "len": 60,
+      "w": 36
+     },
+     {
+      "type": "rect",
+      "c": [
+       803,
+       1778
+      ],
+      "toward": [
+       803,
+       1708
+      ],
+      "len": 60,
+      "w": 36
+     },
+     {
+      "type": "rect",
+      "c": [
+       871,
+       1778
+      ],
+      "toward": [
+       871,
+       1708
+      ],
+      "len": 60,
+      "w": 36
+     }
+    ]
+   }
+  },
+  "launch": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     949,
+     2140
+    ],
+    "toward": [
+     949,
+     2000
+    ],
+    "len": 140,
+    "w": 50
+   }
+  }
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "id": "transformers",
+ "name": "Transformers (Pro)",
+ "manufacturer": "Stern",
+ "year": 2011,
+ "versions": "VPX (2.4.1) · echter Pro: gleiche Regeln (ROM 1.80)",
+ "accent": "#d63a3a",
+ "thumb": "img/transformers-thumb.jpg",
+ "data": "data/transformers.json"
+}

@@ -1,0 +1,210 @@
+{
+ "lock_ins": {
+  "name": "Grüne Lock-Einsätze (Wall + 4 Fairies)",
+  "en": "Brick Keeper lock target inserts",
+  "text": "Blinken grün vor den fünf Zielen. Jeder Treffer macht einen Einsatz dauerhaft grün. Alle fünf = Ball Lock leuchtet (Handbuch 2-13).",
+  "px": [
+   [
+    146.5,
+    1439.1
+   ],
+   [
+    234.0,
+    1073.2
+   ],
+   [
+    355.8,
+    964.6
+   ],
+   [
+    468.6,
+    536.1
+   ],
+   [
+    388.0,
+    663.1
+   ]
+  ],
+  "r": 16
+ },
+ "lock_tri": {
+  "name": "Lock 1 · Lock 2 · Start Multiball",
+  "en": "Lock triangles",
+  "text": "Dreieck-Einsätze: Lock 1 am linken Orbit, Lock 2 an der Mittelrampe, Start Multiball am rechten Orbit (Handbuch 2-13).",
+  "px": [
+   [
+    190.3,
+    1117.0
+   ],
+   [
+    417.5,
+    536.1
+   ],
+   [
+    937.2,
+    629.4
+   ]
+  ],
+  "r": 20
+ },
+ "start_mode": {
+  "name": "Start Mode",
+  "en": "Start Mode inserts",
+  "text": "Runde Einsätze links und rechts am Horseshoe. Blinken, wenn LABYRINTH komplett ist: Horseshoe oder Wiseman-Scoop startet den Modus (Handbuch 2-3).",
+  "px": [
+   [
+    512.9,
+    611.5
+   ],
+   [
+    681.6,
+    738.0
+   ]
+  ],
+  "r": 28
+ },
+ "friends_adv": {
+  "name": "Advance-Friend-Kreise",
+  "en": "Advance Friend inserts (5)",
+  "text": "Fünf runde Einsätze. Blinkend in Freundesfarbe = Freund finden, dauerhaft = Gegenstand sammeln. Gelb Hoggle, orange Ludo, blau Sir Didymus (Handbuch 2-10).",
+  "px": [
+   [
+    430.7,
+    808.1
+   ],
+   [
+    875.0,
+    878.7
+   ],
+   [
+    641.5,
+    1138.6
+   ],
+   [
+    263.6,
+    1282.5
+   ],
+   [
+    347.9,
+    1250.9
+   ]
+  ],
+  "r": 24
+ },
+ "friend_faces": {
+  "name": "Hoggle · Ludo · Sir Didymus",
+  "en": "Friend faces + Jackpot Ready",
+  "text": "Gesichter leuchten, wenn der Freund gefunden ist; „Jackpot Ready“ blinkt, wenn sein Jackpot am Helping-Hands-Scoop bereit ist.",
+  "px": [
+   [
+    269.9,
+    1439.1
+   ],
+   [
+    387.4,
+    1557.7
+   ],
+   [
+    550.9,
+    1561.4
+   ]
+  ],
+  "r": 80
+ },
+ "help_ins": {
+  "name": "H-E-L-P",
+  "en": "HELP lane inserts",
+  "text": "In- und Outlanes. HELP komplett = Helping-Hands-Scoop leuchtet (Handbuch 2-3).",
+  "px": [
+   [
+    50.1,
+    1572.4
+   ],
+   [
+    131.8,
+    1572.4
+   ],
+   [
+    785.4,
+    1572.4
+   ],
+   [
+    856.6,
+    1572.4
+   ]
+  ],
+  "r": 20
+ },
+ "modes_ins": {
+  "name": "Modus-Einsätze",
+  "en": "Knockers · Four Guards · Fireys / Cleaners · Oubliette · Bog",
+  "text": "Obere Reihe: Knockers, Four Guards, Fireys. Untere Reihe: Cleaners, Oubliette, Bog. Leuchten für gespielte/aktuelle Modi (Handbuch 2-3).",
+  "px": [
+   [
+    458.6,
+    1265.1
+   ],
+   [
+    540.3,
+    1259.8
+   ],
+   [
+    622.0,
+    1265.1
+   ],
+   [
+    458.6,
+    1370.5
+   ],
+   [
+    540.3,
+    1381.1
+   ],
+   [
+    622.0,
+    1370.5
+   ]
+  ],
+  "r": 40
+ },
+ "ello_ins": {
+  "name": "Ello Mystery",
+  "en": "Ello Mystery insert",
+  "text": "Leuchtet nach beiden Wiseman-Zielen in derselben Kugel. Dann die Ello-Bahn unter dem oberen rechten Flipper (Handbuch 2-16).",
+  "px": [
+   [
+    741,
+    1141
+   ]
+  ],
+  "r": 18
+ },
+ "orb_ins": {
+  "name": "Collect Orb",
+  "en": "Collect Orb insert",
+  "text": "Dreieck vor der Ello-Bahn. Leuchtet nach einer der 13 Errungenschaften: 10 Mio. (Handbuch 2-17).",
+  "px": [
+   [
+    825,
+    1083
+   ]
+  ],
+  "r": 18
+ },
+ "forks_ins": {
+  "name": "Fang-Gabeln",
+  "en": "Forks (blue circles)",
+  "text": "Blaue Kreise im linken Orbit. Leuchten, wenn die Gabeln eine Kugel fangen (Fireys, Brick-Keeper-Super-Jackpot, Goblin City).",
+  "px": [
+   [
+    105.4,
+    1007.3
+   ],
+   [
+    161.3,
+    988.4
+   ]
+  ],
+  "r": 18
+ }
+}

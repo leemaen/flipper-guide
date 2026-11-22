@@ -1,0 +1,242 @@
+{
+"BottomBumper": [
+"Bumper",
+808.8,
+582.4
+],
+"LeftBumper": [
+"Bumper",
+650.8,
+452.0
+],
+"RightBumper": [
+"Bumper",
+833.9,
+376.8
+],
+"LeftFlipper": [
+"Flipper",
+303.2,
+2040.6,
+119.3,
+70.4,
+118.0,
+11.8
+],
+"RightFlipper": [
+"Flipper",
+630.1,
+2040.6,
+-119.4,
+-70.4,
+118.0,
+11.8
+],
+"Gate1": [
+"Gate",
+911.1,
+2074.1
+],
+"LGate": [
+"Gate",
+571.6,
+169.5
+],
+"LGate1": [
+"Gate",
+140.1,
+532.5
+],
+"RGate": [
+"Gate",
+787.2,
+174.0
+],
+"sw77": [
+"HitTarget",
+506.6,
+493.6,
+0.0,
+"drop_target_beveled"
+],
+"BallRelease": [
+"Kicker",
+875.4,
+2075.6
+],
+"cKicker": [
+"Kicker",
+155.0,
+2217.2
+],
+"Drain": [
+"Kicker",
+491.7,
+2247.1
+],
+"Drain1": [
+"Kicker",
+539.2,
+2227.1
+],
+"Drain2": [
+"Kicker",
+586.7,
+2206.1
+],
+"LDrop": [
+"Kicker",
+-84.6,
+1703.5
+],
+"RDrop": [
+"Kicker",
+1114.4,
+1718.9
+],
+"sw36": [
+"Kicker",
+259.6,
+414.8
+],
+"sw36a": [
+"Kicker",
+364.4,
+499.8
+],
+"sw37": [
+"Kicker",
+681.9,
+791.9
+],
+"sw37a": [
+"Kicker",
+707.1,
+721.6
+],
+"sw78": [
+"Kicker",
+504.8,
+421.0
+],
+"DPTrigger": [
+"Trigger",
+504.2,
+512.3
+],
+"LRoll": [
+"Trigger",
+244.4,
+593.8
+],
+"LRTrigger": [
+"Trigger",
+133.9,
+1711.0
+],
+"RRTrigger": [
+"Trigger",
+797.1,
+1710.6
+],
+"SW16": [
+"Trigger",
+62.7,
+1775.2
+],
+"sw17": [
+"Trigger",
+803.0,
+1777.5
+],
+"SW26": [
+"Trigger",
+130.5,
+1775.2
+],
+"SW27": [
+"Trigger",
+870.7,
+1778.0
+],
+"SW38": [
+"Trigger",
+645.0,
+273.2
+],
+"SW48": [
+"Trigger",
+741.0,
+266.2
+],
+"sw61": [
+"Trigger",
+144.8,
+531.8
+],
+"SW62": [
+"Trigger",
+440.3,
+318.5
+],
+"sw63": [
+"Trigger",
+810.6,
+735.5
+],
+"sw64": [
+"Trigger",
+267.2,
+286.2
+],
+"sw65": [
+"Trigger",
+941.0,
+834.4
+],
+"SW71": [
+"Trigger",
+946.4,
+369.4
+],
+"SW72": [
+"Trigger",
+920.2,
+747.8
+],
+"SW73": [
+"Trigger",
+104.4,
+383.4
+],
+"SW74": [
+"Trigger",
+77.2,
+618.5
+],
+"swPlunger": [
+"Trigger",
+949.1,
+2142.6
+],
+"TriggerLF": [
+"Trigger",
+270.2,
+2043.8
+],
+"TriggerRF": [
+"Trigger",
+662.8,
+2044.1
+],
+"WobbleMagnet": [
+"Trigger",
+155.0,
+2211.0
+],
+"WobbleMagnet2": [
+"Trigger",
+159.2,
+2213.7
+]
+}

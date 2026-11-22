@@ -1,0 +1,141 @@
+{
+  "table": {
+    "id": "cftbl", "name": "Creature from the Black Lagoon", "short": "CFTBL", "manufacturer": "Bally (Midway)", "year": 1992,
+    "system": "WPC (Fliptronics II)", "design": "John Trudeau",
+    "editions": "Bally 1992, eine Ausführung. Virtuell: VPW „Creature from the Black Lagoon (Bally 1992)“ 1.2 mit Original-ROM „cftbl_l4“ (PinMAME, Stand L-4). Gleiche Regeln wie der echte Tisch mit diesem ROM.",
+    "ruleVersion": "Grundregeln und Schusskarten aus dem Bally-Handbuch (Game Rules, S. B–K). Werte und Details aus dem Rulesheet von Kevin Martin (ohne Datum und ROM-Nummer). Die VPX läuft mit ROM L-4. Ob alle Werte des Rulesheets zu L-4 passen, ist nicht belegt; Martin schreibt selbst, dass einige Zahlen je nach Gerät abweichen.",
+    "accent": "#3fb58a", "contentDate": "2026-11-08"
+  },
+  "sources": [
+    { "id": "manual", "title": "Bally: Creature from the Black Lagoon – Operations Manual (1992), Game Rules und Playfield Shot Maps", "url": "https://arcarc.xmission.com/Pinball/PDF%20Pinball%20Manuals%20and%20Schematics/Creature%20from%20the%20Black%20Lagoon%20Operations%20Manual.pdf", "use": "Offizielle Regeln (S. B), Schusskarten mit Pfeilen und Anzeigen (S. C–K), Lampenliste (S. 2-40), Schalterliste (S. 2-41)." },
+    { "id": "rules", "title": "Kevin Martin: Creature from the Black Lagoon Rulesheet (ohne Datum)", "url": "https://www.bmigaming.com/Games/Rulesheets/creature_from_the_black_lagoon.txt", "use": "Werte, Abläufe, Rückläufe, Tipps. Kein ROM-Stand genannt." },
+    { "id": "vpx", "title": "VPW: Creature from the Black Lagoon (Bally 1992) 1.2 (lokale Tischdatei, gespeichert 04.06.2025, ROM cftbl_l4)", "url": "https://vpuniverse.com/", "use": "Exakte Schalter-, Flipper- und Lichtpositionen; Draufsicht selbst aus den Bake-Meshes der Tischdatei gerendert." },
+    { "id": "ball", "title": "Kugelbild: Lucasbosch, Wikimedia Commons, CC BY-SA 3.0", "url": "https://commons.wikimedia.org/wiki/File:Stainless_steel_1.4034_X46Cr13_bearing_ball_60mm_G100_removed_camera.jpg", "use": "Animierte Flipperkugel (bearbeitet, CC BY-SA 3.0)." }
+  ],
+  "views": {
+    "vpx": { "label": "VPX (VPW 1.2)", "note": "Draufsicht, aus den 3D-Teilen der VPW-Tischdatei gerendert (Licht der Bake, ohne Kugel). VPW hat das Original-Artwork nachgebaut; Bahnen und Schalter liegen wie am echten Tisch. Ein freies Draufsicht-Foto des echten Tisches habe ich nicht gefunden. Das dunkle Oval unten ist das Fenster zur Hologramm-Lagune." }
+  },
+  "shots": {
+    "left_saucer": { "name": "Taillight Park (linke Bahn)", "en": "Taillight Park / Left Saucer Lane (Left Subway)", "kind": "Bahn mit Loch", "flipper": "R",
+      "what": "Bahn links über dem rosa Auto-Heck, über den Lippen und K-I-S-S. Mündung unten am Heck, das Loch liegt oben am Bahnende. Daneben die Anzeigen Start Movie, Video und Search.",
+      "returns": "Das Loch führt unter das Spielfeld; die Kugel kommt rechts unten wieder heraus und rollt zur rechten Inlane (Rulesheet).",
+      "awards": ["K-I-S-S weiterschalten: erstes K-I-S-S = F, weitere = Extraball", "Video, wenn beleuchtet", "Start Movie (Multiball), wenn es blinkt", "Search im Multiball"],
+      "visibility": "Sichtbar. Schalter 16 (Left Subway, unter dem Spielfeld).", "sources": ["manual", "rules", "vpx"] },
+    "left_ramp": { "name": "Linke Rampe (Creature Ramp)", "en": "Left Ramp / Creature Ramp", "kind": "Rampe", "flipper": "R",
+      "what": "Steile Rampe links der Mitte, über dem Einsatz „Double Feature Combo“. Eingang ist die Metallkante, eine bewegliche Rampe (Weiche) sitzt dahinter.",
+      "returns": "Normal oben links herum und zur rechten Inlane. Bei „Creature Feature“ öffnet die Weiche: die lange Bahn führt zum Whirlpool über der rechten Inlane.",
+      "awards": ["Double Feature Combo aufbauen", "Unlimited Millions, wenn beleuchtet", "Extra Ball Countdown: Extraball beleuchten", "Multiball: Creature Feature → Whirlpool, C-R-E-A-T-U-R-E"],
+      "visibility": "Eingang sichtbar. Schalter 36 (Left Ramp Enter), 64 (Upper Ramp), 62 (Left Ramp Exit).", "sources": ["manual", "rules", "vpx"] },
+    "center_shot": { "name": "Center Shot", "en": "Center Shot / Center Top Rollover", "kind": "Bahn", "flipper": "R",
+      "what": "Schmale Bahn in der Mitte über den Einsätzen „Hey, move your car!“, „Parking OK“ und „Collect Combo“. Sie führt mit zwei Gates S-förmig hoch zu den P-A-I-D-Bahnen.",
+      "returns": "Oben in die P-A-I-D-Bahnen und die Bumper. Ein schneller Schuss kann um den hinteren Orbit in die linke Bahn laufen (Sneak-In).",
+      "awards": ["Extra Ball, wenn beleuchtet", "Move Your Car", "Parking O.K.", "Double Feature Combo kassieren", "P-A-I-D erreichen"],
+      "visibility": "Eingang sichtbar, unter der durchsichtigen Rampe. Schalter 18 (Center Shot), 63 (Center Lane Exit).", "sources": ["manual", "rules", "vpx"] },
+    "snackbar": { "name": "Snack Bar (Loch Mitte)", "en": "Snack Bar Hole (Center Subway)", "kind": "Loch", "flipper": "beide",
+      "what": "Loch in der Mitte, links neben dem Schild „Snack Bar Open“.",
+      "returns": "Unter dem Spielfeld nach rechts unten, Auswurf zur rechten Inlane (Rulesheet).",
+      "awards": ["Snack-Bar-Menü, wenn „Snack Bar Open“ blinkt", "Multiball: Search, Rescue, Jackpot, Super Jackpot", "Multiball-Restart"],
+      "visibility": "Sichtbar. Schalter 17 (Center Subway).", "sources": ["manual", "rules", "vpx"] },
+    "menu_targets": { "name": "Menu-Ziele (Cola · Hot Dog · Popcorn · Ice Cream)", "en": "Menu Targets (4)", "kind": "Ziele", "flipper": "beide",
+      "what": "Vier Ziele: zwei links (Cola unten, Hot Dog oben) neben dem Auto, zwei rechts (Popcorn oben, Ice Cream unten) unter der Snack Bar. Links vom rechten Flipper, rechts vom linken Flipper.",
+      "returns": "Prallen zurück.",
+      "awards": ["Alle vier: Snack Bar öffnet, Buchstabe I", "Mega Menu: jedes blinkende Ziel 5M"],
+      "visibility": "Teils unter der durchsichtigen Rampe. Schalter 41 Cola, 42 Hot Dog, 43 Popcorn, 44 Ice Cream.", "sources": ["manual", "rules", "vpx"] },
+    "right_ramp": { "name": "Rechte Rampe", "en": "Right Ramp", "kind": "Rampe", "flipper": "L",
+      "what": "Große flache Rampe rechts der Mitte, Eingang an der Metallkante unter der Snack Bar.",
+      "returns": "Großer Bogen gegen den Uhrzeigersinn über das Spielfeld und zurück zur linken Inlane.",
+      "awards": ["Big Millions, wenn es blinkt (10 bis 60 Mio.)", "Snack Attack hochzählen", "Multiball: Movie Madness"],
+      "visibility": "Eingang sichtbar. Schalter 35 (Right Ramp Enter), 61 (Right Ramp Exit).", "sources": ["manual", "rules", "vpx"] },
+    "playground": { "name": "Playground-Saucer (rechte Bahn)", "en": "Playground / Right Popper", "kind": "Bahn mit Saucer", "flipper": "L",
+      "what": "Schmale Bahn rechts außen, über „Video“. Sie führt hoch zum Saucer (Becher) oben am Bahnende. Davor die Reihe Start Mega Menu, Playground Award, Big Millions, Slide, Search.",
+      "returns": "Der Saucer schießt die Kugel über das Spielfeld in die linke Bahn (Rulesheet).",
+      "awards": ["Slide = Buchstabe M", "Start Mega Menu", "Playground Award (Zufall)", "Big Millions starten", "Video, wenn beleuchtet", "Start Movie, wenn es blinkt", "Search im Multiball"],
+      "visibility": "Sichtbar. Schalter 34 (Right Popper).", "sources": ["manual", "rules", "vpx"] },
+    "whirlpool": { "name": "Whirlpool (Bowl)", "en": "Whirlpool Bowl", "kind": "Schale", "flipper": null,
+      "what": "Runde Schale rechts unten über der rechten Inlane. Erreichbar über die linke Rampe, wenn Creature Feature leuchtet.",
+      "returns": "Die Kugel kreist und fällt zur rechten Inlane.",
+      "awards": ["Multiball: jede Runde ein C-R-E-A-T-U-R-E-Buchstabe (1 Mio. × Multiplikator); komplett = Multiplikator +1"],
+      "visibility": "Sichtbar. Schalter 65 (Bowl).", "sources": ["manual", "rules", "vpx"] },
+    "paid_lanes": { "name": "P-A-I-D-Bahnen", "en": "P-A-I-D lanes", "kind": "Bahnen", "flipper": null,
+      "what": "Vier Rollover-Bahnen oben rechts. Erreichbar über den Center Shot, den Abschuss und die Bumper. Die Flipper verschieben die Lampen.",
+      "returns": "In die Bumper.", "awards": ["Komplett: Buchstabe L, Bonus-Multiplikator", "Skill Shot: blinkende Bahn"],
+      "visibility": "Sichtbar. Schalter 25–28.", "sources": ["manual", "rules", "vpx"] },
+    "jets": { "name": "Bumper", "en": "Jet Bumpers", "kind": "Bumper", "flipper": null,
+      "what": "Drei Bumper unter den P-A-I-D-Bahnen.", "returns": "Ausgang nach unten rechts.",
+      "awards": ["Multiball: zählen den Super Jackpot herunter", "Erhöhen Jackpot und drehen die beleuchteten Menu-Ziele weiter"],
+      "visibility": "Sichtbar.", "sources": ["manual", "rules", "vpx"] },
+    "kiss_rollover": { "name": "Oberer linker Rollover (K-I-S-S-Skill-Shot)", "en": "Top Left Rollover", "kind": "Rollover", "flipper": null,
+      "what": "Schalter oben links im hinteren Orbit. Ein voller Abschuss läuft oben herum hierher.",
+      "returns": "Weiter in die linke Bahn (Taillight Park).", "awards": ["Skill Shot: so viele K-I-S-S-Buchstaben, wie beim Überrollen leuchten"],
+      "visibility": "Sichtbar. Schalter 15.", "sources": ["manual", "rules", "vpx"] },
+    "rollovers": { "name": "In- und Outlanes", "en": "Inlanes / Outlanes", "kind": "Bahnen", "flipper": null,
+      "what": "Vier Bahnen neben den Flippern. Die rechte Inlane heißt im Handbuch „Start Combo“.",
+      "returns": "—", "awards": ["Outlane: FOCUS 500K (Rulesheet)"], "visibility": "Sichtbar. Schalter 51–54.", "sources": ["manual", "rules", "vpx"] },
+    "plunger": { "name": "Abschuss", "en": "Plunger", "kind": "Abschuss", "flipper": null,
+      "what": "Abschussbahn rechts. Mittel: P-A-I-D-Skill-Shot. Voll durchgezogen und im richtigen Moment losgelassen: K-I-S-S-Skill-Shot.",
+      "returns": "Oben herum.", "awards": ["P-A-I-D-Skill-Shot", "K-I-S-S-Skill-Shot"], "visibility": "Sichtbar.", "sources": ["manual", "rules", "vpx"] }
+  },
+  "strategies": [
+    { "id": "solid", "title": "Solide spielen", "subtitle": "F-I-L-M sammeln und den Film starten",
+      "steps": [
+        { "title": "Skill Shot", "shots": ["plunger", "paid_lanes", "kiss_rollover"], "prep": "Blinkende P-A-I-D-Bahn mit den Flippern verschieben.", "go": "Normal abschießen in die blinkende Bahn. Oder voll durchziehen und loslassen, wenn alle K-I-S-S-Lampen leuchten.", "why": "P-A-I-D-Skill-Shot = L. Voller K-I-S-S-Skill-Shot = F.", "sources": ["manual", "rules"] },
+        { "title": "F: K-I-S-S", "shots": ["left_saucer"], "prep": "K-I-S-S-Lampen links unten zeigen den Stand.", "go": "Taillight Park (linke Bahn) vom rechten Flipper, bis K-I-S-S komplett ist.", "why": "Erstes K-I-S-S = F, jedes weitere beleuchtet einen Extraball.", "sources": ["manual", "rules"] },
+        { "title": "I: Menu-Ziele", "shots": ["menu_targets"], "prep": "Ziele leuchten nach dem Treffer fest.", "go": "Alle vier Menu-Ziele treffen.", "why": "Snack Bar öffnet, Buchstabe I.", "sources": ["manual"] },
+        { "title": "L: P-A-I-D", "shots": ["center_shot", "paid_lanes"], "prep": "Offene P-A-I-D-Lampen beachten.", "go": "Center Shot vom rechten Flipper; die Kugel läuft in die P-A-I-D-Bahnen.", "why": "P-A-I-D komplett = L und Bonus-Multiplikator.", "sources": ["manual"] },
+        { "title": "M: Slide", "shots": ["playground"], "prep": "„Slide“ blinkt.", "go": "Playground-Saucer (rechte Bahn) vom linken Flipper.", "why": "Buchstabe M. Danach bringt der Saucer Mega Menu, Playground Award und Big Millions.", "sources": ["manual", "rules"] },
+        { "title": "Film starten", "shots": ["left_saucer", "playground"], "prep": "F-I-L-M komplett, „Start Movie“ blinkt.", "go": "Taillight Park oder Playground-Saucer treffen.", "why": "Multiball startet. Die linke Bahn ist der leichtere Schuss (Rulesheet).", "sources": ["manual", "rules"] }
+      ] },
+    { "id": "high", "title": "Auf Highscore", "subtitle": "Multiplikator hoch, dann Jackpots",
+      "steps": [
+        { "title": "Kreatur suchen", "shots": ["left_saucer", "playground", "snackbar"], "prep": "Multiball läuft, „Search“ blinkt an drei Stellen.", "go": "Die blinkenden Search-Schüsse treffen, bis die Kreatur gefunden ist.", "why": "Zufall, welche Stelle es ist. Fund = 5 Mio. × Multiplikator.", "sources": ["manual", "rules"] },
+        { "title": "Multiplikator vorher hochtreiben", "shots": ["left_ramp", "whirlpool"], "prep": "„Creature Feature“ leuchtet, noch kein Jackpot geholt.", "go": "Eine Kugel links halten, die andere über die linke Rampe in den Whirlpool.", "why": "C-R-E-A-T-U-R-E komplett = Multiplikator +1 (normal bis 4×). Gilt für Jackpot und Super Jackpot.", "sources": ["manual", "rules"] },
+        { "title": "Rescue und Jackpot", "shots": ["snackbar"], "prep": "Kreatur gefunden.", "go": "Snack Bar: erst Rescue, dann Jackpot.", "why": "Rescue 10 Mio. ×, Jackpot ab ca. 40 Mio. ×.", "sources": ["manual", "rules"] },
+        { "title": "Super Jackpot", "shots": ["jets", "snackbar"], "prep": "Jackpot geholt.", "go": "Bumper treffen, bis der Zähler auf null ist, dann die Snack Bar.", "why": "Super Jackpot = doppelter Jackpot × Multiplikator, danach beginnt die Suche neu.", "sources": ["manual", "rules"] },
+        { "title": "Rechte Rampe zählen", "shots": ["right_ramp", "snackbar"], "prep": "Einzelball.", "go": "Rechte Rampe immer wieder. Laut Rulesheet: 4 = Snack Attack, 8 = Video, 12 = Super Scoring (dann Snack Bar).", "why": "Super Scoring schaltet für kurze Zeit fast alles ein, auch Super Creature Feature.", "sources": ["manual", "rules"] },
+        { "title": "Double Feature", "shots": ["left_ramp", "center_shot"], "prep": "Mehrmals linke Rampe.", "go": "Linke Rampe so oft wie möglich, dann den Center Shot.", "why": "Wert verdoppelt sich je Rampe, bis 16 Mio. (Rulesheet).", "sources": ["manual", "rules"] }
+      ] }
+  ],
+  "multiballs": [
+    { "id": "movie", "name": "Multiball (Film)", "tag": "Haupt-Multiball", "balls": "2 Kugeln",
+      "prep": [ { "title": "F-I-L-M komplett", "shots": ["left_saucer", "menu_targets", "paid_lanes", "playground"], "text": "F = K-I-S-S (Taillight Park), I = vier Menu-Ziele, L = P-A-I-D, M = Slide (Playground). Die Buchstaben bleiben über das ganze Spiel erhalten.", "sources": ["manual", "rules"] } ],
+      "start": { "title": "Start Movie", "shots": ["left_saucer", "playground"], "text": "„Start Movie“ blinkt: Taillight Park oder Playground-Saucer treffen. Die Kugel bleibt dort, eine zweite kommt in die Abschussbahn.", "sources": ["manual", "rules"] },
+      "score": [ { "title": "1. Search", "shots": ["left_saucer", "playground", "snackbar"], "text": "Die Kreatur an einer der drei Stellen finden (5 Mio. × Multiplikator).", "sources": ["manual", "rules"] },
+                 { "title": "2. Rescue", "shots": ["snackbar"], "text": "Das Mädchen in der Snack Bar retten (10 Mio. ×). Das beleuchtet den Jackpot.", "sources": ["manual", "rules"] },
+                 { "title": "3. Jackpot", "shots": ["snackbar"], "text": "Snack Bar: Jackpot × Multiplikator. Startet den Super-Jackpot-Zähler in den Bumpern.", "sources": ["manual", "rules"] },
+                 { "title": "4. Super Jackpot", "shots": ["jets", "snackbar"], "text": "Zähler in den Bumpern auf null, dann Snack Bar. Danach beginnt die Suche von vorn.", "sources": ["manual", "rules"] },
+                 { "title": "Multiplikator", "shots": ["left_ramp", "whirlpool"], "text": "Creature Feature: linke Rampe in den Whirlpool, C-R-E-A-T-U-R-E sammeln.", "sources": ["manual", "rules"] },
+                 { "title": "Restart", "shots": ["snackbar"], "text": "Endet der Multiball ohne Jackpot: „Restart Multiball“ blinkt etwa 14 s an der Snack Bar.", "sources": ["manual", "rules"] } ] }
+  ],
+  "modes": [
+    { "id": "megamenu", "name": "Mega Menu", "film": "Playground-Saucer", "time": "ca. 20 s", "steps": [
+      { "title": "Blinkende Menu-Ziele", "shots": ["playground", "menu_targets"], "text": "Start über „Start Mega Menu“ am Playground-Saucer. Jedes blinkende Menu-Ziel 5 Mio." } ] },
+    { "id": "bigmillions", "name": "Big Millions", "film": "Playground / rechte Rampe", "time": "ca. 10 s", "steps": [
+      { "title": "Rechte Rampe", "shots": ["playground", "right_ramp"], "text": "Am Playground-Saucer starten, dann rechte Rampe: 10 bis 60 Mio. laut Handbuch; laut Rulesheet steigt der Wert je Schuss." } ] },
+    { "id": "unlimited", "name": "Unlimited Millions", "film": "Playground Award", "time": "ca. 24 s", "steps": [
+      { "title": "Linke Rampe", "shots": ["left_ramp"], "text": "Linke Rampe wiederholt treffen; der Wert steigt je Schuss (Rulesheet)." } ] },
+    { "id": "snackattack", "name": "Snack Attack", "film": "Rechte Rampe", "time": "zählt herunter", "steps": [
+      { "title": "Snack Bar", "shots": ["right_ramp", "snackbar"], "text": "Über die rechte Rampe beleuchten, dann die Snack Bar treffen, bevor der Wert fällt." } ] },
+    { "id": "video", "name": "Video-Modus", "film": "Taillight Park / Playground", "time": "15 s", "steps": [
+      { "title": "Beleuchteten Saucer treffen", "shots": ["left_saucer", "playground"], "text": "„Video“ leuchtet an einer der beiden Bahnen. Dann Faustkampf mit den Flipperknöpfen (Rulesheet)." } ] },
+    { "id": "moveyourcar", "name": "Move Your Car", "film": "Center Shot", "time": "zählt herunter", "steps": [
+      { "title": "Center Shot", "shots": ["center_shot"], "text": "Wenn „Move Your Car“ blinkt, den Center Shot treffen. Weitere Treffer erhöhen den Wert." } ] },
+    { "id": "superscoring", "name": "Super Scoring", "film": "Rechte Rampe → Snack Bar", "time": "ca. 20–25 s", "steps": [
+      { "title": "Alles ist beleuchtet", "shots": ["right_ramp", "snackbar", "left_ramp"], "text": "Laut Rulesheet nach 12 rechten Rampen, dann Snack Bar. Super Creature Feature: linke Rampe in den Whirlpool, bis 35 Mio." } ] }
+  ],
+  "modesIntro": "Die meisten Modi starten am Playground-Saucer (rechte Bahn) oder über die rechte Rampe. Kern des Spiels ist der Film-Multiball.",
+  "glossary": [
+    { "term": "F-I-L-M", "text": "Vier Buchstaben für den Multiball: K-I-S-S, Menu-Ziele, P-A-I-D, Slide." },
+    { "term": "Taillight Park", "text": "Linke Bahn am rosa Auto-Heck, mit Loch. Sammelt K-I-S-S." },
+    { "term": "Playground", "text": "Saucer oben in der rechten Bahn. Slide, Mega Menu, Big Millions." },
+    { "term": "Snack Bar", "text": "Loch in der Mitte. Rescue, Jackpot, Super Jackpot." },
+    { "term": "Creature Feature", "text": "Linke Rampe mit offener Weiche zum Whirlpool." },
+    { "term": "Einsatz (Insert)", "text": "Beleuchtetes Feld im Spielfeld. Nur Anzeige, kein Ziel." }
+  ],
+  "limits": [
+    "Kein Foto des echten Tisches: Ich habe keine frei zugängliche Draufsicht gefunden. Die Ansicht ist ein eigenes Render der VPW-Tischdatei.",
+    "Kein Rulesheet mit ROM-Stand gefunden. Werte aus Martins Rulesheet können abweichen; die Grundregeln und Schusskarten stammen von Bally.",
+    "Die vier Jackpot-Anzeigen der Snack Bar und die Anzeigen auf den Rampenschildern sitzen nicht auf dem Spielfeld und sind deshalb nicht markiert.",
+    "Die Zuordnung der Bilder auf den Menu-Zielen (Cola, Hot Dog, Popcorn, Ice Cream) stammt aus der Schalter- und Lampenliste; die Bilder sind teils von der durchsichtigen Rampe verdeckt.",
+    "Die Linie zeigt die Zielrichtung vom Flipper zum Eingang (wie auf Ballys Schusskarten). Rampenverläufe sind nicht eingezeichnet."
+  ]
+}

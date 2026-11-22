@@ -1,0 +1,10 @@
+{
+ "id": "cftbl",
+ "name": "Creature from the Black Lagoon",
+ "manufacturer": "Bally",
+ "year": 1992,
+ "versions": "VPX (VPW 1.2) · echter Tisch: gleiche Regeln (ROM L-4)",
+ "accent": "#3fb58a",
+ "thumb": "img/cftbl-thumb.jpg",
+ "data": "data/cftbl.json"
+}

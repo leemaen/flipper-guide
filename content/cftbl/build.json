@@ -1,0 +1,2 @@
+{ "views": { "vpx": { "H": "tools/cftbl/H_vpx.json", "src": "_quellen/cftbl/vpx_view_1000.png", "crop": [0, 20, 1000, 2243], "out": "cftbl-vpx.jpg", "quality": 84 } },
+  "insertsView": "vpx" }

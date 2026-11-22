@@ -37,53 +37,42 @@
         <div class="t-sub" id="tSub"></div>
       </div>
       <div class="seg seg-sm" id="viewSeg" role="tablist" aria-label="Ansicht"></div>
+      <button class="icon-btn" id="btnInfo" aria-label="Info und Quellen">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5h.01"/></svg>
+      </button>
     </header>
 
-    <div id="stage" class="stage">
-      <div id="pfWrap" class="pf-wrap">
-        <img id="pfImg" alt="Spielfeld" draggable="false">
-        <svg id="pfSvg" class="pf-svg" aria-hidden="true"></svg>
-      </div>
-      <div class="stage-ui">
-        <div id="stepBanner" class="step-banner" hidden></div>
-        <div class="stage-btns">
-          <button class="fab" id="btnFs" aria-label="Vollbild">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
-          </button>
-          <button class="fab fs-only" id="btnGuide" aria-label="Guide wählen">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01"/></svg>
-          </button>
-          <button class="fab" id="btnFit" aria-label="Ganzes Spielfeld zeigen">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="2"/><circle cx="12" cy="9" r="1.6"/></svg>
-          </button>
-          <button class="fab" id="btnClear" aria-label="Markierung ausblenden" hidden>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
-          </button>
+    <div class="table-main">
+      <div id="stage" class="stage">
+        <div id="pfWrap" class="pf-wrap">
+          <img id="pfImg" alt="Spielfeld" draggable="false">
+          <svg id="pfSvg" class="pf-svg" aria-hidden="true"></svg>
         </div>
-        <div class="nav-btns" id="navBtns" hidden>
-          <button class="pill ghost" id="btnPrev">‹ Zurück</button>
-          <button class="pill primary" id="btnNext">Weiter ›</button>
-        </div>
-        <button class="pill primary fs-start" id="btnGuideStart" hidden>Guide wählen</button>
-        <div id="guideMenu" class="guide-menu" hidden role="dialog" aria-label="Guide wählen">
-          <div class="gm-head"><span>Guide wählen</span><button class="pill ghost sm" id="btnGuideClose">Schließen</button></div>
-          <div class="gm-body" id="guideList"></div>
-        </div>
-        <div id="corrBar" class="corr-bar" hidden>
-          <span>Korrekturmodus: markierten Schuss mit dem Finger verschieben</span>
-          <button class="pill ghost sm" id="btnCorrReset">Zurücksetzen</button>
+        <div class="stage-ui">
+          <div class="stage-btns">
+            <button class="fab" id="btnFs" aria-label="Vollbild">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+            </button>
+            <button class="fab" id="btnFit" aria-label="Ganzes Spielfeld zeigen">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="2"/><circle cx="12" cy="9" r="1.6"/></svg>
+            </button>
+          </div>
+          <div id="corrBar" class="corr-bar" hidden>
+            <span>Korrekturmodus: markierten Schuss mit dem Finger verschieben</span>
+            <button class="pill ghost sm" id="btnCorrReset">Zurücksetzen</button>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div id="sheet" class="sheet">
-      <div class="grab" id="grab" aria-label="Liste vergrößern"><span></span></div>
-      <nav class="tabs" id="tabs" role="tablist"></nav>
-      <div class="sheet-body" id="sheetBody"></div>
+      <div id="panel" class="panel"></div>
     </div>
   </section>
 </div>
 
+<div id="infoSheet" class="info-sheet" hidden role="dialog" aria-label="Info und Quellen">
+  <div class="is-head"><b>Info und Quellen</b><button class="pill ghost sm" id="btnInfoClose">Schließen</button></div>
+  <div class="is-body" id="infoBody"></div>
+</div>
 <div id="toast" class="toast" hidden></div>
 <script src="app.js"></script>
 </body>

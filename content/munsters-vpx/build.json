@@ -1,0 +1,2 @@
+{ "views": { "vpx": { "H": "tools/munsters-vpx/H_vpx.json", "src": "_quellen/munsters-vpx/vpx_playfield.png", "crop": [0, 0, 952, 2168], "out": "munsters-vpx-pf.jpg", "quality": 86 } },
+  "insertsView": "vpx" }

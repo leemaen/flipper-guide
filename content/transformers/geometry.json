@@ -1,0 +1,316 @@
+{
+ "_note": "Schuss-Geometrie in VPX-Tischkoordinaten (952 x 2164) der Tischdatei „Transformers Pro (Stern 2011) v.2.4.1“. Grundlage: Schalter der Tischdatei, Schalternamen laut Stern-Schaltermatrix (Handbuch S. 60) und Schalterlageplan (S. 61), Wände/Rampen der Tischdatei und das selbst gerenderte Draufsicht-Bild. Eingang = Mündung der Bahn bzw. Ziel/Loch.",
+ "flippers": {
+  "L": {
+   "pivot": [
+    277,
+    1825
+   ],
+   "aim": [
+    347,
+    1830
+   ]
+  },
+  "R": {
+   "pivot": [
+    594,
+    1825
+   ],
+   "aim": [
+    524,
+    1830
+   ]
+  }
+ },
+ "shots": {
+  "left_orbit": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     86,
+     712
+    ],
+    "toward": [
+     62,
+     600
+    ],
+    "len": 50,
+    "w": 58
+   }
+  },
+  "allspark": {
+   "entrance": {
+    "type": "circle",
+    "c": [
+     68,
+     1034
+    ],
+    "r": 30
+   }
+  },
+  "left_ramp": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     233,
+     900
+    ],
+    "toward": [
+     214,
+     800
+    ],
+    "len": 60,
+    "w": 92
+   }
+  },
+  "megatron": {
+   "entrance": {
+    "type": "circle",
+    "c": [
+     378,
+     858
+    ],
+    "r": 30
+   }
+  },
+  "energon": {
+   "entrance": {
+    "type": "multi",
+    "items": [
+     {
+      "type": "rect",
+      "c": [
+       317,
+       872
+      ],
+      "toward": [
+       335.5,
+       929.1
+      ],
+      "len": 14,
+      "w": 42
+     },
+     {
+      "type": "rect",
+      "c": [
+       435,
+       827
+      ],
+      "toward": [
+       443.4,
+       886.4
+      ],
+      "len": 14,
+      "w": 42
+     },
+     {
+      "type": "rect",
+      "c": [
+       771,
+       777
+      ],
+      "toward": [
+       754.5,
+       834.7
+      ],
+      "len": 14,
+      "w": 42
+     }
+    ]
+   }
+  },
+  "tf_ramp": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     509,
+     572
+    ],
+    "toward": [
+     509,
+     480
+    ],
+    "len": 60,
+    "w": 80
+   }
+  },
+  "bumblebee": {
+   "entrance": {
+    "type": "circle",
+    "c": [
+     622,
+     747
+    ],
+    "r": 27
+   }
+  },
+  "right_ramp": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     726,
+     690
+    ],
+    "toward": [
+     735,
+     560
+    ],
+    "len": 70,
+    "w": 76
+   }
+  },
+  "right_orbit": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     822,
+     930
+    ],
+    "toward": [
+     838,
+     830
+    ],
+    "len": 60,
+    "w": 60
+   }
+  },
+  "jets": {
+   "entrance": {
+    "type": "multi",
+    "items": [
+     {
+      "type": "circle",
+      "c": [
+       151,
+       299
+      ],
+      "r": 46
+     },
+     {
+      "type": "circle",
+      "c": [
+       287,
+       416
+      ],
+      "r": 46
+     },
+     {
+      "type": "circle",
+      "c": [
+       149,
+       505
+      ],
+      "r": 46
+     }
+    ]
+   }
+  },
+  "top_lanes": {
+   "entrance": {
+    "type": "multi",
+    "items": [
+     {
+      "type": "rect",
+      "c": [
+       203,
+       174
+      ],
+      "toward": [
+       203,
+       114
+      ],
+      "len": 60,
+      "w": 34
+     },
+     {
+      "type": "rect",
+      "c": [
+       289,
+       195
+      ],
+      "toward": [
+       289,
+       135
+      ],
+      "len": 60,
+      "w": 34
+     }
+    ]
+   }
+  },
+  "rollovers": {
+   "entrance": {
+    "type": "multi",
+    "items": [
+     {
+      "type": "rect",
+      "c": [
+       53,
+       1640
+      ],
+      "toward": [
+       53,
+       1578
+      ],
+      "len": 60,
+      "w": 36
+     },
+     {
+      "type": "rect",
+      "c": [
+       127,
+       1600
+      ],
+      "toward": [
+       127,
+       1538
+      ],
+      "len": 60,
+      "w": 36
+     },
+     {
+      "type": "rect",
+      "c": [
+       740,
+       1604
+      ],
+      "toward": [
+       740,
+       1542
+      ],
+      "len": 60,
+      "w": 36
+     },
+     {
+      "type": "rect",
+      "c": [
+       813,
+       1643
+      ],
+      "toward": [
+       813,
+       1581
+      ],
+      "len": 60,
+      "w": 36
+     }
+    ]
+   }
+  },
+  "plunger": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     902,
+     2020
+    ],
+    "toward": [
+     902,
+     1900
+    ],
+    "len": 140,
+    "w": 46
+   }
+  }
+ }
+}

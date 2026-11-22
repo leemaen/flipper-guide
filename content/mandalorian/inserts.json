@@ -1,0 +1,18 @@
+{
+ "missions": { "name": "Missionen 1–5 · I Like Those Odds", "en": "Mission inserts 1–5, I Like Those Odds in the middle",
+   "text": "Die fünf Missionen (Kreise 1–5) und in der Mitte der Wizard-Modus I Like Those Odds. Leuchtet, sobald alle fünf Missionen gestartet wurden.",
+   "px": [[669, 1417], [690, 1375], [732, 1357], [776, 1375], [792, 1417], [732, 1417]], "r": 20 },
+ "multipliers": { "name": "+1X Spielfeld-Multiplikatoren", "en": "+1X playfield multipliers (green / orange / blue)",
+   "text": "Drei Dreiecke über der rechten Schleuder: grün = Boba-Fett-Ziele, orange = Hunter, blau = Scope. Alle drei gleichzeitig ergeben 6X.",
+   "px": [[903, 1290], [976, 1343], [892, 1364]], "r": 26 },
+ "hunter_ins": { "name": "Hunter-Anzeigen (linke 3er-Bank)", "en": "Left 3-bank inserts – 'Targets light Hunter'",
+   "text": "Zeigen die getroffenen Ziele der linken 3er-Bank. Alle drei = Hunter leuchtet an einer Rückkehrbahn.",
+   "px": [[455, 1180], [455, 1230], [455, 1280]], "r": 22 },
+ "boba_ins": { "name": "BOBA / FETT", "en": "Boba Fett 2-bank inserts – 'Boba Fett lights playfield multiplier'",
+   "text": "Zeigen die beiden Boba-Fett-Ziele rechts. Beide getroffen = grüner +1X-Multiplikator.",
+   "px": [[1020, 1205], [1020, 1258]], "r": 22 },
+ "scope_ins": { "name": "Scope", "en": "Scope insert at the left return lane",
+   "text": "Leuchtet, wenn Scope bereit ist. Startet, wenn die Kugel durch die linke Rückkehrbahn läuft.",
+   "px": [[484, 1765]], "r": 22 },
+ "shoot_again": { "name": "Shoot Again", "en": "Shoot Again", "text": "Leuchtet bei Extraball bzw. aktivem Ball-Retter.", "px": [[705, 1950]], "r": 26 }
+}

@@ -1,0 +1,10 @@
+{
+ "id": "labyrinth",
+ "name": "Jim Henson's Labyrinth",
+ "manufacturer": "Barrels of Fun",
+ "year": 2023,
+ "versions": "Echter Tisch · Ansicht: Hersteller-Spielfeldgrafik",
+ "accent": "#b4dd94",
+ "thumb": "img/labyrinth-thumb.jpg",
+ "data": "data/labyrinth.json"
+}

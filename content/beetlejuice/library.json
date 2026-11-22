@@ -1,0 +1,10 @@
+{
+ "id": "beetlejuice",
+ "name": "Beetlejuice",
+ "manufacturer": "Spooky Pinball",
+ "year": 2025,
+ "versions": "Echter Tisch (eine Ausführung) · Prototyp-Foto, nur Teile markiert",
+ "accent": "#9bd14a",
+ "thumb": "img/beetlejuice-thumb.jpg",
+ "data": "data/beetlejuice.json"
+}

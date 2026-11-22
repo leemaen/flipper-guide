@@ -1,0 +1,29 @@
+{
+ "_note": "Eingänge in Pixeln des Stern-Herstellerfotos (The Munsters Pro, Draufsicht 1476 x 2500) vermessen und mit Schalter- und Lichterplan des Pro-Handbuchs 500-55L1-01 (S. 14-19) abgeglichen (tools/munsters/plan_H.py, Plan->Foto RMS 6 px). H_real = Skalierung 0,94 wie bei TMNT (gleicher Bildzuschnitt).",
+ "space": "px:real",
+ "pxToVpx": 1.0638,
+ "flipperSpace": "px",
+ "flippers": {
+  "L": { "pivot": [556, 1900], "aim": [630, 1945] },
+  "R": { "pivot": [912, 1900], "aim": [838, 1945] }
+ },
+ "shots": {
+  "left_orbit":   { "entrance": { "type": "lane", "c": [452, 1000], "toward": [440, 930], "len": 60, "w": 44 } },
+  "left_ramp":    { "entrance": { "type": "lane", "c": [550, 905], "toward": [535, 840], "len": 60, "w": 90 } },
+  "spot":         { "entrance": { "type": "rect", "c": [540, 850], "toward": [530, 800], "len": 16, "w": 66 } },
+  "herman":       { "entrance": { "type": "lane", "c": [662, 770], "toward": [663, 710], "len": 50, "w": 70 } },
+  "kitty":        { "entrance": { "type": "rect", "c": [785, 722], "toward": [785, 690], "len": 14, "w": 34 } },
+  "scoop":        { "entrance": { "type": "circle", "c": [828, 858], "r": 28 } },
+  "right_ramp":   { "entrance": { "type": "lane", "c": [962, 935], "toward": [975, 870], "len": 60, "w": 90 } },
+  "right_orbit":  { "entrance": { "type": "lane", "c": [1100, 940], "toward": [1125, 870], "len": 60, "w": 44 } },
+  "purple":       { "entrance": { "type": "multi", "items": [ { "type": "rect", "c": [517, 953], "toward": [512, 920], "len": 14, "w": 32 }, { "type": "rect", "c": [624, 920], "toward": [622, 888], "len": 14, "w": 32 }, { "type": "rect", "c": [899, 947], "toward": [903, 915], "len": 14, "w": 32 }, { "type": "rect", "c": [1011, 1000], "toward": [1018, 968], "len": 14, "w": 32 } ] } },
+  "dragula_lane": { "entrance": { "type": "lane", "c": [390, 1075], "toward": [365, 1020], "len": 50, "w": 44 } },
+  "dragula_target": { "entrance": { "type": "rect", "c": [422, 1318], "toward": [452, 1318], "len": 14, "w": 110 } },
+  "lily_target":  { "entrance": { "type": "rect", "c": [1082, 1315], "toward": [1052, 1315], "len": 14, "w": 120 } },
+  "pops":         { "entrance": { "type": "multi", "items": [ { "type": "circle", "c": [821, 635], "r": 30 }, { "type": "circle", "c": [1015, 673], "r": 30 }, { "type": "circle", "c": [866, 770], "r": 30 } ] } },
+  "top_lanes":    { "entrance": { "type": "multi", "items": [ { "type": "rect", "c": [915, 575], "toward": [912, 520], "len": 50, "w": 30 }, { "type": "rect", "c": [982, 575], "toward": [982, 520], "len": 50, "w": 30 } ] } },
+  "inlanes":      { "entrance": { "type": "multi", "items": [ { "type": "rect", "c": [390, 1653], "toward": [390, 1600], "len": 60, "w": 28 }, { "type": "rect", "c": [450, 1647], "toward": [450, 1594], "len": 60, "w": 28 }, { "type": "rect", "c": [1037, 1667], "toward": [1037, 1614], "len": 60, "w": 28 } ] } },
+  "outlanes":     { "entrance": { "type": "multi", "items": [ { "type": "rect", "c": [310, 1720], "toward": [310, 1667], "len": 60, "w": 28 }, { "type": "rect", "c": [1117, 1727], "toward": [1117, 1674], "len": 60, "w": 28 } ] } },
+  "plunger":      { "entrance": { "type": "lane", "c": [1182, 1960], "toward": [1182, 1850], "len": 130, "w": 40 } }
+ }
+}

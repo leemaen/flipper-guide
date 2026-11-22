@@ -1,0 +1,2 @@
+{ "views": { "art": { "H": "tools/labyrinth/H_art.json", "src": "_quellen/labyrinth/art_1000.png", "crop": [0, 0, 1000, 2066], "out": "labyrinth-art.jpg", "quality": 86 } },
+  "insertsView": "art" }

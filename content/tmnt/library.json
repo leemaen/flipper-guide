@@ -1,0 +1,10 @@
+{
+ "id": "tmnt",
+ "name": "Teenage Mutant Ninja Turtles",
+ "manufacturer": "Stern",
+ "year": 2020,
+ "versions": "Echter Tisch (Pro)",
+ "accent": "#3fae49",
+ "thumb": "img/tmnt-thumb.jpg",
+ "data": "data/tmnt.json"
+}

@@ -1,0 +1,250 @@
+{
+ "spot_pf": {
+  "name": "S-P-O-T",
+  "en": "SPOT inserts (lamps 106-109)",
+  "text": "Buchstaben für Spot. Jeder rote Rampenschuss (Pfeil „Spot“ an linker oder rechter Rampe) gibt einen Buchstaben. Komplett = Spot-Modus: Spot erscheint in der Treppe.",
+  "px": [
+   [
+    670,
+    1574
+   ],
+   [
+    714,
+    1563
+   ],
+   [
+    766,
+    1563
+   ],
+   [
+    814,
+    1574
+   ]
+  ],
+  "r": 20
+ },
+ "members": {
+  "name": "Familienmitglieder",
+  "en": "Herman · Raven · Lily · Spot · Grandpa (lamps 18-22)",
+  "text": "Leuchten, wenn das Familienmitglied gespielt ist. Alle fünf = Munster Madness am Scoop (Aufdruck „Collect 5 modes to lite Munster Madness“).",
+  "px": [
+   [
+    639,
+    1769
+   ],
+   [
+    741,
+    1770
+   ],
+   [
+    841,
+    1769
+   ],
+   [
+    684,
+    1843
+   ],
+   [
+    793,
+    1843
+   ]
+  ],
+  "r": 26
+ },
+ "mm_ins": {
+  "name": "Munster Madness",
+  "en": "Munster Madness (lamp 17)",
+  "text": "Leuchtet für den Wizard-Modus.",
+  "px": [
+   [
+    741,
+    1688
+   ]
+  ],
+  "r": 30
+ },
+ "kitty_x": {
+  "name": "2X · 3X",
+  "en": "Playfield multipliers (lamps 23-24)",
+  "text": "Spielfeld-Multiplikator. Aufdruck: „Kitty advances multipliers when lit“.",
+  "px": [
+   [
+    694,
+    1911
+   ],
+   [
+    770,
+    1911
+   ]
+  ],
+  "r": 24
+ },
+ "dragula_ins": {
+  "name": "D-R-A-G-U-L-A",
+  "en": "DRAGULA inserts (lamps 32-38)",
+  "text": "Fortschritt der Dragula-Ziele links daneben. Bestimmt den Wert der Dragula-Bahn; komplett = 5x Dragula bzw. im Multiball Add-a-Ball.",
+  "px": [
+   [
+    470,
+    1228
+   ],
+   [
+    477,
+    1270
+   ],
+   [
+    468,
+    1312
+   ],
+   [
+    470,
+    1355
+   ],
+   [
+    459,
+    1399
+   ],
+   [
+    470,
+    1441
+   ],
+   [
+    461,
+    1484
+   ]
+  ],
+  "r": 20
+ },
+ "dragula_arrows": {
+  "name": "Add-a-Ball · 5x · Super Jackpot",
+  "en": "Dragula lane arrows (lamps 28-30)",
+  "text": "Pfeile vor der Dragula-Bahn: Add-a-Ball, 5x Dragula, Super Jackpot.",
+  "px": [
+   [
+    489,
+    1108
+   ],
+   [
+    447,
+    1142
+   ],
+   [
+    433,
+    1190
+   ]
+  ],
+  "r": 18
+ },
+ "lily_ins": {
+  "name": "L-I-L-Y",
+  "en": "LILY inserts (lamps 40-43)",
+  "text": "Fortschritt am Lily-Ziel rechts daneben. Läuft mit der Zeit zurück.",
+  "px": [
+   [
+    1025,
+    1235
+   ],
+   [
+    1025,
+    1310
+   ],
+   [
+    1025,
+    1386
+   ],
+   [
+    1022,
+    1460
+   ]
+  ],
+  "r": 24
+ },
+ "herman_ins": {
+  "name": "Herman 1-2-3",
+  "en": "Herman inserts (lamps 58-60)",
+  "text": "Zeigen, wie oft Herman noch getroffen werden muss.",
+  "px": [
+   [
+    657,
+    929
+   ],
+   [
+    677,
+    903
+   ],
+   [
+    712,
+    929
+   ]
+  ],
+  "r": 18
+ },
+ "lab": {
+  "name": "Extra Ball · Grandpa's Lab · Munster Madness",
+  "en": "Scoop inserts (lamps 62-64)",
+  "text": "Vor dem Grandpa-Scoop: Extraball, Grandpa-Modus (Pro: Enlarging Ray), Munster Madness.",
+  "px": [
+   [
+    765,
+    938
+   ],
+   [
+    809,
+    944
+   ],
+   [
+    855,
+    941
+   ]
+  ],
+  "r": 18
+ },
+ "mystery": {
+  "name": "Mystery · Add Time",
+  "en": "Mystery / Add Time (lamps 103-104)",
+  "text": "„?“ = Mystery am Scoop. Add Time = mehr Zeit für den laufenden Modus.",
+  "px": [
+   [
+    782,
+    996
+   ],
+   [
+    836,
+    1006
+   ]
+  ],
+  "r": 16
+ },
+ "raven_ins": {
+  "name": "Raven-Locks",
+  "en": "Left Ramp Lock 1-3 (lamps 95-97)",
+  "text": "Zeigen die Raven-Fortschritte an der linken Rampe (3 = Raven Multiball).",
+  "px": [
+   [
+    605,
+    1075
+   ],
+   [
+    650,
+    1100
+   ],
+   [
+    593,
+    1113
+   ]
+  ],
+  "r": 16
+ },
+ "marilyn_ins": {
+  "name": "Marilyn",
+  "en": "Right Ramp Marilyn (lamp 102)",
+  "text": "Rechte Rampe: Freund verjagen (Marilyn).",
+  "px": [
+   [
+    907,
+    1088
+   ]
+  ],
+  "r": 20
+ }
+}

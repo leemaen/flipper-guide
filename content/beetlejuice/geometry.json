@@ -1,0 +1,12 @@
+{
+ "_note": "Geometrie in Pixeln des Prototyp-Spielfeldfotos aus dem Spooky-Flyer 'Frightful Features' (_quellen/beetlejuice/flyer.png, 1583x2048; Spielfeld ca. 585 px breit). H = Skalierung 0.6, damit 50 Einheiten ~ 30 px = ein Kugeldurchmesser. Nur sicher erkennbare Elemente vermessen; Zuordnung ueber Rulesheet (pinballrulesheets.com) und Schalterliste des Spooky-Handbuchs (Juli 2026).",
+ "space": "px:real", "pxToVpx": 1.6667, "flipperSpace": "px",
+ "flippers": { "L": { "pivot": [290, 1418], "aim": [338, 1444] }, "R": { "pivot": [492, 1418], "aim": [444, 1444] } },
+ "shots": {
+  "left_ramp":   { "entrance": { "type": "lane", "c": [282, 982], "toward": [270, 940], "len": 36, "w": 34 } },
+  "sandworm":    { "entrance": { "type": "circle", "c": [468, 705], "r": 42 } },
+  "center_scoop":{ "entrance": { "type": "circle", "c": [409, 738], "r": 18 } },
+  "upper_pf":    { "entrance": { "type": "circle", "c": [338, 470], "r": 70 } },
+  "captive":     { "entrance": { "type": "circle", "c": [650, 1010], "r": 20 } }
+ }
+}

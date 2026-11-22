@@ -1,0 +1,10 @@
+{
+ "id": "munsters-vpx",
+ "name": "The Munsters (VPX Original)",
+ "manufacturer": "Allknowing2012 (Fan-Tisch)",
+ "year": 2020,
+ "versions": "VPX 1.06b · eigene Regeln, nicht Stern",
+ "accent": "#6aa84f",
+ "thumb": "img/munsters-vpx-thumb.jpg",
+ "data": "data/munsters-vpx.json"
+}

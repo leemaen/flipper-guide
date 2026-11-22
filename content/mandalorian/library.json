@@ -1,0 +1,10 @@
+{
+ "id": "mandalorian",
+ "name": "The Mandalorian",
+ "manufacturer": "Stern",
+ "year": 2021,
+ "versions": "Echter Tisch (Pro)",
+ "accent": "#b9c4cc",
+ "thumb": "img/mandalorian-thumb.jpg",
+ "data": "data/mandalorian.json"
+}

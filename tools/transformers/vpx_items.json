@@ -1,0 +1,302 @@
+{
+"Bumper1": [
+"Bumper",
+150.6,
+299.3
+],
+"Bumper2": [
+"Bumper",
+287.3,
+416.3
+],
+"Bumper3": [
+"Bumper",
+149.4,
+504.9
+],
+"LeftFlipper": [
+"Flipper",
+277.0,
+1825.2,
+122.0,
+70.0,
+116.5,
+11.5
+],
+"RightFlipper": [
+"Flipper",
+594.5,
+1825.2,
+-122.0,
+-70.0,
+116.5,
+11.5
+],
+"Gate2": [
+"Gate",
+871.0,
+1842.5
+],
+"Gate3": [
+"Gate",
+234.0,
+865.8
+],
+"Gate4": [
+"Gate",
+740.9,
+524.1
+],
+"Gate5": [
+"Gate",
+906.4,
+181.4
+],
+"Gate6": [
+"Gate",
+50.8,
+605.6
+],
+"LGate": [
+"Gate",
+135.5,
+76.0
+],
+"RGate": [
+"Gate",
+347.7,
+55.6
+],
+"sw1p": [
+"HitTarget",
+660.1,
+238.0,
+0.0,
+"hit_target_rectangle"
+],
+"sw2": [
+"HitTarget",
+317.3,
+871.7,
+-18.0,
+"hit_target_slim"
+],
+"sw37": [
+"HitTarget",
+787.2,
+1251.1,
+83.0,
+"hit_target_rectangle"
+],
+"sw46": [
+"HitTarget",
+770.8,
+777.0,
+16.0,
+"hit_target_slim"
+],
+"sw49": [
+"HitTarget",
+434.9,
+827.2,
+-8.0,
+"hit_target_slim"
+],
+"sw50": [
+"HitTarget",
+778.3,
+1174.0,
+83.0,
+"hit_target_rectangle"
+],
+"BallRelease": [
+"Kicker",
+820.1,
+1841.2
+],
+"CapKicker1": [
+"Kicker",
+622.6,
+747.0
+],
+"CapKicker1a": [
+"Kicker",
+626.3,
+694.8
+],
+"carkicker": [
+"Kicker",
+656.1,
+351.9
+],
+"Drain": [
+"Kicker",
+438.5,
+2131.1
+],
+"hball": [
+"Kicker",
+118.4,
+2126.6
+],
+"KickerMegaTron": [
+"Kicker",
+318.9,
+673.2
+],
+"sw3": [
+"Kicker",
+68.2,
+1034.4
+],
+"Plunger": [
+"Plunger",
+902.1,
+2105.2
+],
+"sw34": [
+"Spinner",
+795.1,
+889.9
+],
+"CapTrigger1": [
+"Trigger",
+621.4,
+785.4
+],
+"KickerTrigger": [
+"Trigger",
+68.6,
+1034.7
+],
+"ramptrigger01": [
+"Trigger",
+220.6,
+812.8
+],
+"ramptrigger02": [
+"Trigger",
+736.7,
+553.7
+],
+"REnd1": [
+"Trigger",
+124.4,
+1464.8
+],
+"REnd2": [
+"Trigger",
+777.7,
+1495.6
+],
+"right_drop": [
+"Trigger",
+905.9,
+938.5
+],
+"right_drop1": [
+"Trigger",
+53.2,
+661.8
+],
+"sw10": [
+"Trigger",
+54.7,
+632.4
+],
+"sw11": [
+"Trigger",
+542.5,
+218.5
+],
+"sw12": [
+"Trigger",
+854.1,
+213.7
+],
+"sw13": [
+"Trigger",
+372.2,
+491.6
+],
+"sw14": [
+"Trigger",
+896.7,
+156.0
+],
+"sw22": [
+"Trigger",
+839.3,
+1838.7
+],
+"sw23": [
+"Trigger",
+900.1,
+1913.9
+],
+"sw24": [
+"Trigger",
+53.4,
+1640.0
+],
+"sw25": [
+"Trigger",
+126.7,
+1600.3
+],
+"sw28": [
+"Trigger",
+740.3,
+1603.9
+],
+"sw29": [
+"Trigger",
+813.5,
+1643.4
+],
+"sw35": [
+"Trigger",
+736.3,
+553.7
+],
+"sw4": [
+"Trigger",
+221.4,
+813.7
+],
+"sw45": [
+"Trigger",
+648.8,
+506.5
+],
+"sw5": [
+"Trigger",
+58.6,
+545.4
+],
+"sw6": [
+"Trigger",
+81.7,
+123.2
+],
+"sw7": [
+"Trigger",
+289.3,
+195.3
+],
+"sw8": [
+"Trigger",
+203.3,
+173.7
+],
+"TriggerLF": [
+"Trigger",
+244.4,
+1827.8
+],
+"TriggerRF": [
+"Trigger",
+627.2,
+1827.8
+]
+}
