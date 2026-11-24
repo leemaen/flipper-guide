@@ -1,0 +1,162 @@
+{
+ "terms": {
+  "name": "Terms 1–6 (Filme)",
+  "en": "Term / movie mode inserts 1–6",
+  "text": "Die sechs Film-Modi (Terms): 1 Stein der Weisen … 6 Halbblutprinz. Darunter links Deathly Hallows, rechts Battle of Hogwarts.",
+  "px": [
+   [
+    678.9,
+    1633.7
+   ],
+   [
+    734.7,
+    1584.1
+   ],
+   [
+    806.0,
+    1562.4
+   ],
+   [
+    883.5,
+    1562.4
+   ],
+   [
+    954.8,
+    1584.1
+   ],
+   [
+    1026.1,
+    1633.7
+   ]
+  ],
+  "r": 42
+ },
+ "horcruxes": {
+  "name": "Horkruxe",
+  "en": "Horcrux inserts (Harry, Diary, Ring, Nagini, Cup, Locket, Diadem)",
+  "text": "Sieben Horkrux-Felder um das Heiligtümer-Symbol. Alle gesammelt = Weg zu The Boy Who Lived (Mittelbahn).",
+  "px": [
+   [
+    860,
+    1306
+   ],
+   [
+    943,
+    1328
+   ],
+   [
+    966,
+    1401
+   ],
+   [
+    933,
+    1476
+   ],
+   [
+    793,
+    1476
+   ],
+   [
+    766,
+    1401
+   ],
+   [
+    790,
+    1328
+   ]
+  ],
+  "r": 22
+ },
+ "stairs": {
+  "name": "Treppen-Ziele",
+  "en": "Staircase paths: Classrooms, Castle Grounds, Towers, Secret Passages",
+  "text": "Rautenfelder unter der Mittelrampe. Mittelrampe = Orte, Treppenrampe = Häuser. Alle = Explore Hogwarts Multiball.",
+  "px": [
+   [
+    838,
+    996
+   ],
+   [
+    802,
+    1030
+   ],
+   [
+    878,
+    1024
+   ],
+   [
+    850,
+    1056
+   ]
+  ],
+  "r": 20
+ },
+ "shops": {
+  "name": "Diagon-Alley-Läden",
+  "en": "Shops: Weasleys, Owl Post, Flourish & Blotts, Ollivanders",
+  "text": "Zeigen den gewählten Laden. Wechsel mit Hagrid-Ziel oder Action-Button.",
+  "px": [
+   [
+    949,
+    855
+   ],
+   [
+    949,
+    903
+   ],
+   [
+    918,
+    941
+   ],
+   [
+    948,
+    978
+   ]
+  ],
+  "r": 20
+ },
+ "quidditch": {
+  "name": "Quidditch",
+  "en": "Snitch 1–3, World Cup / Match / Tryouts",
+  "text": "Quidditch-Fortschritt an der linken Rampe: Tryouts, Match, 3 Schnatze, World Cup Multiball.",
+  "px": [
+   [
+    556,
+    1103
+   ],
+   [
+    556,
+    1178
+   ],
+   [
+    556,
+    1228
+   ]
+  ],
+  "r": 34
+ },
+ "travel": {
+  "name": "Travel / Advance Combo",
+  "en": "Wizard travel level, Advance Combo",
+  "text": "Kombos beleuchten Advance; an der Mulde steigt die Reisestufe (Hogwarts Express … Apparition).",
+  "px": [
+   [
+    1054.0,
+    1553.1
+   ]
+  ],
+  "r": 50
+ },
+ "shoot_again": {
+  "name": "Shoot Again / Boy Who Lived",
+  "en": "Shoot Again",
+  "text": "Leuchtet bei Extraball bzw. Ball-Retter.",
+  "px": [
+   [
+    840.1,
+    2095.6
+   ]
+  ],
+  "r": 40
+ }
+}

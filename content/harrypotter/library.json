@@ -1,0 +1,10 @@
+{
+ "id": "harrypotter",
+ "name": "Harry Potter (Jersey Jack)",
+ "manufacturer": "Jersey Jack Pinball",
+ "year": 2025,
+ "versions": "Echter Tisch (Arcade/Wizard/Collector's Edition) · VPX-Fan-Original: eigener Eintrag",
+ "accent": "#b8892c",
+ "thumb": "img/harrypotter-thumb.jpg",
+ "data": "data/harrypotter.json"
+}

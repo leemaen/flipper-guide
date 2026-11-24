@@ -802,7 +802,7 @@
   }
   function srcText(ids) {
     if (!ids || !ids.length) return 'Keine Quelle – ehrlich offen.';
-    const names = { rules: 'Rulesheet', manual: 'Hersteller-Handbuch', vpw: 'VPX-Tischdatei', vpx: 'VPX-Tischdatei', photo: 'Foto', rules10: 'Rulesheet 1.0', script: 'Tisch-Script', card: 'Spielanleitung' };
+    const names = { rules: st.data && st.data.table.id === 'harrypotter' ? 'Regel-Flowchart' : 'Rulesheet', manual: 'Hersteller-Handbuch', vpw: 'VPX-Tischdatei', vpx: 'VPX-Tischdatei', photo: 'Foto', rules10: 'Rulesheet 1.0', script: 'Tisch-Script', card: 'Spielanleitung' };
     return 'Quelle: ' + ids.map(i => names[i] || i).join(', ');
   }
 

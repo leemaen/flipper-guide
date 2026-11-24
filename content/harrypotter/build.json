@@ -1,0 +1,17 @@
+{
+ "views": {
+  "real": {
+   "H": "tools/harrypotter/H_real.json",
+   "src": "_quellen/harrypotter/pf_s.png",
+   "crop": [
+    388,
+    338,
+    1392,
+    2458
+   ],
+   "out": "harrypotter-real.jpg",
+   "quality": 86
+  }
+ },
+ "insertsView": "real"
+}

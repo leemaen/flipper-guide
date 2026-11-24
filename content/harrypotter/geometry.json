@@ -1,0 +1,307 @@
+{
+ "_note": "Geometrie in Pixeln des JJP-Spielfeldfotos (Collector's Edition, jerseyjackpinball.com 'Harry_CE_playfield_100.webp', 2878x4470), auf 62 % verkleinert (_quellen/harrypotter/pf_s.png; ~51 px = Kugeldurchmesser). Eingaenge an den 'Advance Term'-Pfeilen und Einsaetzen im Foto vermessen; Namen ueber Schalter- und Opto-Plaene des Handbuchs (27. Juni 2025, S. 128/129/131/155) und das offizielle Regel-Flowchart zugeordnet.",
+ "space": "px:real",
+ "pxToVpx": 1,
+ "flipperSpace": "px",
+ "flippers": {
+  "L": {
+   "pivot": [
+    651.0,
+    2058.4
+   ],
+   "aim": [
+    744.0,
+    2132.8
+   ]
+  },
+  "R": {
+   "pivot": [
+    1023.0,
+    2058.4
+   ],
+   "aim": [
+    926.9,
+    2132.8
+   ]
+  },
+  "UR": {
+   "pivot": [
+    1152.0,
+    1209.0
+   ],
+   "aim": [
+    1128.4,
+    1314.4
+   ]
+  }
+ },
+ "shots": {
+  "left_ramp": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     646,
+     1338
+    ],
+    "toward": [
+     636,
+     1298
+    ],
+    "len": 50,
+    "w": 50
+   }
+  },
+  "inner_loop": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     647.9,
+     911.4
+    ],
+    "toward": [
+     623.1,
+     871.1
+    ],
+    "len": 53,
+    "w": 50
+   }
+  },
+  "allies": {
+   "entrance": {
+    "type": "circle",
+    "c": [
+     698,
+     1056
+    ],
+    "r": 22
+   }
+  },
+  "death_eater": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     750.0,
+     963.0
+    ],
+    "toward": [
+     738.0,
+     918.0
+    ],
+    "len": 50,
+    "w": 48
+   }
+  },
+  "center_ramp": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     822.0,
+     850.0
+    ],
+    "toward": [
+     820.0,
+     803.0
+    ],
+    "len": 52,
+    "w": 52
+   }
+  },
+  "center_lane": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     906.4,
+     753.3
+    ],
+    "toward": [
+     905.2,
+     709.9
+    ],
+    "len": 50,
+    "w": 50
+   }
+  },
+  "staircase": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     1016.0,
+     923.0
+    ],
+    "toward": [
+     1016.0,
+     878.0
+    ],
+    "len": 50,
+    "w": 48
+   }
+  },
+  "right_orbit": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     1126.0,
+     916.0
+    ],
+    "toward": [
+     1134.0,
+     870.0
+    ],
+    "len": 52,
+    "w": 48
+   }
+  },
+  "scoop": {
+   "entrance": {
+    "type": "circle",
+    "c": [
+     1100.5,
+     1422.9
+    ],
+    "r": 26
+   }
+  },
+  "under_flipper": {
+   "entrance": {
+    "type": "circle",
+    "c": [
+     1109.8,
+     1320.6
+    ],
+    "r": 25
+   }
+  },
+  "ron": {
+   "entrance": {
+    "type": "multi",
+    "items": [
+     {
+      "type": "rect",
+      "c": [
+       542.5,
+       1478.7
+      ],
+      "toward": [
+       561.1,
+       1478.7
+      ],
+      "len": 12,
+      "w": 34
+     },
+     {
+      "type": "rect",
+      "c": [
+       561.1,
+       1515.9
+      ],
+      "toward": [
+       579.7,
+       1515.9
+      ],
+      "len": 12,
+      "w": 34
+     }
+    ]
+   }
+  },
+  "hermione": {
+   "entrance": {
+    "type": "rect",
+    "c": [
+     688,
+     1243
+    ],
+    "toward": [
+     708,
+     1243
+    ],
+    "len": 12,
+    "w": 42
+   }
+  },
+  "harry_lanes": {
+   "entrance": {
+    "type": "multi",
+    "items": [
+     {
+      "type": "lane",
+      "c": [
+       447.6,
+       1680.2
+      ],
+      "toward": [
+       447.6,
+       1636.8
+      ],
+      "len": 50,
+      "w": 34
+     },
+     {
+      "type": "lane",
+      "c": [
+       509.6,
+       1680.2
+      ],
+      "toward": [
+       509.6,
+       1636.8
+      ],
+      "len": 50,
+      "w": 34
+     },
+     {
+      "type": "lane",
+      "c": [
+       1131.5,
+       1680.2
+      ],
+      "toward": [
+       1131.5,
+       1636.8
+      ],
+      "len": 50,
+      "w": 34
+     },
+     {
+      "type": "lane",
+      "c": [
+       1191.6,
+       1680.2
+      ],
+      "toward": [
+       1191.6,
+       1636.8
+      ],
+      "len": 50,
+      "w": 34
+     }
+    ]
+   }
+  },
+  "upper_pf": {
+   "entrance": {
+    "type": "circle",
+    "c": [
+     558.0,
+     496.0
+    ],
+    "r": 118
+   }
+  },
+  "plunger": {
+   "entrance": {
+    "type": "rect",
+    "c": [
+     1351.6,
+     2046.0
+    ],
+    "toward": [
+     1351.6,
+     1922.0
+    ],
+    "len": 434,
+    "w": 34
+   }
+  }
+ }
+}

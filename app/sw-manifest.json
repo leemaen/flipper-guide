@@ -1,5 +1,5 @@
 {
- "version": "8a4e31db542c",
+ "version": "263c503bb4b8",
  "assets": [
   "./",
   "app.css",
@@ -17,6 +17,7 @@
   "data/deadpool.json",
   "data/futurama.json",
   "data/harrypotter-vpx.json",
+  "data/harrypotter.json",
   "data/kingkong.json",
   "data/labyrinth.json",
   "data/lotr.json",
@@ -59,6 +60,8 @@
   "img/deadpool-vpx.jpg",
   "img/futurama-thumb.jpg",
   "img/futurama-vpx.jpg",
+  "img/harrypotter-real.jpg",
+  "img/harrypotter-thumb.jpg",
   "img/harrypotter-vpx-thumb.jpg",
   "img/harrypotter-vpx-vpx.jpg",
   "img/kingkong-real.jpg",
