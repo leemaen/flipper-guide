@@ -1,0 +1,2 @@
+{ "views": { "vpx": { "H": "tools/futurama/H_view.json", "src": "_quellen/futurama/render.png", "crop": [0, 230, 1000, 2330], "out": "futurama-vpx.jpg", "quality": 84 } },
+  "insertsView": "vpx" }

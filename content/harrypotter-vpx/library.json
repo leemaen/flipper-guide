@@ -1,0 +1,10 @@
+{
+ "id": "harrypotter-vpx",
+ "name": "Harry Potter & the Goblet of Fire (VPX)",
+ "manufacturer": "Fan-Original (ScottyWic)",
+ "year": 2020,
+ "versions": "VPX-Original v.1 · andere Regeln als der echte JJP-Tisch",
+ "accent": "#b8892c",
+ "thumb": "img/harrypotter-vpx-thumb.jpg",
+ "data": "data/harrypotter-vpx.json"
+}

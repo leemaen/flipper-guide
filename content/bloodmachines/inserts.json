@@ -1,0 +1,346 @@
+{
+ "shot_arrows": {
+  "name": "Schuss-Pfeile 1–5",
+  "en": "Shot arrows: left orbit · ship · center lane · ramp · right orbit",
+  "r": 17,
+  "text": "Große Pfeile vor den fünf Hauptschüssen (von links: linker Orbit, Schiff, Mittelbahn, Rampe, rechter Orbit). Blinkend = Mission-, Jackpot- oder Freischalt-Schuss. Nur Anzeige, das Ziel liegt dahinter.",
+  "px": [
+   [
+    139.8,
+    779.3
+   ],
+   [
+    314.7,
+    551.8
+   ],
+   [
+    571.5,
+    901.2
+   ],
+   [
+    695.7,
+    921.4
+   ],
+   [
+    839.3,
+    1020.9
+   ]
+  ]
+ },
+ "pentagons": {
+  "name": "Fünfecke (Corey)",
+  "en": "Pentagon inserts (Corey)",
+  "r": 20,
+  "text": "Je ein Fünfeck an den fünf Schüssen. Jeder Skyloop lässt eins blinken; den zugehörigen Schuss treffen → leuchtet fest. Alle fünf fest = Corey-Multiball bereit.",
+  "px": [
+   [
+    168.1,
+    885.2
+   ],
+   [
+    326.8,
+    659.8
+   ],
+   [
+    552.0,
+    1009.4
+   ],
+   [
+    682.5,
+    1032.0
+   ],
+   [
+    801.9,
+    1121.9
+   ]
+  ]
+ },
+ "crosses": {
+  "name": "Kreuze (Tracy)",
+  "en": "Cross inserts (Tracy)",
+  "r": 20,
+  "text": "Je ein umgedrehtes Kreuz an den fünf Schüssen. Alle 10 Bumper-Treffer blinkt eins; den zugehörigen Schuss treffen → fest. Alle fünf fest = Tracy-Multiball bereit.",
+  "px": [
+   [
+    197.5,
+    989.9
+   ],
+   [
+    335.6,
+    763.7
+   ],
+   [
+    529.5,
+    1119.5
+   ],
+   [
+    633.6,
+    1238.8
+   ],
+   [
+    759.1,
+    1221.2
+   ]
+  ]
+ },
+ "mb_status": {
+  "name": "Mima · Corey · Tracy",
+  "en": "Multiball status (MIMA / COREY / TRACY)",
+  "r": 26,
+  "text": "Drei Felder über den Flippern. Blinkend = Multiball läuft, an = gespielt. Alle drei plus alle Missionen öffnen das Final Chapter.",
+  "px": [
+   [
+    362.4,
+    1801.8
+   ],
+   [
+    463.6,
+    1802.3
+   ],
+   [
+    561.8,
+    1801.4
+   ]
+  ]
+ },
+ "missions": {
+  "name": "Missions-Leiste",
+  "en": "Missions 1–7 + Final Chapter",
+  "r": 12,
+  "text": "Sieben Missionslichter und das Final-Chapter-Licht auf der Schürze. Blinkend = als nächstes wählbar, an = geschafft.",
+  "px": [
+   [
+    685.8,
+    2190.3
+   ],
+   [
+    681.7,
+    2219.6
+   ],
+   [
+    677.2,
+    2251.5
+   ],
+   [
+    673.0,
+    2283.9
+   ],
+   [
+    841.8,
+    2190.3
+   ],
+   [
+    847.5,
+    2220.0
+   ],
+   [
+    851.5,
+    2251.2
+   ],
+   [
+    855.7,
+    2283.4
+   ]
+  ]
+ },
+ "mission_start": {
+  "name": "Mission",
+  "en": "MISSION (start lit)",
+  "r": 18,
+  "text": "Rundes Feld links. Blinkt, wenn eine Mission bereit ist; sie startet in der Kanone (linker VUK).",
+  "px": [
+   [
+    190.0,
+    1313.6
+   ]
+  ]
+ },
+ "load_gun": {
+  "name": "Kanone laden",
+  "en": "Load gun insert",
+  "r": 16,
+  "text": "Gestreiftes Feld links. Zeigt den Kanonen-Zustand (Mission The Hunt: „Load the gun“).",
+  "px": [
+   [
+    137.6,
+    1231.0
+   ]
+  ]
+ },
+ "scavenge_menu": {
+  "name": "Super Spinner · Double Scoring · Mystery",
+  "en": "Scavenge awards",
+  "r": 15,
+  "text": "Drei Felder links neben den Scavenge-Fallzielen. Zeigen die Scavenge-Belohnungen, die der rechte Scoop vergibt.",
+  "px": [
+   [
+    159.4,
+    1388.6
+   ],
+   [
+    155.6,
+    1440.4
+   ],
+   [
+    150.9,
+    1491.6
+   ]
+  ]
+ },
+ "scavenge_ins": {
+  "name": "Scavenge",
+  "en": "SCAVENGE (scoop lit)",
+  "r": 18,
+  "text": "Vor dem rechten Scoop. Blinkt, wenn alle drei Fallziele links unten sind: Scoop gibt dann eine Scavenge-Belohnung.",
+  "px": [
+   [
+    756.7,
+    1433.8
+   ]
+  ]
+ },
+ "multiplier": {
+  "name": "Multiplier",
+  "en": "MULTIPLIER (shield)",
+  "r": 16,
+  "text": "Beim Schild rechts vom Schiff. Blinkt, solange ein Playfield-Multiplikator (2×–5×, je 30 s) läuft.",
+  "px": [
+   [
+    538.5,
+    728.4
+   ]
+  ]
+ },
+ "mima_ready": {
+  "name": "Mima-Zähler",
+  "en": "Mima target lights (3)",
+  "r": 10,
+  "text": "Drei kleine Lichter am Schild. Jeder Treffer der gefangenen Kugel unter dem Schiff zündet eins; bei drei öffnet sich das Schwerkraftloch (Lock).",
+  "px": [
+   [
+    609.3,
+    697.9
+   ],
+   [
+    589.5,
+    716.2
+   ],
+   [
+    574.3,
+    738.0
+   ]
+  ]
+ },
+ "mima_locks": {
+  "name": "Mima-Locks",
+  "en": "Mima lock lights",
+  "r": 10,
+  "text": "Zeigen die gelockten Kugeln für den Mima-Multiball.",
+  "px": [
+   [
+    627.0,
+    661.6
+   ],
+   [
+    658.5,
+    650.0
+   ]
+  ]
+ },
+ "extra_ball": {
+  "name": "Extra Ball",
+  "en": "EXTRA BALL (collect)",
+  "r": 18,
+  "text": "Leuchtet, wenn ein Extraball wartet (nach 3 und 6 Missionen oder Mystery). Abholen an der Harpune rechts vom Schiff.",
+  "px": [
+   [
+    457.3,
+    780.3
+   ]
+  ]
+ },
+ "turbo": {
+  "name": "Turbo",
+  "en": "TURBO",
+  "r": 16,
+  "text": "Feld links der Mitte. Bedeutung im Script nicht eindeutig belegt.",
+  "px": [
+   [
+    362.4,
+    978.3
+   ]
+  ]
+ },
+ "lanes": {
+  "name": "LAGO-Bahnen",
+  "en": "Inlane/outlane lights",
+  "r": 13,
+  "text": "Alle vier In-/Outlane-Lichter = Kickback links (bis zu 2 gespeichert). Die Flipper verschieben die Lichter.",
+  "px": [
+   [
+    59.2,
+    1675.9
+   ],
+   [
+    135.2,
+    1633.5
+   ],
+   [
+    787.0,
+    1633.3
+   ],
+   [
+    868.8,
+    1676.6
+   ]
+  ]
+ },
+ "kickback": {
+  "name": "Kickback",
+  "en": "Kickback lights",
+  "r": 13,
+  "text": "Gespeicherte Kickbacks in der linken Outlane.",
+  "px": [
+   [
+    117.5,
+    1874.9
+   ],
+   [
+    124.6,
+    1937.6
+   ]
+  ]
+ },
+ "top_lanes": {
+  "name": "Obere Bahnen (Skillshot)",
+  "en": "Top lanes",
+  "r": 13,
+  "text": "Zwei Bahnen oben rechts. Die blinkende ist der Skillshot.",
+  "px": [
+   [
+    659.7,
+    171.0
+   ],
+   [
+    764.6,
+    182.4
+   ]
+  ]
+ },
+ "shoot_again": {
+  "name": "Shoot Again",
+  "en": "SHOOT AGAIN",
+  "r": 16,
+  "text": "Extraball bzw. Ballsicherung.",
+  "px": [
+   [
+    423.5,
+    1997.8
+   ],
+   [
+    495.8,
+    1999.6
+   ]
+  ]
+ }
+}

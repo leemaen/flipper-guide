@@ -1,0 +1,10 @@
+{
+ "id": "futurama",
+ "name": "Futurama",
+ "manufacturer": "Fan-Original (VPX)",
+ "year": 2024,
+ "versions": "VPX-Original v1.2.2 · kein echter Tisch",
+ "accent": "#2fb7a8",
+ "thumb": "img/futurama-thumb.jpg",
+ "data": "data/futurama.json"
+}

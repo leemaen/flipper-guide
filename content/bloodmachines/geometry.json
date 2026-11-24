@@ -1,0 +1,30 @@
+{
+ "_note": "VPX-Koordinaten der Tischdatei Blood Machines 2.0 (VPW). Eingänge aus Schaltern (swLeftOrbTrigger1/2, CaptiveTrigger, VUK2, RRAMPUP/swMainRamp, swRightOrbTrigger1/2, swSkyRamp), Rampen-Polylinien (Ramp003/004 Hauptrampe, Ramp011/030/008 Skyloop) und den Pfeil-Einsätzen cLightShot1-5.",
+ "flippers": {
+  "L":  { "pivot": [279, 1889], "aim": [348, 1900] },
+  "R":  { "pivot": [599, 1889], "aim": [530, 1900] },
+  "UL": { "pivot": [77, 929],   "aim": [100, 985] }
+ },
+ "shots": {
+  "left_orbit":  { "entrance": { "type": "lane", "c": [108, 690], "toward": [80, 615], "len": 70, "w": 62 } },
+  "ship":        { "entrance": { "type": "lane", "c": [300, 575], "toward": [297, 520], "len": 50, "w": 120 } },
+  "center_lane": { "entrance": { "type": "lane", "c": [540, 815], "toward": [528, 755], "len": 60, "w": 56 } },
+  "main_ramp":   { "entrance": { "type": "lane", "c": [632, 1055], "toward": [650, 960], "len": 60, "w": 100 } },
+  "right_orbit": { "entrance": { "type": "lane", "c": [770, 1072], "toward": [786, 995], "len": 70, "w": 60 } },
+  "sky_loop":    { "entrance": { "type": "lane", "c": [245, 955], "toward": [330, 908], "len": 50, "w": 58 } },
+  "vuk2":        { "entrance": { "type": "circle", "c": [774, 801], "r": 26 } },
+  "gun_vuk":     { "entrance": { "type": "circle", "c": [33, 776], "r": 26 } },
+  "scavenge_scoop": { "entrance": { "type": "circle", "c": [786, 1278], "r": 28 } },
+  "scavenge_drops": { "entrance": { "type": "multi", "items": [
+     { "type": "rect", "c": [66, 1388], "toward": [110, 1395], "len": 14, "w": 38 },
+     { "type": "rect", "c": [73, 1346], "toward": [117, 1353], "len": 14, "w": 38 },
+     { "type": "rect", "c": [80, 1306], "toward": [124, 1313], "len": 14, "w": 38 } ] } },
+  "shield":      { "entrance": { "type": "rect", "c": [534, 688], "toward": [494, 668], "len": 16, "w": 210 } },
+  "harpoon":     { "entrance": { "type": "circle", "c": [483, 366], "r": 24 } },
+  "bumpers":     { "entrance": { "type": "multi", "items": [ { "type": "circle", "c": [580, 418], "r": 45 }, { "type": "circle", "c": [701, 565], "r": 45 }, { "type": "circle", "c": [822, 422], "r": 45 } ] } },
+  "top_lanes":   { "entrance": { "type": "multi", "items": [ { "type": "rect", "c": [627, 253], "toward": [627, 200], "len": 60, "w": 34 }, { "type": "rect", "c": [728, 262], "toward": [728, 209], "len": 60, "w": 34 } ] } },
+  "hatch":       { "entrance": { "type": "circle", "c": [429, 1440], "r": 120 } },
+  "lanes":       { "entrance": { "type": "multi", "items": [ { "type": "rect", "c": [58, 1778], "toward": [58, 1720], "len": 50, "w": 36 }, { "type": "rect", "c": [130, 1650], "toward": [130, 1592], "len": 50, "w": 36 }, { "type": "rect", "c": [749, 1649], "toward": [749, 1591], "len": 50, "w": 36 }, { "type": "rect", "c": [825, 1687], "toward": [825, 1629], "len": 50, "w": 36 } ] } },
+  "plunger":     { "entrance": { "type": "lane", "c": [915, 2080], "toward": [915, 1980], "len": 140, "w": 46 } }
+ }
+}

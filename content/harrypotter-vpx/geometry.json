@@ -1,0 +1,30 @@
+{
+ "_note": "VPX-Koordinaten der Tischdatei Harry Potter (Original 2020) LW (nFozzy) = ScottyWic „Harry Potter & the Goblet of Fire“ v.1. Eingänge aus Kickern (Kicker1, chesthole, Kicker2/3, merlock1-3, wandlock), Zielen (Target1-20), Spinnern, Schaltern (lohit/lrstart, rrstart, Gate5/Gate9, innerorbitsnd) und den Insert-Reihen s1x-s9x.",
+ "flippers": {
+  "L":  { "pivot": [370, 1905], "aim": [440, 1915] },
+  "R":  { "pivot": [684, 1904], "aim": [614, 1914] },
+  "UL": { "pivot": [142, 1066], "aim": [170, 1120] }
+ },
+ "shots": {
+  "left_orbit":   { "entrance": { "type": "lane", "c": [142, 770], "toward": [128, 690], "len": 70, "w": 70 } },
+  "left_dugout":  { "entrance": { "type": "circle", "c": [222, 727], "r": 30 } },
+  "horseshoe_left":  { "entrance": { "type": "lane", "c": [300, 688], "toward": [287, 630], "len": 60, "w": 70 } },
+  "center_scoop": { "entrance": { "type": "multi", "items": [ { "type": "circle", "c": [432, 651], "r": 26 }, { "type": "circle", "c": [420, 601], "r": 26 } ] } },
+  "horseshoe_right": { "entrance": { "type": "lane", "c": [545, 660], "toward": [545, 600], "len": 60, "w": 70 } },
+  "inner_orbit":  { "entrance": { "type": "lane", "c": [652, 650], "toward": [666, 585], "len": 70, "w": 56 } },
+  "right_dugout": { "entrance": { "type": "circle", "c": [770, 683], "r": 30 } },
+  "right_lane":   { "entrance": { "type": "lane", "c": [925, 760], "toward": [912, 690], "len": 70, "w": 72 } },
+  "potter_targets": { "entrance": { "type": "multi", "items": [
+     { "type": "rect", "c": [193, 777], "toward": [208, 805], "len": 14, "w": 36 },
+     { "type": "rect", "c": [394, 682], "toward": [407, 711], "len": 14, "w": 36 },
+     { "type": "rect", "c": [479, 655], "toward": [480, 687], "len": 14, "w": 36 },
+     { "type": "rect", "c": [606, 656], "toward": [608, 688], "len": 14, "w": 36 },
+     { "type": "rect", "c": [710, 699], "toward": [705, 731], "len": 14, "w": 36 },
+     { "type": "rect", "c": [817, 719], "toward": [811, 751], "len": 14, "w": 36 } ] } },
+  "potion_targets": { "entrance": { "type": "multi", "items": [ { "type": "circle", "c": [988, 1197], "r": 18 }, { "type": "circle", "c": [940, 1223], "r": 18 }, { "type": "circle", "c": [1023, 1143], "r": 18 }, { "type": "circle", "c": [990, 1026], "r": 18 }, { "type": "circle", "c": [939, 1006], "r": 18 }, { "type": "circle", "c": [1023, 1077], "r": 18 } ] } },
+  "spinners":    { "entrance": { "type": "multi", "items": [ { "type": "rect", "c": [930, 549], "toward": [930, 520], "len": 14, "w": 70 }, { "type": "rect", "c": [668, 584], "toward": [668, 555], "len": 14, "w": 70 } ] } },
+  "bumpers":     { "entrance": { "type": "multi", "items": [ { "type": "circle", "c": [914, 379], "r": 42 }, { "type": "circle", "c": [836, 523], "r": 42 }, { "type": "circle", "c": [821, 246], "r": 42 }, { "type": "circle", "c": [711, 372], "r": 42 } ] } },
+  "mermaid_locks": { "entrance": { "type": "multi", "items": [ { "type": "circle", "c": [164, 228], "r": 24 }, { "type": "circle", "c": [174, 170], "r": 24 }, { "type": "circle", "c": [120, 142], "r": 24 } ] } },
+  "plunger":     { "entrance": { "type": "lane", "c": [1040, 1900], "toward": [1040, 1800], "len": 140, "w": 46 } }
+ }
+}

@@ -1,0 +1,2 @@
+{ "views": { "vpx": { "H": "tools/harrypotter-vpx/H_view.json", "src": "_quellen/harrypotter-vpx/render.png", "crop": [0, 70, 1000, 1880], "out": "harrypotter-vpx-vpx.jpg", "quality": 84 } },
+  "insertsView": "vpx" }

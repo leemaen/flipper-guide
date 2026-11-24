@@ -1,0 +1,302 @@
+{
+ "potter": {
+  "name": "P-O-T-T-E-R",
+  "en": "POTTER letters",
+  "r": 15,
+  "text": "Sechs Buchstaben vor den sechs schmalen POTTER-Zielen. Alle sechs = Hausmodus bereit, Start am rechten Dugout.",
+  "px": [
+   [
+    189.1,
+    742.8
+   ],
+   [
+    373.4,
+    648.6
+   ],
+   [
+    445.2,
+    629.3
+   ],
+   [
+    561.8,
+    627.6
+   ],
+   [
+    653.2,
+    666.4
+   ],
+   [
+    750.0,
+    686.6
+   ]
+  ]
+ },
+ "accio": {
+  "name": "A-C-C-I-O",
+  "en": "ACCIO letters",
+  "r": 12,
+  "text": "Fünf Buchstaben oben im Hufeisen vor den runden Zielen dort. Bedeutung im Script nicht ausgewertet.",
+  "px": [
+   [
+    312.3,
+    428.4
+   ],
+   [
+    327.3,
+    404.4
+   ],
+   [
+    353.5,
+    392.5
+   ],
+   [
+    380.8,
+    395.0
+   ],
+   [
+    403.8,
+    409.0
+   ]
+  ]
+ },
+ "potion_lights": {
+  "name": "Zaubertrank-Ziele",
+  "en": "Potion target lights",
+  "r": 12,
+  "text": "Sechs Lichter an den runden Zielen beim Kessel rechts. Treffer füllen den Zaubertrank; abholen am Spinner.",
+  "px": [
+   [
+    863.0,
+    1113.4
+   ],
+   [
+    903.8,
+    1091.1
+   ],
+   [
+    930.3,
+    1048.0
+   ],
+   [
+    928.6,
+    995.0
+   ],
+   [
+    905.0,
+    955.7
+   ],
+   [
+    862.0,
+    943.1
+   ]
+  ]
+ },
+ "mb_ready": {
+  "name": "Golden Egg · Lake Rescue · Maze Escape",
+  "en": "Multiball inserts",
+  "r": 22,
+  "text": "Drei Wappen über dem Turnierschild. Zeigen die drei Aufgaben-Multibälle.",
+  "px": [
+   [
+    393.8,
+    1284.4
+   ],
+   [
+    482.6,
+    1278.1
+   ],
+   [
+    577.2,
+    1282.6
+   ]
+  ]
+ },
+ "wand_ins": {
+  "name": "Wand",
+  "en": "WAND (multiball)",
+  "r": 20,
+  "text": "Feld „Wand“ über den drei Wappen: Zauberstab-Multiball.",
+  "px": [
+   [
+    480.2,
+    1187.1
+   ]
+  ]
+ },
+ "houses": {
+  "name": "Hausmodi",
+  "en": "Quidditch World Cup · Goblet of Fire · Unforgivable Curses · Escape Deatheaters",
+  "r": 16,
+  "text": "Vier Banner über den Flippern. Zeigen die Hausmodi (Start nach POTTER am rechten Dugout).",
+  "px": [
+   [
+    384.0,
+    1407.6
+   ],
+   [
+    449.8,
+    1387.6
+   ],
+   [
+    517.0,
+    1387.0
+   ],
+   [
+    584.8,
+    1406.9
+   ]
+  ]
+ },
+ "wizard_ins": {
+  "name": "Battle Voldemort",
+  "en": "BATTLE VOLDEMORT",
+  "r": 22,
+  "text": "Wizard-Anzeige über den Flippern. Bedingungen im Script nicht vollständig ausgewertet.",
+  "px": [
+   [
+    484.6,
+    1559.1
+   ]
+  ]
+ },
+ "dugout_lights": {
+  "name": "Dugout-Lichter",
+  "en": "Left / right dugout lights",
+  "r": 14,
+  "text": "Lichter vor dem linken und rechten Dugout (Kicker).",
+  "px": [
+   [
+    190.5,
+    622.9
+   ],
+   [
+    722.8,
+    580.5
+   ]
+  ]
+ },
+ "shot_columns": {
+  "name": "Schuss-Lichter (Pfeil-Reihen)",
+  "en": "Shot insert columns",
+  "r": 13,
+  "text": "Reihen aus Pfeil- und Rundlichtern vor den Schüssen. Sie zeigen Jackpots, Locks, Spell, Modus-Schüsse. Welche Lampe was bedeutet, ist nur teilweise belegt (z. B. am linken Dugout: oberes Licht = Spell-Minispiel, darunter Dragon-Lock).",
+  "px": [
+   [
+    126.4,
+    735.8
+   ],
+   [
+    147.7,
+    811.0
+   ],
+   [
+    163.8,
+    862.7
+   ],
+   [
+    178.3,
+    911.7
+   ],
+   [
+    239.0,
+    727.3
+   ],
+   [
+    261.1,
+    778.9
+   ],
+   [
+    335.8,
+    724.9
+   ],
+   [
+    365.0,
+    797.9
+   ],
+   [
+    382.7,
+    846.0
+   ],
+   [
+    401.9,
+    895.8
+   ],
+   [
+    417.6,
+    672.9
+   ],
+   [
+    501.0,
+    680.8
+   ],
+   [
+    500.5,
+    754.8
+   ],
+   [
+    500.4,
+    811.4
+   ],
+   [
+    499.5,
+    862.6
+   ],
+   [
+    599.8,
+    686.9
+   ],
+   [
+    590.9,
+    762.6
+   ],
+   [
+    584.8,
+    818.7
+   ],
+   [
+    699.6,
+    684.1
+   ],
+   [
+    686.9,
+    738.6
+   ],
+   [
+    672.1,
+    795.7
+   ],
+   [
+    813.9,
+    663.7
+   ],
+   [
+    799.7,
+    719.7
+   ],
+   [
+    879.0,
+    742.1
+   ],
+   [
+    843.8,
+    812.6
+   ],
+   [
+    817.3,
+    864.8
+   ]
+  ]
+ },
+ "shoot_again": {
+  "name": "Shoot Again",
+  "en": "SHOOT AGAIN",
+  "r": 20,
+  "text": "Extraball bzw. Ballsicherung.",
+  "px": [
+   [
+    484.4,
+    1821.1
+   ]
+  ]
+ }
+}

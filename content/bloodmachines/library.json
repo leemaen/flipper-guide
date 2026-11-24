@@ -1,0 +1,10 @@
+{
+ "id": "bloodmachines",
+ "name": "Blood Machines",
+ "manufacturer": "VPW (VPX-Original)",
+ "year": 2022,
+ "versions": "VPX-Original 2.0 · kein echter Tisch",
+ "accent": "#c3263a",
+ "thumb": "img/bloodmachines-thumb.jpg",
+ "data": "data/bloodmachines.json"
+}

@@ -1,0 +1,34 @@
+{
+ "_note": "Alle Koordinaten in VPX-Einheiten der Tischdatei Futurama (Original 2024) v1.2.2. Eingänge aus Schaltern/Kickern/Spinnern, Wänden und Rampen-Polylinien der Tischdatei; Pfeil-Einsätze zur Kontrolle (siehe tools/futurama).",
+ "flippers": {
+  "L":  { "pivot": [276, 2022], "aim": [345, 2032] },
+  "R":  { "pivot": [594, 2022], "aim": [525, 2032] },
+  "UL": { "pivot": [222, 921],  "aim": [275, 944] },
+  "UR": { "pivot": [840, 1005], "aim": [795, 1035] }
+ },
+ "shots": {
+  "left_lane":   { "entrance": { "type": "lane", "c": [112, 1425], "toward": [98, 1360], "len": 70, "w": 56 } },
+  "lower_scoop": { "entrance": { "type": "circle", "c": [208, 1441], "r": 30 } },
+  "left_loop":   { "entrance": { "type": "lane", "c": [112, 855], "toward": [90, 750], "len": 90, "w": 80 } },
+  "side_loop":   { "entrance": { "type": "lane", "c": [168, 772], "toward": [150, 700], "len": 70, "w": 60 } },
+  "upper_scoop": { "entrance": { "type": "rect", "c": [257, 710], "toward": [243, 630], "len": 155, "w": 80 } },
+  "left_ramp":   { "entrance": { "type": "lane", "c": [359, 612], "toward": [353, 520], "len": 60, "w": 80 } },
+  "center_lane": { "entrance": { "type": "lane", "c": [490, 642], "toward": [540, 560], "len": 70, "w": 58 } },
+  "right_ramp":  { "entrance": { "type": "lane", "c": [606, 735], "toward": [630, 620], "len": 60, "w": 110 } },
+  "bender_lane": { "entrance": { "type": "lane", "c": [716, 788], "toward": [735, 700], "len": 60, "w": 55 } },
+  "right_loop":  { "entrance": { "type": "lane", "c": [810, 912], "toward": [825, 840], "len": 70, "w": 55 } },
+  "slugs":       { "entrance": { "type": "multi", "items": [ { "type": "rect", "c": [438, 840], "toward": [438, 800], "len": 76, "w": 76 }, { "type": "rect", "c": [567, 972], "toward": [574, 934], "len": 76, "w": 76 } ] } },
+  "blast_drops": { "entrance": { "type": "multi", "items": [
+     { "type": "rect", "c": [785, 1203], "toward": [739, 1214], "len": 16, "w": 42 },
+     { "type": "rect", "c": [796, 1250], "toward": [750, 1261], "len": 16, "w": 42 },
+     { "type": "rect", "c": [807, 1296], "toward": [761, 1307], "len": 16, "w": 42 },
+     { "type": "rect", "c": [819, 1342], "toward": [773, 1353], "len": 16, "w": 42 },
+     { "type": "rect", "c": [831, 1388], "toward": [785, 1399], "len": 16, "w": 42 } ] } },
+  "mystery_target": { "entrance": { "type": "circle", "c": [341, 1228], "r": 20 } },
+  "px_spinner":  { "entrance": { "type": "rect", "c": [353, 1030], "toward": [310, 1030], "len": 16, "w": 75 } },
+  "bumpers":     { "entrance": { "type": "multi", "items": [ { "type": "circle", "c": [90, 1116], "r": 45 }, { "type": "circle", "c": [308, 1152], "r": 45 }, { "type": "circle", "c": [168, 1314], "r": 45 } ] } },
+  "booth":       { "entrance": { "type": "circle", "c": [823, 1920], "r": 28 } },
+  "lanes":       { "entrance": { "type": "multi", "items": [ { "type": "rect", "c": [52, 1790], "toward": [52, 1730], "len": 50, "w": 36 }, { "type": "rect", "c": [129, 1790], "toward": [129, 1730], "len": 50, "w": 36 }, { "type": "rect", "c": [743, 1791], "toward": [743, 1731], "len": 50, "w": 36 }, { "type": "rect", "c": [819, 1791], "toward": [819, 1731], "len": 50, "w": 36 } ] } },
+  "plunger":     { "entrance": { "type": "lane", "c": [898, 2200], "toward": [898, 2100], "len": 150, "w": 46 } }
+ }
+}

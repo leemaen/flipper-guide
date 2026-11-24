@@ -188,5 +188,35 @@
   "accent": "#9bd14a",
   "thumb": "img/beetlejuice-thumb.jpg",
   "data": "data/beetlejuice.json"
+ },
+ {
+  "id": "harrypotter-vpx",
+  "name": "Harry Potter & the Goblet of Fire (VPX)",
+  "manufacturer": "Fan-Original (ScottyWic)",
+  "year": 2020,
+  "versions": "VPX-Original v.1 · andere Regeln als der echte JJP-Tisch",
+  "accent": "#b8892c",
+  "thumb": "img/harrypotter-vpx-thumb.jpg",
+  "data": "data/harrypotter-vpx.json"
+ },
+ {
+  "id": "futurama",
+  "name": "Futurama",
+  "manufacturer": "Fan-Original (VPX)",
+  "year": 2024,
+  "versions": "VPX-Original v1.2.2 · kein echter Tisch",
+  "accent": "#2fb7a8",
+  "thumb": "img/futurama-thumb.jpg",
+  "data": "data/futurama.json"
+ },
+ {
+  "id": "bloodmachines",
+  "name": "Blood Machines",
+  "manufacturer": "VPW (VPX-Original)",
+  "year": 2022,
+  "versions": "VPX-Original 2.0 · kein echter Tisch",
+  "accent": "#c3263a",
+  "thumb": "img/bloodmachines-thumb.jpg",
+  "data": "data/bloodmachines.json"
  }
 ]
