@@ -22,5 +22,7 @@ jobs:
       - uses: actions/upload-pages-artifact@v5
         with:
           path: app
+      - name: Kurz warten, bis das Paket registriert ist
+        run: sleep 30
       - id: deployment
         uses: actions/deploy-pages@v5
