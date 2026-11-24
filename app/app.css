@@ -243,10 +243,32 @@ textarea.export { width: 100%; min-height: 120px; background: var(--bg); color: 
 
 .toast { position: fixed; left: 50%; bottom: calc(var(--safe-b) + 24px); transform: translateX(-50%); background: var(--surface-3); border: 1px solid var(--line); border-radius: 12px; padding: 10px 16px; font-size: 14px; z-index: 50; max-width: calc(100% - 32px); }
 
-/* Vollbild: Kopfzeile weg, Panel bleibt – gleicher Ablauf */
+/* Vollbild: Spielfeld randlos, Guide als schwebende Leiste; Panel nur aufgeklappt als Overlay */
+.fs-only { display: none; }
 #table.fs .topbar { display: none; }
+#table.fs .table-main { position: relative; }
+#table.fs .fs-only { display: grid; }
+#table.fs .fs-back { position: absolute; left: 10px; top: calc(var(--safe-t) + 10px); }
 #table.fs .stage-btns { top: calc(var(--safe-t) + 10px); }
-#table.fs .panel.menu, #table.fs .panel.shots { height: 44%; }
+#table.fs .panel { display: none; }
+#table.fs .panel.fs-open {
+  display: flex; position: absolute; left: 8px; right: 8px; bottom: calc(var(--safe-b) + 8px); z-index: 20; margin: 0;
+  max-height: 62%; height: auto; flex: none; border: 1px solid var(--line); border-radius: 18px; padding-bottom: 0; box-shadow: 0 12px 40px rgba(0,0,0,.6);
+}
+#table.fs .panel.fs-open.menu, #table.fs .panel.fs-open.shots { height: 62%; }
+.fs-collapse { flex: none; height: 22px; display: grid; place-items: center; width: 100%; }
+.fs-collapse span { width: 44px; height: 5px; border-radius: 3px; background: var(--surface-3); }
+.fs-bar {
+  position: absolute; left: 8px; right: 8px; bottom: calc(var(--safe-b) + 8px); display: flex; align-items: center; gap: 8px;
+  background: rgba(12,14,17,.9); border: 1px solid var(--line); border-radius: 18px; padding: 7px; backdrop-filter: blur(8px);
+}
+.fs-bar .fb-mid { flex: 1; min-width: 0; text-align: left; display: flex; flex-direction: column; padding: 2px 4px; min-height: 44px; justify-content: center; }
+.fs-bar .fb-k { font-size: 11.5px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.fs-bar .fb-t { font-size: 15px; font-weight: 650; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.fs-bar .fb-nav { flex: none; width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--line); background: var(--surface-2); color: var(--text); display: grid; place-items: center; }
+.fs-bar .fb-nav.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.fs-bar .fb-nav:disabled { opacity: .35; }
+.fs-bar .fb-nav svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
 
 /* Breite Bildschirme: Panel rechts neben dem Spielfeld */
 @media (min-width: 820px) {

@@ -49,6 +49,9 @@
           <svg id="pfSvg" class="pf-svg" aria-hidden="true"></svg>
         </div>
         <div class="stage-ui">
+          <button class="fab fs-only fs-back" id="btnFsLib" aria-label="Zur Tischauswahl">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+          </button>
           <div class="stage-btns">
             <button class="fab" id="btnFs" aria-label="Vollbild">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
@@ -57,6 +60,7 @@
               <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="2"/><circle cx="12" cy="9" r="1.6"/></svg>
             </button>
           </div>
+          <div id="fsBar" class="fs-bar" hidden></div>
           <div id="corrBar" class="corr-bar" hidden>
             <span>Korrekturmodus: markierten Schuss mit dem Finger verschieben</span>
             <button class="pill ghost sm" id="btnCorrReset">Zurücksetzen</button>

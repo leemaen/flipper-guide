@@ -31,6 +31,7 @@
     close: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>',
     fsOn: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>',
     fsOff: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/></svg>',
+    check: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>',
     replay: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7M4 4v4h4"/></svg>',
   };
 
@@ -65,6 +66,7 @@
       const [kind, id, si, li, fr] = demo.split(':');
       const go = () => {
         const G = guideList().flatMap(g => g[1]).find(x => x.kind === kind && x.id === id); if (!G) return;
+        if (new URLSearchParams(location.search).get('fs')) toggleFs(true);
         startGuide(G, G.kicker); st.guide.idx = +si || 0; showStep();
         setTimeout(() => { if (st.anim) st.anim.freeze(+li || 0, fr == null ? 0.6 : +fr); }, 400);
       };
@@ -154,6 +156,8 @@
     if (img.complete && img.naturalWidth) done();
   }
   function stageSize() { const r = stage().getBoundingClientRect(); return { w: r.width, h: r.height }; }
+  // Im Vollbild liegt unten die schwebende Leiste: Spielfeld oberhalb davon einpassen
+  function viewH(S) { if (!$('#table').classList.contains('fs')) return S.h; const b = $('#fsBar'); return S.h - (b && !b.hidden ? b.getBoundingClientRect().height + 14 : 0); }
   function applyTf(animate) {
     const w = $('#pfWrap');
     w.classList.toggle('anim', !!animate);
@@ -165,44 +169,49 @@
     st.tf.s = Math.min(Math.max(st.tf.s, st.fit * 0.9), st.fit * 6);
     const w = v.w * st.tf.s, hh = v.h * st.tf.s;
     st.tf.x = w < S.w ? (S.w - w) / 2 : Math.min(40, Math.max(S.w - w - 40, st.tf.x));
-    st.tf.y = hh < S.h ? (S.h - hh) / 2 : Math.min(40, Math.max(S.h - hh - 40, st.tf.y));
+    const H = viewH(S);
+    st.tf.y = hh < H ? (H - hh) / 2 : Math.min(40, Math.max(H - hh - 40, st.tf.y));
   }
   function fitAll(animate = true) {
     const v = st.data.views[st.view], S = stageSize();
     if (!S.w || !S.h) return;
-    st.fit = Math.min(S.w / v.w, S.h / v.h);
-    st.tf = { s: st.fit, x: (S.w - v.w * st.fit) / 2, y: (S.h - v.h * st.fit) / 2 };
+    const H = viewH(S);
+    st.fit = Math.min(S.w / v.w, H / v.h);
+    st.tf = { s: st.fit, x: (S.w - v.w * st.fit) / 2, y: (H - v.h * st.fit) / 2 };
     applyTf(animate);
   }
   function zoomToBox(b, animate = true) {
     const v = st.data.views[st.view], S = stageSize();
     if (!S.w || !S.h) return;
-    st.fit = Math.min(S.w / v.w, S.h / v.h);
+    const H = viewH(S);
+    st.fit = Math.min(S.w / v.w, H / v.h);
     // Ganze Strecke vom Flipper bis zum Ziel soll sichtbar bleiben: nur mäßig zoomen
     const pad = 46;
     const bw = (b.x1 - b.x0) * v.w, bh = (b.y1 - b.y0) * v.h;
-    let sc = Math.min((S.w - pad * 2) / Math.max(bw, 1), (S.h - pad * 2) / Math.max(bh, 1));
+    let sc = Math.min((S.w - pad * 2) / Math.max(bw, 1), (H - pad * 2) / Math.max(bh, 1));
     sc = Math.min(Math.max(sc, st.fit), st.fit * 2.2);
+    if ($('#table').classList.contains('fs')) sc = st.fit; // Vollbild: immer ganzes Spielfeld, Zoomen nur per Finger
     const cx = (b.x0 + b.x1) / 2 * v.w, cy = (b.y0 + b.y1) / 2 * v.h;
-    st.tf = { s: sc, x: S.w / 2 - cx * sc, y: S.h / 2 - cy * sc };
+    st.tf = { s: sc, x: S.w / 2 - cx * sc, y: H / 2 - cy * sc };
     clampTf(); applyTf(animate);
   }
 
   function setupStage() {
     const el = stage();
     if (el._setup) return; el._setup = true;
-    const pts = new Map(); let last = null, moved = false, dragShot = null, lastTap = 0;
+    const pts = new Map(); let last = null, moved = false, dragShot = null, lastTap = 0, swipe = null;
     el.addEventListener('pointerdown', e => {
       if (e.target.closest('.stage-ui > *')) return;
       const disc = e.target.closest('.disc[data-leg]');
       if (disc && !st.corrMode) { jumpLeg(+disc.dataset.leg); return; }
       const lblEl = e.target.closest('.lbl');
       if (lblEl && !st.corrMode) { const [k, id] = lblEl.dataset.hit.split(':'); openDetail(k, id); return; }
-      el.setPointerCapture(e.pointerId);
+      try { el.setPointerCapture(e.pointerId); } catch { /* z. B. synthetische Ereignisse */ }
       pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
       moved = false;
       if (pts.size === 1) {
         last = { x: e.clientX, y: e.clientY };
+        swipe = { x: e.clientX, y: e.clientY, t: Date.now(), atFit: st.tf.s <= st.fit * 1.05 };
         dragShot = null;
         if (st.corrMode && st.sel && st.sel.items.length === 1) {
           const it = st.sel.items[0];
@@ -240,6 +249,11 @@
       if (!pts.has(e.pointerId)) return;
       pts.delete(e.pointerId);
       if (dragShot) { setCorr(dragShot.it.key, getCorr(dragShot.it.key), true); dragShot = null; redraw(); toast('Korrektur gespeichert'); return; }
+      // Wischen links/rechts im Vollbild (Gesamtansicht) = Schritt wechseln
+      if (pts.size === 0 && moved && swipe && swipe.atFit && st.mode === 'guide' && $('#table').classList.contains('fs')) {
+        const dx = e.clientX - swipe.x, dy = e.clientY - swipe.y;
+        if (Math.abs(dx) > 60 && Math.abs(dy) < 50 && Date.now() - swipe.t < 600) { swipe = null; stepNav(dx < 0 ? 1 : -1); return; }
+      }
       if (pts.size === 0 && !moved) {
         const now = Date.now();
         const under = document.elementFromPoint(e.clientX, e.clientY);
@@ -257,6 +271,7 @@
     new ResizeObserver(() => { if ($('#table').hidden || !st.data) return; clearTimeout(rz); rz = setTimeout(() => (st.sel && st.sel.items.length ? focusSel(false) : fitAll(false)), 60); }).observe(el);
     $('#btnFit').onclick = () => fitAll();
     $('#btnFs').onclick = () => toggleFs();
+    $('#btnFsLib').onclick = () => $('#btnLib').click();
     document.addEventListener('keydown', e => {
       if ($('#table').hidden) return;
       if (e.key === 'Escape' && $('#table').classList.contains('fs')) toggleFs(false);
@@ -268,6 +283,7 @@
   function toggleFs(on) {
     const t = $('#table'); on = on ?? !t.classList.contains('fs');
     t.classList.toggle('fs', on);
+    st.fsOpen = false; renderPanel();
     $('#btnFs').setAttribute('aria-label', on ? 'Vollbild verlassen' : 'Vollbild');
     $('#btnFs').innerHTML = on ? ICON.fsOff : ICON.fsOn;
     try { if (on && document.documentElement.requestFullscreen && !document.fullscreenElement) document.documentElement.requestFullscreen().catch(() => {}); if (!on && document.fullscreenElement) document.exitFullscreen().catch(() => {}); } catch { /* iOS: CSS-Vollbild reicht */ }
@@ -649,7 +665,7 @@
     const steps = G.steps();
     const off = steps[0] && steps[0].ph === 'way' ? 0 : 1;
     st.guide = { ...G, kicker, steps, idx: 0, ph0: i => i + off };
-    st.mode = 'guide'; renderPanel(); showStep();
+    st.mode = 'guide'; st.fsOpen = false; renderPanel(); showStep();
   }
   function stepRoute(step) {
     if (step.ph === 'way') return step.way.map(x => ({ step: x }));
@@ -672,8 +688,32 @@
 
   // ---------- Panel unten (bzw. rechts) ----------
   function renderPanel() {
-    const p = $('#panel'); p.innerHTML = ''; p.className = 'panel ' + st.mode;
+    const p = $('#panel'); p.innerHTML = ''; p.className = 'panel ' + st.mode + (st.fsOpen ? ' fs-open' : '');
+    if ($('#table').classList.contains('fs')) p.append(h('button', { class: 'fs-collapse', 'aria-label': 'Einklappen', onclick: () => { st.fsOpen = false; renderPanel(); } }, h('span', {})));
     ({ menu: panelMenu, guide: panelGuide, shot: panelShot, shots: panelShots })[st.mode](p);
+    renderFsBar();
+  }
+  // Schwebende Leiste im Vollbild: Schritt mit Pfeilen; Mitte antippen klappt das Panel als Overlay auf
+  function renderFsBar() {
+    const b = $('#fsBar'); if (!b) return;
+    const fs = $('#table').classList.contains('fs');
+    const before = b.hidden;
+    b.hidden = !fs || !!st.fsOpen; b.innerHTML = '';
+    const open = () => { st.fsOpen = true; renderPanel(); };
+    if (!b.hidden) {
+      if (st.mode === 'guide' && st.guide) {
+        const G = st.guide, step = G.steps[G.idx], last = G.idx === G.steps.length - 1;
+        b.append(h('button', { class: 'fb-nav', 'aria-label': 'Vorheriger Schritt', disabled: G.idx === 0, onclick: () => stepNav(-1), html: ICON.back }),
+          h('button', { class: 'fb-mid', onclick: open },
+            h('span', { class: 'fb-k' }, `${G.title} · ${G.idx + 1}/${G.steps.length}`), h('span', { class: 'fb-t' }, step.title)),
+          h('button', { class: 'fb-nav primary', 'aria-label': last ? 'Fertig' : 'Nächster Schritt', onclick: () => stepNav(1), html: last ? ICON.check : ICON.chev }));
+      } else {
+        b.append(h('button', { class: 'fb-mid', onclick: open },
+          h('span', { class: 'fb-k' }, st.data ? st.data.table.name : ''), h('span', { class: 'fb-t' }, st.mode === 'menu' ? 'Guide wählen' : 'Liste öffnen')),
+          h('button', { class: 'fb-nav primary', 'aria-label': 'Guide wählen', onclick: open, html: ICON.chev }));
+      }
+    }
+    if (before !== b.hidden && st.data) requestAnimationFrame(() => (st.sel && st.sel.items.length ? focusSel(false) : fitAll(false)));
   }
   function panelMenu(p) {
     p.append(h('div', { class: 'p-head' }, h('div', { class: 'p-title' }, 'Was möchtest du spielen?'), h('div', { class: 'p-hint' }, 'Ziel wählen – die Kugel zeigt dir Schuss für Schuss den Weg.')));
@@ -751,12 +791,12 @@
   function openDetail(kind, id) {
     if (st.mode !== 'shot') st.prevMode = st.mode;
     st.shotInfo = { kind, id };
-    st.mode = 'shot'; renderPanel();
+    st.mode = 'shot'; if ($('#table').classList.contains('fs')) st.fsOpen = true; renderPanel();
     showRoute([{ step: { shots: kind === 'shot' ? [id] : [] } }], { ins: kind === 'ins' ? [id] : [] });
   }
   function backFromDetail() {
     st.mode = st.prevMode && st.prevMode !== 'shot' ? st.prevMode : 'menu';
-    if (st.mode === 'guide' && st.guide) showStep(); else { if (st.mode !== 'shots') clearRoute(); renderPanel(); }
+    if (st.mode === 'guide' && st.guide) { st.fsOpen = false; showStep(); } else { if (st.mode !== 'shots') clearRoute(); renderPanel(); }
   }
   function panelShot(p) {
     const D = st.shotInfo;
