@@ -25,6 +25,7 @@
   };
   const toast = (msg, ms = 2600) => { const t = $('#toast'); t.textContent = msg; t.hidden = false; clearTimeout(toast._t); toast._t = setTimeout(() => (t.hidden = true), ms); };
   const FL = { L: 'linker Flipper', R: 'rechter Flipper', beide: 'beide Flipper', UL: 'oberer linker Flipper', UR: 'oberer rechter Flipper', ML: 'mittlerer linker Flipper' };
+  const flName = k => ((st.data && st.data.table.flipperNames) || {})[k] || FL[k] || k;
   const ICON = {
     chev: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>',
     back: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>',
@@ -325,10 +326,12 @@
   function buildRoute(steps, opts = {}) {
     const items = []; let n = 0;
     for (const { step } of steps) {
-      const ids = (step.shots || []).filter(id => st.data.shots[id]);
+      // Eintrag "ziel@Flipper" = gleiches Ziel, aber von einem bestimmten Flipper aus (z. B. "drops@R")
+      const refs = (step.shots || []).map(r => { const [id, from] = String(r).split('@'); return { id, from: from || null }; }).filter(r => st.data.shots[r.id]);
+      const ids = refs.map(r => r.id);
       const alt = ids.length > 1 && ALT_RE.test(stepText(step));
       if (alt) n++;
-      ids.forEach((id, k) => {
+      refs.forEach(({ id, from }, k) => {
         const sh = st.data.shots[id], g = geomFor('shot', id);
         if (!g) { items.push({ kind: 'shot', id, key: 'shot:' + id, missing: true }); return; }
         const parts = (g.outline || []).length > 1 && !isBumper(id, sh) && (isTarget(id, sh) || isLaneSet(id, sh)) ? g.outline.map((_, i) => i) : [null];
@@ -336,7 +339,7 @@
         if (parts.length > 1) parts.sort((a, b) => { const ca = centroid(g.outline[a]), cb = centroid(g.outline[b]); return Math.abs(ca[0] - cb[0]) > 0.02 ? ca[0] - cb[0] : ca[1] - cb[1]; });
         parts.forEach((part, pi) => {
           const num = alt ? `${n}${String.fromCharCode(97 + k)}` : String(++n);
-          items.push({ kind: 'shot', id, part, nParts: parts.length, pIdx: pi, key: 'shot:' + id, num, alt, stepRef: step });
+          items.push({ kind: 'shot', id, from, part, nParts: parts.length, pIdx: pi, key: 'shot:' + id, num, alt, stepRef: step });
         });
       });
     }
@@ -412,7 +415,8 @@
           // Laufrichtung der Kugel am Ziel (Nummer wird dahinter gesetzt, damit Ziel und Kugel frei bleiben)
           let dir = [0, -1];
           try { const lg = legFor(it); const a = lg.pts[0], b = [ig.center[0] * v.w, ig.center[1] * v.h]; const L = Math.hypot(b[0] - a[0], b[1] - a[1]); if (L > 1) dir = [(b[0] - a[0]) / L, (b[1] - a[1]) / L]; } catch { /* Richtung bleibt oben */ }
-          labels.push({ c: ig.center, dir, name: (bdg ? bdg.name : sh.name), sub: (bdg ? sh.name : sh.en) + partTxt, icon: bdg ? bdg.img : null, num: it.num, leg, kind: 'shot', key: it.key });
+          const fromTxt = it.from ? ' · von ' + flName(it.from) : '';
+          labels.push({ c: ig.center, dir, name: (bdg ? bdg.name : sh.name), sub: (bdg ? sh.name : sh.en) + partTxt + fromTxt, icon: bdg ? bdg.img : null, num: it.num, leg, kind: 'shot', key: it.key });
         } else {
           const r = ig.g.r * v.w;
           for (const p of shiftPts(ig.g.points, ig.o)) {
@@ -535,13 +539,15 @@
       // beide Flipper: den gegenüberliegenden nehmen (flacherer, sicherer Winkel)
       return idx.sort((a, b) => Math.abs(A[b][0][0] - target[0]) - Math.abs(A[a][0][0] - target[0]))[0];
     };
-    const ai = pickAim();
+    let AIM = g.aim, AB = g.aimBall, ai = null;
+    if (it.from && g.aimAll && g.aimAll[it.from]) { AIM = [g.aimAll[it.from]]; AB = [(g.aimAllBall || {})[it.from]]; ai = 0; }
+    else ai = pickAim();
     if (ai != null) {
-      let a = g.aim[ai].map(p => [p[0] + o[0], p[1] + o[1]]);
-      a[0] = g.aim[ai][0]; // Flipperspitze bleibt fest
+      let a = AIM[ai].map(p => [p[0] + o[0], p[1] + o[1]]);
+      a[0] = AIM[ai][0]; // Flipperspitze bleibt fest
       if (it.part != null) a = [a[0], target];
       pts = a.map(px);
-      const ab = (g.aimBall || [])[ai] || [M.ball, M.ball];
+      const ab = (AB || [])[ai] || [M.ball, M.ball];
       d = pts.map((_, i) => (ab[0] + (ab[1] - ab[0]) * (i / Math.max(pts.length - 1, 1))) * W);
       aimLine = pts.slice();
       if (it.part == null && g.path) {
@@ -574,7 +580,7 @@
     const layer = s('g'); svg.append(layer);
     const legs = items.map(it => legFor(it));
     const many = legs.length > 1;
-    if (!many) for (const pl of legs[0].pathLines) layer.append(s('polyline', { class: 'path', points: pl.map(p => p.join(',')).join(' ') }));
+    if (!many) for (const pl of legs[0].pathLines) { const pp = pl.map(p => p.join(',')).join(' '); layer.append(s('polyline', { class: 'path-under', points: pp })); layer.append(s('polyline', { class: 'path', points: pp })); }
     const ballG = s('g', { class: 'ballg' });
     const TRAIL = 4, trail = [];
     for (let i = TRAIL; i >= 1; i--) { const t = s('image', { href: 'img/ball.png', class: 'trail', opacity: (0.22 * (1 - i / (TRAIL + 1))).toFixed(2) }); trail.push(t); ballG.append(t); }
@@ -597,7 +603,7 @@
         const u = s('polyline', { class: 'aim-under', points: pts }); layer.insertBefore(u, ballG); extra.push(u);
         const l = s('polyline', { class: 'aim run', points: pts }); layer.insertBefore(l, ballG); extra.push(l);
       }
-      if (many) for (const pl of q.pathLines) { const l = s('polyline', { class: 'path', points: pl.map(p => p.join(',')).join(' ') }); layer.insertBefore(l, ballG); extra.push(l); }
+      if (many) for (const pl of q.pathLines) { const pp = pl.map(p => p.join(',')).join(' '); const u = s('polyline', { class: 'path-under', points: pp }); layer.insertBefore(u, ballG); extra.push(u); const l = s('polyline', { class: 'path', points: pp }); layer.insertBefore(l, ballG); extra.push(l); }
       hit.style.opacity = 0;
       st.curPath = q.pts; // Beschriftung soll die Kugelbahn nicht verdecken
       markLeg(idx);
@@ -772,10 +778,10 @@
       const shots = st.sel.items.filter(it => it.kind === 'shot');
       if (shots.length > 1) {
         const rc = h('div', { class: 'rchips' });
-        shots.forEach((it, i) => rc.append(h('button', { class: 'rchip' + (i === st.curLeg ? ' on' : ''), 'data-leg': i, onclick: () => jumpLeg(i) }, h('b', {}, it.num), it.nParts > 1 ? (it.pIdx === 0 ? st.data.shots[it.id].name + ' – Ziel 1' : `Ziel ${it.pIdx + 1}`) : st.data.shots[it.id].name)));
+        shots.forEach((it, i) => rc.append(h('button', { class: 'rchip' + (i === st.curLeg ? ' on' : ''), 'data-leg': i, onclick: () => jumpLeg(i) }, h('b', {}, it.num), (it.nParts > 1 ? (it.pIdx === 0 ? st.data.shots[it.id].name + ' – Ziel 1' : `Ziel ${it.pIdx + 1}`) : st.data.shots[it.id].name) + (it.from && (it.nParts <= 1 || it.pIdx === 0) ? ' · von ' + flName(it.from) : ''))));
         body.append(rc);
         const anyAlt = shots.some(it => it.alt);
-        const free = step.ph !== 'way' && !anyAlt && shots.length > 1 && !/dann|danach|zuerst|anschließend|→|reihenfolge/i.test(stepText(step));
+        const free = step.ph !== 'way' && !anyAlt && shots.length > 1 && new Set(shots.map(x => x.id)).size === 1 && !/dann|danach|zuerst|anschließend|→|reihenfolge/i.test(stepText(step));
         if (anyAlt) body.append(h('div', { class: 'g-note' }, 'Buchstaben (2a, 2b …) = eine davon reicht.'));
         else if (free) body.append(h('div', { class: 'g-note' }, 'Alle nötig, Reihenfolge laut Regeln frei.'));
       } else if (!shots.length && !(step.shots || []).length && step.ph !== 'way') body.append(h('div', { class: 'g-note' }, 'Kein fester Schuss – Hinweis lesen.'));
@@ -807,7 +813,7 @@
     if (D.kind === 'shot') {
       const sh = st.data.shots[D.id];
       body.append(h('div', { class: 'en' }, `${sh.en} · ${sh.kind}`),
-        h('div', { class: 'row' }, h('span', { class: 'k' }, 'Schießen von'), sh.flipper ? FL[sh.flipper] || sh.flipper : 'nicht direkt – siehe Beschreibung'),
+        h('div', { class: 'row' }, h('span', { class: 'k' }, 'Schießen von'), sh.flipper ? flName(sh.flipper) : 'nicht direkt – siehe Beschreibung'),
         sh.icon && st.data.icons && st.data.icons[sh.icon] ? h('div', { class: 'row icon-row' }, h('span', { class: 'k' }, 'Sammelt'), h('span', { class: 'ir' }, h('img', { src: st.data.icons[sh.icon].img, alt: '' }), st.data.icons[sh.icon].name)) : null,
         h('div', { class: 'row' }, h('span', { class: 'k' }, 'Was ist das?'), sh.what),
         h('div', { class: 'row' }, h('span', { class: 'k' }, 'Wohin läuft die Kugel?'), sh.returns),
@@ -842,7 +848,7 @@
   }
   function srcText(ids) {
     if (!ids || !ids.length) return 'Keine Quelle – ehrlich offen.';
-    const names = { rules: st.data && st.data.table.id === 'harrypotter' ? 'Regel-Flowchart' : 'Rulesheet', manual: 'Hersteller-Handbuch', vpw: 'VPX-Tischdatei', vpx: 'VPX-Tischdatei', photo: 'Foto', rules10: 'Rulesheet 1.0', script: 'Tisch-Script', card: 'Spielanleitung' };
+    const names = { rules: st.data && st.data.table.id === 'harrypotter' ? 'Regel-Flowchart' : 'Rulesheet', manual: 'Hersteller-Handbuch', vpw: 'VPX-Tischdatei', vpx: 'VPX-Tischdatei', photo: 'Foto', rules10: 'Rulesheet 1.0', script: 'Tisch-Script', card: 'Spielanleitung', kineticist: 'Kineticist-Tutorial', cards: 'pinballcards.net', wiki: 'Wiki-Rulesheet' };
     return 'Quelle: ' + ids.map(i => names[i] || i).join(', ');
   }
 

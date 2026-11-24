@@ -79,7 +79,8 @@ a { color: var(--accent); }
 .aim-under { fill: none; stroke: rgba(0,0,0,.6); stroke-width: 7; vector-effect: non-scaling-stroke; stroke-linecap: round; }
 .aim.run { animation: dash 0.9s linear infinite; }
 @keyframes dash { to { stroke-dashoffset: -30; } }
-.path { fill: none; stroke: var(--path); stroke-width: 2.5; vector-effect: non-scaling-stroke; stroke-opacity: .55; stroke-linecap: round; stroke-linejoin: round; }
+.path { fill: none; stroke: var(--path); stroke-width: 3; vector-effect: non-scaling-stroke; stroke-opacity: .9; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 2 7; }
+.path-under { fill: none; stroke: rgba(0,0,0,.55); stroke-width: 7; vector-effect: non-scaling-stroke; stroke-linecap: round; stroke-linejoin: round; }
 .path.p2 { stroke-dasharray: 3 6; }
 .ball-img { filter: drop-shadow(0 0 1px rgba(0,0,0,.6)); }
 .ball-shadow { fill: #000; opacity: .45; filter: blur(2px); }

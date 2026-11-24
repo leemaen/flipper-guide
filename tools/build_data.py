@@ -111,6 +111,9 @@ def build():
                     keys = ['L', 'R'] if fl == 'beide' else (fl if isinstance(fl, list) else [fl])
                     gv['aim'] = [proj(vk, [geo['flippers'][k]['aim'], items[0]['c']]) for k in keys]
                     gv['aimBall'] = [ball_d(vk, [geo['flippers'][k]['aim'], items[0]['c']]) for k in keys]
+                # Zielrichtung von jedem Flipper (fuer Schritte wie "drops@R": gleiches Ziel von anderem Flipper)
+                gv['aimAll'] = {k: proj(vk, [f['aim'], items[0]['c']]) for k, f in geo['flippers'].items()}
+                gv['aimAllBall'] = {k: ball_d(vk, [f['aim'], items[0]['c']]) for k, f in geo['flippers'].items()}
                 for pk in ('path', 'path2'):
                     if pk in g:
                         gv[pk] = proj(vk, g[pk])
