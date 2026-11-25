@@ -323,13 +323,26 @@
 
   // steps: [{ step, ph? }] – mehrere Schritte (Gesamtablauf) oder einer
   // opts: { badges, ins }  →  { items, single, steps, opts }
+  // Hauptschüsse des Tisches (Orbits, Rampen, Loops, Mulden …), von links nach rechts
+  function majorShots() {
+    const out = [];
+    for (const [id, sh] of Object.entries(st.data.shots)) {
+      const g = geomFor('shot', id); if (!g || isLaneSet(id, sh) || isBumper(id, sh) || isPlunger(id, sh)) continue;
+      const k = sh.kind || '';
+      if (/^(ziel|ziele|target)/i.test(k)) continue;
+      if (/orbit|ramp|rampe|loop|schleife|scoop|mulde|u-turn|vuk|bahn|lane|spinner|saucer|kessel/i.test(k) && (g.outline || []).length === 1) out.push([id, g.center[0]]);
+    }
+    return out.sort((a, b) => a[1] - b[1]).map(x => x[0]);
+  }
   function buildRoute(steps, opts = {}) {
     const items = []; let n = 0;
     for (const { step } of steps) {
       // Eintrag "ziel@Flipper" = gleiches Ziel, aber von einem bestimmten Flipper aus (z. B. "drops@R")
-      const refs = (step.shots || []).map(r => { const [id, from] = String(r).split('@'); return { id, from: from || null }; }).filter(r => st.data.shots[r.id]);
+      // step.lit: "beleuchtete/farbige Schüsse" ohne feste Liste → alle Hauptschüsse als Alternativen zeigen
+      const raw = (step.shots && step.shots.length) ? step.shots : (step.lit ? majorShots() : []);
+      const refs = raw.map(r => { const [id, from] = String(r).split('@'); return { id, from: from || null }; }).filter(r => st.data.shots[r.id]);
       const ids = refs.map(r => r.id);
-      const alt = ids.length > 1 && ALT_RE.test(stepText(step));
+      const alt = ids.length > 1 && (!!step.lit || ALT_RE.test(stepText(step)));
       if (alt) n++;
       refs.forEach(({ id, from }, k) => {
         const sh = st.data.shots[id], g = geomFor('shot', id);
@@ -579,6 +592,19 @@
     const svg = $('#pfSvg'), v = st.data.views[st.view];
     const layer = s('g'); svg.append(layer);
     const legs = items.map(it => legFor(it));
+    // Zuspiel: kommt der nächste Schuss von einem oberen Flipper (ziel@UL usw.) und kennt der vorige Schuss keinen
+    // eigenen Bahnverlauf dorthin, wird ein schematischer Rücklauf (gestrichelt) vom Eingang zum Flipper eingefügt.
+    for (let i = 1; i < legs.length; i++) {
+      const it = items[i], prev = legs[i - 1], cur = legs[i];
+      if (!it.from || /^(L|R)$/.test(it.from) || !cur.pts.length) continue;
+      const a = prev.aimLine ? prev.aimLine[prev.aimLine.length - 1] : prev.pts[prev.pts.length - 1], b = cur.pts[0];
+      if (prev.pathLines.length) { const e = prev.pathLines[prev.pathLines.length - 1].slice(-1)[0]; if (Math.hypot(e[0] - b[0], e[1] - b[1]) < v.w * 0.08) continue; }
+      const top = Math.min(a[1], b[1]) - v.h * 0.07, mx = (a[0] + b[0]) / 2;
+      const curve = []; for (let k = 0; k <= 16; k++) { const t = k / 16, u = 1 - t; curve.push([u * u * a[0] + 2 * u * t * mx + t * t * b[0], u * u * a[1] + 2 * u * t * top + t * t * b[1]]); }
+      const D = cur.d[0] || v.w * 0.05;
+      cur.pts = curve.concat(cur.pts.slice(1)); cur.d = curve.map(() => D).concat(cur.d.slice(1));
+      cur.feed = curve; cur.aimStart = curve.length - 1;
+    }
     const many = legs.length > 1;
     if (!many) for (const pl of legs[0].pathLines) { const pp = pl.map(p => p.join(',')).join(' '); layer.append(s('polyline', { class: 'path-under', points: pp })); layer.append(s('polyline', { class: 'path', points: pp })); }
     const ballG = s('g', { class: 'ballg' });
@@ -603,6 +629,7 @@
         const u = s('polyline', { class: 'aim-under', points: pts }); layer.insertBefore(u, ballG); extra.push(u);
         const l = s('polyline', { class: 'aim run', points: pts }); layer.insertBefore(l, ballG); extra.push(l);
       }
+      if (q.feed) { const fp = q.feed.map(p => p.join(',')).join(' '); const u = s('polyline', { class: 'path-under', points: fp }); layer.insertBefore(u, ballG); extra.push(u); const l = s('polyline', { class: 'path feed', points: fp }); layer.insertBefore(l, ballG); extra.push(l); }
       if (many) for (const pl of q.pathLines) { const pp = pl.map(p => p.join(',')).join(' '); const u = s('polyline', { class: 'path-under', points: pp }); layer.insertBefore(u, ballG); extra.push(u); const l = s('polyline', { class: 'path', points: pp }); layer.insertBefore(l, ballG); extra.push(l); }
       hit.style.opacity = 0;
       st.curPath = q.pts; // Beschriftung soll die Kugelbahn nicht verdecken
@@ -617,7 +644,7 @@
     const place = (el, p) => { el.setAttribute('x', p[0] - p[2] / 2); el.setAttribute('y', p[1] - p[2] / 2); el.setAttribute('width', p[2]); el.setAttribute('height', p[2]); };
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     // Zeitpunkt, an dem die Kugel den Eingang/das Ziel erreicht (Ende der Zielrichtung)
-    legs.forEach(q => { const aimEnd = q.aimLine ? seglen(q.aimLine).slice(-1)[0] : q.total; q.hitAt = aimEnd; });
+    legs.forEach(q => { const aimEnd = q.aimLine ? seglen(q.aimLine).slice(-1)[0] : q.total; q.hitAt = Math.min(q.total, aimEnd + (q.feed ? seglen(q.feed).slice(-1)[0] : 0)); });
     setup();
     const tick = now => {
       let q = legs[idx]; let t = now - t0;
@@ -782,7 +809,8 @@
         body.append(rc);
         const anyAlt = shots.some(it => it.alt);
         const free = step.ph !== 'way' && !anyAlt && shots.length > 1 && new Set(shots.map(x => x.id)).size === 1 && !/dann|danach|zuerst|anschließend|→|reihenfolge/i.test(stepText(step));
-        if (anyAlt) body.append(h('div', { class: 'g-note' }, 'Buchstaben (2a, 2b …) = eine davon reicht.'));
+        if (step.lit && !(step.shots || []).length) body.append(h('div', { class: 'g-note' }, typeof step.lit === 'string' ? step.lit : 'Welche Schüsse leuchten, wechselt – die Kugel zeigt alle Hauptschüsse; auf die Pfeile im Spielfeld achten.'));
+        else if (anyAlt) body.append(h('div', { class: 'g-note' }, 'Buchstaben (2a, 2b …) = eine davon reicht.'));
         else if (free) body.append(h('div', { class: 'g-note' }, 'Alle nötig, Reihenfolge laut Regeln frei.'));
       } else if (!shots.length && !(step.shots || []).length && step.ph !== 'way') body.append(h('div', { class: 'g-note' }, 'Kein fester Schuss – Hinweis lesen.'));
       else if (!shots.length) body.append(h('div', { class: 'g-note warn' }, 'Diese Stelle ist im Spielfeldbild nicht markiert (siehe Info → Grenzen).'));

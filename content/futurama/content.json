@@ -1,183 +1,983 @@
 {
  "table": {
-  "id": "futurama", "name": "Futurama", "short": "Futurama", "manufacturer": "Fan-Original (VPX)", "year": 2024,
-  "system": "Visual Pinball X, eigenes Regel-Script (kein ROM)", "design": "Wizball (Script/Layout), Joe Picasso (Artwork)",
+  "id": "futurama",
+  "name": "Futurama",
+  "short": "Futurama",
+  "manufacturer": "Fan-Original (VPX)",
+  "year": 2024,
+  "system": "Visual Pinball X, eigenes Regel-Script (kein ROM)",
+  "design": "Wizball (Script/Layout), Joe Picasso (Artwork)",
   "editions": "Nur virtuell: „Futurama (Original 2024)“ v1.2.2 für VPX (Tischdatei v1.2, gespeichert 30.04.2026). Ein echter Futurama-Flipper ist mir nicht bekannt.",
   "ruleVersion": "Regeln direkt aus dem Tisch-Script v1.2.2 (Änderungsprotokoll bis „1.2.2 (wb)“) und der eingebauten Regelkarte. Punktwerte = Script-Konstanten, vor Playfield-Multiplikator.",
-  "accent": "#2fb7a8", "contentDate": "2026-11-08"
+  "accent": "#2fb7a8",
+  "contentDate": "2026-11-08"
  },
  "sources": [
-  { "id": "script", "title": "Tisch-Script „Futurama (Original 2024) v1.2.2.vpx“ (Wizball u. a.)", "url": "", "use": "Alle Regeln und Punktwerte: Schüsse (ShotHit), Modi, Multibälle, Skillshot, Kombos, Mystery, Blast, Playfield-X, Selbstmordkabine." },
-  { "id": "card", "title": "Eingebaute Regelkarte (Bild „vpwinstrcard“) und Tisch-Info (table_rules)", "url": "", "use": "Kurzregeln des Autors: Modi am unteren Scoop, Multibaseball über die äußeren Orbits, Bender-Multiball über die Bahn mit drei Fallzielen, BLAST, Playfield X, Mystery, Kombos." },
-  { "id": "vpx", "title": "Tischdatei: Schalter-, Kicker-, Wand-, Rampen- und Licht-Positionen (entpackt mit vpxtool 0.33.10)", "url": "", "use": "Exakte Lage aller Eingänge, Ziele und Einsätze; Ansicht als Draufsicht aus Spielfeld-Artwork und 3D-Objekten der Datei." },
-  { "id": "ball", "title": "Kugelbild: Lucasbosch, Wikimedia Commons, CC BY-SA 3.0", "url": "https://commons.wikimedia.org/wiki/File:Stainless_steel_1.4034_X46Cr13_bearing_ball_60mm_G100_removed_camera.jpg", "use": "Animierte Flipperkugel (bearbeitet, CC BY-SA 3.0)." }
+  {
+   "id": "script",
+   "title": "Tisch-Script „Futurama (Original 2024) v1.2.2.vpx“ (Wizball u. a.)",
+   "url": "",
+   "use": "Alle Regeln und Punktwerte: Schüsse (ShotHit), Modi, Multibälle, Skillshot, Kombos, Mystery, Blast, Playfield-X, Selbstmordkabine."
+  },
+  {
+   "id": "card",
+   "title": "Eingebaute Regelkarte (Bild „vpwinstrcard“) und Tisch-Info (table_rules)",
+   "url": "",
+   "use": "Kurzregeln des Autors: Modi am unteren Scoop, Multibaseball über die äußeren Orbits, Bender-Multiball über die Bahn mit drei Fallzielen, BLAST, Playfield X, Mystery, Kombos."
+  },
+  {
+   "id": "vpx",
+   "title": "Tischdatei: Schalter-, Kicker-, Wand-, Rampen- und Licht-Positionen (entpackt mit vpxtool 0.33.10)",
+   "url": "",
+   "use": "Exakte Lage aller Eingänge, Ziele und Einsätze; Ansicht als Draufsicht aus Spielfeld-Artwork und 3D-Objekten der Datei."
+  },
+  {
+   "id": "ball",
+   "title": "Kugelbild: Lucasbosch, Wikimedia Commons, CC BY-SA 3.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Stainless_steel_1.4034_X46Cr13_bearing_ball_60mm_G100_removed_camera.jpg",
+   "use": "Animierte Flipperkugel (bearbeitet, CC BY-SA 3.0)."
+  }
  ],
  "views": {
-  "vpx": { "label": "VPX (Draufsicht)", "note": "Draufsicht aus der Tischdatei gerechnet: Spielfeld-Artwork plus 3D-Objekte von oben, ohne Perspektive. Rampen sind halbdurchsichtig bzw. als Drahtlinien eingezeichnet. Einsätze leuchten alle, damit man sie findet." }
+  "vpx": {
+   "label": "VPX (Draufsicht)",
+   "note": "Draufsicht aus der Tischdatei gerechnet: Spielfeld-Artwork plus 3D-Objekte von oben, ohne Perspektive. Rampen sind halbdurchsichtig bzw. als Drahtlinien eingezeichnet. Einsätze leuchten alle, damit man sie findet."
+  }
  },
  "shots": {
-  "left_lane": { "name": "Linke Bahn (Spinner)", "en": "Left Lane", "kind": "Bahn mit Spinner", "flipper": "R",
+  "left_lane": {
+   "name": "Linke Bahn (Spinner)",
+   "en": "Left Lane",
+   "kind": "Bahn mit Spinner",
+   "flipper": "R",
    "what": "Bahn links unten mit Spinner, vor dem Einsatz „Add Time“. Zählt als Schuss, sobald sich der Spinner dreht.",
    "returns": "Die Bahn führt nach oben links in Richtung Bumper.",
-   "awards": ["Jede Spinner-Drehung: +2 Sekunden für laufende Modi und Pause für den sinkenden Playfield-Multiplikator", "Zählt als Schuss „Left Lane“ für Modi und Kombos"],
-   "visibility": "Eingang sichtbar. Spinner = Schalter „Spinner3“.", "sources": ["script", "vpx"] },
-  "lower_scoop": { "name": "Unterer Scoop", "en": "Lower Scoop", "kind": "Scoop", "flipper": "R",
+   "awards": [
+    "Jede Spinner-Drehung: +2 Sekunden für laufende Modi und Pause für den sinkenden Playfield-Multiplikator",
+    "Zählt als Schuss „Left Lane“ für Modi und Kombos"
+   ],
+   "visibility": "Eingang sichtbar. Spinner = Schalter „Spinner3“.",
+   "sources": [
+    "script",
+    "vpx"
+   ]
+  },
+  "lower_scoop": {
+   "name": "Unterer Scoop",
+   "en": "Lower Scoop",
+   "kind": "Scoop",
+   "flipper": "R",
    "what": "Loch links in der Mitte, neben dem Wegweiser-Schild. Der wichtigste Schuss: hier startet man Modi und holt Belohnungen ab.",
    "returns": "Wirft die Kugel nach unten wieder aus.",
-   "awards": ["Modus wählen und starten (wenn kein Modus und kein Multiball läuft)", "Mystery abholen (nach 3 Treffern am lila Ziel)", "Kombo-Belohnung abholen (alle 5 Kombos), u. a. Extraball", "Wizard-Modi nach 3, 6 und 9 abgeschlossenen Modi"],
-   "visibility": "Sichtbar. Schalter „KickerLeft“.", "sources": ["script", "card", "vpx"] },
-  "left_loop": { "name": "Linker Loop (äußerer Orbit)", "en": "Left Loop / Outer Orbit", "kind": "Orbit", "flipper": "R",
+   "awards": [
+    "Modus wählen und starten (wenn kein Modus und kein Multiball läuft)",
+    "Mystery abholen (nach 3 Treffern am lila Ziel)",
+    "Kombo-Belohnung abholen (alle 5 Kombos), u. a. Extraball",
+    "Wizard-Modi nach 3, 6 und 9 abgeschlossenen Modi"
+   ],
+   "visibility": "Sichtbar. Schalter „KickerLeft“.",
+   "sources": [
+    "script",
+    "card",
+    "vpx"
+   ]
+  },
+  "left_loop": {
+   "name": "Linker Loop (äußerer Orbit)",
+   "en": "Left Loop / Outer Orbit",
+   "kind": "Orbit",
+   "flipper": "R",
    "what": "Äußere Umlaufbahn links. Eingang links vom oberen linken Flipper, der Pfeil liegt weiter unten zwischen den Bumpern auf der Schusslinie.",
    "returns": "Läuft oben um das Spielfeld herum und rechts herunter zum oberen rechten Flipper.",
-   "awards": ["Basemultiball: beleuchtet den Lock (wenn „Light Lock“ links leuchtet)", "Bender-Multiball: entzündet die Jackpots neu (5 Mio.)", "Basemultiball-Jackpot, wenn grün"],
-   "visibility": "Eingang teils unter den Drahtrampen. Schalter „TriggerLeftLoop“ + „TriggerLoopUpper“.", "sources": ["script", "card", "vpx"] },
-  "side_loop": { "name": "Seiten-Loop", "en": "Side Loop", "kind": "Orbit", "flipper": "UR",
+   "awards": [
+    "Basemultiball: beleuchtet den Lock (wenn „Light Lock“ links leuchtet)",
+    "Bender-Multiball: entzündet die Jackpots neu (5 Mio.)",
+    "Basemultiball-Jackpot, wenn grün"
+   ],
+   "visibility": "Eingang teils unter den Drahtrampen. Schalter „TriggerLeftLoop“ + „TriggerLoopUpper“.",
+   "sources": [
+    "script",
+    "card",
+    "vpx"
+   ]
+  },
+  "side_loop": {
+   "name": "Seiten-Loop",
+   "en": "Side Loop",
+   "kind": "Orbit",
+   "flipper": "UR",
    "what": "Schmale Bahn rechts neben dem äußeren Orbit, links vom oberen Scoop (mit ovalem Einsatz).",
    "returns": "Mündet oben in den Orbit und läuft rechts herunter zum oberen rechten Flipper.",
-   "awards": ["Skillshot, wenn grün", "Basemultiball: Super Jackpot 60 Mio. (beide Jackpots hier: 120 Mio.)", "Slurm-Wizard: Super Jackpot"],
-   "visibility": "Sichtbar. Schalter „TriggerLoopSide“.", "sources": ["script", "vpx"] },
-  "upper_scoop": { "name": "Oberer Scoop", "en": "Upper Scoop", "kind": "Loch (Grube) mit VUK", "flipper": "UR",
+   "awards": [
+    "Skillshot, wenn grün",
+    "Basemultiball: Super Jackpot 60 Mio. (beide Jackpots hier: 120 Mio.)",
+    "Slurm-Wizard: Super Jackpot"
+   ],
+   "visibility": "Sichtbar. Schalter „TriggerLoopSide“.",
+   "sources": [
+    "script",
+    "vpx"
+   ]
+  },
+  "upper_scoop": {
+   "name": "Oberer Scoop",
+   "en": "Upper Scoop",
+   "kind": "Loch (Grube) mit VUK",
+   "flipper": "UR",
    "what": "Grube oben links unter der Metallabdeckung. Die Kugel rollt von unten/rechts hinein oder fällt von oben aus der Lock-Bahn hinein. Der Pfeil liegt dahinter (oberhalb).",
    "returns": "Unterflur zum VUK ganz links, der die Kugel auf die Drahtbahn der linken Rampe schießt – zurück zum linken Flipper.",
-   "awards": ["Lock für den Basemultiball (wenn beleuchtet), 3. Lock startet ihn", "Skillshot, wenn grün", "Basemultiball-Jackpot, wenn grün"],
-   "visibility": "Grube sichtbar, Abdeckung darüber. Schalter „TriggerScoopDrop“/„Kicker001“.", "sources": ["script", "card", "vpx"] },
-  "left_ramp": { "name": "Linke Rampe", "en": "Left Ramp", "kind": "Rampe", "flipper": "R",
+   "awards": [
+    "Lock für den Basemultiball (wenn beleuchtet), 3. Lock startet ihn",
+    "Skillshot, wenn grün",
+    "Basemultiball-Jackpot, wenn grün"
+   ],
+   "visibility": "Grube sichtbar, Abdeckung darüber. Schalter „TriggerScoopDrop“/„Kicker001“.",
+   "sources": [
+    "script",
+    "card",
+    "vpx"
+   ]
+  },
+  "left_ramp": {
+   "name": "Linke Rampe",
+   "en": "Left Ramp",
+   "kind": "Rampe",
+   "flipper": "R",
    "what": "Rampe links der Mitte mit kleinem Looping oben.",
    "returns": "Drahtbahn links herunter zur linken Inlane – zum linken Flipper.",
-   "awards": ["Basemultiball-Start-Jackpot (grün)", "Skillshot, wenn grün", "Danach leuchten Kombos auf Center Lane, rechter Rampe, Bender-Bahn, rechtem Loop"],
-   "visibility": "Sichtbar. Schalter „ramptrigger04“.", "sources": ["script", "vpx"] },
-  "center_lane": { "name": "Center Lane (oberer Spinner)", "en": "Center Lane", "kind": "Bahn", "flipper": "beide",
+   "awards": [
+    "Basemultiball-Start-Jackpot (grün)",
+    "Skillshot, wenn grün",
+    "Danach leuchten Kombos auf Center Lane, rechter Rampe, Bender-Bahn, rechtem Loop"
+   ],
+   "visibility": "Sichtbar. Schalter „ramptrigger04“.",
+   "sources": [
+    "script",
+    "vpx"
+   ]
+  },
+  "center_lane": {
+   "name": "Center Lane (oberer Spinner)",
+   "en": "Center Lane",
+   "kind": "Bahn",
+   "flipper": "beide",
    "what": "Schräge Bahn in der Mitte mit Spinner, sie führt nach oben rechts in den Orbit.",
    "returns": "Läuft durch den Orbit rechts herunter.",
-   "awards": ["Skillshot, wenn grün", "Omicron Persei 8: Regenbogen-Pfeil fügt einen gelben Schuss hinzu", "Oberer Spinner zählt für Omicron Persei 8"],
-   "visibility": "Sichtbar. Schalter „TriggerLoopCenter“ + „TriggerLoopRight“, Spinner „Spinner“.", "sources": ["script", "vpx"] },
-  "right_ramp": { "name": "Rechte Rampe (Förderband)", "en": "Right Ramp", "kind": "Rampe", "flipper": "L",
+   "awards": [
+    "Skillshot, wenn grün",
+    "Omicron Persei 8: Regenbogen-Pfeil fügt einen gelben Schuss hinzu",
+    "Oberer Spinner zählt für Omicron Persei 8"
+   ],
+   "visibility": "Sichtbar. Schalter „TriggerLoopCenter“ + „TriggerLoopRight“, Spinner „Spinner“.",
+   "sources": [
+    "script",
+    "vpx"
+   ]
+  },
+  "right_ramp": {
+   "name": "Rechte Rampe (Förderband)",
+   "en": "Right Ramp",
+   "kind": "Rampe",
+   "flipper": "L",
    "what": "Breite, steile Rampe rechts der Mitte (Förderband-Optik) hinter dem Pfeil.",
    "returns": "Oben quer über den Tisch, links herunter und unten zurück zur rechten Inlane – zum rechten Flipper.",
-   "awards": ["Basemultiball-Start-Jackpot (grün)", "Feminista-Wizard: 12 Mio. × Kugeln im Spiel", "Danach leuchten Kombos auf linker Bahn, linkem Loop, unterem Scoop, linker Rampe, Center Lane"],
-   "visibility": "Sichtbar. Schalter „TriggerRightRamp“ (oben auf der Rampe).", "sources": ["script", "vpx"] },
-  "bender_lane": { "name": "Bender-Bahn (3 Fallziele)", "en": "Bender Lane / Inline Drops", "kind": "Bahn mit 3 Fallzielen + Ziel am Ende", "flipper": "L",
+   "awards": [
+    "Basemultiball-Start-Jackpot (grün)",
+    "Feminista-Wizard: 12 Mio. × Kugeln im Spiel",
+    "Danach leuchten Kombos auf linker Bahn, linkem Loop, unterem Scoop, linker Rampe, Center Lane"
+   ],
+   "visibility": "Sichtbar. Schalter „TriggerRightRamp“ (oben auf der Rampe).",
+   "sources": [
+    "script",
+    "vpx"
+   ]
+  },
+  "bender_lane": {
+   "name": "Bender-Bahn (3 Fallziele)",
+   "en": "Bender Lane / Inline Drops",
+   "kind": "Bahn mit 3 Fallzielen + Ziel am Ende",
+   "flipper": "L",
    "what": "Gerade Bahn rechts oben mit drei Fallzielen (Bierflaschen) hintereinander und einem Ziel am Ende.",
    "returns": "Prallt zurück; im Lock bleibt die Kugel in der Bahn liegen.",
-   "awards": ["Bender-Multiball: Kugeln hier locken", "Im Bender-Multiball: 3 Fallziele = Super Jackpot leuchtet, Ziel am Ende = 80 Mio."],
-   "visibility": "Sichtbar. Schalter sw1–sw3 (Fallziele) und sw13 (Ende).", "sources": ["script", "card", "vpx"] },
-  "right_loop": { "name": "Rechter Loop", "en": "Right Loop", "kind": "Orbit", "flipper": "L",
+   "awards": [
+    "Bender-Multiball: Kugeln hier locken",
+    "Im Bender-Multiball: 3 Fallziele = Super Jackpot leuchtet, Ziel am Ende = 80 Mio."
+   ],
+   "visibility": "Sichtbar. Schalter sw1–sw3 (Fallziele) und sw13 (Ende).",
+   "sources": [
+    "script",
+    "card",
+    "vpx"
+   ]
+  },
+  "right_loop": {
+   "name": "Rechter Loop",
+   "en": "Right Loop",
+   "kind": "Orbit",
+   "flipper": "L",
    "what": "Orbit-Eingang rechts, oberhalb des oberen rechten Flippers.",
    "returns": "Läuft rechts hoch und oben herum.",
-   "awards": ["Basemultiball: beleuchtet den Lock (wenn „Light Lock“ rechts leuchtet)", "Basemultiball-Jackpot, wenn grün"],
-   "visibility": "Sichtbar. Schalter „TriggerRightLoopEnter“.", "sources": ["script", "card", "vpx"] },
-  "slugs": { "name": "Hirnschnecken (Slugs)", "en": "Brain Slugs (left / right)", "kind": "Hochfahrende Ziele", "flipper": "beide",
+   "awards": [
+    "Basemultiball: beleuchtet den Lock (wenn „Light Lock“ rechts leuchtet)",
+    "Basemultiball-Jackpot, wenn grün"
+   ],
+   "visibility": "Sichtbar. Schalter „TriggerRightLoopEnter“.",
+   "sources": [
+    "script",
+    "card",
+    "vpx"
+   ]
+  },
+  "slugs": {
+   "name": "Hirnschnecken (Slugs)",
+   "en": "Brain Slugs (left / right)",
+   "kind": "Hochfahrende Ziele",
+   "flipper": "beide",
    "what": "Zwei Hirnschnecken, die aus dem Spielfeld hochfahren: links oberhalb des Playfield-X-Ziels, rechts daneben. Nur im Modus „Slug Invasion“ oben.",
    "returns": "Prallt zurück, die Schnecke fährt wieder ein.",
-   "awards": ["Slug Invasion: 15 Mio. je Treffer, abwechselnd links und rechts"],
-   "visibility": "Nur sichtbar, wenn hochgefahren.", "sources": ["script", "vpx"] },
-  "blast_drops": { "name": "B-L-A-S-T-Fallziele", "en": "BLAST drop targets", "kind": "5 Fallziele", "flipper": "L",
+   "awards": [
+    "Slug Invasion: 15 Mio. je Treffer, abwechselnd links und rechts"
+   ],
+   "visibility": "Nur sichtbar, wenn hochgefahren.",
+   "sources": [
+    "script",
+    "vpx"
+   ]
+  },
+  "blast_drops": {
+   "name": "B-L-A-S-T-Fallziele",
+   "en": "BLAST drop targets",
+   "kind": "5 Fallziele",
+   "flipper": "L",
    "what": "Fünf Fallziele rechts in einer Reihe, vor den Buchstaben B-L-A-S-T.",
    "returns": "Prallt zurück.",
-   "awards": ["Alle fünf = 1 Blast (maximal 3 gespeichert)", "Skillshot beim Abschuss"],
-   "visibility": "Sichtbar.", "sources": ["script", "card", "vpx"] },
-  "mystery_target": { "name": "Lila Mystery-Ziel", "en": "Mystery target", "kind": "Ziel", "flipper": "R",
+   "awards": [
+    "Alle fünf = 1 Blast (maximal 3 gespeichert)",
+    "Skillshot beim Abschuss"
+   ],
+   "visibility": "Sichtbar.",
+   "sources": [
+    "script",
+    "card",
+    "vpx"
+   ]
+  },
+  "mystery_target": {
+   "name": "Lila Mystery-Ziel",
+   "en": "Mystery target",
+   "kind": "Ziel",
+   "flipper": "R",
    "what": "Kleines Ziel unter dem rechten Bumper, vor „Light ????“.",
    "returns": "Prallt zurück.",
-   "awards": ["Drei Treffer = Mystery leuchtet am unteren Scoop"],
-   "visibility": "Sichtbar. Schalter sw12.", "sources": ["script", "card", "vpx"] },
-  "px_spinner": { "name": "Playfield-X-Spinner", "en": "Side Spinner (Playfield X)", "kind": "Spinner", "flipper": "UL",
+   "awards": [
+    "Drei Treffer = Mystery leuchtet am unteren Scoop"
+   ],
+   "visibility": "Sichtbar. Schalter sw12.",
+   "sources": [
+    "script",
+    "card",
+    "vpx"
+   ]
+  },
+  "px_spinner": {
+   "name": "Playfield-X-Spinner",
+   "en": "Side Spinner (Playfield X)",
+   "kind": "Spinner",
+   "flipper": "UL",
    "what": "Spinner über dem rechten Bumper, links neben der Playfield-X-Anzeige.",
    "returns": "Läuft durch.",
-   "awards": ["Jede Drehung: Playfield-Multiplikator +0,1 (bis 5,0×). Er sinkt nach kurzer Pause wieder.", "Skillshot beim Abschuss"],
-   "visibility": "Sichtbar. Schalter „Spinner2“. Flipper aus der Lage abgeleitet.", "sources": ["script", "card", "vpx"] },
-  "bumpers": { "name": "Bumper", "en": "Pop Bumpers", "kind": "Bumper", "flipper": null,
-   "what": "Drei Bumper links in der Mitte.", "returns": "Die Kugel springt zwischen den Bumpern.",
-   "awards": ["Super Bumpers (Kombo-Belohnung): 2 Mio. je Treffer"], "visibility": "Sichtbar.", "sources": ["script", "vpx"] },
-  "booth": { "name": "Selbstmordkabine", "en": "Suicide Booth", "kind": "Kabine hinter der rechten Outlane", "flipper": null,
+   "awards": [
+    "Jede Drehung: Playfield-Multiplikator +0,1 (bis 5,0×). Er sinkt nach kurzer Pause wieder.",
+    "Skillshot beim Abschuss"
+   ],
+   "visibility": "Sichtbar. Schalter „Spinner2“. Flipper aus der Lage abgeleitet.",
+   "sources": [
+    "script",
+    "card",
+    "vpx"
+   ]
+  },
+  "bumpers": {
+   "name": "Bumper",
+   "en": "Pop Bumpers",
+   "kind": "Bumper",
+   "flipper": null,
+   "what": "Drei Bumper links in der Mitte.",
+   "returns": "Die Kugel springt zwischen den Bumpern.",
+   "awards": [
+    "Super Bumpers (Kombo-Belohnung): 2 Mio. je Treffer"
+   ],
+   "visibility": "Sichtbar.",
+   "sources": [
+    "script",
+    "vpx"
+   ]
+  },
+  "booth": {
+   "name": "Selbstmordkabine",
+   "en": "Suicide Booth",
+   "kind": "Kabine hinter der rechten Outlane",
+   "flipper": null,
    "what": "Kabine unter der rechten Outlane. Fällt die Kugel rechts ins Aus, landet sie hier.",
    "returns": "Je nach Wahl zurück ins Spiel oder Kugel verloren.",
-   "awards": ["Bis zu 3 Rettungen: Kugel gerettet, dafür ein Nachteil (Hypnotoad dreht sich, 0,5× Playfield oder vertauschte Flipper) – oder Kugel verloren", "Während der Ballsicherung rettet sie immer"],
-   "visibility": "Sichtbar. Kicker „KickerBooth“.", "sources": ["script", "vpx"] },
-  "lanes": { "name": "In- und Outlanes", "en": "Inlanes / Outlanes", "kind": "Bahnen", "flipper": null,
-   "what": "Vier Bahnen neben den Flippern. Die Flipper verschieben die beleuchteten Bahnen.", "returns": "—",
-   "awards": ["Alle vier beleuchtet = Bonus-Multiplikator +1"], "visibility": "Sichtbar.", "sources": ["script", "vpx"] },
-  "plunger": { "name": "Abschuss", "en": "Plunger", "kind": "Abschuss", "flipper": null,
-   "what": "Abschussbahn rechts.", "returns": "In die oberen Bahnen.",
-   "awards": ["Skillshot: grün leuchtende Schüsse, Playfield-X-Spinner oder BLAST-Ziele direkt nach dem Abschuss treffen"], "visibility": "Sichtbar.", "sources": ["script"] }
+   "awards": [
+    "Bis zu 3 Rettungen: Kugel gerettet, dafür ein Nachteil (Hypnotoad dreht sich, 0,5× Playfield oder vertauschte Flipper) – oder Kugel verloren",
+    "Während der Ballsicherung rettet sie immer"
+   ],
+   "visibility": "Sichtbar. Kicker „KickerBooth“.",
+   "sources": [
+    "script",
+    "vpx"
+   ]
+  },
+  "lanes": {
+   "name": "In- und Outlanes",
+   "en": "Inlanes / Outlanes",
+   "kind": "Bahnen",
+   "flipper": null,
+   "what": "Vier Bahnen neben den Flippern. Die Flipper verschieben die beleuchteten Bahnen.",
+   "returns": "—",
+   "awards": [
+    "Alle vier beleuchtet = Bonus-Multiplikator +1"
+   ],
+   "visibility": "Sichtbar.",
+   "sources": [
+    "script",
+    "vpx"
+   ]
+  },
+  "plunger": {
+   "name": "Abschuss",
+   "en": "Plunger",
+   "kind": "Abschuss",
+   "flipper": null,
+   "what": "Abschussbahn rechts.",
+   "returns": "In die oberen Bahnen.",
+   "awards": [
+    "Skillshot: grün leuchtende Schüsse, Playfield-X-Spinner oder BLAST-Ziele direkt nach dem Abschuss treffen"
+   ],
+   "visibility": "Sichtbar.",
+   "sources": [
+    "script"
+   ]
+  }
  },
  "strategies": [
-  { "id": "solid", "title": "Solide spielen", "subtitle": "Modi am unteren Scoop, Basemultiball, Blasts sammeln",
+  {
+   "id": "solid",
+   "title": "Solide spielen",
+   "subtitle": "Modi am unteren Scoop, Basemultiball, Blasts sammeln",
    "steps": [
-    { "title": "Skillshot", "shots": ["side_loop", "upper_scoop", "left_ramp", "center_lane"], "prep": "Neue Kugel. Vier Pfeile leuchten grün.", "go": "Einen grünen Schuss treffen (side loop, upper scoop, left ramp, center lane). Auch Playfield-X-Spinner oder BLAST-Ziele zählen.", "why": "Neuer Skillshot 25 Mio., Wiederholung 15 Mio.", "sources": ["script"] },
-    { "title": "Modus starten", "shots": ["lower_scoop"], "prep": "Kein Modus und kein Multiball läuft.", "go": "Unteren Scoop treffen (lower scoop). Mit den Flippern einen Planeten wählen, mit der Action-Taste starten.", "why": "Jeder Modus bringt 10–17,5 Mio. pro Treffer. Fortschritt bleibt erhalten, wenn er scheitert.", "sources": ["script", "card"] },
-    { "title": "Pfeile der Modus-Farbe treffen", "shots": [], "prep": "Modus läuft (Uhr läuft ab).", "go": "Nur die Pfeile in der Farbe des Modus treffen. Linke Bahn (left lane) gibt +2 Sekunden je Spinner-Drehung.", "why": "Im ersten Versuch geschafft: Fast-Delivery-Bonus 2 Mio. je Restsekunde.", "sources": ["script"] },
-    { "title": "BLAST-Ziele abräumen", "shots": ["blast_drops"], "prep": "Jederzeit.", "go": "Alle fünf Fallziele rechts treffen (BLAST drops).", "why": "1 Blast (max. 3). In einem Modus oder Multiball Action-Taste drücken: der wertvollste Schuss wird automatisch getroffen.", "sources": ["script", "card"] },
-    { "title": "Basemultiball vorbereiten", "shots": ["upper_scoop", "left_loop", "right_loop"], "prep": "Kein Multiball läuft.", "go": "Oberen Scoop treffen (Lock 1). Dann den leuchtenden Loop (left/right loop), dann wieder den oberen Scoop. Dreimal.", "why": "Der dritte Lock startet den Basemultiball (3 Kugeln).", "sources": ["script", "card"] },
-    { "title": "Mystery mitnehmen", "shots": ["mystery_target", "lower_scoop"], "prep": "Lila Ziel unter dem rechten Bumper.", "go": "Ziel dreimal treffen, dann unteren Scoop.", "why": "Zufallsbelohnung, z. B. Punkte, Blast, Ballsicherung, Zeit, Playfield-X, Bonus-X.", "sources": ["script", "card"] }
-   ] },
-  { "id": "high", "title": "Auf Highscore", "subtitle": "Multiplikator, Multibälle stapeln, Wizard-Modi",
+    {
+     "title": "Skillshot",
+     "shots": [
+      "side_loop",
+      "upper_scoop",
+      "left_ramp",
+      "center_lane"
+     ],
+     "prep": "Neue Kugel. Vier Pfeile leuchten grün.",
+     "go": "Einen grünen Schuss treffen (side loop, upper scoop, left ramp, center lane). Auch Playfield-X-Spinner oder BLAST-Ziele zählen.",
+     "why": "Neuer Skillshot 25 Mio., Wiederholung 15 Mio.",
+     "sources": [
+      "script"
+     ]
+    },
+    {
+     "title": "Modus starten",
+     "shots": [
+      "lower_scoop"
+     ],
+     "prep": "Kein Modus und kein Multiball läuft.",
+     "go": "Unteren Scoop treffen (lower scoop). Mit den Flippern einen Planeten wählen, mit der Action-Taste starten.",
+     "why": "Jeder Modus bringt 10–17,5 Mio. pro Treffer. Fortschritt bleibt erhalten, wenn er scheitert.",
+     "sources": [
+      "script",
+      "card"
+     ]
+    },
+    {
+     "title": "Pfeile der Modus-Farbe treffen",
+     "shots": [],
+     "prep": "Modus läuft (Uhr läuft ab).",
+     "go": "Nur die Pfeile in der Farbe des Modus treffen. Linke Bahn (left lane) gibt +2 Sekunden je Spinner-Drehung.",
+     "why": "Im ersten Versuch geschafft: Fast-Delivery-Bonus 2 Mio. je Restsekunde.",
+     "sources": [
+      "script"
+     ],
+     "lit": true
+    },
+    {
+     "title": "BLAST-Ziele abräumen",
+     "shots": [
+      "blast_drops"
+     ],
+     "prep": "Jederzeit.",
+     "go": "Alle fünf Fallziele rechts treffen (BLAST drops).",
+     "why": "1 Blast (max. 3). In einem Modus oder Multiball Action-Taste drücken: der wertvollste Schuss wird automatisch getroffen.",
+     "sources": [
+      "script",
+      "card"
+     ]
+    },
+    {
+     "title": "Basemultiball vorbereiten",
+     "shots": [
+      "upper_scoop",
+      "left_loop",
+      "right_loop"
+     ],
+     "prep": "Kein Multiball läuft.",
+     "go": "Oberen Scoop treffen (Lock 1). Dann den leuchtenden Loop (left/right loop), dann wieder den oberen Scoop. Dreimal.",
+     "why": "Der dritte Lock startet den Basemultiball (3 Kugeln).",
+     "sources": [
+      "script",
+      "card"
+     ]
+    },
+    {
+     "title": "Mystery mitnehmen",
+     "shots": [
+      "mystery_target",
+      "lower_scoop"
+     ],
+     "prep": "Lila Ziel unter dem rechten Bumper.",
+     "go": "Ziel dreimal treffen, dann unteren Scoop.",
+     "why": "Zufallsbelohnung, z. B. Punkte, Blast, Ballsicherung, Zeit, Playfield-X, Bonus-X.",
+     "sources": [
+      "script",
+      "card"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "high",
+   "title": "Auf Highscore",
+   "subtitle": "Multiplikator, Multibälle stapeln, Wizard-Modi",
    "steps": [
-    { "title": "Playfield-X hochdrehen", "shots": ["px_spinner"], "prep": "Vor großen Schüssen.", "go": "Playfield-X-Spinner kräftig drehen.", "why": "+0,1× pro Drehung bis 5×. Alle Punkte werden multipliziert. Er sinkt nach 5 s Pause wieder ab, die linke Bahn hält ihn kurz.", "sources": ["script", "card"] },
-    { "title": "Bender-Multiball", "shots": ["bender_lane"], "prep": "Bahn mit den drei Fallzielen.", "go": "Bender-Bahn wiederholt treffen: Kugeln locken, der dritte Lock startet (bender lane).", "why": "Jackpots 15 Mio. auf limettengrünen Pfeilen, Super Jackpot 80 Mio.", "sources": ["script", "card"] },
-    { "title": "Modus + Multiball + Blasts stapeln", "shots": ["lower_scoop", "upper_scoop"], "prep": "Basemultiball-Locks bis kurz vor Start sammeln.", "go": "Erst einen Modus am unteren Scoop starten, dann den Multiball über den oberen Scoop.", "why": "Modus-Treffer und Jackpots zählen gleichzeitig, und Blasts nutzen den wertvollsten Schuss.", "sources": ["script"] },
-    { "title": "Kombos sammeln", "shots": ["left_ramp", "right_ramp", "center_lane"], "prep": "Kleine Kombo-Lichter beachten.", "go": "Rampen und Loops hintereinander: nach linker Rampe rechte Rampe/Center Lane, nach rechter Rampe linke Rampe/Center Lane.", "why": "3 Mio. pro Kombo. Alle 5 Kombos Belohnung am unteren Scoop – einmal ein Extraball.", "sources": ["script"] },
-    { "title": "Wizard-Modi", "shots": ["lower_scoop"], "prep": "3, 6 und 9 Modi abgeschlossen.", "go": "Danach den unteren Scoop treffen.", "why": "Poker-Meisterschaft (4 Kugeln), Feminista (6 Kugeln), Slurm (6 Kugeln) – die größten Punktequellen.", "sources": ["script"] }
-   ] }
+    {
+     "title": "Playfield-X hochdrehen",
+     "shots": [
+      "px_spinner"
+     ],
+     "prep": "Vor großen Schüssen.",
+     "go": "Playfield-X-Spinner kräftig drehen.",
+     "why": "+0,1× pro Drehung bis 5×. Alle Punkte werden multipliziert. Er sinkt nach 5 s Pause wieder ab, die linke Bahn hält ihn kurz.",
+     "sources": [
+      "script",
+      "card"
+     ]
+    },
+    {
+     "title": "Bender-Multiball",
+     "shots": [
+      "bender_lane"
+     ],
+     "prep": "Bahn mit den drei Fallzielen.",
+     "go": "Bender-Bahn wiederholt treffen: Kugeln locken, der dritte Lock startet (bender lane).",
+     "why": "Jackpots 15 Mio. auf limettengrünen Pfeilen, Super Jackpot 80 Mio.",
+     "sources": [
+      "script",
+      "card"
+     ]
+    },
+    {
+     "title": "Modus + Multiball + Blasts stapeln",
+     "shots": [
+      "lower_scoop",
+      "upper_scoop"
+     ],
+     "prep": "Basemultiball-Locks bis kurz vor Start sammeln.",
+     "go": "Erst einen Modus am unteren Scoop starten, dann den Multiball über den oberen Scoop.",
+     "why": "Modus-Treffer und Jackpots zählen gleichzeitig, und Blasts nutzen den wertvollsten Schuss.",
+     "sources": [
+      "script"
+     ]
+    },
+    {
+     "title": "Kombos sammeln",
+     "shots": [
+      "left_ramp",
+      "right_ramp",
+      "center_lane"
+     ],
+     "prep": "Kleine Kombo-Lichter beachten.",
+     "go": "Rampen und Loops hintereinander: nach linker Rampe rechte Rampe/Center Lane, nach rechter Rampe linke Rampe/Center Lane.",
+     "why": "3 Mio. pro Kombo. Alle 5 Kombos Belohnung am unteren Scoop – einmal ein Extraball.",
+     "sources": [
+      "script"
+     ]
+    },
+    {
+     "title": "Wizard-Modi",
+     "shots": [
+      "lower_scoop"
+     ],
+     "prep": "3, 6 und 9 Modi abgeschlossen.",
+     "go": "Danach den unteren Scoop treffen.",
+     "why": "Poker-Meisterschaft (4 Kugeln), Feminista (6 Kugeln), Slurm (6 Kugeln) – die größten Punktequellen.",
+     "sources": [
+      "script"
+     ]
+    }
+   ]
+  }
  ],
  "multiballs": [
-  { "id": "base", "name": "Basemultiball", "tag": "Haupt-Multiball", "balls": "3 Kugeln",
+  {
+   "id": "base",
+   "name": "Basemultiball",
+   "tag": "Haupt-Multiball",
+   "balls": "3 Kugeln",
    "prep": [
-    { "title": "Oberer Scoop = Lock 1", "shots": ["upper_scoop"], "text": "Beim ersten Mal lockt der erste Treffer im oberen Scoop sofort (5 Mio.). Danach leuchten beide Loops („Light Lock“).", "sources": ["script"] },
-    { "title": "Loop beleuchtet den Lock", "shots": ["left_loop", "right_loop"], "text": "Einen leuchtenden Loop treffen (1,5 Mio.) – „Lock 2 lit“. Beim zweiten Multiball wechselt ein Loop, ab dem dritten braucht es beide.", "sources": ["script", "card"] },
-    { "title": "Oberer Scoop = Lock 2", "shots": ["upper_scoop"], "text": "Dann wieder Loop → oberer Scoop für Lock 3.", "sources": ["script"] }
+    {
+     "title": "Oberer Scoop = Lock 1",
+     "shots": [
+      "upper_scoop"
+     ],
+     "text": "Beim ersten Mal lockt der erste Treffer im oberen Scoop sofort (5 Mio.). Danach leuchten beide Loops („Light Lock“).",
+     "sources": [
+      "script"
+     ]
+    },
+    {
+     "title": "Loop beleuchtet den Lock",
+     "shots": [
+      "left_loop",
+      "right_loop"
+     ],
+     "text": "Einen leuchtenden Loop treffen (1,5 Mio.) – „Lock 2 lit“. Beim zweiten Multiball wechselt ein Loop, ab dem dritten braucht es beide.",
+     "sources": [
+      "script",
+      "card"
+     ]
+    },
+    {
+     "title": "Oberer Scoop = Lock 2",
+     "shots": [
+      "upper_scoop"
+     ],
+     "text": "Dann wieder Loop → oberer Scoop für Lock 3.",
+     "sources": [
+      "script"
+     ]
+    }
    ],
-   "start": { "title": "Dritter Lock im oberen Scoop", "shots": ["upper_scoop"], "text": "Startet den Basemultiball (5 Mio.), 2 Kugeln kommen dazu, Ballsicherung +12,5 s.", "sources": ["script"] },
+   "start": {
+    "title": "Dritter Lock im oberen Scoop",
+    "shots": [
+     "upper_scoop"
+    ],
+    "text": "Startet den Basemultiball (5 Mio.), 2 Kugeln kommen dazu, Ballsicherung +12,5 s.",
+    "sources": [
+     "script"
+    ]
+   },
    "score": [
-    { "title": "Grüne Jackpot-Pfeile (25 Mio.)", "shots": ["left_ramp", "right_ramp"], "text": "Start: linke und rechte Rampe. Jeder Treffer schiebt den Jackpot weiter: links Rampe → unterer Scoop → linker Loop → Seiten-Loop; rechts Rampe → oberer Scoop → rechter Loop → Seiten-Loop.", "sources": ["script", "card"] },
-    { "title": "Super Jackpot: Seiten-Loop", "shots": ["side_loop"], "text": "Am Seiten-Loop 60 Mio. Stehen beide Jackpots dort: Doppel-Super-Jackpot 120 Mio.", "sources": ["script"] }
-   ] },
-  { "id": "bender", "name": "Bender-Multiball", "tag": "Zweiter Multiball", "balls": "3 Kugeln",
+    {
+     "title": "Grüne Jackpot-Pfeile (25 Mio.)",
+     "shots": [
+      "left_ramp",
+      "right_ramp"
+     ],
+     "text": "Start: linke und rechte Rampe. Jeder Treffer schiebt den Jackpot weiter: links Rampe → unterer Scoop → linker Loop → Seiten-Loop; rechts Rampe → oberer Scoop → rechter Loop → Seiten-Loop.",
+     "sources": [
+      "script",
+      "card"
+     ]
+    },
+    {
+     "title": "Super Jackpot: Seiten-Loop",
+     "shots": [
+      "side_loop"
+     ],
+     "text": "Am Seiten-Loop 60 Mio. Stehen beide Jackpots dort: Doppel-Super-Jackpot 120 Mio.",
+     "sources": [
+      "script"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bender",
+   "name": "Bender-Multiball",
+   "tag": "Zweiter Multiball",
+   "balls": "3 Kugeln",
    "prep": [
-    { "title": "Erstes Mal: Bender-Bahn locken", "shots": ["bender_lane"], "text": "Ziel am Ende der Bahn treffen: Kugel 1 gelockt. Weiter die Bahn treffen, bis Kugel 2 und 3 liegen.", "sources": ["script", "card"] },
-    { "title": "Zweites Mal", "shots": ["bender_lane"], "text": "Jeder Lock muss erst beleuchtet werden („Lock lit“), dann gelockt – abwechselnd über das Ende der Bahn und die Fallziele.", "sources": ["script"] },
-    { "title": "Ab dem dritten Mal", "shots": ["bender_lane"], "text": "Zuerst die drei Fallziele der Reihe nach abräumen, dann wie oben locken.", "sources": ["script"] }
+    {
+     "title": "Erstes Mal: Bender-Bahn locken",
+     "shots": [
+      "bender_lane"
+     ],
+     "text": "Ziel am Ende der Bahn treffen: Kugel 1 gelockt. Weiter die Bahn treffen, bis Kugel 2 und 3 liegen.",
+     "sources": [
+      "script",
+      "card"
+     ]
+    },
+    {
+     "title": "Zweites Mal",
+     "shots": [
+      "bender_lane"
+     ],
+     "text": "Jeder Lock muss erst beleuchtet werden („Lock lit“), dann gelockt – abwechselnd über das Ende der Bahn und die Fallziele.",
+     "sources": [
+      "script"
+     ]
+    },
+    {
+     "title": "Ab dem dritten Mal",
+     "shots": [
+      "bender_lane"
+     ],
+     "text": "Zuerst die drei Fallziele der Reihe nach abräumen, dann wie oben locken.",
+     "sources": [
+      "script"
+     ]
+    }
    ],
-   "start": { "title": "Dritter Lock", "shots": ["bender_lane"], "text": "Startet den Bender-Multiball; Ballsicherung +12,5 s.", "sources": ["script"] },
+   "start": {
+    "title": "Dritter Lock",
+    "shots": [
+     "bender_lane"
+    ],
+    "text": "Startet den Bender-Multiball; Ballsicherung +12,5 s.",
+    "sources": [
+     "script"
+    ]
+   },
    "score": [
-    { "title": "Limettengrüne Pfeile (15 Mio.)", "shots": ["left_lane", "lower_scoop", "side_loop", "upper_scoop", "left_ramp", "center_lane", "right_ramp", "right_loop"], "text": "Jeder Jackpot einmal. Danach linken Loop treffen: alle Jackpots neu (5 Mio.).", "sources": ["script", "card"] },
-    { "title": "Bender-Super-Jackpot (80 Mio.)", "shots": ["bender_lane"], "text": "Die drei Fallziele treffen (je 1,5 Mio.), dann das Ziel am Ende der Bahn.", "sources": ["script"] }
-   ] },
-  { "id": "poker", "name": "Poker-Meisterschaft", "tag": "Wizard 1 (nach 3 Modi)", "balls": "4 Kugeln",
-   "prep": [ { "title": "3 Modi abschließen", "shots": ["lower_scoop"], "text": "Drei beliebige Modi erfolgreich beenden.", "sources": ["script"] } ],
-   "start": { "title": "Unterer Scoop", "shots": ["lower_scoop"], "text": "„Universal Poker Championship“ startet statt der Modus-Auswahl. Ballsicherung +22,5 s.", "sources": ["script"] },
-   "score": [ { "title": "Blinkende Pfeile", "shots": [], "text": "Abwechselnd Jackpot-Schüsse wählen und blinkende Pfeile abholen. Grundwert 10 Mio., spätere Jackpots ein Vielfaches davon.", "sources": ["script"] } ] },
-  { "id": "feminista", "name": "Feminista", "tag": "Wizard 2 (nach 6 Modi)", "balls": "6 Kugeln",
-   "prep": [ { "title": "6 Modi abschließen", "shots": ["lower_scoop"], "text": "Sechs Modi (plus Poker) abgeschlossen.", "sources": ["script"] } ],
-   "start": { "title": "Unterer Scoop", "shots": ["lower_scoop"], "text": "Startet mit bis zu 6 Kugeln; Ballsicherung +32,5 s.", "sources": ["script"] },
-   "score": [ { "title": "Rechte Rampe", "shots": ["right_ramp"], "text": "12 Mio. × Anzahl Kugeln im Spiel. Leuchtende Schüsse geben 4 Mio. extra.", "sources": ["script"] } ] },
-  { "id": "slurm", "name": "Slurm", "tag": "Wizard-Modus (nach 9 Modi)", "balls": "6 Kugeln",
-   "prep": [ { "title": "Alle 9 Modi abschließen", "shots": ["lower_scoop"], "text": "Alle neun Planeten-Modi (plus Poker und Feminista).", "sources": ["script"] } ],
-   "start": { "title": "Unterer Scoop", "shots": ["lower_scoop"], "text": "Slurm-Wizard-Modus mit bis zu 6 Kugeln; Ballsicherung +32,5 s.", "sources": ["script"] },
+    {
+     "title": "Limettengrüne Pfeile (15 Mio.)",
+     "shots": [
+      "left_lane",
+      "lower_scoop",
+      "side_loop",
+      "upper_scoop",
+      "left_ramp",
+      "center_lane",
+      "right_ramp",
+      "right_loop"
+     ],
+     "text": "Jeder Jackpot einmal. Danach linken Loop treffen: alle Jackpots neu (5 Mio.).",
+     "sources": [
+      "script",
+      "card"
+     ]
+    },
+    {
+     "title": "Bender-Super-Jackpot (80 Mio.)",
+     "shots": [
+      "bender_lane"
+     ],
+     "text": "Die drei Fallziele treffen (je 1,5 Mio.), dann das Ziel am Ende der Bahn.",
+     "sources": [
+      "script"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "poker",
+   "name": "Poker-Meisterschaft",
+   "tag": "Wizard 1 (nach 3 Modi)",
+   "balls": "4 Kugeln",
+   "prep": [
+    {
+     "title": "3 Modi abschließen",
+     "shots": [
+      "lower_scoop"
+     ],
+     "text": "Drei beliebige Modi erfolgreich beenden.",
+     "sources": [
+      "script"
+     ]
+    }
+   ],
+   "start": {
+    "title": "Unterer Scoop",
+    "shots": [
+     "lower_scoop"
+    ],
+    "text": "„Universal Poker Championship“ startet statt der Modus-Auswahl. Ballsicherung +22,5 s.",
+    "sources": [
+     "script"
+    ]
+   },
    "score": [
-    { "title": "Rot – Gelb – Grün", "shots": [], "text": "Jeden Schuss dreimal: 10, 20, 30 Mio.", "sources": ["script"] },
-    { "title": "Super Jackpot: Seiten-Loop", "shots": ["side_loop"], "text": "Gibt 50 Mio. je fertigem (grünem) Schuss, jeder weitere 10 Mio. mehr.", "sources": ["script"] }
-   ] }
+    {
+     "title": "Blinkende Pfeile",
+     "shots": [],
+     "text": "Abwechselnd Jackpot-Schüsse wählen und blinkende Pfeile abholen. Grundwert 10 Mio., spätere Jackpots ein Vielfaches davon.",
+     "sources": [
+      "script"
+     ],
+     "lit": true
+    }
+   ]
+  },
+  {
+   "id": "feminista",
+   "name": "Feminista",
+   "tag": "Wizard 2 (nach 6 Modi)",
+   "balls": "6 Kugeln",
+   "prep": [
+    {
+     "title": "6 Modi abschließen",
+     "shots": [
+      "lower_scoop"
+     ],
+     "text": "Sechs Modi (plus Poker) abgeschlossen.",
+     "sources": [
+      "script"
+     ]
+    }
+   ],
+   "start": {
+    "title": "Unterer Scoop",
+    "shots": [
+     "lower_scoop"
+    ],
+    "text": "Startet mit bis zu 6 Kugeln; Ballsicherung +32,5 s.",
+    "sources": [
+     "script"
+    ]
+   },
+   "score": [
+    {
+     "title": "Rechte Rampe",
+     "shots": [
+      "right_ramp"
+     ],
+     "text": "12 Mio. × Anzahl Kugeln im Spiel. Leuchtende Schüsse geben 4 Mio. extra.",
+     "sources": [
+      "script"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "slurm",
+   "name": "Slurm",
+   "tag": "Wizard-Modus (nach 9 Modi)",
+   "balls": "6 Kugeln",
+   "prep": [
+    {
+     "title": "Alle 9 Modi abschließen",
+     "shots": [
+      "lower_scoop"
+     ],
+     "text": "Alle neun Planeten-Modi (plus Poker und Feminista).",
+     "sources": [
+      "script"
+     ]
+    }
+   ],
+   "start": {
+    "title": "Unterer Scoop",
+    "shots": [
+     "lower_scoop"
+    ],
+    "text": "Slurm-Wizard-Modus mit bis zu 6 Kugeln; Ballsicherung +32,5 s.",
+    "sources": [
+     "script"
+    ]
+   },
+   "score": [
+    {
+     "title": "Rot – Gelb – Grün",
+     "shots": [],
+     "text": "Jeden Schuss dreimal: 10, 20, 30 Mio.",
+     "sources": [
+      "script"
+     ],
+     "lit": true
+    },
+    {
+     "title": "Super Jackpot: Seiten-Loop",
+     "shots": [
+      "side_loop"
+     ],
+     "text": "Gibt 50 Mio. je fertigem (grünem) Schuss, jeder weitere 10 Mio. mehr.",
+     "sources": [
+      "script"
+     ]
+    }
+   ]
+  }
  ],
  "modesIntro": "Neun Liefer-Modi (Planeten in der Mitte). Start: unterer Scoop, mit den Flippern wählen, Action-Taste startet. Jeder Modus hat eine Zeit und eine Pfeilfarbe. Scheitert er, bleibt der Fortschritt. Beim ersten Versuch geschafft: Fast-Delivery 2 Mio. je Restsekunde. Werte aus dem Script, vor Playfield-X.",
  "modes": [
-  { "id": "chapek", "name": "Chapek 9", "film": "lila · 9 Treffer", "time": "93 s", "steps": [ { "title": "Lila Pfeile", "shots": ["left_ramp", "right_ramp"], "text": "Erst die beiden Rampen, dann weitere Schüsse in lila. 13,5 Mio. je Treffer." } ] },
-  { "id": "decapod", "name": "Decapod 10", "film": "orange · 10 Treffer", "time": "78 s", "steps": [ { "title": "Alle 10 Schüsse einmal", "shots": ["left_lane", "lower_scoop", "left_loop", "side_loop", "upper_scoop", "left_ramp", "center_lane", "right_ramp", "bender_lane", "right_loop"], "text": "Alle Pfeile orange; jeder getroffene erlischt. 10 Mio. + 1 Mio. je bisherigem Treffer." } ] },
-  { "id": "naturama", "name": "Naturama", "film": "türkis · 10 Treffer", "time": "78 s", "steps": [ { "title": "Türkise Pfeile wandern", "shots": ["lower_scoop", "left_ramp", "bender_lane"], "text": "Start: unterer Scoop, linke Rampe, Bender-Bahn. Ein Treffer beleuchtet die beiden Nachbarschüsse. 12 Mio. je Treffer." } ] },
-  { "id": "omicron", "name": "Omicron Persei 8", "film": "gelb · 7 Treffer", "time": "88 s", "steps": [ { "title": "Spinner, dann gelbe Pfeile", "shots": ["center_lane"], "text": "Der obere Spinner in der Center Lane fügt gelbe Pfeile hinzu (je 3 Mio.). Gelbe Pfeile treffen: 12 Mio." } ] },
-  { "id": "amazonia", "name": "Amazonia", "film": "pink · 10 Treffer", "time": "63 s", "steps": [ { "title": "Pink, hin und her", "shots": [], "text": "Pink leuchten abwechselnd alle Schüsse rechts bzw. links vom zuletzt getroffenen. 12 Mio. je Treffer." } ] },
-  { "id": "earth", "name": "Earth", "film": "blau · 8 Treffer", "time": "63 s", "steps": [ { "title": "Lange nicht getroffene Schüsse", "shots": [], "text": "Blau leuchten die 4 Schüsse, die am längsten nicht getroffen wurden. 15 Mio. je Treffer." } ] },
-  { "id": "moon", "name": "The Moon", "film": "weiß + grau · 6 Treffer", "time": "48 s", "steps": [ { "title": "Pfeile mit den Flippern schieben", "shots": [], "text": "Ein weißer und ein grauer Pfeil; die Flipper-Tasten verschieben sie. 17,5 Mio. je Pfeil, beide auf einem Schuss = doppelt." } ] },
-  { "id": "slugs", "name": "Slug Invasion", "film": "Hirnschnecken · 6 Treffer", "time": "33 s", "steps": [ { "title": "Schnecke links, dann rechts", "shots": ["slugs"], "text": "Die hochgefahrene Hirnschnecke treffen, abwechselnd links und rechts. 15 Mio. je Treffer." } ] },
-  { "id": "mars", "name": "Mars", "film": "rot · 8 Treffer", "time": "78 s", "steps": [ { "title": "Wandernder roter Block", "shots": [], "text": "Ein Block roter Pfeile wandert hin und her und wird mit jedem zweiten Treffer kürzer und schneller (5 → 2 Pfeile). 12 Mio. + 1 Mio. je 2 Treffer." } ] }
+  {
+   "id": "chapek",
+   "name": "Chapek 9",
+   "film": "lila · 9 Treffer",
+   "time": "93 s",
+   "steps": [
+    {
+     "title": "Lila Pfeile",
+     "shots": [
+      "left_ramp",
+      "right_ramp"
+     ],
+     "text": "Erst die beiden Rampen, dann weitere Schüsse in lila. 13,5 Mio. je Treffer."
+    }
+   ]
+  },
+  {
+   "id": "decapod",
+   "name": "Decapod 10",
+   "film": "orange · 10 Treffer",
+   "time": "78 s",
+   "steps": [
+    {
+     "title": "Alle 10 Schüsse einmal",
+     "shots": [
+      "left_lane",
+      "lower_scoop",
+      "left_loop",
+      "side_loop",
+      "upper_scoop",
+      "left_ramp",
+      "center_lane",
+      "right_ramp",
+      "bender_lane",
+      "right_loop"
+     ],
+     "text": "Alle Pfeile orange; jeder getroffene erlischt. 10 Mio. + 1 Mio. je bisherigem Treffer."
+    }
+   ]
+  },
+  {
+   "id": "naturama",
+   "name": "Naturama",
+   "film": "türkis · 10 Treffer",
+   "time": "78 s",
+   "steps": [
+    {
+     "title": "Türkise Pfeile wandern",
+     "shots": [
+      "lower_scoop",
+      "left_ramp",
+      "bender_lane"
+     ],
+     "text": "Start: unterer Scoop, linke Rampe, Bender-Bahn. Ein Treffer beleuchtet die beiden Nachbarschüsse. 12 Mio. je Treffer."
+    }
+   ]
+  },
+  {
+   "id": "omicron",
+   "name": "Omicron Persei 8",
+   "film": "gelb · 7 Treffer",
+   "time": "88 s",
+   "steps": [
+    {
+     "title": "Spinner, dann gelbe Pfeile",
+     "shots": [
+      "center_lane"
+     ],
+     "text": "Der obere Spinner in der Center Lane fügt gelbe Pfeile hinzu (je 3 Mio.). Gelbe Pfeile treffen: 12 Mio."
+    }
+   ]
+  },
+  {
+   "id": "amazonia",
+   "name": "Amazonia",
+   "film": "pink · 10 Treffer",
+   "time": "63 s",
+   "steps": [
+    {
+     "title": "Pink, hin und her",
+     "shots": [],
+     "text": "Pink leuchten abwechselnd alle Schüsse rechts bzw. links vom zuletzt getroffenen. 12 Mio. je Treffer.",
+     "lit": true
+    }
+   ]
+  },
+  {
+   "id": "earth",
+   "name": "Earth",
+   "film": "blau · 8 Treffer",
+   "time": "63 s",
+   "steps": [
+    {
+     "title": "Lange nicht getroffene Schüsse",
+     "shots": [],
+     "text": "Blau leuchten die 4 Schüsse, die am längsten nicht getroffen wurden. 15 Mio. je Treffer.",
+     "lit": true
+    }
+   ]
+  },
+  {
+   "id": "moon",
+   "name": "The Moon",
+   "film": "weiß + grau · 6 Treffer",
+   "time": "48 s",
+   "steps": [
+    {
+     "title": "Pfeile mit den Flippern schieben",
+     "shots": [],
+     "text": "Ein weißer und ein grauer Pfeil; die Flipper-Tasten verschieben sie. 17,5 Mio. je Pfeil, beide auf einem Schuss = doppelt.",
+     "lit": true
+    }
+   ]
+  },
+  {
+   "id": "slugs",
+   "name": "Slug Invasion",
+   "film": "Hirnschnecken · 6 Treffer",
+   "time": "33 s",
+   "steps": [
+    {
+     "title": "Schnecke links, dann rechts",
+     "shots": [
+      "slugs"
+     ],
+     "text": "Die hochgefahrene Hirnschnecke treffen, abwechselnd links und rechts. 15 Mio. je Treffer."
+    }
+   ]
+  },
+  {
+   "id": "mars",
+   "name": "Mars",
+   "film": "rot · 8 Treffer",
+   "time": "78 s",
+   "steps": [
+    {
+     "title": "Wandernder roter Block",
+     "shots": [],
+     "text": "Ein Block roter Pfeile wandert hin und her und wird mit jedem zweiten Treffer kürzer und schneller (5 → 2 Pfeile). 12 Mio. + 1 Mio. je 2 Treffer.",
+     "lit": true
+    }
+   ]
+  }
  ],
  "glossary": [
-  { "term": "Blast", "text": "Gespeicherter Joker (max. 3) aus den BLAST-Zielen. Action-Taste in Modus/Multiball: der wertvollste Schuss zählt als getroffen." },
-  { "term": "Playfield X", "text": "Multiplikator auf alle Punkte, über den Spinner neben der Anzeige bis 5×. Sinkt mit der Zeit." },
-  { "term": "Kombo", "text": "Schuss innerhalb von 4 Sekunden nach einer passenden Rampe oder einem Loop (kleines Licht am Pfeil)." },
-  { "term": "Scoop", "text": "Loch, das die Kugel kurz festhält und wieder auswirft." },
-  { "term": "Lock", "text": "Kugel wird für einen Multiball gezählt oder festgehalten." },
-  { "term": "Einsatz (Insert)", "text": "Beleuchtetes Feld im Spielfeld. Nur Anzeige, kein Ziel." }
+  {
+   "term": "Blast",
+   "text": "Gespeicherter Joker (max. 3) aus den BLAST-Zielen. Action-Taste in Modus/Multiball: der wertvollste Schuss zählt als getroffen."
+  },
+  {
+   "term": "Playfield X",
+   "text": "Multiplikator auf alle Punkte, über den Spinner neben der Anzeige bis 5×. Sinkt mit der Zeit."
+  },
+  {
+   "term": "Kombo",
+   "text": "Schuss innerhalb von 4 Sekunden nach einer passenden Rampe oder einem Loop (kleines Licht am Pfeil)."
+  },
+  {
+   "term": "Scoop",
+   "text": "Loch, das die Kugel kurz festhält und wieder auswirft."
+  },
+  {
+   "term": "Lock",
+   "text": "Kugel wird für einen Multiball gezählt oder festgehalten."
+  },
+  {
+   "term": "Einsatz (Insert)",
+   "text": "Beleuchtetes Feld im Spielfeld. Nur Anzeige, kein Ziel."
+  }
  ],
  "limits": [
   "Fan-Original ohne ROM: Alles steht im Tisch-Script v1.2.2. Ein Autoren-Rulesheet habe ich nicht gefunden; die Regelkarte ist sehr kurz.",

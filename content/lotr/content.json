@@ -48,6 +48,24 @@
    "title": "Kugelbild: „Stainless steel bearing ball 60mm G100 (removed camera)“, Lucasbosch, Wikimedia Commons, CC BY-SA 3.0",
    "url": "https://commons.wikimedia.org/wiki/File:Stainless_steel_1.4034_X46Cr13_bearing_ball_60mm_G100_removed_camera.jpg",
    "use": "Freigestellt, verkleinert und abgedunkelt als animierte Flipperkugel (Bearbeitung ebenfalls CC BY-SA 3.0)."
+  },
+  {
+   "id": "nirvana",
+   "title": "Larry Scott: LotR-Regelwerk (Pinball Nirvana, ROM 5.01)",
+   "url": "https://pinballnirvana.com/forums/resources/lord-of-the-rings-stern-2003-vp8.2994",
+   "use": "Kugelwege der Rampen/Orbits, Stapel-Regeln, Skillshots."
+  },
+  {
+   "id": "tilt",
+   "title": "Tilt Forums: „Lord of the Rings basic tutorial“",
+   "url": "https://tiltforums.com/t/lord-of-the-rings-basic-tutorial-needed/1164",
+   "use": "Reihenfolge Modus → Gollum → Film-Multiball, Paarungen, 2x sparen."
+  },
+  {
+   "id": "blog",
+   "title": "lotrpinball.blogspot.com: „Devising a new strategy“ (2011)",
+   "url": "https://lotrpinball.blogspot.com/2011/04/devising-new-strategy.html",
+   "use": "Spielerfahrung: Paarungen, Reihenfolge der Film-Multibälle, DTR-Vorbereitung."
   }
  ],
  "views": {
@@ -67,7 +85,7 @@
    "kind": "Orbit",
    "flipper": "R",
    "what": "Bahn ganz links außen. Der Eingang liegt oben am Ende der beiden roten Pfeile links (nicht die Pfeile selbst).",
-   "returns": "Normal läuft die Kugel oben quer über das Spielfeld in den Barad-dûr (Auswurf oben rechts). In manchen Modi lenkt ein Pfosten sie nach Orthanc. Schwache Schüsse fallen in die O-R-C-Bahnen oder nach Orthanc.",
+   "returns": "Oben quer über das Spielfeld nach Barad-dûr (Auswurf oben rechts); schwächer um den rechten Orbit, noch schwächer in die O-R-C-Bahnen. Mit Diverter: nach Orthanc → Paths of the Dead.",
    "awards": [
     "Gift of the Elves abholen (über Barad-dûr)",
     "Pippin (Fellowship)",
@@ -87,7 +105,7 @@
    "kind": "Rampe",
    "flipper": "R",
    "what": "Rampe links. Eingang über der ersten Pfeil-/Ring-Reihe (Man, Dwarf, Elf). Die Kugel fährt hoch, wendet oben und kommt über die Drahtbahn links herunter.",
-   "returns": "Drahtbahn → linke Inlane → linker Flipper.",
+   "returns": "Über die Drahtbahn zur linken Rückkehrbahn (zum linken Flipper).",
    "awards": [
     "Ring (Elf/Dwarf/Man, je nach Einsatz)",
     "Legolas (Fellowship)",
@@ -218,7 +236,7 @@
    "kind": "VUK",
    "flipper": "L",
    "what": "Loch zwischen Palantír und rechter Rampe, unter den Drahtbahnen. Belohnungen zählen nur, wenn die Kugel direkt vom Flipper hineinfällt, nicht über Orbits oder Bumper.",
-   "returns": "Der VUK schießt die Kugel hoch → Drahtbahn → Schwert-Rampe → rechte Inlane.",
+   "returns": "VUK hoch zum Schwert der rechten Rampe, dann rechte Rückkehrbahn.",
    "awards": [
     "Gollum-Multiball starten (nach 9 Menschenringen)",
     "Extra Ball / Special, wenn beleuchtet",
@@ -240,7 +258,7 @@
    "kind": "Rampe",
    "flipper": "L",
    "what": "Rampe rechts, Eingang über der rechten Pfeil-/Ring-Reihe („Aragorn“). Oben trifft die Kugel meist ein weißes Ziel und kommt über das große Schwert herunter. Gezählt wird unter dem Schwertgriff.",
-   "returns": "Schwert → rechte Inlane → rechter Flipper. Liegen gelockte Bälle auf dem Schwert und ist kein Lock beleuchtet, wird einer freigegeben. Darauf gefasst sein!",
+   "returns": "Zur rechten Rückkehrbahn (zum rechten Flipper); hält gelockte Kugeln am Schwert.",
    "awards": [
     "Lock für The Two Towers (wenn „Lock“ leuchtet)",
     "Ring",
@@ -666,6 +684,110 @@
      ]
     }
    ]
+  },
+  {
+   "id": "pro",
+   "title": "Profi-Spielzüge",
+   "subtitle": "Modus → Gollum → Film-Multiball",
+   "steps": [
+    {
+     "title": "Flipper-Skillshot",
+     "shots": [
+      "plunger",
+      "right_orbit"
+     ],
+     "go": "Hart abschießen, sodass die Kugel um den linken Orbit kommt, dann vom Flipper den rechten Orbit.",
+     "why": "1,25 Mio.",
+     "sources": [
+      "nirvana"
+     ]
+    },
+    {
+     "title": "Zuerst einen Ring-Modus starten",
+     "shots": [
+      "ring_ramp"
+     ],
+     "go": "Mit den Flippern den Modus wählen, dann den Ring-Schuss.",
+     "why": "Ein Modus muss vor dem Film-Multiball laufen – danach lässt sich keiner mehr starten.",
+     "sources": [
+      "nirvana",
+      "tilt"
+     ]
+    },
+    {
+     "title": "Dann Gollum Multiball",
+     "shots": [
+      "gollum"
+     ],
+     "go": "Gollum's Cave.",
+     "why": "Mit Gollum lassen sich Modi kombinieren; Gollum kurz nach dem Ende eines Film-Multiballs holt diesen zurück.",
+     "sources": [
+      "nirvana",
+      "tilt"
+     ]
+    },
+    {
+     "title": "Film-Multiball zuletzt",
+     "shots": [
+      "right_ramp"
+     ],
+     "go": "Zum Beispiel Two Towers (am leichtesten zu qualifizieren). Gute Paarungen: Saruman mit Two Towers oder Fellowship, Witch King mit Fellowship, Warg/Shelob mit Two Towers, Warg/Ringwraith mit Return of the King.",
+     "why": "Modus, Gollum und Film-Multiball zahlen zusammen.",
+     "sources": [
+      "tilt",
+      "blog"
+     ]
+    },
+    {
+     "title": "Seelen: rechte Rückkehrbahn → linker Orbit",
+     "shots": [
+      "keep_lanes",
+      "left_orbit"
+     ],
+     "go": "Kommt die Kugel über die rechte Rückkehrbahn, sofort den linken Orbit – der Diverter lenkt nach Orthanc und hoch zu den Paths of the Dead.",
+     "why": "Seelen für Return of the King.",
+     "sources": [
+      "nirvana",
+      "tilt"
+     ]
+    },
+    {
+     "title": "Palantír-Kugel richtig einsetzen",
+     "shots": [
+      "palantir"
+     ],
+     "go": "In Two Towers früh (mehr Kugeln = höherer Multiplikator), in Fellowship/Return of the King erst bei zwei Kugeln.",
+     "why": "Bis zu 4 Kugeln, aber ohne Ball-Save.",
+     "sources": [
+      "tilt",
+      "nirvana"
+     ]
+    },
+    {
+     "title": "2x Playfield aufheben",
+     "shots": [
+      "ring_ramp",
+      "right_ramp"
+     ],
+     "go": "Nicht verschwenden – für Two Towers plus Modus aufsparen.",
+     "why": "Laut Tilt-Forums-Tutorial.",
+     "sources": [
+      "tilt"
+     ]
+    },
+    {
+     "title": "Ring-Modi nicht mit Fellowship",
+     "shots": [
+      "balrog"
+     ],
+     "go": "Nach dem Cave Troll blockiert der Balrog den Ring-Schuss – Ring Frenzy u. ä. nicht mit Fellowship kombinieren. Balrog mittig und fest treffen.",
+     "why": "Erfahrung aus dem LotR-Blog und Regelwerk.",
+     "sources": [
+      "blog",
+      "nirvana"
+     ]
+    }
+   ]
   }
  ],
  "multiballs": [
@@ -948,7 +1070,8 @@
      "text": "Alle 7 s Wechsel: Gollum = Punkte halb, Sméagol = Punkte doppelt (außer Bonus). Große Schüsse in Sméagol-Phasen legen.",
      "sources": [
       "rules"
-     ]
+     ],
+     "lit": true
     },
     {
      "title": "Film-Multiball wiederbeleben",
@@ -970,7 +1093,13 @@
    "prep": [
     {
      "title": "Alle drei Film-Multibälle spielen",
-     "shots": [],
+     "shots": [
+      "right_ramp",
+      "left_orbit",
+      "barad_dur",
+      "orthanc",
+      "gollum"
+     ],
      "text": "Gewinnen ist nicht nötig. Danach können keine Modi starten, bis Destroy the Ring geholt ist.",
      "sources": [
       "rules"
@@ -1072,7 +1201,13 @@
    "prep": [
     {
      "title": "Voraussetzungen (Bericht vom 21.03.2004)",
-     "shots": [],
+     "shots": [
+      "right_ramp",
+      "left_orbit",
+      "barad_dur",
+      "orthanc",
+      "gollum"
+     ],
      "text": "Alle drei Film-Multibälle komplett, je mit Super Jackpot · alle 6 Modi gespielt · There and Back Again gespielt · alle 6 Elben-Geschenke · Destroy the Ring (meist zweimal). Nur ein Spielerbericht, nicht offiziell bestätigt.",
      "sources": [
       "rules"
@@ -1094,7 +1229,8 @@
      "title": "Keine belegten Details",
      "shots": [],
      "text": "Zu Ablauf und Werten von Valinor habe ich keine verlässliche Quelle gefunden.",
-     "sources": []
+     "sources": [],
+     "lit": true
     }
    ]
   }

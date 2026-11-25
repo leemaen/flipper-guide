@@ -1,145 +1,778 @@
 {
-  "table": {
-    "id": "munsters-vpx", "name": "The Munsters (VPX Original)", "short": "Munsters VPX", "manufacturer": "Allknowing2012 (Fan-Tisch nach Stern)", "year": 2020,
-    "system": "Visual Pinball X, eigenes Regel-Script (kein Stern-ROM)", "design": "Script/Regeln: Allknowing2012; Spielfeld-Neuzeichnung: Franck Hollinger/Mussinger; PuP: NailBuster, Mr. H",
-    "editions": "Installierte Datei „The Munsters (Original 2020) v1.06b.vpx“ (in der Datei: „Munsters Pro (2020 Stern/Tribute)“, Version 1.05/1.06, gespeichert 18.02.2023). Nachbau des Stern-Pro-Spielfelds, aber mit selbst geschriebenen Regeln. Deshalb ein eigener Tisch neben dem echten Stern The Munsters.",
-    "ruleVersion": "Regeln aus dem Tisch-Script v1.06 (Scorbit-Fassung auf Basis von Solters VR 1.05) und der Regelnotiz der Tischdatei. Der Autor nennt in der TODO-Liste offene Punkte (u. a. Combos nicht programmiert, keine Midnight Madness).",
-    "accent": "#6aa84f", "contentDate": "2026-11-08"
+ "table": {
+  "id": "munsters-vpx",
+  "name": "The Munsters (VPX Original)",
+  "short": "Munsters VPX",
+  "manufacturer": "Allknowing2012 (Fan-Tisch nach Stern)",
+  "year": 2020,
+  "system": "Visual Pinball X, eigenes Regel-Script (kein Stern-ROM)",
+  "design": "Script/Regeln: Allknowing2012; Spielfeld-Neuzeichnung: Franck Hollinger/Mussinger; PuP: NailBuster, Mr. H",
+  "editions": "Installierte Datei „The Munsters (Original 2020) v1.06b.vpx“ (in der Datei: „Munsters Pro (2020 Stern/Tribute)“, Version 1.05/1.06, gespeichert 18.02.2023). Nachbau des Stern-Pro-Spielfelds, aber mit selbst geschriebenen Regeln. Deshalb ein eigener Tisch neben dem echten Stern The Munsters.",
+  "ruleVersion": "Regeln aus dem Tisch-Script v1.06 (Scorbit-Fassung auf Basis von Solters VR 1.05) und der Regelnotiz der Tischdatei. Der Autor nennt in der TODO-Liste offene Punkte (u. a. Combos nicht programmiert, keine Midnight Madness).",
+  "accent": "#6aa84f",
+  "contentDate": "2026-11-08"
+ },
+ "sources": [
+  {
+   "id": "script",
+   "title": "Tisch-Script „The Munsters (Original 2020) v1.06b“ (Allknowing2012), lokal aus der installierten VPX entpackt",
+   "url": "https://www.youtube.com/channel/UCi9jCs_DmgtHWqLVPf5_7rA",
+   "use": "Regeln: Schalter-Routinen sw29 (Dragula), sw31 (Lily), sw37–41 (violette Ziele), sw39 (Kitty), sw45/Magnet (Herman), sw64/65 (Orbits), sw68 (Spot), sw69/70 (Rampen), Scoop-Logik, Munster Madness. Link = Kanal des Autors aus dem Script."
   },
-  "sources": [
-    { "id": "script", "title": "Tisch-Script „The Munsters (Original 2020) v1.06b“ (Allknowing2012), lokal aus der installierten VPX entpackt", "url": "https://www.youtube.com/channel/UCi9jCs_DmgtHWqLVPf5_7rA", "use": "Regeln: Schalter-Routinen sw29 (Dragula), sw31 (Lily), sw37–41 (violette Ziele), sw39 (Kitty), sw45/Magnet (Herman), sw64/65 (Orbits), sw68 (Spot), sw69/70 (Rampen), Scoop-Logik, Munster Madness. Link = Kanal des Autors aus dem Script." },
-    { "id": "vpx", "title": "Tischdatei: gameitems und Spielfeldgrafik (vpxtool-Auszug)", "url": "https://vpinball.com/forums/topic/munsters-2020-sterntribute/", "use": "Exakte Positionen aller Schalter, Ziele, Kicker, Bumper, Flipper und Lampen. Ansicht = Spielfeldgrafik + Plastiken aus der Datei." },
-    { "id": "info", "title": "Regelnotiz in der Tischdatei (Table Info)", "url": "https://vpinball.com/forums/topic/munsters-2020-sterntribute/", "use": "„Modes: Raven, Spot, Herman, Lily, Grandpa and Marilyn & Eddie. Complete the 5 Areas to Play Munster Madness. Then on to Level II and Level III“." }
-  ],
-  "views": {
-    "vpx": { "label": "VPX (Fan-Tisch 1.06b)", "note": "Spielfeldgrafik der Tischdatei mit den flachen Plastiken. Rampen, Herman-Figur und Drahtbahnen sind 3D-Modelle und fehlen in diesem Bild. Alle Markierungen kommen direkt aus den Koordinaten der Tischdatei." }
+  {
+   "id": "vpx",
+   "title": "Tischdatei: gameitems und Spielfeldgrafik (vpxtool-Auszug)",
+   "url": "https://vpinball.com/forums/topic/munsters-2020-sterntribute/",
+   "use": "Exakte Positionen aller Schalter, Ziele, Kicker, Bumper, Flipper und Lampen. Ansicht = Spielfeldgrafik + Plastiken aus der Datei."
   },
-  "shots": {
-    "left_orbit": { "name": "Linker Orbit", "en": "Left Orbit", "kind": "Orbit mit Spinner", "flipper": "R",
-      "what": "Bahn links über dem Eddie-Pfeil (L46) und dem Jackpot-Pfeil (L47). Im Eingang sitzt der Spinner.",
-      "returns": "Um die obere linke Ecke (Schalter sw64).",
-      "awards": ["Eddie-Loop, wenn rot blinkend", "Jackpot in Herman, Raven, Grandpa und Munster Madness, wenn L47 leuchtet"],
-      "visibility": "Spinner-Position aus der Tischdatei.", "sources": ["script", "vpx"] },
-    "left_ramp": { "name": "Linke Rampe (Treppe)", "en": "Left Ramp / Staircase", "kind": "Rampe", "flipper": "R",
-      "what": "Treppen-Rampe links der Mitte, über dem Jackpot-Pfeil L51, dem Spot-Pfeil L98 und den drei Raven-Einsätzen.",
-      "returns": "Die Treppe hinauf bis oben (sw69), zurück über die Drahtbahn.",
-      "awards": ["Raven-Fortschritt (drei = Raven Multiball)", "Spot-Buchstabe, wenn L98 rot blinkt", "Skillshot", "Raven Boost und Raven-Restart"],
-      "visibility": "Rampe ist 3D und fehlt im Bild; Eingang aus der Rampe „FakeRampBottom“ der Datei.", "sources": ["script", "vpx"] },
-    "spot": { "name": "Spot (in der Treppe)", "en": "Spot target", "kind": "Ziel (Spielzeug)", "flipper": "R",
-      "what": "Spot fährt in der Treppe der linken Rampe hoch (Schalter sw68).",
-      "returns": "Prallt zurück.",
-      "awards": ["Spot-Buchstabe, wenn Spot oben ist", "Im Spot-Modus: Spot treffen"],
-      "visibility": "Nur wenn Spot oben ist.", "sources": ["script", "vpx"] },
-    "herman": { "name": "Herman", "en": "Herman", "kind": "Schuss mit Magnet", "flipper": "beide",
-      "what": "Bahn zu Herman über dem Herman-Pfeil L56 und den drei Herman-Einsätzen. Am Ende sitzen Schalter sw45 und der Magnet.",
-      "returns": "Prallt zurück oder bleibt am Magnet hängen.",
-      "awards": ["1. Treffer schaltet den Magnet ein", "Wird die Kugel gefangen: zweite Kugel kommt, Herman-Hurry-up und Herman Multiball"],
-      "visibility": "Herman-Figur fehlt im Bild; Schalter sw45 aus der Datei.", "sources": ["script", "vpx"] },
-    "kitty": { "name": "Kitty-Ziel", "en": "Kitty Target", "kind": "Ziel", "flipper": "L",
-      "what": "Schmales Ziel mit Katzenbild rechts von Herman (sw39).",
-      "returns": "Prallt zurück.",
-      "awards": ["Wenn L80 blinkt: Spielfeld-Multiplikator (läuft 60 s)", "Laufender Multiplikator: Timer zurücksetzen"],
-      "visibility": "Sichtbar.", "sources": ["script", "vpx"] },
-    "scoop": { "name": "Grandpa-Scoop", "en": "Scoop", "kind": "Scoop", "flipper": "beide",
-      "what": "Loch in der Mitte über „Grandpa's Laboratory“ (Kicker ScoopEject).",
-      "returns": "Wirft die Kugel wieder aus.",
-      "awards": ["Reihenfolge laut Script: Grandpa-Modus (wenn L63 leuchtet) → Mystery (L103) → Extraball (L62) → Munster Madness (L64) → sonst Punkte", "Add Time im Grandpa-Modus"],
-      "visibility": "Sichtbar.", "sources": ["script", "vpx"] },
-    "right_ramp": { "name": "Rechte Rampe (Marilyn)", "en": "Right Ramp", "kind": "Rampe", "flipper": "L",
-      "what": "Rampe rechts der Mitte, über dem Jackpot-Pfeil L67, dem Spot-Pfeil L101 und dem Marilyn-Einsatz L102.",
-      "returns": "Rampe hinauf (sw70), zurück über die Drahtbahn.",
-      "awards": ["Super Skillshot: linke Taste halten und rechte Rampe", "Marilyn, wenn L102 blinkt", "Spot-Buchstabe, wenn L101 rot blinkt", "Jackpots in Modi und Multibällen"],
-      "visibility": "Rampe 3D, fehlt im Bild; Eingang zwischen den violetten Zielen 3 und 4.", "sources": ["script", "vpx"] },
-    "right_orbit": { "name": "Rechter Orbit", "en": "Right Orbit", "kind": "Orbit", "flipper": "L",
-      "what": "Bahn rechts über dem Eddie-Pfeil L72 und dem Jackpot-Pfeil L73.",
-      "returns": "Um die obere rechte Ecke (sw65).",
-      "awards": ["Eddie-Loop, wenn rot blinkend", "Jackpots in Modi und Multibällen"],
-      "visibility": "Eingang aus Lampen und Schalter sw_shortplunge der Datei abgeleitet.", "sources": ["script", "vpx"] },
-    "purple": { "name": "Violette Ziele (1–4)", "en": "Purple targets sw37/38/40/41", "kind": "Ziele", "flipper": "beide",
-      "what": "Vier kleine Ziele: links neben der linken Rampe, links vor Herman, rechts neben dem Scoop, links vom rechten Orbit.",
-      "returns": "Prallen zurück.",
-      "awards": ["Alle vier treffen, dann ein weiterer Treffer beleuchtet Grandpa am Scoop (L63)", "Im Grandpa-Modus: färben einen Hauptschuss violett (Jackpot)", "Lösen kurz die Zap-Taste aus"],
-      "visibility": "Sichtbar.", "sources": ["script", "vpx"] },
-    "dragula_lane": { "name": "Dragula-Bahn", "en": "Dragula Lane", "kind": "Bahn mit Kicker", "flipper": "R",
-      "what": "Bahn ganz links mit dem Dragula-Kicker (sw29). Die Pfeile L28–L30 zeigen dorthin.",
-      "returns": "Nach 3 s schießt der „Car Plunger“ die Kugel zurück.",
-      "awards": ["Punkte nach DRAGULA-Stand (1.000–100.000), mit 5x Dragula fünffach", "Bonus-X +1 bis +3", "Zufälliger Boost für Herman, Lily, Spot oder Grandpa (60 s)", "Im Herman/Raven-Multiball: Add-a-Ball", "Kassiert gestapelte Super Jackpots"],
-      "visibility": "Lage aus sw29 und dem Car Plunger der Datei.", "sources": ["script", "vpx"] },
-    "dragula_target": { "name": "Dragula-Ziel", "en": "Dragula Target", "kind": "Ziel", "flipper": "R",
-      "what": "Zielbereich links neben D-R-A-G-U-L-A (sw28, zwei Trefferflächen).",
-      "returns": "Prallt zurück.", "awards": ["DRAGULA-Buchstaben (erhöht den Dragula-Wert)"],
-      "visibility": "Die Trefferflächen sind in der Datei unsichtbar.", "sources": ["script", "vpx"] },
-    "lily_target": { "name": "Lily-Ziel", "en": "Lily Target", "kind": "Ziel", "flipper": "L",
-      "what": "Zielbereich rechts neben L-I-L-Y (sw31, zwei Trefferflächen).",
-      "returns": "Prallt zurück.", "awards": ["Viermal = Lily-Modus (Fortschritt läuft ab)"],
-      "visibility": "Die Trefferflächen sind in der Datei unsichtbar.", "sources": ["script", "vpx"] },
-    "pops": { "name": "Bumper", "en": "Pop Bumpers", "kind": "Bumper", "flipper": null,
-      "what": "Drei Bumper oben rechts der Mitte.", "returns": "—", "awards": ["Punkte"], "visibility": "Sichtbar.", "sources": ["vpx"] },
-    "top_lanes": { "name": "Top-Lanes", "en": "Top Lanes", "kind": "Bahnen", "flipper": null,
-      "what": "Zwei Rollover oben.", "returns": "In die Bumper.", "awards": ["Rechte Bahn (sw54): Skillshot"], "visibility": "Sichtbar.", "sources": ["script", "vpx"] },
-    "inlanes": { "name": "Rückläufe", "en": "Return Lanes", "kind": "Bahnen", "flipper": null,
-      "what": "Links zwei, rechts ein Rücklauf.", "returns": "Zum Flipper.", "awards": ["Starten Eddie bzw. Marilyn, wenn blinkend"], "visibility": "Sichtbar.", "sources": ["script", "vpx"] },
-    "outlanes": { "name": "Outlanes", "en": "Outlanes", "kind": "Bahnen", "flipper": null,
-      "what": "Ganz außen links und rechts.", "returns": "Ins Aus.", "awards": ["—"], "visibility": "Sichtbar.", "sources": ["vpx"] },
-    "plunger": { "name": "Abschuss", "en": "Plunger", "kind": "Abschuss", "flipper": null,
-      "what": "Abschussbahn rechts.", "returns": "Zu den Top-Lanes.", "awards": ["Skillshot: rechte Top-Lane oder linke Rampe", "Super Skillshot: linke Taste halten, rechte Rampe"], "visibility": "Sichtbar.", "sources": ["script"] }
+  {
+   "id": "info",
+   "title": "Regelnotiz in der Tischdatei (Table Info)",
+   "url": "https://vpinball.com/forums/topic/munsters-2020-sterntribute/",
+   "use": "„Modes: Raven, Spot, Herman, Lily, Grandpa and Marilyn & Eddie. Complete the 5 Areas to Play Munster Madness. Then on to Level II and Level III“."
+  }
+ ],
+ "views": {
+  "vpx": {
+   "label": "VPX (Fan-Tisch 1.06b)",
+   "note": "Spielfeldgrafik der Tischdatei mit den flachen Plastiken. Rampen, Herman-Figur und Drahtbahnen sind 3D-Modelle und fehlen in diesem Bild. Alle Markierungen kommen direkt aus den Koordinaten der Tischdatei."
+  }
+ },
+ "shots": {
+  "left_orbit": {
+   "name": "Linker Orbit",
+   "en": "Left Orbit",
+   "kind": "Orbit mit Spinner",
+   "flipper": "R",
+   "what": "Bahn links über dem Eddie-Pfeil (L46) und dem Jackpot-Pfeil (L47). Im Eingang sitzt der Spinner.",
+   "returns": "Um die obere linke Ecke (Schalter sw64).",
+   "awards": [
+    "Eddie-Loop, wenn rot blinkend",
+    "Jackpot in Herman, Raven, Grandpa und Munster Madness, wenn L47 leuchtet"
+   ],
+   "visibility": "Spinner-Position aus der Tischdatei.",
+   "sources": [
+    "script",
+    "vpx"
+   ]
   },
-  "strategies": [
-    { "id": "solid", "title": "Solide spielen", "subtitle": "Fünf Familienmitglieder, dann Munster Madness",
-      "steps": [
-        { "title": "Skillshot", "shots": ["plunger", "top_lanes", "left_ramp", "right_ramp"], "prep": "Kugel in der Abschussbahn.", "go": "1. In die rechte Top-Lane oder kurz abschießen und linke Rampe. 2. Super: linke Taste halten und rechte Rampe.", "why": "Skillshot bzw. Super Skillshot (Bildschirmtext im Script).", "sources": ["script"] },
-        { "title": "Herman", "shots": ["herman"], "prep": "—", "go": "1. Herman einmal: Magnet geht an. 2. Nochmal Herman: Kugel bleibt hängen.", "why": "Zweite Kugel kommt: Herman Multiball.", "sources": ["script"] },
-        { "title": "Grandpa", "shots": ["purple", "scoop"], "prep": "Violette Einsätze zeigen den Stand.", "go": "1. Alle vier violetten Ziele. 2. Ein weiteres violettes Ziel: Grandpa leuchtet am Scoop. 3. Scoop.", "why": "Grandpa-Modus: Jackpots auf den violett gefärbten Hauptschüssen.", "sources": ["script"] },
-        { "title": "Lily", "shots": ["lily_target"], "prep": "—", "go": "Lily-Ziel viermal, bevor der Fortschritt abläuft.", "why": "Startet Lily.", "sources": ["script"] },
-        { "title": "Spot", "shots": ["left_ramp", "right_ramp", "spot"], "prep": "Spot-Pfeil an einer Rampe blinkt rot.", "go": "Die rote Rampe treffen; taucht Spot auf, auch Spot treffen.", "why": "S-P-O-T komplett startet den Spot-Modus (47 s).", "sources": ["script"] },
-        { "title": "Raven", "shots": ["left_ramp"], "prep": "Raven-Einsätze blinken.", "go": "Linke Rampe dreimal.", "why": "Raven Multiball.", "sources": ["script"] },
-        { "title": "Extraball", "shots": ["scoop"], "prep": "Drei Familienmitglieder gespielt.", "go": "Scoop, wenn „Extra Ball“ blinkt.", "why": "Extraball (Script: cAwardExtraBallLight).", "sources": ["script"] }
-      ] },
-    { "id": "high", "title": "Auf Highscore", "subtitle": "Multiplikator und Munster Madness",
-      "steps": [
-        { "title": "Kitty nach jedem Modus", "shots": ["kitty"], "prep": "Kitty blinkt (nach jedem Familienmitglied).", "go": "Kitty-Ziel treffen, dann immer wieder.", "why": "Spielfeld-Multiplikator für 60 s; jeder Treffer setzt die Zeit zurück.", "sources": ["script"] },
-        { "title": "Dragula im Multiball", "shots": ["dragula_target", "dragula_lane"], "prep": "Herman- oder Raven-Multiball läuft.", "go": "1. Dragula-Bahn: Add-a-Ball wird beleuchtet. 2. Nochmal: Kugel kommt dazu.", "why": "Mehr Kugeln, mehr Jackpots.", "sources": ["script"] },
-        { "title": "Eddie-Loops", "shots": ["left_orbit", "right_orbit"], "prep": "Eddie-Pfeile blinken rot.", "go": "Orbits treffen, solange sie blinken.", "why": "Beim fünften Loop 400.000 und ein Super Jackpot.", "sources": ["script"] },
-        { "title": "Munster Madness", "shots": ["scoop"], "prep": "Alle fünf Familienmitglieder gespielt.", "go": "Scoop.", "why": "Vier-Kugel-Wizard mit drei Stufen.", "sources": ["script", "info"] }
-      ] }
-  ],
-  "multiballs": [
-    { "id": "herman", "name": "Herman Multiball", "tag": "Familienmitglied", "balls": "2 Kugeln (+ Add-a-Ball)",
-      "prep": [ { "title": "Magnet einschalten", "shots": ["herman"], "text": "Erster Herman-Treffer schaltet den Magnet ein.", "sources": ["script"] } ],
-      "start": { "title": "Kugel fangen", "shots": ["herman"], "text": "Der Magnet hält die Kugel, eine zweite kommt ins Spiel.", "sources": ["script"] },
-      "score": [ { "title": "Leuchtende Hauptschüsse", "shots": ["left_orbit", "left_ramp", "right_ramp", "right_orbit"], "text": "Leuchtende Jackpot-Pfeile treffen.", "sources": ["script"] },
-        { "title": "Add-a-Ball", "shots": ["dragula_lane"], "text": "Dragula-Bahn beleuchtet Add-a-Ball, der nächste Treffer gibt die Kugel.", "sources": ["script"] } ] },
-    { "id": "raven", "name": "Raven Multiball", "tag": "Familienmitglied", "balls": "nicht belegt",
-      "prep": [ { "title": "Zwei Raven-Fortschritte", "shots": ["left_ramp"], "text": "Linke Rampe zweimal, solange die Raven-Einsätze blinken.", "sources": ["script"] } ],
-      "start": { "title": "Dritte linke Rampe", "shots": ["left_ramp"], "text": "Startet Raven Multiball; alle vier Hauptschüsse leuchten weiß.", "sources": ["script"] },
-      "score": [ { "title": "Vier Jackpots", "shots": ["left_orbit", "left_ramp", "right_ramp", "right_orbit"], "text": "Linker Orbit, linke Rampe, rechte Rampe, rechter Orbit.", "sources": ["script"] },
-        { "title": "Raven Boost / Restart", "shots": ["left_ramp"], "text": "Drei linke Rampen = Boost (20 s). Läuft der Restart-Timer, startet die linke Rampe den Multiball neu.", "sources": ["script"] } ] },
-    { "id": "madness", "name": "Munster Madness", "tag": "Wizard-Modus", "balls": "4 Kugeln (Script-Kommentar)",
-      "prep": [ { "title": "Alle fünf Familienmitglieder", "shots": ["herman", "purple", "lily_target", "left_ramp"], "text": "Herman, Raven, Lily, Spot und Grandpa gespielt: L17 und L64 blinken.", "sources": ["script"] } ],
-      "start": { "title": "Scoop", "shots": ["scoop"], "text": "Scoop startet Munster Madness.", "sources": ["script"] },
-      "score": [ { "title": "Stufe 1: Bereich abschließen", "shots": [], "text": "Ein Familienmitglied wie im Spiel abschließen (z. B. LILY, vier violette Ziele).", "sources": ["script"] },
-        { "title": "Stufe 2: Jackpots", "shots": ["left_orbit", "left_ramp", "right_ramp", "right_orbit"], "text": "Leuchtende Hauptschüsse (250.000, je +25.000), 20 s Zeit pro Jackpot.", "sources": ["script"] },
-        { "title": "Stufe 3: Hurry-ups", "shots": ["left_ramp", "right_orbit", "right_ramp", "left_orbit"], "text": "Blinkender Schuss wandert: linke Rampe → rechter Orbit → rechte Rampe → linker Orbit.", "sources": ["script"] } ] }
-  ],
-  "modesIntro": "Familienmitglieder wie beim Stern-Vorbild: Herman, Raven, Lily, Spot, Grandpa, dazu Eddie und Marilyn. Jedes gespielte Mitglied beleuchtet Kitty. Drei = Extraball, alle fünf = Munster Madness. Danach Stufe II und III (Regelnotiz).",
-  "modes": [
-    { "id": "spot", "name": "Spot", "film": "Familienmitglied", "time": "47 s", "steps": [ { "title": "Spot treffen", "shots": ["spot"], "text": "Spot steht in der Treppe der linken Rampe." } ] },
-    { "id": "lily", "name": "Lily", "film": "Familienmitglied", "time": "auf Zeit", "steps": [ { "title": "Alles zählt mehr", "shots": [], "text": "Laut Script-Kopf „Everything scores more“." } ] },
-    { "id": "grandpa", "name": "Grandpa", "film": "Familienmitglied", "time": "45 s (Stufe 2: 30 s)", "steps": [ { "title": "Schüsse violett färben", "shots": ["purple"], "text": "Violette Ziele färben einen Hauptschuss violett." }, { "title": "Jackpots kassieren", "shots": ["left_orbit", "left_ramp", "right_ramp", "right_orbit"], "text": "Violette Schüsse treffen. Alle vier Ziele erneut = Add Time am Scoop (+10 s)." } ] },
-    { "id": "eddie", "name": "Eddie", "film": "Nebenmodus", "time": "läuft ab", "steps": [ { "title": "Orbits", "shots": ["left_orbit", "right_orbit"], "text": "Ab 20.000; fünfter Loop 400.000 und Super Jackpot." } ] },
-    { "id": "marilyn", "name": "Marilyn", "film": "Nebenmodus", "time": "10 s", "steps": [ { "title": "Rechte Rampe", "shots": ["right_ramp"], "text": "Wenn L102 blinkt: Freund verjagen." } ] }
-  ],
-  "glossary": [
-    { "term": "Familienmitglied", "text": "Herman, Raven, Lily, Spot, Grandpa." },
-    { "term": "Boost", "text": "Die Dragula-Bahn macht ein Mitglied für 60 s wertvoller." },
-    { "term": "Zap", "text": "Aktionstaste (im Script die MagnaSave-Taste) nach einem Zieltreffer: lädt Zap-Jackpots." },
-    { "term": "Insert (Einsatz)", "text": "Leuchtfeld im Spielfeld vor einem Schuss. Nicht das Ziel selbst." }
-  ],
-  "limits": [
-    "Fan-Tisch: Die Regeln stammen aus dem Script, nicht aus einem offiziellen Regelwerk. Der Autor listet selbst offene Punkte (Combos, Raven-Jackpot aus Mystery u. a.).",
-    "Werte (Punkte, Zeiten) sind Script-Werte von v1.06 und können in anderen Fassungen abweichen.",
-    "Das Spielfeldbild zeigt nur Grafik und flache Plastiken; Rampen, Herman und Drähte fehlen.",
-    "Der Eingang des rechten Orbits ist aus Lampen und einem Hilfsschalter abgeleitet, nicht aus einem eigenen Eingangsschalter.",
-    "Flipper-Empfehlungen sind aus der Lage abgeleitet."
-  ]
+  "left_ramp": {
+   "name": "Linke Rampe (Treppe)",
+   "en": "Left Ramp / Staircase",
+   "kind": "Rampe",
+   "flipper": "R",
+   "what": "Treppen-Rampe links der Mitte, über dem Jackpot-Pfeil L51, dem Spot-Pfeil L98 und den drei Raven-Einsätzen.",
+   "returns": "Die Treppe hinauf bis oben (sw69), zurück über die Drahtbahn.",
+   "awards": [
+    "Raven-Fortschritt (drei = Raven Multiball)",
+    "Spot-Buchstabe, wenn L98 rot blinkt",
+    "Skillshot",
+    "Raven Boost und Raven-Restart"
+   ],
+   "visibility": "Rampe ist 3D und fehlt im Bild; Eingang aus der Rampe „FakeRampBottom“ der Datei.",
+   "sources": [
+    "script",
+    "vpx"
+   ]
+  },
+  "spot": {
+   "name": "Spot (in der Treppe)",
+   "en": "Spot target",
+   "kind": "Ziel (Spielzeug)",
+   "flipper": "R",
+   "what": "Spot fährt in der Treppe der linken Rampe hoch (Schalter sw68).",
+   "returns": "Prallt zurück.",
+   "awards": [
+    "Spot-Buchstabe, wenn Spot oben ist",
+    "Im Spot-Modus: Spot treffen"
+   ],
+   "visibility": "Nur wenn Spot oben ist.",
+   "sources": [
+    "script",
+    "vpx"
+   ]
+  },
+  "herman": {
+   "name": "Herman",
+   "en": "Herman",
+   "kind": "Schuss mit Magnet",
+   "flipper": "beide",
+   "what": "Bahn zu Herman über dem Herman-Pfeil L56 und den drei Herman-Einsätzen. Am Ende sitzen Schalter sw45 und der Magnet.",
+   "returns": "Prallt zurück oder bleibt am Magnet hängen.",
+   "awards": [
+    "1. Treffer schaltet den Magnet ein",
+    "Wird die Kugel gefangen: zweite Kugel kommt, Herman-Hurry-up und Herman Multiball"
+   ],
+   "visibility": "Herman-Figur fehlt im Bild; Schalter sw45 aus der Datei.",
+   "sources": [
+    "script",
+    "vpx"
+   ]
+  },
+  "kitty": {
+   "name": "Kitty-Ziel",
+   "en": "Kitty Target",
+   "kind": "Ziel",
+   "flipper": "L",
+   "what": "Schmales Ziel mit Katzenbild rechts von Herman (sw39).",
+   "returns": "Prallt zurück.",
+   "awards": [
+    "Wenn L80 blinkt: Spielfeld-Multiplikator (läuft 60 s)",
+    "Laufender Multiplikator: Timer zurücksetzen"
+   ],
+   "visibility": "Sichtbar.",
+   "sources": [
+    "script",
+    "vpx"
+   ]
+  },
+  "scoop": {
+   "name": "Grandpa-Scoop",
+   "en": "Scoop",
+   "kind": "Scoop",
+   "flipper": "beide",
+   "what": "Loch in der Mitte über „Grandpa's Laboratory“ (Kicker ScoopEject).",
+   "returns": "Wirft die Kugel wieder aus.",
+   "awards": [
+    "Reihenfolge laut Script: Grandpa-Modus (wenn L63 leuchtet) → Mystery (L103) → Extraball (L62) → Munster Madness (L64) → sonst Punkte",
+    "Add Time im Grandpa-Modus"
+   ],
+   "visibility": "Sichtbar.",
+   "sources": [
+    "script",
+    "vpx"
+   ]
+  },
+  "right_ramp": {
+   "name": "Rechte Rampe (Marilyn)",
+   "en": "Right Ramp",
+   "kind": "Rampe",
+   "flipper": "L",
+   "what": "Rampe rechts der Mitte, über dem Jackpot-Pfeil L67, dem Spot-Pfeil L101 und dem Marilyn-Einsatz L102.",
+   "returns": "Rampe hinauf (sw70), zurück über die Drahtbahn.",
+   "awards": [
+    "Super Skillshot: linke Taste halten und rechte Rampe",
+    "Marilyn, wenn L102 blinkt",
+    "Spot-Buchstabe, wenn L101 rot blinkt",
+    "Jackpots in Modi und Multibällen"
+   ],
+   "visibility": "Rampe 3D, fehlt im Bild; Eingang zwischen den violetten Zielen 3 und 4.",
+   "sources": [
+    "script",
+    "vpx"
+   ]
+  },
+  "right_orbit": {
+   "name": "Rechter Orbit",
+   "en": "Right Orbit",
+   "kind": "Orbit",
+   "flipper": "L",
+   "what": "Bahn rechts über dem Eddie-Pfeil L72 und dem Jackpot-Pfeil L73.",
+   "returns": "Um die obere rechte Ecke (sw65).",
+   "awards": [
+    "Eddie-Loop, wenn rot blinkend",
+    "Jackpots in Modi und Multibällen"
+   ],
+   "visibility": "Eingang aus Lampen und Schalter sw_shortplunge der Datei abgeleitet.",
+   "sources": [
+    "script",
+    "vpx"
+   ]
+  },
+  "purple": {
+   "name": "Violette Ziele (1–4)",
+   "en": "Purple targets sw37/38/40/41",
+   "kind": "Ziele",
+   "flipper": "beide",
+   "what": "Vier kleine Ziele: links neben der linken Rampe, links vor Herman, rechts neben dem Scoop, links vom rechten Orbit.",
+   "returns": "Prallen zurück.",
+   "awards": [
+    "Alle vier treffen, dann ein weiterer Treffer beleuchtet Grandpa am Scoop (L63)",
+    "Im Grandpa-Modus: färben einen Hauptschuss violett (Jackpot)",
+    "Lösen kurz die Zap-Taste aus"
+   ],
+   "visibility": "Sichtbar.",
+   "sources": [
+    "script",
+    "vpx"
+   ]
+  },
+  "dragula_lane": {
+   "name": "Dragula-Bahn",
+   "en": "Dragula Lane",
+   "kind": "Bahn mit Kicker",
+   "flipper": "R",
+   "what": "Bahn ganz links mit dem Dragula-Kicker (sw29). Die Pfeile L28–L30 zeigen dorthin.",
+   "returns": "Nach 3 s schießt der „Car Plunger“ die Kugel zurück.",
+   "awards": [
+    "Punkte nach DRAGULA-Stand (1.000–100.000), mit 5x Dragula fünffach",
+    "Bonus-X +1 bis +3",
+    "Zufälliger Boost für Herman, Lily, Spot oder Grandpa (60 s)",
+    "Im Herman/Raven-Multiball: Add-a-Ball",
+    "Kassiert gestapelte Super Jackpots"
+   ],
+   "visibility": "Lage aus sw29 und dem Car Plunger der Datei.",
+   "sources": [
+    "script",
+    "vpx"
+   ]
+  },
+  "dragula_target": {
+   "name": "Dragula-Ziel",
+   "en": "Dragula Target",
+   "kind": "Ziel",
+   "flipper": "R",
+   "what": "Zielbereich links neben D-R-A-G-U-L-A (sw28, zwei Trefferflächen).",
+   "returns": "Prallt zurück.",
+   "awards": [
+    "DRAGULA-Buchstaben (erhöht den Dragula-Wert)"
+   ],
+   "visibility": "Die Trefferflächen sind in der Datei unsichtbar.",
+   "sources": [
+    "script",
+    "vpx"
+   ]
+  },
+  "lily_target": {
+   "name": "Lily-Ziel",
+   "en": "Lily Target",
+   "kind": "Ziel",
+   "flipper": "L",
+   "what": "Zielbereich rechts neben L-I-L-Y (sw31, zwei Trefferflächen).",
+   "returns": "Prallt zurück.",
+   "awards": [
+    "Viermal = Lily-Modus (Fortschritt läuft ab)"
+   ],
+   "visibility": "Die Trefferflächen sind in der Datei unsichtbar.",
+   "sources": [
+    "script",
+    "vpx"
+   ]
+  },
+  "pops": {
+   "name": "Bumper",
+   "en": "Pop Bumpers",
+   "kind": "Bumper",
+   "flipper": null,
+   "what": "Drei Bumper oben rechts der Mitte.",
+   "returns": "—",
+   "awards": [
+    "Punkte"
+   ],
+   "visibility": "Sichtbar.",
+   "sources": [
+    "vpx"
+   ]
+  },
+  "top_lanes": {
+   "name": "Top-Lanes",
+   "en": "Top Lanes",
+   "kind": "Bahnen",
+   "flipper": null,
+   "what": "Zwei Rollover oben.",
+   "returns": "In die Bumper.",
+   "awards": [
+    "Rechte Bahn (sw54): Skillshot"
+   ],
+   "visibility": "Sichtbar.",
+   "sources": [
+    "script",
+    "vpx"
+   ]
+  },
+  "inlanes": {
+   "name": "Rückläufe",
+   "en": "Return Lanes",
+   "kind": "Bahnen",
+   "flipper": null,
+   "what": "Links zwei, rechts ein Rücklauf.",
+   "returns": "Zum Flipper.",
+   "awards": [
+    "Starten Eddie bzw. Marilyn, wenn blinkend"
+   ],
+   "visibility": "Sichtbar.",
+   "sources": [
+    "script",
+    "vpx"
+   ]
+  },
+  "outlanes": {
+   "name": "Outlanes",
+   "en": "Outlanes",
+   "kind": "Bahnen",
+   "flipper": null,
+   "what": "Ganz außen links und rechts.",
+   "returns": "Ins Aus.",
+   "awards": [
+    "—"
+   ],
+   "visibility": "Sichtbar.",
+   "sources": [
+    "vpx"
+   ]
+  },
+  "plunger": {
+   "name": "Abschuss",
+   "en": "Plunger",
+   "kind": "Abschuss",
+   "flipper": null,
+   "what": "Abschussbahn rechts.",
+   "returns": "Zu den Top-Lanes.",
+   "awards": [
+    "Skillshot: rechte Top-Lane oder linke Rampe",
+    "Super Skillshot: linke Taste halten, rechte Rampe"
+   ],
+   "visibility": "Sichtbar.",
+   "sources": [
+    "script"
+   ]
+  }
+ },
+ "strategies": [
+  {
+   "id": "solid",
+   "title": "Solide spielen",
+   "subtitle": "Fünf Familienmitglieder, dann Munster Madness",
+   "steps": [
+    {
+     "title": "Skillshot",
+     "shots": [
+      "plunger",
+      "top_lanes",
+      "left_ramp",
+      "right_ramp"
+     ],
+     "prep": "Kugel in der Abschussbahn.",
+     "go": "1. In die rechte Top-Lane oder kurz abschießen und linke Rampe. 2. Super: linke Taste halten und rechte Rampe.",
+     "why": "Skillshot bzw. Super Skillshot (Bildschirmtext im Script).",
+     "sources": [
+      "script"
+     ]
+    },
+    {
+     "title": "Herman",
+     "shots": [
+      "herman"
+     ],
+     "prep": "—",
+     "go": "1. Herman einmal: Magnet geht an. 2. Nochmal Herman: Kugel bleibt hängen.",
+     "why": "Zweite Kugel kommt: Herman Multiball.",
+     "sources": [
+      "script"
+     ]
+    },
+    {
+     "title": "Grandpa",
+     "shots": [
+      "purple",
+      "scoop"
+     ],
+     "prep": "Violette Einsätze zeigen den Stand.",
+     "go": "1. Alle vier violetten Ziele. 2. Ein weiteres violettes Ziel: Grandpa leuchtet am Scoop. 3. Scoop.",
+     "why": "Grandpa-Modus: Jackpots auf den violett gefärbten Hauptschüssen.",
+     "sources": [
+      "script"
+     ]
+    },
+    {
+     "title": "Lily",
+     "shots": [
+      "lily_target"
+     ],
+     "prep": "—",
+     "go": "Lily-Ziel viermal, bevor der Fortschritt abläuft.",
+     "why": "Startet Lily.",
+     "sources": [
+      "script"
+     ]
+    },
+    {
+     "title": "Spot",
+     "shots": [
+      "left_ramp",
+      "right_ramp",
+      "spot"
+     ],
+     "prep": "Spot-Pfeil an einer Rampe blinkt rot.",
+     "go": "Die rote Rampe treffen; taucht Spot auf, auch Spot treffen.",
+     "why": "S-P-O-T komplett startet den Spot-Modus (47 s).",
+     "sources": [
+      "script"
+     ]
+    },
+    {
+     "title": "Raven",
+     "shots": [
+      "left_ramp"
+     ],
+     "prep": "Raven-Einsätze blinken.",
+     "go": "Linke Rampe dreimal.",
+     "why": "Raven Multiball.",
+     "sources": [
+      "script"
+     ]
+    },
+    {
+     "title": "Extraball",
+     "shots": [
+      "scoop"
+     ],
+     "prep": "Drei Familienmitglieder gespielt.",
+     "go": "Scoop, wenn „Extra Ball“ blinkt.",
+     "why": "Extraball (Script: cAwardExtraBallLight).",
+     "sources": [
+      "script"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "high",
+   "title": "Auf Highscore",
+   "subtitle": "Multiplikator und Munster Madness",
+   "steps": [
+    {
+     "title": "Kitty nach jedem Modus",
+     "shots": [
+      "kitty"
+     ],
+     "prep": "Kitty blinkt (nach jedem Familienmitglied).",
+     "go": "Kitty-Ziel treffen, dann immer wieder.",
+     "why": "Spielfeld-Multiplikator für 60 s; jeder Treffer setzt die Zeit zurück.",
+     "sources": [
+      "script"
+     ]
+    },
+    {
+     "title": "Dragula im Multiball",
+     "shots": [
+      "dragula_target",
+      "dragula_lane"
+     ],
+     "prep": "Herman- oder Raven-Multiball läuft.",
+     "go": "1. Dragula-Bahn: Add-a-Ball wird beleuchtet. 2. Nochmal: Kugel kommt dazu.",
+     "why": "Mehr Kugeln, mehr Jackpots.",
+     "sources": [
+      "script"
+     ]
+    },
+    {
+     "title": "Eddie-Loops",
+     "shots": [
+      "left_orbit",
+      "right_orbit"
+     ],
+     "prep": "Eddie-Pfeile blinken rot.",
+     "go": "Orbits treffen, solange sie blinken.",
+     "why": "Beim fünften Loop 400.000 und ein Super Jackpot.",
+     "sources": [
+      "script"
+     ]
+    },
+    {
+     "title": "Munster Madness",
+     "shots": [
+      "scoop"
+     ],
+     "prep": "Alle fünf Familienmitglieder gespielt.",
+     "go": "Scoop.",
+     "why": "Vier-Kugel-Wizard mit drei Stufen.",
+     "sources": [
+      "script",
+      "info"
+     ]
+    }
+   ]
+  }
+ ],
+ "multiballs": [
+  {
+   "id": "herman",
+   "name": "Herman Multiball",
+   "tag": "Familienmitglied",
+   "balls": "2 Kugeln (+ Add-a-Ball)",
+   "prep": [
+    {
+     "title": "Magnet einschalten",
+     "shots": [
+      "herman"
+     ],
+     "text": "Erster Herman-Treffer schaltet den Magnet ein.",
+     "sources": [
+      "script"
+     ]
+    }
+   ],
+   "start": {
+    "title": "Kugel fangen",
+    "shots": [
+     "herman"
+    ],
+    "text": "Der Magnet hält die Kugel, eine zweite kommt ins Spiel.",
+    "sources": [
+     "script"
+    ]
+   },
+   "score": [
+    {
+     "title": "Leuchtende Hauptschüsse",
+     "shots": [
+      "left_orbit",
+      "left_ramp",
+      "right_ramp",
+      "right_orbit"
+     ],
+     "text": "Leuchtende Jackpot-Pfeile treffen.",
+     "sources": [
+      "script"
+     ]
+    },
+    {
+     "title": "Add-a-Ball",
+     "shots": [
+      "dragula_lane"
+     ],
+     "text": "Dragula-Bahn beleuchtet Add-a-Ball, der nächste Treffer gibt die Kugel.",
+     "sources": [
+      "script"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "raven",
+   "name": "Raven Multiball",
+   "tag": "Familienmitglied",
+   "balls": "nicht belegt",
+   "prep": [
+    {
+     "title": "Zwei Raven-Fortschritte",
+     "shots": [
+      "left_ramp"
+     ],
+     "text": "Linke Rampe zweimal, solange die Raven-Einsätze blinken.",
+     "sources": [
+      "script"
+     ]
+    }
+   ],
+   "start": {
+    "title": "Dritte linke Rampe",
+    "shots": [
+     "left_ramp"
+    ],
+    "text": "Startet Raven Multiball; alle vier Hauptschüsse leuchten weiß.",
+    "sources": [
+     "script"
+    ]
+   },
+   "score": [
+    {
+     "title": "Vier Jackpots",
+     "shots": [
+      "left_orbit",
+      "left_ramp",
+      "right_ramp",
+      "right_orbit"
+     ],
+     "text": "Linker Orbit, linke Rampe, rechte Rampe, rechter Orbit.",
+     "sources": [
+      "script"
+     ]
+    },
+    {
+     "title": "Raven Boost / Restart",
+     "shots": [
+      "left_ramp"
+     ],
+     "text": "Drei linke Rampen = Boost (20 s). Läuft der Restart-Timer, startet die linke Rampe den Multiball neu.",
+     "sources": [
+      "script"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "madness",
+   "name": "Munster Madness",
+   "tag": "Wizard-Modus",
+   "balls": "4 Kugeln (Script-Kommentar)",
+   "prep": [
+    {
+     "title": "Alle fünf Familienmitglieder",
+     "shots": [
+      "herman",
+      "purple",
+      "lily_target",
+      "left_ramp"
+     ],
+     "text": "Herman, Raven, Lily, Spot und Grandpa gespielt: L17 und L64 blinken.",
+     "sources": [
+      "script"
+     ]
+    }
+   ],
+   "start": {
+    "title": "Scoop",
+    "shots": [
+     "scoop"
+    ],
+    "text": "Scoop startet Munster Madness.",
+    "sources": [
+     "script"
+    ]
+   },
+   "score": [
+    {
+     "title": "Stufe 1: Bereich abschließen",
+     "shots": [],
+     "text": "Ein Familienmitglied wie im Spiel abschließen (z. B. LILY, vier violette Ziele).",
+     "sources": [
+      "script"
+     ],
+     "lit": true
+    },
+    {
+     "title": "Stufe 2: Jackpots",
+     "shots": [
+      "left_orbit",
+      "left_ramp",
+      "right_ramp",
+      "right_orbit"
+     ],
+     "text": "Leuchtende Hauptschüsse (250.000, je +25.000), 20 s Zeit pro Jackpot.",
+     "sources": [
+      "script"
+     ]
+    },
+    {
+     "title": "Stufe 3: Hurry-ups",
+     "shots": [
+      "left_ramp",
+      "right_orbit",
+      "right_ramp",
+      "left_orbit"
+     ],
+     "text": "Blinkender Schuss wandert: linke Rampe → rechter Orbit → rechte Rampe → linker Orbit.",
+     "sources": [
+      "script"
+     ]
+    }
+   ]
+  }
+ ],
+ "modesIntro": "Familienmitglieder wie beim Stern-Vorbild: Herman, Raven, Lily, Spot, Grandpa, dazu Eddie und Marilyn. Jedes gespielte Mitglied beleuchtet Kitty. Drei = Extraball, alle fünf = Munster Madness. Danach Stufe II und III (Regelnotiz).",
+ "modes": [
+  {
+   "id": "spot",
+   "name": "Spot",
+   "film": "Familienmitglied",
+   "time": "47 s",
+   "steps": [
+    {
+     "title": "Spot treffen",
+     "shots": [
+      "spot"
+     ],
+     "text": "Spot steht in der Treppe der linken Rampe."
+    }
+   ]
+  },
+  {
+   "id": "lily",
+   "name": "Lily",
+   "film": "Familienmitglied",
+   "time": "auf Zeit",
+   "steps": [
+    {
+     "title": "Alles zählt mehr",
+     "shots": [
+      "pops"
+     ],
+     "text": "Laut Script-Kopf „Everything scores more“."
+    }
+   ]
+  },
+  {
+   "id": "grandpa",
+   "name": "Grandpa",
+   "film": "Familienmitglied",
+   "time": "45 s (Stufe 2: 30 s)",
+   "steps": [
+    {
+     "title": "Schüsse violett färben",
+     "shots": [
+      "purple"
+     ],
+     "text": "Violette Ziele färben einen Hauptschuss violett."
+    },
+    {
+     "title": "Jackpots kassieren",
+     "shots": [
+      "left_orbit",
+      "left_ramp",
+      "right_ramp",
+      "right_orbit"
+     ],
+     "text": "Violette Schüsse treffen. Alle vier Ziele erneut = Add Time am Scoop (+10 s)."
+    }
+   ]
+  },
+  {
+   "id": "eddie",
+   "name": "Eddie",
+   "film": "Nebenmodus",
+   "time": "läuft ab",
+   "steps": [
+    {
+     "title": "Orbits",
+     "shots": [
+      "left_orbit",
+      "right_orbit"
+     ],
+     "text": "Ab 20.000; fünfter Loop 400.000 und Super Jackpot."
+    }
+   ]
+  },
+  {
+   "id": "marilyn",
+   "name": "Marilyn",
+   "film": "Nebenmodus",
+   "time": "10 s",
+   "steps": [
+    {
+     "title": "Rechte Rampe",
+     "shots": [
+      "right_ramp"
+     ],
+     "text": "Wenn L102 blinkt: Freund verjagen."
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "term": "Familienmitglied",
+   "text": "Herman, Raven, Lily, Spot, Grandpa."
+  },
+  {
+   "term": "Boost",
+   "text": "Die Dragula-Bahn macht ein Mitglied für 60 s wertvoller."
+  },
+  {
+   "term": "Zap",
+   "text": "Aktionstaste (im Script die MagnaSave-Taste) nach einem Zieltreffer: lädt Zap-Jackpots."
+  },
+  {
+   "term": "Insert (Einsatz)",
+   "text": "Leuchtfeld im Spielfeld vor einem Schuss. Nicht das Ziel selbst."
+  }
+ ],
+ "limits": [
+  "Fan-Tisch: Die Regeln stammen aus dem Script, nicht aus einem offiziellen Regelwerk. Der Autor listet selbst offene Punkte (Combos, Raven-Jackpot aus Mystery u. a.).",
+  "Werte (Punkte, Zeiten) sind Script-Werte von v1.06 und können in anderen Fassungen abweichen.",
+  "Das Spielfeldbild zeigt nur Grafik und flache Plastiken; Rampen, Herman und Drähte fehlen.",
+  "Der Eingang des rechten Orbits ist aus Lampen und einem Hilfsschalter abgeleitet, nicht aus einem eigenen Eingangsschalter.",
+  "Flipper-Empfehlungen sind aus der Lage abgeleitet."
+ ]
 }

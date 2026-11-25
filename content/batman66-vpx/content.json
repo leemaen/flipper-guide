@@ -580,7 +580,8 @@
      "text": "Catwoman, Joker, Penguin, Riddler.",
      "sources": [
       "rules"
-     ]
+     ],
+     "lit": true
     }
    ],
    "start": {

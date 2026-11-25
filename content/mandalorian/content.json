@@ -1,176 +1,1187 @@
 {
  "table": {
-  "id": "mandalorian", "name": "The Mandalorian", "short": "Mandalorian", "manufacturer": "Stern Pinball", "year": 2021,
-  "system": "Stern SPIKE 2", "design": "Keith Elwin",
+  "id": "mandalorian",
+  "name": "The Mandalorian",
+  "short": "Mandalorian",
+  "manufacturer": "Stern Pinball",
+  "year": 2021,
+  "system": "Stern SPIKE 2",
+  "design": "Keith Elwin",
   "editions": "Pro-Ausführung (dieser Guide): U-Turn statt rechter Mulde, Mini-Spielfeld mit nur einem Flipper (kein Kippen), Ausrüstung Rising Phoenix statt Jetpack. Premium/LE weichen ab.",
   "ruleVersion": "Regeln nach der offiziellen Stern-Spielanleitung „How-To-Play and Rule Guide“ Version 1.40.00 und dem Wiki-Rulesheet (pinballrulesheets.com, Code 1.42). Neuere Software kann abweichen.",
-  "accent": "#b9c4cc", "contentDate": "2026-11-22"
+  "accent": "#b9c4cc",
+  "contentDate": "2026-11-22"
  },
  "sources": [
-  { "id": "rules", "title": "Stern Pinball: The Mandalorian – How-To-Play and Rule Guide, Version 1.40.00", "url": "https://sternpinball.com/wp-content/uploads/2022/11/Mando-Rule-Sheet.pdf", "use": "Offizielle Regeln mit Pro-Hinweisen (U-Turn statt rechter Mulde). Grundlage für Missionen, Multibälle, Encounters, Hunter, Scope, Foundry, Skillshots." },
-  { "id": "wiki", "title": "Wiki-Rulesheet The Mandalorian (pinballrulesheets.com, früher Tilt Forums), Code 1.42", "url": "https://pinballrulesheets.com/stern/the-mandalorian-rulesheet.html", "use": "Details: Start der Razor-Crest-Multibälle, Jackpots, Encounter-Zählung, Unterschiede Pro/Premium, Strategie („Fire Triangle“)." },
-  { "id": "manual", "title": "Stern Pinball: The Mandalorian LE / Premium Manual 500-55S6-01", "url": "https://cdn.shopify.com/s/files/1/2677/1846/files/Mandalorian_LE_Pre_web.pdf", "use": "Schalterplan (Fig. 3.3.1) und Lampenliste zur Zuordnung der Schüsse. Ein Pro-Handbuch war nicht abrufbar; Unterschiede Pro siehe Grenzen." },
-  { "id": "photo", "title": "Stern Pinball: Spielfeldfoto The Mandalorian Pro („Mandalorian-Pro-Playfield-01“)", "url": "https://sternpinball.com/wp-content/uploads/2021/05/Mandalorian-Pro-Playfield-01-afkjhadf-scaled.webp", "use": "Spielfeldansicht; alle Markierungen sind in diesem Foto vermessen." },
-  { "id": "ball", "title": "Kugelbild: wie in den anderen Tischen der App", "url": "", "use": "Animierte Kugel." }
+  {
+   "id": "rules",
+   "title": "Stern Pinball: The Mandalorian – How-To-Play and Rule Guide, Version 1.40.00",
+   "url": "https://sternpinball.com/wp-content/uploads/2022/11/Mando-Rule-Sheet.pdf",
+   "use": "Offizielle Regeln mit Pro-Hinweisen (U-Turn statt rechter Mulde). Grundlage für Missionen, Multibälle, Encounters, Hunter, Scope, Foundry, Skillshots."
+  },
+  {
+   "id": "wiki",
+   "title": "Wiki-Rulesheet The Mandalorian (pinballrulesheets.com, früher Tilt Forums), Code 1.42",
+   "url": "https://pinballrulesheets.com/stern/the-mandalorian-rulesheet.html",
+   "use": "Details: Start der Razor-Crest-Multibälle, Jackpots, Encounter-Zählung, Unterschiede Pro/Premium, Strategie („Fire Triangle“)."
+  },
+  {
+   "id": "manual",
+   "title": "Stern Pinball: The Mandalorian LE / Premium Manual 500-55S6-01",
+   "url": "https://cdn.shopify.com/s/files/1/2677/1846/files/Mandalorian_LE_Pre_web.pdf",
+   "use": "Schalterplan (Fig. 3.3.1) und Lampenliste zur Zuordnung der Schüsse. Ein Pro-Handbuch war nicht abrufbar; Unterschiede Pro siehe Grenzen."
+  },
+  {
+   "id": "photo",
+   "title": "Stern Pinball: Spielfeldfoto The Mandalorian Pro („Mandalorian-Pro-Playfield-01“)",
+   "url": "https://sternpinball.com/wp-content/uploads/2021/05/Mandalorian-Pro-Playfield-01-afkjhadf-scaled.webp",
+   "use": "Spielfeldansicht; alle Markierungen sind in diesem Foto vermessen."
+  },
+  {
+   "id": "ball",
+   "title": "Kugelbild: wie in den anderen Tischen der App",
+   "url": "",
+   "use": "Animierte Kugel."
+  },
+  {
+   "id": "cheat",
+   "title": "San Diego Pinball Club: Mandalorian-Cheatsheet (pinball.miraheze.org)",
+   "url": "https://pinball.miraheze.org/wiki/The_Mandalorian",
+   "use": "Mission vor dem ersten Multiball, Reihenfolge der Razor-Crest-Multibälle."
+  }
  ],
- "views": { "real": { "label": "Echter Tisch (Pro)", "note": "Herstellerfoto des Pro-Spielfelds, leicht schräg von vorn (oben schmaler). Rampen sind durchsichtig; der zweite Bumper liegt unter dem Razor-Crest-Modell, die Ziele der linken 3er-Bank sind von oben kaum zu sehen." } },
+ "views": {
+  "real": {
+   "label": "Echter Tisch (Pro)",
+   "note": "Herstellerfoto des Pro-Spielfelds, leicht schräg von vorn (oben schmaler). Rampen sind durchsichtig; der zweite Bumper liegt unter dem Razor-Crest-Modell, die Ziele der linken 3er-Bank sind von oben kaum zu sehen."
+  }
+ },
  "shots": {
-  "left_orbit": { "name": "Linker Orbit (Spinner)", "en": "Left Orbit / Left Spinner", "kind": "Orbit", "flipper": "R",
-    "what": "Bahn ganz links mit dem Spinner. Davor die Einsätze CHILD und HUNTER.", "returns": "Läuft oben herum über die Bumper-Seite (Schalter 32 Spinner).",
-    "awards": ["The Child einsammeln, wenn beleuchtet (beide Orbits)", "Hunter-Schuss", "Spinner: Pirates-Multiball stabilisiert das Rhydonium, Mission 3 baut Werte auf", "Mehrere Orbits beleuchten The Child"],
-    "visibility": "Eingang am Pfeil links oben im Foto; Spinner laut Schalterplan (32) in dieser Bahn.", "sources": ["rules", "manual", "photo"] },
-  "left_scoop": { "name": "Linke Mulde (Foundry)", "en": "Left Scoop / Left Eject", "kind": "Mulde", "flipper": "R",
-    "what": "Mulde links der Mitte. Davor die Einsätze FOUNDRY, EXTRA BALL und MISSION.", "returns": "Kugel wird ausgeworfen (Schalter 37 Left Eject).",
-    "awards": ["Mission starten (nach beiden Rampen)", "Foundry: Beskar eintauschen", "Extraball holen", "Finaler Schuss der meisten Missionen", "This Is The Way starten"],
-    "visibility": "Pfeil und Einsätze im Foto eindeutig; Lage der Mulde dahinter aus dem Schalterplan.", "sources": ["rules", "manual", "photo"] },
-  "left_ramp": { "name": "Linke Rampe (Encounter)", "en": "Left Ramp", "kind": "Rampe", "flipper": "R",
-    "what": "Rampe links der Mitte, davor ENCOUNTERS und MISSION.", "returns": "Normal zurück zum Flipper; bei Encounter/Jetpack-Multiball zum Mini-Spielfeld.",
-    "awards": ["Mission vorbereiten (beide Rampen + linke Mulde)", "Encounter beleuchten und starten", "Super Skillshot: Encounter starten"],
-    "visibility": "Pfeil im Foto; Ein-/Ausgang laut Schalterplan (50/51).", "sources": ["rules", "manual", "photo"] },
-  "center": { "name": "Mitte: Razor Crest / Mittelrampe", "en": "Center Ramp / Razor Crest Target", "kind": "Rampe mit Ziel", "flipper": "beide",
-    "what": "Schuss in die Mitte unter dem Razor-Crest-Modell. Ein harter, direkter Treffer zählt am Razor-Crest-Ziel; gestartet wird mit einem Schuss, der ganz um die Mittelrampe läuft.",
-    "returns": "Mittelrampe (Schalter 53/52), Ziel 64 laut Schalterplan.",
-    "awards": ["Razor-Crest-Multiball vorbereiten und starten", "Razor-Crest-Hurry-up starten", "Precious Cargo starten", "Super Skillshot: Multiball starten"],
-    "visibility": "Pfeil „Advance Razor Crest to light Multiball“ im Foto; genaue Lage des Ziels unter dem Modell verdeckt.", "sources": ["rules", "wiki", "manual", "photo"] },
-  "uturn": { "name": "U-Turn (Pro)", "en": "U-Turn (Pro; Premium/LE: right scoop)", "kind": "U-Turn", "flipper": "L",
-    "what": "Bahn rechts der Mitte mit der durchsichtigen U-Führung. Auf dem Pro ersetzt sie die rechte Mulde. Davor SUPER JACKPOT und AMBUSH.",
-    "returns": "Kugel läuft im Bogen und kommt rechts wieder heraus.",
-    "awards": ["Super Jackpots der Razor-Crest-Multibälle", "Ambush auslösen/anhalten", "Scope (blauer Pfeil): Ausrüstung", "Super Skillshot: erster Schuss", "Mission 2 (Ahsoka) und 5"],
-    "visibility": "U-Führung und Pfeil im Foto klar; Zuordnung über Einsätze Super Jackpot/Ambush und Pro-Hinweise der Spielanleitung.", "sources": ["rules", "wiki", "photo"] },
-  "x2_left": { "name": "Linkes 2X-Ziel", "en": "Left 2X Ramp Target", "kind": "Ziel", "flipper": "L",
-    "what": "Kleines Ziel links neben der rechten Rampe (Einsatz „2X RAMP“). Rechts der Rampe sitzt ein zweites 2X-Ziel.",
-    "returns": "Prallt zurück.",
-    "awards": ["Scope-Schuss (blau)", "Wechselt die beleuchtete Mission", "2X-Rampen-Bonus"],
-    "visibility": "Lage aus Schalterplan (56 „Right Ramp Left Target“) und Einsatz „2X RAMP“, im Foto nicht scharf zu sehen – etwa ±20 px.", "sources": ["rules", "wiki", "manual"] },
-  "right_ramp": { "name": "Rechte Rampe", "en": "Right Ramp", "kind": "Rampe", "flipper": "L",
-    "what": "Rampe rechts, zwischen den beiden 2X-Zielen.", "returns": "Zurück zum Flipper (Schalter 54).",
-    "awards": ["Mission vorbereiten (beide Rampen + linke Mulde)", "Ambush einsammeln", "Scope (blau): Punkte", "Super Skillshot: zweiter Schuss", "Hunter: Rampen erhöhen das Beskar"],
-    "visibility": "Pfeil im Foto; genaue Eingangsbreite geschätzt (±15 px).", "sources": ["rules", "wiki", "manual", "photo"] },
-  "right_orbit": { "name": "Rechter Orbit", "en": "Right Orbit", "kind": "Orbit", "flipper": "L",
-    "what": "Bahn ganz rechts oben, mit den Einsätzen THE CHILD und BOUNTY HUNTER.", "returns": "Läuft oben herum nach links (Schalter 60).",
-    "awards": ["The Child einsammeln, wenn beleuchtet", "Hunter-Schuss", "Mission 2 (Ahsoka)"],
-    "visibility": "Pfeil rechts oben im Foto.", "sources": ["rules", "manual", "photo"] },
-  "left_bank": { "name": "Linke 3er-Bank (Hunter)", "en": "Left 3-bank targets", "kind": "Ziele", "flipper": "R",
-    "what": "Drei Ziele an der linken Wand, davor drei Mandalorian-Einsätze („Targets light Hunter“).", "returns": "Prallt zurück.",
-    "awards": ["Alle drei = Hunter an einer Rückkehrbahn", "Mit 200 Beskar: Foundry beleuchten"],
-    "visibility": "Ziele selbst im Foto kaum zu sehen; Lage aus Schalterplan (29–31) direkt neben den Einsätzen, ±15 px.", "sources": ["rules", "manual", "photo"] },
-  "boba_fett": { "name": "Boba-Fett-Ziele", "en": "Boba Fett 2-bank (BOBA / FETT)", "kind": "Ziele", "flipper": "L",
-    "what": "Zwei Ziele an der rechten Wand, davor die Einsätze BOBA und FETT.", "returns": "Prallt zurück.",
-    "awards": ["Beide = grüner +1X-Spielfeld-Multiplikator", "Jeder Treffer gibt laufenden Timern Zeit", "Wählt den nächsten Razor-Crest-Multiball"],
-    "visibility": "Lage aus Schalterplan (34/35) neben den Einsätzen, ±15 px.", "sources": ["rules", "wiki", "manual", "photo"] },
-  "top_lanes": { "name": "CHILD-Bahnen", "en": "C-H-I-L-D top lanes", "kind": "Bahnen",
-    "what": "Fünf Bahnen oben links. Hier landet auch der Abschuss (Skillshot).", "returns": "Weiter zu den Bumpern.",
-    "awards": ["Skillshot: beleuchtete Bahn treffen", "Alle fünf = +1X Bonus, The Child, Super Pop"],
-    "visibility": "Einsätze der Bahnen im Foto; genaue Bahnmitten ±15 px.", "sources": ["rules", "photo"] },
-  "bumpers": { "name": "Bumper", "en": "Pop bumpers (Super Pops)", "kind": "Bumper",
-    "what": "Zwei Bumper unter den CHILD-Bahnen. Der zweite liegt unter dem Razor-Crest-Modell.", "returns": "—",
-    "awards": ["Super Pops: blinkender Bumper punktet extra", "Mission 4: jeder Treffer dreht die beleuchteten Schüsse"],
-    "visibility": "Ein Bumper im Foto sichtbar, der zweite verdeckt.", "sources": ["rules", "manual", "photo"] },
-  "mini_pf": { "name": "Mini-Spielfeld (Pro: ein Flipper)", "en": "Mini playfield (Encounters)", "kind": "Mini-Spielfeld",
-    "what": "Kuppel oben rechts. Erreichbar über die linke Rampe, wenn ein Encounter läuft. Auf dem Pro mit einem Flipper.", "returns": "Kugel kehrt ins Hauptspielfeld zurück.",
-    "awards": ["Encounters: drei Wellen Ziele", "Jetpack-Multiball: Ziele = Jackpots, alle sechs = Kugel dazu"],
-    "visibility": "Kuppel im Foto deutlich; die Ziele darin nicht einzeln markiert.", "sources": ["rules", "wiki", "manual", "photo"] },
-  "plunger": { "name": "Abschuss", "en": "Plunger / Skill Shot", "kind": "Abschuss",
-    "what": "Abschussbahn rechts. Die Kugel läuft zu den CHILD-Bahnen.", "returns": "Zu den CHILD-Bahnen.",
-    "awards": ["Skillshot", "Super Skillshot: linken Flipperknopf beim Abschuss halten"],
-    "visibility": "Bahn im Foto.", "sources": ["rules", "photo"] }
+  "left_orbit": {
+   "name": "Linker Orbit (Spinner)",
+   "en": "Left Orbit / Left Spinner",
+   "kind": "Orbit",
+   "flipper": "R",
+   "what": "Bahn ganz links mit dem Spinner. Davor die Einsätze CHILD und HUNTER.",
+   "returns": "Läuft oben herum über die Bumper-Seite (Schalter 32 Spinner).",
+   "awards": [
+    "The Child einsammeln, wenn beleuchtet (beide Orbits)",
+    "Hunter-Schuss",
+    "Spinner: Pirates-Multiball stabilisiert das Rhydonium, Mission 3 baut Werte auf",
+    "Mehrere Orbits beleuchten The Child"
+   ],
+   "visibility": "Eingang am Pfeil links oben im Foto; Spinner laut Schalterplan (32) in dieser Bahn.",
+   "sources": [
+    "rules",
+    "manual",
+    "photo"
+   ]
+  },
+  "left_scoop": {
+   "name": "Linke Mulde (Foundry)",
+   "en": "Left Scoop / Left Eject",
+   "kind": "Mulde",
+   "flipper": "R",
+   "what": "Mulde links der Mitte. Davor die Einsätze FOUNDRY, EXTRA BALL und MISSION.",
+   "returns": "Kugel wird ausgeworfen (Schalter 37 Left Eject).",
+   "awards": [
+    "Mission starten (nach beiden Rampen)",
+    "Foundry: Beskar eintauschen",
+    "Extraball holen",
+    "Finaler Schuss der meisten Missionen",
+    "This Is The Way starten"
+   ],
+   "visibility": "Pfeil und Einsätze im Foto eindeutig; Lage der Mulde dahinter aus dem Schalterplan.",
+   "sources": [
+    "rules",
+    "manual",
+    "photo"
+   ]
+  },
+  "left_ramp": {
+   "name": "Linke Rampe (Encounter)",
+   "en": "Left Ramp",
+   "kind": "Rampe",
+   "flipper": "R",
+   "what": "Rampe links der Mitte, davor ENCOUNTERS und MISSION.",
+   "returns": "Lange Rampe hinter der Rückwand; normal zur rechten Rückkehrbahn (rechter Flipper). Bei Encounter, Jetpack-Multiball und Mandalorian Madness ins Mini-Spielfeld.",
+   "awards": [
+    "Mission vorbereiten (beide Rampen + linke Mulde)",
+    "Encounter beleuchten und starten",
+    "Super Skillshot: Encounter starten"
+   ],
+   "visibility": "Pfeil im Foto; Ein-/Ausgang laut Schalterplan (50/51).",
+   "sources": [
+    "rules",
+    "manual",
+    "photo"
+   ]
+  },
+  "center": {
+   "name": "Mitte: Razor Crest / Mittelrampe",
+   "en": "Center Ramp / Razor Crest Target",
+   "kind": "Rampe mit Ziel",
+   "flipper": "beide",
+   "what": "Schuss in die Mitte unter dem Razor-Crest-Modell. Ein harter, direkter Treffer zählt am Razor-Crest-Ziel; gestartet wird mit einem Schuss, der ganz um die Mittelrampe läuft.",
+   "returns": "Mittelrampe (Schalter 53/52), Ziel 64 laut Schalterplan.",
+   "awards": [
+    "Razor-Crest-Multiball vorbereiten und starten",
+    "Razor-Crest-Hurry-up starten",
+    "Precious Cargo starten",
+    "Super Skillshot: Multiball starten"
+   ],
+   "visibility": "Pfeil „Advance Razor Crest to light Multiball“ im Foto; genaue Lage des Ziels unter dem Modell verdeckt.",
+   "sources": [
+    "rules",
+    "wiki",
+    "manual",
+    "photo"
+   ]
+  },
+  "uturn": {
+   "name": "U-Turn (Pro)",
+   "en": "U-Turn (Pro; Premium/LE: right scoop)",
+   "kind": "U-Turn",
+   "flipper": "L",
+   "what": "Bahn rechts der Mitte mit der durchsichtigen U-Führung. Auf dem Pro ersetzt sie die rechte Mulde. Davor SUPER JACKPOT und AMBUSH.",
+   "returns": "Kugel läuft im Bogen und kommt rechts wieder heraus.",
+   "awards": [
+    "Super Jackpots der Razor-Crest-Multibälle",
+    "Ambush auslösen/anhalten",
+    "Scope (blauer Pfeil): Ausrüstung",
+    "Super Skillshot: erster Schuss",
+    "Mission 2 (Ahsoka) und 5"
+   ],
+   "visibility": "U-Führung und Pfeil im Foto klar; Zuordnung über Einsätze Super Jackpot/Ambush und Pro-Hinweise der Spielanleitung.",
+   "sources": [
+    "rules",
+    "wiki",
+    "photo"
+   ]
+  },
+  "x2_left": {
+   "name": "Linkes 2X-Ziel",
+   "en": "Left 2X Ramp Target",
+   "kind": "Ziel",
+   "flipper": "L",
+   "what": "Kleines Ziel links neben der rechten Rampe (Einsatz „2X RAMP“). Rechts der Rampe sitzt ein zweites 2X-Ziel.",
+   "returns": "Prallt zurück.",
+   "awards": [
+    "Scope-Schuss (blau)",
+    "Wechselt die beleuchtete Mission",
+    "2X-Rampen-Bonus"
+   ],
+   "visibility": "Lage aus Schalterplan (56 „Right Ramp Left Target“) und Einsatz „2X RAMP“, im Foto nicht scharf zu sehen – etwa ±20 px.",
+   "sources": [
+    "rules",
+    "wiki",
+    "manual"
+   ]
+  },
+  "right_ramp": {
+   "name": "Rechte Rampe",
+   "en": "Right Ramp",
+   "kind": "Rampe",
+   "flipper": "L",
+   "what": "Rampe rechts, zwischen den beiden 2X-Zielen.",
+   "returns": "Zurück zum Flipper (Schalter 54).",
+   "awards": [
+    "Mission vorbereiten (beide Rampen + linke Mulde)",
+    "Ambush einsammeln",
+    "Scope (blau): Punkte",
+    "Super Skillshot: zweiter Schuss",
+    "Hunter: Rampen erhöhen das Beskar"
+   ],
+   "visibility": "Pfeil im Foto; genaue Eingangsbreite geschätzt (±15 px).",
+   "sources": [
+    "rules",
+    "wiki",
+    "manual",
+    "photo"
+   ]
+  },
+  "right_orbit": {
+   "name": "Rechter Orbit",
+   "en": "Right Orbit",
+   "kind": "Orbit",
+   "flipper": "L",
+   "what": "Bahn ganz rechts oben, mit den Einsätzen THE CHILD und BOUNTY HUNTER.",
+   "returns": "Läuft oben herum nach links (Schalter 60).",
+   "awards": [
+    "The Child einsammeln, wenn beleuchtet",
+    "Hunter-Schuss",
+    "Mission 2 (Ahsoka)"
+   ],
+   "visibility": "Pfeil rechts oben im Foto.",
+   "sources": [
+    "rules",
+    "manual",
+    "photo"
+   ]
+  },
+  "left_bank": {
+   "name": "Linke 3er-Bank (Hunter)",
+   "en": "Left 3-bank targets",
+   "kind": "Ziele",
+   "flipper": "R",
+   "what": "Drei Ziele an der linken Wand, davor drei Mandalorian-Einsätze („Targets light Hunter“).",
+   "returns": "Prallt zurück.",
+   "awards": [
+    "Alle drei = Hunter an einer Rückkehrbahn",
+    "Mit 200 Beskar: Foundry beleuchten"
+   ],
+   "visibility": "Ziele selbst im Foto kaum zu sehen; Lage aus Schalterplan (29–31) direkt neben den Einsätzen, ±15 px.",
+   "sources": [
+    "rules",
+    "manual",
+    "photo"
+   ]
+  },
+  "boba_fett": {
+   "name": "Boba-Fett-Ziele",
+   "en": "Boba Fett 2-bank (BOBA / FETT)",
+   "kind": "Ziele",
+   "flipper": "L",
+   "what": "Zwei Ziele an der rechten Wand, davor die Einsätze BOBA und FETT.",
+   "returns": "Prallt zurück.",
+   "awards": [
+    "Beide = grüner +1X-Spielfeld-Multiplikator",
+    "Jeder Treffer gibt laufenden Timern Zeit",
+    "Wählt den nächsten Razor-Crest-Multiball"
+   ],
+   "visibility": "Lage aus Schalterplan (34/35) neben den Einsätzen, ±15 px.",
+   "sources": [
+    "rules",
+    "wiki",
+    "manual",
+    "photo"
+   ]
+  },
+  "top_lanes": {
+   "name": "CHILD-Bahnen",
+   "en": "C-H-I-L-D top lanes",
+   "kind": "Bahnen",
+   "what": "Fünf Bahnen oben links. Hier landet auch der Abschuss (Skillshot).",
+   "returns": "Weiter zu den Bumpern.",
+   "awards": [
+    "Skillshot: beleuchtete Bahn treffen",
+    "Alle fünf = +1X Bonus, The Child, Super Pop"
+   ],
+   "visibility": "Einsätze der Bahnen im Foto; genaue Bahnmitten ±15 px.",
+   "sources": [
+    "rules",
+    "photo"
+   ]
+  },
+  "bumpers": {
+   "name": "Bumper",
+   "en": "Pop bumpers (Super Pops)",
+   "kind": "Bumper",
+   "what": "Zwei Bumper unter den CHILD-Bahnen. Der zweite liegt unter dem Razor-Crest-Modell.",
+   "returns": "—",
+   "awards": [
+    "Super Pops: blinkender Bumper punktet extra",
+    "Mission 4: jeder Treffer dreht die beleuchteten Schüsse"
+   ],
+   "visibility": "Ein Bumper im Foto sichtbar, der zweite verdeckt.",
+   "sources": [
+    "rules",
+    "manual",
+    "photo"
+   ]
+  },
+  "mini_pf": {
+   "name": "Mini-Spielfeld (Pro: ein Flipper)",
+   "en": "Mini playfield (Encounters)",
+   "kind": "Mini-Spielfeld",
+   "what": "Kuppel oben rechts. Erreichbar über die linke Rampe, wenn ein Encounter läuft. Auf dem Pro mit einem Flipper.",
+   "returns": "Kugel kehrt ins Hauptspielfeld zurück.",
+   "awards": [
+    "Encounters: drei Wellen Ziele",
+    "Jetpack-Multiball: Ziele = Jackpots, alle sechs = Kugel dazu"
+   ],
+   "visibility": "Kuppel im Foto deutlich; die Ziele darin nicht einzeln markiert.",
+   "sources": [
+    "rules",
+    "wiki",
+    "manual",
+    "photo"
+   ]
+  },
+  "plunger": {
+   "name": "Abschuss",
+   "en": "Plunger / Skill Shot",
+   "kind": "Abschuss",
+   "what": "Abschussbahn rechts. Die Kugel läuft zu den CHILD-Bahnen.",
+   "returns": "Zu den CHILD-Bahnen.",
+   "awards": [
+    "Skillshot",
+    "Super Skillshot: linken Flipperknopf beim Abschuss halten"
+   ],
+   "visibility": "Bahn im Foto.",
+   "sources": [
+    "rules",
+    "photo"
+   ]
+  }
  },
  "strategies": [
-  { "id": "solid", "title": "Solide spielen", "subtitle": "Missionen, Hunter und ersten Multiball holen", "steps": [
-    { "title": "Skillshot in die CHILD-Bahnen", "shots": ["plunger", "top_lanes"], "prep": "Abschießen, sodass die Kugel durch eine der zwei wandernden beleuchteten Bahnen fällt.", "why": "+2X Bonus, The Child beleuchtet, ein Super Pop.", "sources": ["rules"] },
-    { "title": "Mission starten: beide Rampen, dann linke Mulde", "shots": ["left_ramp", "right_ramp", "left_scoop"], "go": "Zuerst linke und rechte Rampe, dann die linke Mulde.", "why": "Startet die beleuchtete Mission (60 s). Tipp: Die Mulde ersetzt bei den ersten zwei Missionen fehlende Rampen.", "sources": ["rules", "wiki"] },
-    { "title": "Linke 3er-Bank für Hunter", "shots": ["left_bank"], "go": "Alle drei Ziele treffen, dann durch die beleuchtete Rückkehrbahn rollen (mit dem Flipperknopf wählbar).", "why": "Hunter startet: Beskar für die Foundry und ein +1X-Multiplikator.", "sources": ["rules", "wiki"] },
-    { "title": "Hunter: erst ein Orbit, dann der andere", "shots": ["left_orbit", "right_orbit"], "go": "Den blinkenden Orbit (gegenüber der Rückkehrbahn), dann den anderen Orbit. Rampen dazwischen erhöhen das Beskar.", "why": "Mindestens 250 Beskar, oranger +1X, schaltet Razor Crest frei.", "sources": ["rules", "wiki"] },
-    { "title": "Razor-Crest-Multiball in der Mitte", "shots": ["center"], "go": "Mitte hart treffen, bis der Multiball leuchtet; dann einen Schuss ganz um die Mittelrampe.", "why": "Erster Multiball. Läuft eine Mission mit, gibt es schnelle, sichere Punkte.", "sources": ["rules", "wiki"] },
-    { "title": "Boba-Fett-Ziele mitnehmen", "shots": ["boba_fett"], "go": "Beide Ziele rechts treffen.", "why": "Grüner +1X; jeder Treffer gibt laufenden Timern Zeit.", "sources": ["rules"] },
-    { "title": "Encounter über die linke Rampe", "shots": ["left_ramp", "mini_pf"], "go": "Linke Rampe, bis der Einsatz rot blinkt; weitere Rampenschüsse gehen ins Mini-Spielfeld.", "why": "Drei Wellen Ziele, danach Bonus-Level. Drei Encounters = Wizard-Modus You Have What I Want.", "sources": ["rules", "wiki"] }
-  ] },
-  { "id": "high", "title": "Auf Highscore", "subtitle": "„Fire Triangle“: 6X Spielfeld, dann Multiball", "steps": [
-    { "title": "Super Skillshot", "shots": ["plunger", "uturn", "right_ramp", "center"], "prep": "Linken Flipperknopf beim Abschuss halten, bis die Kugel den Spinner erreicht.", "go": "Dann U-Turn, rechte Rampe und einen Abschluss: Mitte (Multiball), linke Rampe (Encounter) oder linke Mulde (Mission).", "why": "Jeder Schuss +Bonus-X; der Abschluss startet direkt eine Funktion.", "sources": ["rules", "wiki"] },
-    { "title": "Grün: Boba-Fett-Ziele", "shots": ["boba_fett"], "go": "Beide Ziele.", "why": "Erster +1X-Spielfeld-Multiplikator.", "sources": ["rules"] },
-    { "title": "Blau: Scope", "shots": ["uturn", "x2_left", "right_ramp"], "go": "Die drei blauen Pfeile: U-Turn, linkes 2X-Ziel, rechte Rampe. Dann durch die linke Rückkehrbahn und in 5 s einen blauen Pfeil treffen.", "why": "Blauer +1X und je nach Schuss Ausrüstung, Beskar oder Punkte.", "sources": ["rules", "wiki"] },
-    { "title": "Orange: Hunter", "shots": ["left_bank", "left_orbit", "right_orbit"], "go": "3er-Bank, Rückkehrbahn, dann beide Orbits.", "why": "Oranger +1X. Alle drei Multiplikatoren gleichzeitig = 6X Spielfeld.", "sources": ["rules", "wiki"] },
-    { "title": "Mit 6X in den Multiball", "shots": ["center"], "go": "Razor-Crest-Multiball starten, solange die Multiplikatoren laufen.", "why": "Mit Flamethrower vor großen Einzelschüssen (z. B. Super Jackpot) zählt der Schuss doppelt.", "sources": ["wiki"] },
-    { "title": "Ambush einsammeln", "shots": ["uturn", "right_ramp"], "go": "Ambush startet ggf. über den U-Turn. Wert aufbauen, am U-Turn anhalten, an der rechten Rampe kassieren.", "why": "Mit allen Multiplikatoren laut Wiki bis 720 Mio.", "sources": ["rules", "wiki"] }
-  ] }
+  {
+   "id": "solid",
+   "title": "Solide spielen",
+   "subtitle": "Missionen, Hunter und ersten Multiball holen",
+   "steps": [
+    {
+     "title": "Skillshot in die CHILD-Bahnen",
+     "shots": [
+      "plunger",
+      "top_lanes"
+     ],
+     "prep": "Abschießen, sodass die Kugel durch eine der zwei wandernden beleuchteten Bahnen fällt.",
+     "why": "+2X Bonus, The Child beleuchtet, ein Super Pop.",
+     "sources": [
+      "rules"
+     ]
+    },
+    {
+     "title": "Mission starten: beide Rampen, dann linke Mulde",
+     "shots": [
+      "left_ramp",
+      "right_ramp",
+      "left_scoop"
+     ],
+     "go": "Zuerst linke und rechte Rampe, dann die linke Mulde.",
+     "why": "Startet die beleuchtete Mission (60 s). Tipp: Die Mulde ersetzt bei den ersten zwei Missionen fehlende Rampen.",
+     "sources": [
+      "rules",
+      "wiki"
+     ]
+    },
+    {
+     "title": "Linke 3er-Bank für Hunter",
+     "shots": [
+      "left_bank"
+     ],
+     "go": "Alle drei Ziele treffen, dann durch die beleuchtete Rückkehrbahn rollen (mit dem Flipperknopf wählbar).",
+     "why": "Hunter startet: Beskar für die Foundry und ein +1X-Multiplikator.",
+     "sources": [
+      "rules",
+      "wiki"
+     ]
+    },
+    {
+     "title": "Hunter: erst ein Orbit, dann der andere",
+     "shots": [
+      "left_orbit",
+      "right_orbit"
+     ],
+     "go": "Den blinkenden Orbit (gegenüber der Rückkehrbahn), dann den anderen Orbit. Rampen dazwischen erhöhen das Beskar.",
+     "why": "Mindestens 250 Beskar, oranger +1X, schaltet Razor Crest frei.",
+     "sources": [
+      "rules",
+      "wiki"
+     ]
+    },
+    {
+     "title": "Razor-Crest-Multiball in der Mitte",
+     "shots": [
+      "center"
+     ],
+     "go": "Mitte hart treffen, bis der Multiball leuchtet; dann einen Schuss ganz um die Mittelrampe.",
+     "why": "Erster Multiball. Läuft eine Mission mit, gibt es schnelle, sichere Punkte.",
+     "sources": [
+      "rules",
+      "wiki"
+     ]
+    },
+    {
+     "title": "Boba-Fett-Ziele mitnehmen",
+     "shots": [
+      "boba_fett"
+     ],
+     "go": "Beide Ziele rechts treffen.",
+     "why": "Grüner +1X; jeder Treffer gibt laufenden Timern Zeit.",
+     "sources": [
+      "rules"
+     ]
+    },
+    {
+     "title": "Encounter über die linke Rampe",
+     "shots": [
+      "left_ramp",
+      "mini_pf"
+     ],
+     "go": "Linke Rampe, bis der Einsatz rot blinkt; weitere Rampenschüsse gehen ins Mini-Spielfeld.",
+     "why": "Drei Wellen Ziele, danach Bonus-Level. Drei Encounters = Wizard-Modus You Have What I Want.",
+     "sources": [
+      "rules",
+      "wiki"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "high",
+   "title": "Auf Highscore",
+   "subtitle": "„Fire Triangle“: 6X Spielfeld, dann Multiball",
+   "steps": [
+    {
+     "title": "Super Skillshot",
+     "shots": [
+      "plunger",
+      "uturn",
+      "right_ramp",
+      "center"
+     ],
+     "prep": "Linken Flipperknopf beim Abschuss halten, bis die Kugel den Spinner erreicht.",
+     "go": "Dann U-Turn, rechte Rampe und einen Abschluss: Mitte (Multiball), linke Rampe (Encounter) oder linke Mulde (Mission).",
+     "why": "Jeder Schuss +Bonus-X; der Abschluss startet direkt eine Funktion.",
+     "sources": [
+      "rules",
+      "wiki"
+     ]
+    },
+    {
+     "title": "Grün: Boba-Fett-Ziele",
+     "shots": [
+      "boba_fett"
+     ],
+     "go": "Beide Ziele.",
+     "why": "Erster +1X-Spielfeld-Multiplikator.",
+     "sources": [
+      "rules"
+     ]
+    },
+    {
+     "title": "Blau: Scope",
+     "shots": [
+      "uturn",
+      "x2_left",
+      "right_ramp"
+     ],
+     "go": "Die drei blauen Pfeile: U-Turn, linkes 2X-Ziel, rechte Rampe. Dann durch die linke Rückkehrbahn und in 5 s einen blauen Pfeil treffen.",
+     "why": "Blauer +1X und je nach Schuss Ausrüstung, Beskar oder Punkte.",
+     "sources": [
+      "rules",
+      "wiki"
+     ]
+    },
+    {
+     "title": "Orange: Hunter",
+     "shots": [
+      "left_bank",
+      "left_orbit",
+      "right_orbit"
+     ],
+     "go": "3er-Bank, Rückkehrbahn, dann beide Orbits.",
+     "why": "Oranger +1X. Alle drei Multiplikatoren gleichzeitig = 6X Spielfeld.",
+     "sources": [
+      "rules",
+      "wiki"
+     ]
+    },
+    {
+     "title": "Mit 6X in den Multiball",
+     "shots": [
+      "center"
+     ],
+     "go": "Razor-Crest-Multiball starten, solange die Multiplikatoren laufen.",
+     "why": "Mit Flamethrower vor großen Einzelschüssen (z. B. Super Jackpot) zählt der Schuss doppelt.",
+     "sources": [
+      "wiki"
+     ]
+    },
+    {
+     "title": "Ambush einsammeln",
+     "shots": [
+      "uturn",
+      "right_ramp"
+     ],
+     "go": "Ambush startet ggf. über den U-Turn. Wert aufbauen, am U-Turn anhalten, an der rechten Rampe kassieren.",
+     "why": "Mit allen Multiplikatoren laut Wiki bis 720 Mio.",
+     "sources": [
+      "rules",
+      "wiki"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pro",
+   "title": "Profi-Spielzüge",
+   "subtitle": "Mission + Multiball, dann 6X-Spielfeld",
+   "steps": [
+    {
+     "title": "Mission vor dem ersten Multiball",
+     "shots": [
+      "left_ramp",
+      "right_ramp",
+      "left_scoop"
+     ],
+     "go": "Beide Rampen, dann linke Mulde (bei den ersten zwei Missionen ersetzt die Mulde fehlende Rampen).",
+     "why": "Mission plus Razor-Crest-Multiball gibt schnelle, recht sichere Punkte.",
+     "sources": [
+      "wiki",
+      "cheat",
+      "rules"
+     ]
+    },
+    {
+     "title": "Gute Multiball-Reihenfolge wählen",
+     "shots": [
+      "boba_fett"
+     ],
+     "go": "Mit den Boba-Fett-Zielen den nächsten Multiball wählen. Laut Cheatsheet sind Ice Spider (1) und Pirates (3) gut, Jetpack (2) schwächer.",
+     "why": "Die Ziele geben außerdem laufenden Timern Zeit.",
+     "sources": [
+      "cheat",
+      "rules"
+     ]
+    },
+    {
+     "title": "Dann Razor Crest starten",
+     "shots": [
+      "center"
+     ],
+     "go": "Mitte hart treffen bis beleuchtet, dann ganz um die Mittelrampe – während die Mission läuft.",
+     "why": "Mission und Multiball laufen zusammen.",
+     "sources": [
+      "wiki",
+      "rules"
+     ]
+    },
+    {
+     "title": "Linke Rampe → rechter Flipper",
+     "shots": [
+      "left_ramp",
+      "right_orbit"
+     ],
+     "go": "Die linke Rampe kommt zur rechten Rückkehrbahn; vom rechten Flipper geht es weiter, z. B. zum Gegen-Orbit.",
+     "why": "Im Hunter wird immer die Rampe beleuchtet, die den richtigen Flipper für den nächsten Orbit füttert.",
+     "sources": [
+      "rules",
+      "wiki"
+     ]
+    },
+    {
+     "title": "Hurry-up mit Flamethrower",
+     "shots": [
+      "center"
+     ],
+     "go": "Razor-Crest-Hurry-up an der Mittelrampe mit allen drei +1X: 8 Schüsse bei 6X; die ersten 7 treffen, vor dem letzten den Flamethrower (Action-Button halten).",
+     "why": "Letzter Schuss 12X; jeder Treffer addiert sich zum nächsten.",
+     "sources": [
+      "rules"
+     ]
+    },
+    {
+     "title": "Foundry: Fragezeichen",
+     "shots": [
+      "left_scoop"
+     ],
+     "go": "Für 100 Beskar „?“ wählen.",
+     "why": "Kann auf teure Artikel fallen (z. B. Extraball) oder versteckt alle drei +1X starten. Amban Rifle erst zünden, wenn die vorletzte Kugel abläuft.",
+     "sources": [
+      "rules"
+     ]
+    }
+   ]
+  }
  ],
  "multiballs": [
-  { "id": "icespider", "name": "Ice Spider Multiball", "tag": "Razor Crest 1 (S2:E2)", "balls": "Kugelzahl nicht belegt",
-    "prep": [ { "title": "Multiball wählen", "optional": true, "shots": ["boba_fett"], "text": "Boba-Fett-Ziele wechseln den nächsten Multiball (grüner Nummern-Einsatz), solange keiner beleuchtet ist.", "sources": ["rules", "wiki"] },
-              { "title": "Razor-Crest-Ziel treffen", "shots": ["center"], "text": "Mitte hart treffen, bis der Multiball leuchtet. Jeder weitere Razor-Crest-Start braucht einen Treffer mehr.", "sources": ["rules", "wiki"] } ],
-    "start": { "title": "Ganz um die Mittelrampe", "shots": ["center"], "text": "Ein Schuss, der ganz um die Mittelrampe läuft, startet den Multiball.", "sources": ["wiki"] },
-    "score": [ { "title": "Alle lila Schüsse = Spinnen", "shots": [], "text": "Jede lila Bahn ist eine Spinne mit Timer – je schneller, desto mehr Punkte. Die Spinnen kommen in Wellen.", "sources": ["rules", "wiki"] },
-               { "title": "Super Jackpot am U-Turn", "shots": ["uturn"], "text": "Nach einer Welle leuchtet der Super Jackpot am U-Turn mit Timer und kann bis zum Ablauf mehrfach geholt werden.", "sources": ["rules", "wiki"] } ] },
-  { "id": "jetpack", "name": "Jetpack Multiball", "tag": "Razor Crest 2 (S1:E8)", "balls": "Kugelzahl nicht belegt",
-    "prep": [ { "title": "Multiball wählen", "optional": true, "shots": ["boba_fett"], "text": "Boba-Fett-Ziele wechseln den nächsten Multiball.", "sources": ["rules", "wiki"] },
-              { "title": "Razor-Crest-Ziel treffen", "shots": ["center"], "text": "Mitte hart treffen, bis der Multiball leuchtet.", "sources": ["rules", "wiki"] } ],
-    "start": { "title": "Ganz um die Mittelrampe", "shots": ["center"], "text": "Startet den Multiball.", "sources": ["wiki"] },
-    "score": [ { "title": "Jackpots auf allen lila Schüssen", "shots": [], "text": "Ein Schuss zählt erst wieder, wenn zwischendurch ein anderer getroffen wurde.", "sources": ["wiki"] },
-               { "title": "Mini-Spielfeld über die linke Rampe", "shots": ["left_ramp", "mini_pf"], "text": "Die linke Rampe führt immer ins Mini-Spielfeld; dort sind die Ziele Jackpots, alle sechs = Kugel dazu. Baut den Super Jackpot auf.", "sources": ["rules", "wiki"] },
-               { "title": "Super Jackpot am U-Turn", "shots": ["uturn"], "text": "Leuchtet erst, wenn nur noch eine Kugel im Spiel ist – nur wenige Sekunden. Vorher Flamethrower bereithalten.", "sources": ["rules", "wiki"] } ] },
-  { "id": "pirates", "name": "Pirates Multiball", "tag": "Razor Crest 3 (S2:E7)", "balls": "Kugelzahl nicht belegt",
-    "prep": [ { "title": "Multiball wählen", "optional": true, "shots": ["boba_fett"], "text": "Boba-Fett-Ziele wechseln den nächsten Multiball.", "sources": ["rules", "wiki"] },
-              { "title": "Razor-Crest-Ziel treffen", "shots": ["center"], "text": "Mitte hart treffen, bis der Multiball leuchtet.", "sources": ["rules", "wiki"] } ],
-    "start": { "title": "Ganz um die Mittelrampe", "shots": ["center"], "text": "Startet den Multiball.", "sources": ["wiki"] },
-    "score": [ { "title": "Wellen: beleuchtete Schüsse", "shots": [], "text": "Jede Welle braucht einen Jackpot-Schuss mehr. Jeder Jackpot einmal pro Welle.", "sources": ["rules", "wiki"] },
-               { "title": "Spinner hält das Rhydonium stabil", "shots": ["left_orbit"], "text": "Je instabiler, desto niedriger die Werte – den Spinner (linker Orbit) schießen.", "sources": ["rules"] },
-               { "title": "Super Jackpot am U-Turn", "shots": ["uturn"], "text": "Nach Welle 3. Danach beginnt Welle 1 neu, jeder Jackpot braucht dann zwei Treffer.", "sources": ["wiki"] } ] },
-  { "id": "dankfarrik", "name": "Dank Farrik", "tag": "Zufallspreis der Foundry", "balls": "2 Kugeln",
-    "prep": [ { "title": "Foundry: Fragezeichen", "shots": ["left_scoop"], "text": "Beim Fragezeichen (100 Beskar) kann als versteckter Preis Dank Farrik kommen – reiner Zufall.", "sources": ["rules"] } ],
-    "start": { "title": "Startet sofort", "shots": [], "text": "Zwei-Kugel-Frenzy.", "sources": ["rules"] },
-    "score": [ { "title": "Jeder Schalter punktet", "shots": [], "text": "Alles treffen – Bumper und Spinner eingeschlossen.", "sources": ["rules", "wiki"] } ] }
+  {
+   "id": "icespider",
+   "name": "Ice Spider Multiball",
+   "tag": "Razor Crest 1 (S2:E2)",
+   "balls": "Kugelzahl nicht belegt",
+   "prep": [
+    {
+     "title": "Multiball wählen",
+     "optional": true,
+     "shots": [
+      "boba_fett"
+     ],
+     "text": "Boba-Fett-Ziele wechseln den nächsten Multiball (grüner Nummern-Einsatz), solange keiner beleuchtet ist.",
+     "sources": [
+      "rules",
+      "wiki"
+     ]
+    },
+    {
+     "title": "Razor-Crest-Ziel treffen",
+     "shots": [
+      "center"
+     ],
+     "text": "Mitte hart treffen, bis der Multiball leuchtet. Jeder weitere Razor-Crest-Start braucht einen Treffer mehr.",
+     "sources": [
+      "rules",
+      "wiki"
+     ]
+    }
+   ],
+   "start": {
+    "title": "Ganz um die Mittelrampe",
+    "shots": [
+     "center"
+    ],
+    "text": "Ein Schuss, der ganz um die Mittelrampe läuft, startet den Multiball.",
+    "sources": [
+     "wiki"
+    ]
+   },
+   "score": [
+    {
+     "title": "Alle lila Schüsse = Spinnen",
+     "shots": [],
+     "text": "Jede lila Bahn ist eine Spinne mit Timer – je schneller, desto mehr Punkte. Die Spinnen kommen in Wellen.",
+     "sources": [
+      "rules",
+      "wiki"
+     ],
+     "lit": true
+    },
+    {
+     "title": "Super Jackpot am U-Turn",
+     "shots": [
+      "uturn"
+     ],
+     "text": "Nach einer Welle leuchtet der Super Jackpot am U-Turn mit Timer und kann bis zum Ablauf mehrfach geholt werden.",
+     "sources": [
+      "rules",
+      "wiki"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jetpack",
+   "name": "Jetpack Multiball",
+   "tag": "Razor Crest 2 (S1:E8)",
+   "balls": "Kugelzahl nicht belegt",
+   "prep": [
+    {
+     "title": "Multiball wählen",
+     "optional": true,
+     "shots": [
+      "boba_fett"
+     ],
+     "text": "Boba-Fett-Ziele wechseln den nächsten Multiball.",
+     "sources": [
+      "rules",
+      "wiki"
+     ]
+    },
+    {
+     "title": "Razor-Crest-Ziel treffen",
+     "shots": [
+      "center"
+     ],
+     "text": "Mitte hart treffen, bis der Multiball leuchtet.",
+     "sources": [
+      "rules",
+      "wiki"
+     ]
+    }
+   ],
+   "start": {
+    "title": "Ganz um die Mittelrampe",
+    "shots": [
+     "center"
+    ],
+    "text": "Startet den Multiball.",
+    "sources": [
+     "wiki"
+    ]
+   },
+   "score": [
+    {
+     "title": "Jackpots auf allen lila Schüssen",
+     "shots": [],
+     "text": "Ein Schuss zählt erst wieder, wenn zwischendurch ein anderer getroffen wurde.",
+     "sources": [
+      "wiki"
+     ],
+     "lit": true
+    },
+    {
+     "title": "Mini-Spielfeld über die linke Rampe",
+     "shots": [
+      "left_ramp",
+      "mini_pf"
+     ],
+     "text": "Die linke Rampe führt immer ins Mini-Spielfeld; dort sind die Ziele Jackpots, alle sechs = Kugel dazu. Baut den Super Jackpot auf.",
+     "sources": [
+      "rules",
+      "wiki"
+     ]
+    },
+    {
+     "title": "Super Jackpot am U-Turn",
+     "shots": [
+      "uturn"
+     ],
+     "text": "Leuchtet erst, wenn nur noch eine Kugel im Spiel ist – nur wenige Sekunden. Vorher Flamethrower bereithalten.",
+     "sources": [
+      "rules",
+      "wiki"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pirates",
+   "name": "Pirates Multiball",
+   "tag": "Razor Crest 3 (S2:E7)",
+   "balls": "Kugelzahl nicht belegt",
+   "prep": [
+    {
+     "title": "Multiball wählen",
+     "optional": true,
+     "shots": [
+      "boba_fett"
+     ],
+     "text": "Boba-Fett-Ziele wechseln den nächsten Multiball.",
+     "sources": [
+      "rules",
+      "wiki"
+     ]
+    },
+    {
+     "title": "Razor-Crest-Ziel treffen",
+     "shots": [
+      "center"
+     ],
+     "text": "Mitte hart treffen, bis der Multiball leuchtet.",
+     "sources": [
+      "rules",
+      "wiki"
+     ]
+    }
+   ],
+   "start": {
+    "title": "Ganz um die Mittelrampe",
+    "shots": [
+     "center"
+    ],
+    "text": "Startet den Multiball.",
+    "sources": [
+     "wiki"
+    ]
+   },
+   "score": [
+    {
+     "title": "Wellen: beleuchtete Schüsse",
+     "shots": [],
+     "text": "Jede Welle braucht einen Jackpot-Schuss mehr. Jeder Jackpot einmal pro Welle.",
+     "sources": [
+      "rules",
+      "wiki"
+     ],
+     "lit": true
+    },
+    {
+     "title": "Spinner hält das Rhydonium stabil",
+     "shots": [
+      "left_orbit"
+     ],
+     "text": "Je instabiler, desto niedriger die Werte – den Spinner (linker Orbit) schießen.",
+     "sources": [
+      "rules"
+     ]
+    },
+    {
+     "title": "Super Jackpot am U-Turn",
+     "shots": [
+      "uturn"
+     ],
+     "text": "Nach Welle 3. Danach beginnt Welle 1 neu, jeder Jackpot braucht dann zwei Treffer.",
+     "sources": [
+      "wiki"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dankfarrik",
+   "name": "Dank Farrik",
+   "tag": "Zufallspreis der Foundry",
+   "balls": "2 Kugeln",
+   "prep": [
+    {
+     "title": "Foundry: Fragezeichen",
+     "shots": [
+      "left_scoop"
+     ],
+     "text": "Beim Fragezeichen (100 Beskar) kann als versteckter Preis Dank Farrik kommen – reiner Zufall.",
+     "sources": [
+      "rules"
+     ]
+    }
+   ],
+   "start": {
+    "title": "Startet sofort",
+    "shots": [],
+    "text": "Zwei-Kugel-Frenzy.",
+    "sources": [
+     "rules"
+    ],
+    "lit": true
+   },
+   "score": [
+    {
+     "title": "Jeder Schalter punktet",
+     "shots": [],
+     "text": "Alles treffen – Bumper und Spinner eingeschlossen.",
+     "sources": [
+      "rules",
+      "wiki"
+     ],
+     "lit": true
+    }
+   ]
+  }
  ],
  "modesIntro": "Missionen (linke Mulde), Encounters (linke Rampe, Mini-Spielfeld), Hunter, Scope, Ambush und die vier Wizard-Modi.",
  "modes": [
-  { "id": "m1", "name": "Mission 1: Find the Asset", "film": "S1:E1", "time": "60 s", "steps": [
-    { "title": "Einen von drei gelben Schüssen", "shots": [], "text": "Startet einen Hurry-up an der rechten Rampe." },
-    { "title": "Hurry-up an der rechten Rampe", "shots": ["right_ramp"], "text": "Danach leuchten Orbits und linke Rampe." },
-    { "title": "Mindestens zwei davon", "shots": ["left_orbit", "right_orbit", "left_ramp"], "text": "Oder weiter schießen für mehr Punkte, bevor der Abschluss leuchtet." },
-    { "title": "Abschluss an der linken Mulde", "shots": ["left_scoop"], "text": "Beendet die Mission." } ] },
-  { "id": "m2", "name": "Mission 2: Deceive the Magistrate", "film": "S2:E5", "time": "60 s", "steps": [
-    { "title": "Ahsoka: U-Turn, rechter Orbit, U-Turn", "shots": ["uturn", "right_orbit", "uturn"], "text": "Auf dem Pro jeweils der U-Turn statt der rechten Mulde." },
-    { "title": "Mando: rechte Rampe, dann Hurry-up links", "shots": ["right_ramp", "left_ramp"], "text": "Hurry-up an der linken Rampe abschließen; Bonus-Schuss am rechten Orbit." },
-    { "title": "Abschluss an der linken Mulde", "shots": ["left_scoop"], "text": "Nach beiden Hälften." } ] },
-  { "id": "m3", "name": "Mission 3: Destroy the Imperial Base", "film": "S2:E4", "time": "60 s", "steps": [
-    { "title": "Blinkende gelbe Schüsse", "shots": [], "text": "Spinner (linker Orbit) erhöht alle Werte von Gelb über Orange zu Rot." },
-    { "title": "Abschluss an der linken Mulde", "shots": ["left_scoop"], "text": "Zerstört die Basis." } ] },
-  { "id": "m4", "name": "Mission 4: Defeat the Mudhorn", "film": "S1:E2", "time": "60 s", "steps": [
-    { "title": "Vier gelbe Schüsse", "shots": [], "text": "Orbits blinken hellblau: The Child schickt die Kugel in CHILD-Bahnen und Bumper. Bahnen erhöhen die Werte, Bumper drehen die Schüsse." },
-    { "title": "Abschluss an der linken Mulde", "shots": ["left_scoop"], "text": "Vorher linker Orbit oder rechte Rampe (Bonus-Messer) für mehr Punkte." } ] },
-  { "id": "m5", "name": "Mission 5: Infiltrate the Freighter", "film": "S2:E3", "time": "60 s", "steps": [
-    { "title": "U-Turn und linke Rampe oder linker Orbit", "shots": ["uturn", "left_ramp", "left_orbit"], "text": "U-Turn (Pro) und eine der beiden linken Bahnen." },
-    { "title": "Rechte Rampe, dann linke Mulde", "shots": ["right_ramp", "left_scoop"], "text": "Rechte Rampe zuerst gibt Extrapunkte; die Mulde schließt ab." } ] },
-  { "id": "encounter", "name": "Encounters (3)", "film": "Protect the Child · Catch the Jawas · Escape to the Sewer", "time": "–", "steps": [
-    { "title": "Linke Rampe, bis der Einsatz rot blinkt", "shots": ["left_ramp"], "text": "Erster Encounter: 1 Schuss, jeder weitere +2." },
-    { "title": "Ins Mini-Spielfeld", "shots": ["left_ramp", "mini_pf"], "text": "Drei Wellen beleuchteter Ziele, danach kurzes Bonus-Level (2 Mio.+ pro Ziel). Pro: ein Flipper, kein Kippen." } ] },
-  { "id": "hunter", "name": "Hunter", "film": "Mini-Modus", "time": "25 s", "steps": [
-    { "title": "Linke 3er-Bank", "shots": ["left_bank"], "text": "Beleuchtet Hunter an einer Rückkehrbahn; mit dem Flipperknopf wählen." },
-    { "title": "Durch die beleuchtete Rückkehrbahn", "shots": [], "text": "Startet Hunter." },
-    { "title": "Orbit gegenüber, dann der andere", "shots": ["left_orbit", "right_orbit"], "text": "Rampen dazwischen geben je 25 Beskar extra." } ] },
-  { "id": "scope", "name": "Scope", "film": "Ein-Schuss-Funktion", "time": "5 s", "steps": [
-    { "title": "Drei blaue Schüsse", "shots": ["uturn", "x2_left", "right_ramp"], "text": "Beleuchtet Scope an der linken Rückkehrbahn." },
-    { "title": "Durch die linke Rückkehrbahn, dann ein blauer Pfeil", "shots": ["uturn", "x2_left", "right_ramp"], "text": "U-Turn = 2 Ausrüstungen, 2X-Ziel = Beskar + Foundry, rechte Rampe = Punkte." } ] },
-  { "id": "ambush", "name": "Ambush", "film": "Mini-Wizard", "time": "–", "steps": [
-    { "title": "Try to Escape am U-Turn", "shots": ["uturn"], "text": "Wenn nichts anderes läuft, kann der U-Turn Try to Escape auslösen: 6 Schüsse blinken, zwei davon starten Ambush." },
-    { "title": "Weiß: Wert am U-Turn anhalten", "shots": ["uturn"], "text": "Andere weiße Schüsse erhöhen den Wert." },
-    { "title": "Blau: an der rechten Rampe kassieren", "shots": ["right_ramp"], "text": "Oder einen blauen Schuss für mehr Wert und zurück zu Weiß." } ] },
-  { "id": "wiz_odds", "name": "I Like Those Odds", "film": "Wizard (5 Missionen gestartet)", "time": "–", "steps": [
-    { "title": "Wie eine Mission starten", "shots": ["left_ramp", "right_ramp", "left_scoop"], "text": "Beide Rampen, dann linke Mulde." } ] },
-  { "id": "wiz_cargo", "name": "Precious Cargo", "film": "Wizard (3 Multibälle gespielt)", "time": "–", "steps": [
-    { "title": "Razor-Crest-Ziel bis beleuchtet", "shots": ["center"], "text": "Wie ein Razor-Crest-Multiball. Anzahl Treffer nicht belegt." } ] },
-  { "id": "wiz_want", "name": "You Have What I Want", "film": "Wizard (3 Encounters abgeschlossen)", "time": "–", "steps": [
-    { "title": "Linke Rampe bis beleuchtet", "shots": ["left_ramp"], "text": "Startet wie ein Encounter." } ] },
-  { "id": "wiz_way", "name": "This Is The Way", "film": "Finaler Wizard", "time": "–", "steps": [
-    { "title": "Die drei anderen Wizard-Modi abschließen", "shots": [], "text": "Dann This Is The Way Ready: sechs Schüsse." },
-    { "title": "Linke Mulde", "shots": ["left_scoop"], "text": "Startet den Modus: drei Phasen, je mit Bonus-Runde." } ] }
+  {
+   "id": "m1",
+   "name": "Mission 1: Find the Asset",
+   "film": "S1:E1",
+   "time": "60 s",
+   "steps": [
+    {
+     "title": "Einen von drei gelben Schüssen",
+     "shots": [],
+     "text": "Startet einen Hurry-up an der rechten Rampe.",
+     "lit": true
+    },
+    {
+     "title": "Hurry-up an der rechten Rampe",
+     "shots": [
+      "right_ramp"
+     ],
+     "text": "Danach leuchten Orbits und linke Rampe."
+    },
+    {
+     "title": "Mindestens zwei davon",
+     "shots": [
+      "left_orbit",
+      "right_orbit",
+      "left_ramp"
+     ],
+     "text": "Oder weiter schießen für mehr Punkte, bevor der Abschluss leuchtet."
+    },
+    {
+     "title": "Abschluss an der linken Mulde",
+     "shots": [
+      "left_scoop"
+     ],
+     "text": "Beendet die Mission."
+    }
+   ]
+  },
+  {
+   "id": "m2",
+   "name": "Mission 2: Deceive the Magistrate",
+   "film": "S2:E5",
+   "time": "60 s",
+   "steps": [
+    {
+     "title": "Ahsoka: U-Turn, rechter Orbit, U-Turn",
+     "shots": [
+      "uturn",
+      "right_orbit",
+      "uturn"
+     ],
+     "text": "Auf dem Pro jeweils der U-Turn statt der rechten Mulde."
+    },
+    {
+     "title": "Mando: rechte Rampe, dann Hurry-up links",
+     "shots": [
+      "right_ramp",
+      "left_ramp"
+     ],
+     "text": "Hurry-up an der linken Rampe abschließen; Bonus-Schuss am rechten Orbit."
+    },
+    {
+     "title": "Abschluss an der linken Mulde",
+     "shots": [
+      "left_scoop"
+     ],
+     "text": "Nach beiden Hälften."
+    }
+   ]
+  },
+  {
+   "id": "m3",
+   "name": "Mission 3: Destroy the Imperial Base",
+   "film": "S2:E4",
+   "time": "60 s",
+   "steps": [
+    {
+     "title": "Blinkende gelbe Schüsse",
+     "shots": [],
+     "text": "Spinner (linker Orbit) erhöht alle Werte von Gelb über Orange zu Rot.",
+     "lit": true
+    },
+    {
+     "title": "Abschluss an der linken Mulde",
+     "shots": [
+      "left_scoop"
+     ],
+     "text": "Zerstört die Basis."
+    }
+   ]
+  },
+  {
+   "id": "m4",
+   "name": "Mission 4: Defeat the Mudhorn",
+   "film": "S1:E2",
+   "time": "60 s",
+   "steps": [
+    {
+     "title": "Vier gelbe Schüsse",
+     "shots": [],
+     "text": "Orbits blinken hellblau: The Child schickt die Kugel in CHILD-Bahnen und Bumper. Bahnen erhöhen die Werte, Bumper drehen die Schüsse.",
+     "lit": true
+    },
+    {
+     "title": "Abschluss an der linken Mulde",
+     "shots": [
+      "left_scoop"
+     ],
+     "text": "Vorher linker Orbit oder rechte Rampe (Bonus-Messer) für mehr Punkte."
+    }
+   ]
+  },
+  {
+   "id": "m5",
+   "name": "Mission 5: Infiltrate the Freighter",
+   "film": "S2:E3",
+   "time": "60 s",
+   "steps": [
+    {
+     "title": "U-Turn und linke Rampe oder linker Orbit",
+     "shots": [
+      "uturn",
+      "left_ramp",
+      "left_orbit"
+     ],
+     "text": "U-Turn (Pro) und eine der beiden linken Bahnen."
+    },
+    {
+     "title": "Rechte Rampe, dann linke Mulde",
+     "shots": [
+      "right_ramp",
+      "left_scoop"
+     ],
+     "text": "Rechte Rampe zuerst gibt Extrapunkte; die Mulde schließt ab."
+    }
+   ]
+  },
+  {
+   "id": "encounter",
+   "name": "Encounters (3)",
+   "film": "Protect the Child · Catch the Jawas · Escape to the Sewer",
+   "time": "–",
+   "steps": [
+    {
+     "title": "Linke Rampe, bis der Einsatz rot blinkt",
+     "shots": [
+      "left_ramp"
+     ],
+     "text": "Erster Encounter: 1 Schuss, jeder weitere +2."
+    },
+    {
+     "title": "Ins Mini-Spielfeld",
+     "shots": [
+      "left_ramp",
+      "mini_pf"
+     ],
+     "text": "Drei Wellen beleuchteter Ziele, danach kurzes Bonus-Level (2 Mio.+ pro Ziel). Pro: ein Flipper, kein Kippen."
+    }
+   ]
+  },
+  {
+   "id": "hunter",
+   "name": "Hunter",
+   "film": "Mini-Modus",
+   "time": "25 s",
+   "steps": [
+    {
+     "title": "Linke 3er-Bank",
+     "shots": [
+      "left_bank"
+     ],
+     "text": "Beleuchtet Hunter an einer Rückkehrbahn; mit dem Flipperknopf wählen."
+    },
+    {
+     "title": "Durch die beleuchtete Rückkehrbahn",
+     "shots": [
+      "left_orbit",
+      "right_orbit"
+     ],
+     "text": "Startet Hunter."
+    },
+    {
+     "title": "Orbit gegenüber, dann der andere",
+     "shots": [
+      "left_orbit",
+      "right_orbit"
+     ],
+     "text": "Rampen dazwischen geben je 25 Beskar extra."
+    }
+   ]
+  },
+  {
+   "id": "scope",
+   "name": "Scope",
+   "film": "Ein-Schuss-Funktion",
+   "time": "5 s",
+   "steps": [
+    {
+     "title": "Drei blaue Schüsse",
+     "shots": [
+      "uturn",
+      "x2_left",
+      "right_ramp"
+     ],
+     "text": "Beleuchtet Scope an der linken Rückkehrbahn."
+    },
+    {
+     "title": "Durch die linke Rückkehrbahn, dann ein blauer Pfeil",
+     "shots": [
+      "uturn",
+      "x2_left",
+      "right_ramp"
+     ],
+     "text": "U-Turn = 2 Ausrüstungen, 2X-Ziel = Beskar + Foundry, rechte Rampe = Punkte."
+    }
+   ]
+  },
+  {
+   "id": "ambush",
+   "name": "Ambush",
+   "film": "Mini-Wizard",
+   "time": "–",
+   "steps": [
+    {
+     "title": "Try to Escape am U-Turn",
+     "shots": [
+      "uturn"
+     ],
+     "text": "Wenn nichts anderes läuft, kann der U-Turn Try to Escape auslösen: 6 Schüsse blinken, zwei davon starten Ambush."
+    },
+    {
+     "title": "Weiß: Wert am U-Turn anhalten",
+     "shots": [
+      "uturn"
+     ],
+     "text": "Andere weiße Schüsse erhöhen den Wert."
+    },
+    {
+     "title": "Blau: an der rechten Rampe kassieren",
+     "shots": [
+      "right_ramp"
+     ],
+     "text": "Oder einen blauen Schuss für mehr Wert und zurück zu Weiß."
+    }
+   ]
+  },
+  {
+   "id": "wiz_odds",
+   "name": "I Like Those Odds",
+   "film": "Wizard (5 Missionen gestartet)",
+   "time": "–",
+   "steps": [
+    {
+     "title": "Wie eine Mission starten",
+     "shots": [
+      "left_ramp",
+      "right_ramp",
+      "left_scoop"
+     ],
+     "text": "Beide Rampen, dann linke Mulde."
+    }
+   ]
+  },
+  {
+   "id": "wiz_cargo",
+   "name": "Precious Cargo",
+   "film": "Wizard (3 Multibälle gespielt)",
+   "time": "–",
+   "steps": [
+    {
+     "title": "Razor-Crest-Ziel bis beleuchtet",
+     "shots": [
+      "center"
+     ],
+     "text": "Wie ein Razor-Crest-Multiball. Anzahl Treffer nicht belegt."
+    }
+   ]
+  },
+  {
+   "id": "wiz_want",
+   "name": "You Have What I Want",
+   "film": "Wizard (3 Encounters abgeschlossen)",
+   "time": "–",
+   "steps": [
+    {
+     "title": "Linke Rampe bis beleuchtet",
+     "shots": [
+      "left_ramp"
+     ],
+     "text": "Startet wie ein Encounter."
+    }
+   ]
+  },
+  {
+   "id": "wiz_way",
+   "name": "This Is The Way",
+   "film": "Finaler Wizard",
+   "time": "–",
+   "steps": [
+    {
+     "title": "Die drei anderen Wizard-Modi abschließen",
+     "shots": [],
+     "text": "Dann This Is The Way Ready: sechs Schüsse.",
+     "lit": true
+    },
+    {
+     "title": "Linke Mulde",
+     "shots": [
+      "left_scoop"
+     ],
+     "text": "Startet den Modus: drei Phasen, je mit Bonus-Runde."
+    }
+   ]
+  }
  ],
  "glossary": [
-  { "term": "Beskar", "text": "Währung im Spiel. Kommt vor allem aus Hunter und Scope; wird in der Foundry (linke Mulde) gegen Ausrüstung getauscht." },
-  { "term": "Foundry", "text": "Tauschmenü an der linken Mulde, z. B. Armour, Flamethrower, Amban Rifle, Extraball. Jeder Kauf macht den Artikel ~50 % teurer." },
-  { "term": "Flamethrower", "text": "Ausrüstung: Action-Button halten setzt Schüsse von rechts nach links in Brand – jeder brennende Schuss zählt einmal doppelt." },
-  { "term": "The Child", "text": "Zufallspreis an den Orbits (C-H-I-L-D), z. B. Extraball, Beskar, Heal." },
-  { "term": "Heal", "text": "Rettet eine Kugel, die durch eine Outlane fällt; mit den Flipperknöpfen die Seite wählen." },
-  { "term": "U-Turn", "text": "Pro-Bahn rechts der Mitte; ersetzt die rechte Mulde von Premium/LE." }
+  {
+   "term": "Beskar",
+   "text": "Währung im Spiel. Kommt vor allem aus Hunter und Scope; wird in der Foundry (linke Mulde) gegen Ausrüstung getauscht."
+  },
+  {
+   "term": "Foundry",
+   "text": "Tauschmenü an der linken Mulde, z. B. Armour, Flamethrower, Amban Rifle, Extraball. Jeder Kauf macht den Artikel ~50 % teurer."
+  },
+  {
+   "term": "Flamethrower",
+   "text": "Ausrüstung: Action-Button halten setzt Schüsse von rechts nach links in Brand – jeder brennende Schuss zählt einmal doppelt."
+  },
+  {
+   "term": "The Child",
+   "text": "Zufallspreis an den Orbits (C-H-I-L-D), z. B. Extraball, Beskar, Heal."
+  },
+  {
+   "term": "Heal",
+   "text": "Rettet eine Kugel, die durch eine Outlane fällt; mit den Flipperknöpfen die Seite wählen."
+  },
+  {
+   "term": "U-Turn",
+   "text": "Pro-Bahn rechts der Mitte; ersetzt die rechte Mulde von Premium/LE."
+  }
  ],
  "limits": [
   "Kein Pro-Handbuch verfügbar: Schusszuordnung über das LE/Premium-Handbuch (gleiches Grundlayout) plus Pro-Foto und Pro-Hinweise der Spielanleitung.",

@@ -1,206 +1,1123 @@
 {
-  "table": {
-    "id": "tmnt", "name": "Teenage Mutant Ninja Turtles", "short": "TMNT", "manufacturer": "Stern Pinball", "year": 2020,
-    "system": "Stern SPIKE 2", "design": "John Borg (Regeln/Code: Dwight Sullivan)",
-    "editions": "Stern 2020 in Pro, Premium und Limited Edition. Hier gilt die Pro-Ausführung (Modell 500-55Q5): kein Glider-Diverter, kein Mushroom-Topping, Top-Lane-Skillshot nur am Pro. Keine VPX-Fassung.",
-    "ruleVersion": "Regeln nach dem offiziellen Stern-Regelblatt „Turtles Roolz“ (2020) und dem Tilt-Forums-Rulesheet (Wiki, Stand Code 1.50). Offizielle Pro-Software-Notizen habe ich bis Pro 1.10 (21.07.2020) gesehen, für Premium/LE bis 1.41 (23.12.2020). Ob es neuere Pro-Stände gibt, habe ich nicht geprüft.",
-    "accent": "#3fae49", "contentDate": "2026-11-08"
+ "table": {
+  "id": "tmnt",
+  "name": "Teenage Mutant Ninja Turtles",
+  "short": "TMNT",
+  "manufacturer": "Stern Pinball",
+  "year": 2020,
+  "system": "Stern SPIKE 2",
+  "design": "John Borg (Regeln/Code: Dwight Sullivan)",
+  "editions": "Stern 2020 in Pro, Premium und Limited Edition. Hier gilt die Pro-Ausführung (Modell 500-55Q5): kein Glider-Diverter, kein Mushroom-Topping, Top-Lane-Skillshot nur am Pro. Keine VPX-Fassung.",
+  "ruleVersion": "Regeln nach dem offiziellen Stern-Regelblatt „Turtles Roolz“ (2020) und dem Tilt-Forums-Rulesheet (Wiki, Stand Code 1.50). Offizielle Pro-Software-Notizen habe ich bis Pro 1.10 (21.07.2020) gesehen, für Premium/LE bis 1.41 (23.12.2020). Ob es neuere Pro-Stände gibt, habe ich nicht geprüft.",
+  "accent": "#3fae49",
+  "contentDate": "2026-11-08"
+ },
+ "sources": [
+  {
+   "id": "manual",
+   "title": "Stern Pinball: Teenage Mutant Ninja Turtles Pro – Service and Operation Manual 500-55Q5-01 (2020)",
+   "url": "https://www.sternpinball.com/wp-content/uploads/2020/07/TMNT_Pro_web.pdf",
+   "use": "Schalterliste und Schalterplan (S. 14–17), Lichterliste und Lichterplan (S. 18–22). Damit sind alle Pfeil-Einsätze ihrem Schuss zugeordnet."
   },
-  "sources": [
-    { "id": "manual", "title": "Stern Pinball: Teenage Mutant Ninja Turtles Pro – Service and Operation Manual 500-55Q5-01 (2020)", "url": "https://www.sternpinball.com/wp-content/uploads/2020/07/TMNT_Pro_web.pdf", "use": "Schalterliste und Schalterplan (S. 14–17), Lichterliste und Lichterplan (S. 18–22). Damit sind alle Pfeil-Einsätze ihrem Schuss zugeordnet." },
-    { "id": "stern_rules", "title": "Stern Pinball: TMNT „Turtles Roolz“ – offizielles Regelblatt (2020)", "url": "https://www.sternpinball.com/wp-content/uploads/2020/06/TMNT-Rulesheet.pdf", "use": "Offizielle Kurzregeln: Episoden, Multibälle, LAIR, APRIL, Training, Krang Kombo, Pizza Eating Contest." },
-    { "id": "rulesheet", "title": "Tilt Forums Wiki: Stern TMNT Rulesheet (Stand Code 1.50; Spiegel auf pinballrulesheets.com)", "url": "https://tiltforums.com/t/stern-tmnt-rulesheet/6599", "use": "Ausführliche Regeln: Episoden-Abläufe, Jackpot-Werte, Mondo/Jackpoto Grande, Team-Up, Final Battle, Cowabunga-Bedingungen." },
-    { "id": "readme", "title": "Stern Pinball: Turtles PRO 1.10 README (21.07.2020)", "url": "https://sternpinball.com/wp-content/uploads/2020/07/Turtles_PRO-1_10_0-README.txt", "use": "Software-Stand der Pro-Ausführung." },
-    { "id": "photo", "title": "Stern Pinball: TMNT Pro – Produktseite mit Draufsicht und Detailfotos", "url": "https://www.sternpinball.com/game/tmnt/pro/", "use": "Draufsicht (1476 × 2500) als Spielfeldbild; Detailfotos der Rampen-Einläufe zur Unterscheidung von Mittel- und rechter Rampe." }
-  ],
-  "views": {
-    "real": { "label": "Echter Tisch (Pro)", "note": "Herstellerfoto des Pro von oben. Die oberen Bahnen liegen unter Draht- und Klarsicht-Rampen; dort sind die Eingänge aus Foto, Detailfotos und Schalterplan bestimmt. Die Rampenwege selbst sind nicht eingezeichnet." }
+  {
+   "id": "stern_rules",
+   "title": "Stern Pinball: TMNT „Turtles Roolz“ – offizielles Regelblatt (2020)",
+   "url": "https://www.sternpinball.com/wp-content/uploads/2020/06/TMNT-Rulesheet.pdf",
+   "use": "Offizielle Kurzregeln: Episoden, Multibälle, LAIR, APRIL, Training, Krang Kombo, Pizza Eating Contest."
   },
-  "icons": {
-    "leo": { "name": "Leonardo", "img": "img/tmnt-icon-leo.png", "note": "Turtle-Anzeige rechts am Spielfeld (Pro-Foto)" },
-    "don": { "name": "Donatello", "img": "img/tmnt-icon-don.png", "note": "Turtle-Anzeige rechts am Spielfeld (Pro-Foto)" },
-    "raph": { "name": "Raphael", "img": "img/tmnt-icon-raph.png", "note": "Turtle-Anzeige rechts am Spielfeld (Pro-Foto)" },
-    "mike": { "name": "Michelangelo", "img": "img/tmnt-icon-mike.png", "note": "Turtle-Anzeige rechts am Spielfeld (Pro-Foto)" }
+  {
+   "id": "rulesheet",
+   "title": "Tilt Forums Wiki: Stern TMNT Rulesheet (Stand Code 1.50; Spiegel auf pinballrulesheets.com)",
+   "url": "https://tiltforums.com/t/stern-tmnt-rulesheet/6599",
+   "use": "Ausführliche Regeln: Episoden-Abläufe, Jackpot-Werte, Mondo/Jackpoto Grande, Team-Up, Final Battle, Cowabunga-Bedingungen."
   },
-  "shots": {
-    "left_orbit": { "name": "Linker Orbit (Bebop)", "en": "Left Orbit", "kind": "Orbit", "flipper": "R",
-      "what": "Bahn ganz links oben, hinter dem Pfeil mit Bebop. Davor die Einsätze „Training“ und „Weapon“ des Orbits.",
-      "returns": "Läuft um die obere linke Ecke herum (Schalter 62 „Left Orbit“).",
-      "awards": ["Weapon-Hurry-up, wenn hier gestartet", "Bebop im Team-Up", "Teil vieler Episoden"],
-      "visibility": "Eingang sichtbar, links neben der linken Rampe.", "sources": ["manual", "rulesheet"] },
-    "left_ramp": { "name": "Linke Rampe (Raphael)", "en": "Left Ramp", "kind": "Rampe", "flipper": "R",
-      "what": "Silberne Metallrampe links. Davor der große Pfeil „Raphael“, links und rechts davon je ein Dimension-X-Ziel mit „X“-Einsatz.",
-      "returns": "Rampe nach oben (Eingangs-Lichtschranke 50, Ausgang 51), Rückkehr über eine Drahtbahn.",
-      "awards": ["Mit rechter Rampe: Start Episode beleuchten", "Raphaels Turtle-Schuss", "Startet Team-Up und Neutrino Pizza Party, wenn beleuchtet", "1-2-3 Foot: 3. Schuss", "Ninja Pizza Multiball: 3 Foot"],
-      "visibility": "Eingang (Rampenkante) gut sichtbar.", "sources": ["manual", "stern_rules", "rulesheet"] },
-    "dimx": { "name": "Dimension-X-Ziele", "en": "Dimension X Targets", "kind": "Ziele", "flipper": "R",
-      "what": "Zwei Standziele links und rechts vom Eingang der linken Rampe, je mit „X“-Einsatz davor.",
-      "returns": "Prallen zurück.",
-      "awards": ["Wählen die nächste Episode (links = in der Liste hoch, rechts = runter)", "Beide nach einem Training: Neutrino Pizza Party an der linken Rampe beleuchten"],
-      "visibility": "Sichtbar. Schalter 36/37 „Left Ramp Left/Right Target“.", "sources": ["manual", "rulesheet"] },
-    "pizza_parlor": { "name": "Ninja Pizza Parlor (Michelangelo)", "en": "Ninja Pizza Parlor", "kind": "Lock-Einlauf", "flipper": "R",
-      "what": "Einlauf vorn unter dem Turtle-Van, hinter dem Pfeil „Michelangelo“. Davor die Einsätze „Ninja Pizza Parlor“, „Extra Ball“ und „Pizza Topping“.",
-      "returns": "Die Kugel läuft in den Lock (Schalter 46–48 „Upper Lock“) oder wird freigegeben.",
-      "awards": ["Episode starten (wenn Start Episode leuchtet)", "Kugel locken – 3 Locks = Ninja Pizza Multiball", "Extraball holen, wenn beleuchtet", "Michelangelos Turtle-Schuss"],
-      "visibility": "Teilweise unter dem Van; Lage aus Pfeil, Lichterplan (Michelangelo 96–98, Ninja Pizza Parlor 101) und Schalterplan.", "sources": ["manual", "stern_rules", "rulesheet"] },
-    "twox": { "name": "2X-Ziel", "en": "2X Playfield Target", "kind": "Ziel", "flipper": "beide",
-      "what": "Standziel in der Mitte über dem Pfeil „2X Playfield“, rechts neben „Start Episode“.",
-      "returns": "Prallt zurück.",
-      "awards": ["Startet 2X Playfield (30 s), wenn beleuchtet", "Verlängert laufendes 2X um 5 s", "Ohne laufendes Feature: wechselt die Episode (offizielles Regelblatt)"],
-      "visibility": "Ziel selbst im Foto klein; Lage aus Schalter 40 im Plan und dem Detailfoto. Zuordnung Schalter 40 = 2X-Ziel ist aus der Lage neben dem 2X-Einsatz abgeleitet.", "sources": ["manual", "stern_rules", "rulesheet"] },
-    "pizza_target": { "name": "Pizza-Ziel (vorn)", "en": "Pizza Target", "kind": "Ziel", "flipper": "L",
-      "what": "Standziel mit Explosions-Aufkleber direkt unter dem türkisen Plastikdreieck, links vom Einlauf der rechten Rampe. Davor der Einsatz „Pizza Slice“.",
-      "returns": "Prallt zurück.",
-      "awards": ["Pizza-Toppings wechseln", "Pizzastücke sammeln – nach 7 Stücken startet hier der Pizza Eating Contest"],
-      "visibility": "Im Detailfoto klar, in der Draufsicht verdeckt. Das zweite Pizza-Ziel (Schalter 39 „Upper Pop Target“ bei den Bumpern) ist im Foto nicht erkennbar und darum nicht markiert.", "sources": ["manual", "rulesheet", "photo"] },
-    "center_ramp": { "name": "Mittelrampe (Donatello)", "en": "Center Ramp", "kind": "Rampe", "flipper": "L",
-      "what": "Metall-Einlauf hinter dem Pfeil „Donatello“, links neben dem türkisen Plastikdreieck. Nicht mit der rechten Rampe rechts daneben verwechseln.",
-      "returns": "Rampe nach oben (Ausgangs-Lichtschranke 53), Rückkehr über die Drahtbahn.",
-      "awards": ["Donatellos Turtle-Schuss", "Krang Kombo kassieren", "2. Weapon-Hurry-up", "1-2-3 Foot: 2. Schuss", "Ninja Pizza Multiball: 2 Foot"],
-      "visibility": "In der Draufsicht unter Drähten; im Stern-Detailfoto zeigt der Donatello-Pfeil eindeutig auf diesen Metall-Einlauf.", "sources": ["manual", "rulesheet", "photo"] },
-    "krang_loop": { "name": "Krang-Loop (oberer Loop)", "en": "Krang Loop / Center Loop", "kind": "Loop", "flipper": "UL",
-      "what": "Bahn über die Pfeile „Mondo Jackpot“, die gelbe „2“ und „Krang“ in Richtung Krang-Gemälde. Wird vom oberen linken Flipper gespielt.",
-      "returns": "Läuft als Schleife herum (Schalter 64 „Center Loop“).",
-      "awards": ["Krang Kombo aufbauen (3× = Maximum)", "Mondo Jackpot im Multiball (danach Double, Triple)", "Ninja Pizza Multiball: 2 Foot"],
-      "visibility": "Eingang teils unter Drähten; Lage aus den Pfeilen (Lichterplan 122–128) und dem Detailfoto.", "sources": ["manual", "stern_rules", "rulesheet"] },
-    "right_ramp": { "name": "Rechte Rampe (Shredder)", "en": "Right Ramp", "kind": "Rampe", "flipper": "L",
-      "what": "Metall-Einlauf rechts vom türkisen Plastikdreieck, hinter dem Pfeil „Shredder“. Davor die Einsätze „1“ (1-2-3 Foot) und „Turtle Power Multiball“.",
-      "returns": "Klarsicht-Rampe nach rechts oben (Schalter 55 Eingang, 56 Ausgang).",
-      "awards": ["Mit linker Rampe: Start Episode beleuchten", "4× = Turtle Power Multiball", "April-Hurry-up kassieren", "1-2-3 Foot: 1. Schuss", "Ninja Pizza Multiball: 1 Foot"],
-      "visibility": "Einlauf in Draufsicht und Detailfoto sichtbar.", "sources": ["manual", "stern_rules", "rulesheet", "photo"] },
-    "right_orbit": { "name": "Rechter Orbit (Rocksteady)", "en": "Right Orbit", "kind": "Orbit mit Spinner", "flipper": "L",
-      "what": "Bahn rechts außen links vom roten Blitzlicht, hinter dem Pfeil „Rocksteady“ mit „Training“ und „Weapon“. Im Orbit sitzt der Spinner.",
-      "returns": "Läuft um die obere rechte Ecke (Schalter 63 „Right Orbit“, 43 Spinner).",
-      "awards": ["Weapon-Hurry-up", "Rocksteady im Team-Up", "Spinner erhöht den Foot-Wert (1-2-3 Foot)"],
-      "visibility": "Eingang sichtbar; Spinner im Foto nicht zu erkennen.", "sources": ["manual", "rulesheet"] },
-    "lair_lane": { "name": "LAIR-Bahn (unter dem oberen Flipper)", "en": "LAIR Lane", "kind": "Bahn / Lock", "flipper": "R",
-      "what": "Bahn hinter dem oberen linken Flipper, angezeigt durch den Pfeil „Leonardo“ mit „Training“ und „Jackpoto Grande“. Die Kugel läuft unter dem Flipper durch.",
-      "returns": "Läuft links nach unten zum Schalter 29 („Lower Lock 1“).",
-      "awards": ["Training starten, wenn beleuchtet", "Jackpoto Grande (Super Jackpot) nach einem Mondo Jackpot", "Leonardos Turtle-Schuss", "Final Battle: Add-a-Ball nach LAIR"],
-      "visibility": "Eingang direkt unter dem oberen Flipper, schwer zu sehen; Lage aus Pfeil, Instruction Card („Shoot the ball behind the upper flipper“) und Schalterplan.", "sources": ["manual", "stern_rules", "rulesheet"] },
-    "lair_target": { "name": "LAIR-Ziele", "en": "LAIR Target", "kind": "Zielbank", "flipper": "R",
-      "what": "Standziel-Bank links neben den Einsätzen L-A-I-R (Pro: zwei Ziele an einem Schalter, „Left Bank Target (2x)“).",
-      "returns": "Prallt zurück.",
-      "awards": ["4 Treffer = LAIR: beim 1., 3. … Mal Training beleuchten, beim 2., 4. … Mal 2X Playfield beleuchten", "Buchstaben laufen ab", "Nach 2 Komplettierungen gesperrt bis zur nächsten Episode"],
-      "visibility": "Ziele im Foto nicht klar erkennbar. Lage aus dem Schalterplan (Schalter 28) ins Foto übertragen.", "sources": ["manual", "stern_rules", "rulesheet"] },
-    "april_target": { "name": "APRIL-Ziele", "en": "APRIL Target", "kind": "Zielbank", "flipper": "L",
-      "what": "Standziel-Bank rechts neben den Einsätzen A-P-R-I-L (Pro: „Right Bank Target (2x)“).",
-      "returns": "Prallt zurück.",
-      "awards": ["5 Treffer = APRIL: beim 1., 3. … Mal Battle Again, beim 2., 4. … Mal April-Hurry-up an der rechten Rampe", "Während April-Hurry-up: Wert +62 % und mehr Zeit"],
-      "visibility": "Ziele unter den Drahtbahnen rechts; Lage aus dem Schalterplan (Schalter 31) übertragen.", "sources": ["manual", "stern_rules", "rulesheet"] },
-    "pops": { "name": "Bumper (Pict-o-Pops)", "en": "Pop Bumpers", "kind": "Bumper", "flipper": null,
-      "what": "Drei Bumper oben in der Mitte: links mit Kanaldeckel-Kappe, rechts und unten mit roter Kappe.",
-      "returns": "Die Kugel springt zwischen den Bumpern.",
-      "awards": ["Pict-o-Pops: drei gleiche Bildteile = Belohnung (u. a. Extraball beleuchten, Start Episode, Turtle Power, Battle Again, Add-a-Ball)"],
-      "visibility": "Unter den Drahtbahnen, teils verdeckt.", "sources": ["manual", "rulesheet"] },
-    "upper_flipper": { "name": "Oberer linker Flipper", "en": "Upper Left Flipper", "kind": "Flipper", "flipper": null,
-      "what": "Kleiner gelber Flipper links in der Mitte. Von hier spielt man vor allem den Krang-Loop.",
-      "returns": "—", "awards": ["Orientierung"], "visibility": "Sichtbar.", "sources": ["manual"] },
-    "inlanes": { "name": "Rückläufe (Inlanes)", "en": "Return Lanes", "kind": "Bahnen", "flipper": null,
-      "what": "Links zwei, rechts ein Rücklauf zu den Flippern.",
-      "returns": "Zum Flipper.",
-      "awards": ["Weapon-Bahn (wechselt mit den Flippertasten) startet den Weapon-Hurry-up", "Innerer linker Rücklauf startet 1-2-3 Foot (zu Beginn jeder Kugel beleuchtet)"],
-      "visibility": "Sichtbar.", "sources": ["manual", "stern_rules", "rulesheet"] },
-    "outlanes": { "name": "Outlanes (Battle Again)", "en": "Outlanes", "kind": "Bahnen", "flipper": null,
-      "what": "Ganz außen links und rechts. Darüber je ein „Battle Again“-Einsatz.",
-      "returns": "Ins Aus – außer Battle Again leuchtet.",
-      "awards": ["Battle Again: rettet die Kugel. Nur eine Seite leuchtet, die Schleudern wechseln sie."],
-      "visibility": "Sichtbar.", "sources": ["manual", "stern_rules", "rulesheet"] },
-    "plunger": { "name": "Abschuss", "en": "Plunger", "kind": "Abschuss", "flipper": null,
-      "what": "Abschussbahn rechts.",
-      "returns": "Über den rechten Orbit nach oben zu den Top-Lanes und Bumpern.",
-      "awards": ["Pro-Skillshot: blinkende Top-Lane (immer die rechte) = Bonus-Multiplikator +1", "Linke Flippertaste halten: die Kugel läuft durch zum oberen Flipper"],
-      "visibility": "Abschussbahn sichtbar; die Top-Lanes liegen im Foto unter den Rampen und sind nicht markiert.", "sources": ["rulesheet", "stern_rules"] }
+  {
+   "id": "readme",
+   "title": "Stern Pinball: Turtles PRO 1.10 README (21.07.2020)",
+   "url": "https://sternpinball.com/wp-content/uploads/2020/07/Turtles_PRO-1_10_0-README.txt",
+   "use": "Software-Stand der Pro-Ausführung."
   },
-  "strategies": [
-    { "id": "solid", "title": "Solide spielen", "subtitle": "Episoden starten, die zwei Multibälle holen",
-      "steps": [
-        { "title": "Turtle wählen", "shots": ["lair_lane", "left_ramp", "pizza_parlor", "center_ramp"], "prep": "Zu Spielbeginn mit den Flippertasten wählen.", "go": "Raphael ist laut Rulesheet der stärkste Turtle (Stufe 1: Start Episode beleuchtet). Donatello beleuchtet sofort Turtle Power Multiball.", "why": "Jeder Turtle hat einen eigenen Schuss für den Skillshot. Das Symbol zeigt, welcher Schuss zu welchem Turtle gehört.", "sources": ["stern_rules", "rulesheet"], "badges": { "lair_lane": "leo", "left_ramp": "raph", "pizza_parlor": "mike", "center_ramp": "don" } },
-        { "title": "Skillshot", "shots": ["plunger", "left_ramp"], "prep": "Kugel in der Abschussbahn.", "go": "1. Sanft in die blinkende rechte Top-Lane (Pro). 2. Danach 15 s Zeit für den blinkenden Schuss deines Turtles.", "why": "Top-Lane: Bonus-X +1. Turtle-Schuss: 250.000 und Weapon an einem Rücklauf.", "sources": ["rulesheet", "stern_rules"] },
-        { "title": "Start Episode beleuchten", "shots": ["left_ramp", "right_ramp"], "prep": "Keine Episode läuft.", "go": "Linke Rampe (Left Ramp) und rechte Rampe (Right Ramp) je einmal treffen.", "why": "Beleuchtet „Start Episode“ am Pizza Parlor.", "sources": ["stern_rules", "rulesheet"] },
-        { "title": "Episode starten", "shots": ["pizza_parlor", "dimx"], "prep": "Start Episode leuchtet. Mit den Dimension-X-Zielen kannst du vorher die Episode wählen.", "go": "Ninja Pizza Parlor treffen.", "why": "Startet die Episode. Zwei gestartete Episoden beleuchten den Extraball am Pizza Parlor.", "sources": ["rulesheet"] },
-        { "title": "Ninja Pizza Multiball", "shots": ["pizza_parlor"], "prep": "Kein Multiball läuft.", "go": "Pizza Parlor dreimal treffen – jeder Treffer lockt eine Kugel.", "why": "Der dritte Lock startet den Multiball.", "sources": ["stern_rules", "rulesheet"] },
-        { "title": "Turtle Power Multiball", "shots": ["right_ramp"], "prep": "Kein Multiball läuft.", "go": "Rechte Rampe viermal.", "why": "Die vierte Rampe startet Turtle Power Multiball.", "sources": ["stern_rules", "rulesheet"] },
-        { "title": "LAIR für Training", "shots": ["lair_target", "lair_lane"], "prep": "L-A-I-R-Einsätze blinken (nicht gesperrt).", "go": "1. LAIR-Ziele viermal treffen, bevor die Buchstaben ablaufen. 2. Dann die LAIR-Bahn unter dem oberen Flipper.", "why": "Startet Training. Geschafft: +10 % auf alle Punkte für den Rest des Spiels und nächste Turtle-Stufe.", "sources": ["stern_rules", "rulesheet"] }
-      ] },
-    { "id": "high", "title": "Auf Highscore", "subtitle": "Episoden stapeln, 2X laufen lassen, Super Jackpots",
-      "steps": [
-        { "title": "Episoden mit Multiball stapeln", "shots": ["pizza_parlor", "right_ramp"], "prep": "Start Episode leuchtet.", "go": "Episode starten und dann einen Multiball dazu holen.", "why": "Quick Strategy Guide des Rulesheets: mehr Kugeln, mehr Zeit für die Episoden-Schüsse.", "sources": ["rulesheet"] },
-        { "title": "Vier Episoden → Team-Up", "shots": ["left_ramp"], "prep": "Vier Episoden gespielt (gewonnen oder verloren).", "go": "Linke Rampe startet Team-Up Multiball.", "why": "Team-Up schaltet danach die beiden Haupt-Multibälle wieder frei.", "sources": ["rulesheet"] },
-        { "title": "2X Playfield laufen lassen", "shots": ["lair_target", "twox"], "prep": "LAIR zum 2. Mal komplett.", "go": "1. 2X-Ziel in der Mitte starten. 2. Immer wieder treffen: +5 s.", "why": "30 s doppelte Punkte. Am besten im Multiball mit Ball Save starten.", "sources": ["rulesheet"] },
-        { "title": "Mondo, dann Jackpoto Grande", "shots": ["krang_loop", "lair_lane"], "prep": "Multiball läuft, Mondo Jackpot ist beleuchtet.", "go": "1. Krang-Loop vom oberen Flipper. 2. Danach die LAIR-Bahn.", "why": "Mondo Jackpot beleuchtet den Super Jackpot (Jackpoto Grande) an der LAIR-Bahn. Wiederholen.", "sources": ["rulesheet"] },
-        { "title": "Neutrino Pizza Party", "shots": ["dimx", "left_ramp"], "prep": "Ein Training geschafft, Einzelkugel.", "go": "1. Beide Dimension-X-Ziele, bevor sie ablaufen. 2. Linke Rampe.", "why": "Einmal pro Spiel. Rote Schüsse erhöhen den blauen Schuss bis 5 Mio.; der blaue Schuss kassiert.", "sources": ["rulesheet"] },
-        { "title": "Acht Episoden → Final Battle", "shots": ["pizza_parlor"], "prep": "Alle acht Episoden gespielt.", "go": "Final Battle starten (siehe Multibälle).", "why": "Schon der Start bringt bis zu 25 Mio., wenn alle acht Episoden gewonnen sind.", "sources": ["rulesheet"] }
-      ] }
-  ],
-  "multiballs": [
-    { "id": "pizza", "name": "Ninja Pizza Multiball", "tag": "Haupt-Multiball", "balls": "3 Kugeln (Gummy Bears: bis zu 3 mehr am Pro)",
-      "prep": [
-        { "title": "Toppings wählen", "shots": ["pizza_target"], "text": "Die Pizza-Ziele schalten die Toppings um. Beim 1. Lock werden die ersten zwei festgelegt, beim 2. die nächsten zwei, beim 3. das fünfte.", "sources": ["rulesheet"] },
-        { "title": "Zwei Kugeln locken", "shots": ["pizza_parlor"], "text": "Pizza Parlor zweimal treffen.", "sources": ["stern_rules", "rulesheet"] }
-      ],
-      "start": { "title": "Dritter Lock", "shots": ["pizza_parlor"], "text": "Der dritte Treffer am Pizza Parlor startet den Multiball. Die Kugeln kommen über die drehende Pizza.", "sources": ["stern_rules", "rulesheet"] },
-      "score": [
-        { "title": "Foot-Soldaten besiegen", "shots": ["left_ramp", "krang_loop", "center_ramp", "pizza_parlor", "right_ramp"], "text": "Linke Rampe 3 Foot, Krang-Loop und Mittelrampe je 2, Pizza Parlor und rechte Rampe je 1.", "sources": ["rulesheet"] },
-        { "title": "Mondo Jackpot", "shots": ["krang_loop"], "text": "Nach 6 Foot: Mondo Jackpot am Krang-Loop. Danach Double und Triple Mondo (laufen ab).", "sources": ["rulesheet"] },
-        { "title": "Jackpoto Grande", "shots": ["lair_lane"], "text": "Ein Mondo Jackpot beleuchtet den Super Jackpot an der LAIR-Bahn: 3 Mio. + 500.000 je Mondo seit dem letzten Super.", "sources": ["rulesheet"] }
-      ] },
-    { "id": "power", "name": "Turtle Power Multiball", "tag": "Haupt-Multiball", "balls": "nicht belegt",
-      "prep": [ { "title": "Rechte Rampe dreimal", "shots": ["right_ramp"], "text": "Drei Treffer an der rechten Rampe. Donatello (Stufe 1) beleuchtet den Multiball sofort.", "sources": ["stern_rules", "rulesheet"] } ],
-      "start": { "title": "Vierte rechte Rampe", "shots": ["right_ramp"], "text": "Der nächste Treffer an der rechten Rampe startet den Multiball.", "sources": ["stern_rules", "rulesheet"] },
-      "score": [
-        { "title": "Grüne Schüsse = Jackpots", "shots": [], "text": "Grün leuchtende Schüsse treffen: 100.000, je +25.000 bis 250.000. Welche Schüsse grün sind, zeigt das Spielfeld.", "sources": ["rulesheet"] },
-        { "title": "Mondo, dann Super", "shots": ["krang_loop", "lair_lane"], "text": "Nach 4 Jackpots Mondo am Krang-Loop, danach Jackpoto Grande an der LAIR-Bahn.", "sources": ["rulesheet"] },
-        { "title": "Add-a-Ball", "shots": ["lair_lane", "left_ramp", "pizza_parlor", "center_ramp", "right_ramp"], "text": "Alle vier Turtle-Schüsse treffen: „Turtle Power“ blinkt – rechte Rampe gibt eine Kugel dazu.", "sources": ["rulesheet"], "badges": { "lair_lane": "leo", "left_ramp": "raph", "pizza_parlor": "mike", "center_ramp": "don" } }
-      ] },
-    { "id": "teamup", "name": "Team-Up Multiball", "tag": "Mini-Wizard", "balls": "nicht belegt (Add-a-Ball je Rettung)",
-      "prep": [ { "title": "Vier Episoden spielen", "shots": ["pizza_parlor"], "text": "Vier beliebige Episoden spielen. Jede gewonnene Episode gibt einen Vorteil im Team-Up.", "sources": ["stern_rules", "rulesheet"] } ],
-      "start": { "title": "Linke Rampe", "shots": ["left_ramp"], "text": "Team-Up leuchtet an der linken Rampe.", "sources": ["rulesheet"] },
-      "score": [
-        { "title": "Sechs Bösewichte", "shots": ["left_orbit", "right_orbit", "left_ramp", "center_ramp", "right_ramp", "krang_loop"], "text": "Orbits = Bebop und Rocksteady, Rampen und Krang-Loop = Foot-Soldaten. Alle sechs besiegen.", "sources": ["rulesheet"] },
-        { "title": "Turtle retten", "shots": [], "text": "Dann startet ein Rescue-Hurry-up an einem Turtle-Schuss (ab 500.000) – treffen = Add-a-Ball.", "sources": ["rulesheet"] },
-        { "title": "Shredder, dann letzte Rettung", "shots": ["right_ramp"], "text": "Nach zwei Rettungen: Shredder-Hurry-up an der rechten Rampe, dann die dritte Rettung. Danach Pizza Party bis zur letzten Kugel.", "sources": ["rulesheet"] }
-      ] },
-    { "id": "final", "name": "Final Battle", "tag": "Wizard-Modus", "balls": "Phasen mit Multiball und Einzelkugel",
-      "prep": [ { "title": "Alle acht Episoden spielen", "shots": ["pizza_parlor"], "text": "Gewonnen oder verloren – gespielt zählt.", "sources": ["stern_rules", "rulesheet"] } ],
-      "start": { "title": "Start: Quellen uneinig", "shots": ["pizza_parlor", "left_ramp"], "text": "Das Rulesheet nennt an einer Stelle den Pizza Parlor, an anderer die linke Rampe. Am Gerät auf den blinkenden Einsatz achten.", "sources": ["rulesheet"] },
-      "score": [
-        { "title": "Phase 1 (Multiball)", "shots": ["left_ramp", "center_ramp", "right_ramp", "krang_loop", "dimx"], "text": "Drei der vier leuchtenden Schüsse (Rampen, Loop), dann die Dimension-X-Ziele, dann die linke Rampe.", "sources": ["rulesheet"] },
-        { "title": "Phase 2 (eine Kugel)", "shots": ["left_orbit", "right_orbit", "left_ramp"], "text": "4 rote (Bebop) und 4 blaue (Rocksteady) Schüsse. Dann Hurry-ups am linken und rechten Orbit, dann linke Rampe.", "sources": ["rulesheet"] },
-        { "title": "Phase 3 (Multiball)", "shots": ["left_ramp", "krang_loop", "right_ramp"], "text": "Linke Rampe (Slash), Loop (Krang), rechte Rampe (Shredder), zum Schluss linke Rampe. LAIR komplett = Add-a-Ball an der LAIR-Bahn.", "sources": ["rulesheet"] }
-      ] },
-    { "id": "cowabunga", "name": "Cowabunga Multiball", "tag": "Finaler Wizard", "balls": "nicht belegt",
-      "prep": [
-        { "title": "Sieben Bedingungen", "shots": ["krang_loop", "center_ramp", "lair_lane"], "text": "Max Krang Kombo, Jackpoto Grande, Triple Mondo, ein Weapon-Hurry-up, 5 April-Hurry-ups, 1-2-3 Foot komplett, Final Battle gespielt.", "sources": ["rulesheet"] }
-      ],
-      "start": { "title": "Start nicht belegt", "shots": [], "text": "Wie Cowabunga gestartet wird und abläuft, beschreibt keine der Quellen.", "sources": [] },
-      "score": [ { "title": "Ablauf nicht belegt", "shots": [], "text": "Das Rulesheet hat zu diesem Modus noch keine Beschreibung.", "sources": ["rulesheet"] } ] }
-  ],
-  "modesIntro": "Acht Episoden. Start: linke und rechte Rampe beleuchten „Start Episode“, dann Pizza Parlor. Die Dimension-X-Ziele wählen die Episode. Episoden laufen meist auf Zeit (30 s). Bestimmte Schüsse treffen, dann leuchten die vier Turtle-Schüsse – einer davon gewinnt die Episode. Episode 7 braucht vorher Episode 4, Episode 8 braucht Episode 3.",
-  "modes": [
-    { "id": "ep1", "name": "Pizza-o-Meter", "film": "Episode 1", "time": "30 s", "steps": [ { "title": "3 leuchtende Hauptschüsse", "shots": ["left_orbit", "left_ramp", "krang_loop", "center_ramp", "right_ramp", "right_orbit"], "text": "Alle sechs Hauptschüsse leuchten. Drei treffen, dann einen Turtle-Schuss. Abschluss 1 Mio." } ] },
-    { "id": "ep2", "name": "Window Shopping", "film": "Episode 2", "time": "30 s", "steps": [ { "title": "Dreimal Orbits", "shots": ["left_orbit", "right_orbit"], "text": "Beide Orbits bleiben beleuchtet. 3 Orbit-Treffer, dann Turtle-Schuss. Orbits zählen weiter mit steigendem Multiplikator." } ] },
-    { "id": "ep3", "name": "I Want a Body", "film": "Episode 3", "time": "30 s", "steps": [ { "title": "4 wandernde Schüsse", "shots": ["left_ramp", "right_ramp", "left_orbit", "right_orbit"], "text": "Beide Rampen leuchten. Ein Treffer schaltet Rampe oder Orbit der anderen Seite an. 4 Treffer, dann Turtle-Schuss." } ] },
-    { "id": "ep4", "name": "Night of the Mousers", "film": "Episode 4", "time": "kein Timer", "steps": [ { "title": "6 leuchtende Schüsse", "shots": ["lair_target", "left_ramp", "right_ramp", "april_target", "center_ramp", "left_orbit", "right_orbit"], "text": "LAIR, linke Rampe, rechte Rampe und APRIL leuchten, danach auch Mittelrampe und Orbits. Schüsse laufen einzeln ab; 10 abgelaufene = verloren. 6 Treffer, dann Turtle-Schuss." } ] },
-    { "id": "ep5", "name": "See You on the Other Side, Ray", "film": "Episode 5", "time": "30 s", "steps": [ { "title": "Rampe, dann LAIR – dreimal", "shots": ["left_ramp", "center_ramp", "right_ramp", "lair_target"], "text": "Eine leuchtende Rampe schaltet das LAIR-Ziel an. LAIR treffen schaltet die Rampen wieder an. Dreimal LAIR, dann Turtle-Schuss." } ] },
-    { "id": "ep6", "name": "Welcome to the Concrete Jungle", "film": "Episode 6", "time": "30 s", "steps": [ { "title": "Phase 1", "shots": ["dimx", "left_ramp"], "text": "Beide Dimension-X-Ziele, dann linke Rampe. Gelbe Orbits geben +10 s." }, { "title": "Phase 2", "shots": ["left_orbit", "left_ramp", "krang_loop", "center_ramp", "right_ramp", "right_orbit"], "text": "Drei leuchtende Hauptschüsse, dann Turtle-Schuss." } ] },
-    { "id": "ep7", "name": "Super Fly", "film": "Episode 7 (nach Episode 4)", "time": "30 s", "steps": [ { "title": "Von rechts nach links", "shots": ["right_ramp", "right_orbit", "left_ramp", "left_orbit", "krang_loop", "center_ramp"], "text": "Rechte Rampe oder rechter Orbit, dann linke Seite, dann Loop oder Mittelrampe. Der 3. Treffer startet einen Hurry-up ab 2,5 Mio. am Turtle-Schuss." } ] },
-    { "id": "ep8", "name": "The Wrath of Krang", "film": "Episode 8 (nach Episode 3)", "time": "30 s", "steps": [ { "title": "3 rote Schüsse", "shots": [], "text": "Zwei rote Schüsse wandern hin und her, alle anderen sind gelb (nur 25.000). Drei rote treffen, dann Turtle-Schuss. Abschluss 1,5 Mio." } ] }
-  ],
-  "glossary": [
-    { "term": "Turtle-Schüsse", "text": "Die vier Schüsse der Turtles: Leonardo = LAIR-Bahn, Raphael = linke Rampe, Michelangelo = Pizza Parlor, Donatello = Mittelrampe. Ihre Pfeile tragen die Namen." },
-    { "term": "Foot", "text": "Shredders Fußsoldaten. Im Ninja Pizza Multiball und bei 1-2-3 Foot besiegt man sie." },
-    { "term": "Mondo Jackpot", "text": "Jackpot am Krang-Loop in beiden Haupt-Multibällen. Danach Double und Triple Mondo." },
-    { "term": "Jackpoto Grande", "text": "Super Jackpot an der LAIR-Bahn, nach einem Mondo Jackpot." },
-    { "term": "Hurry-up", "text": "Wert, der rückwärts läuft, bis man den beleuchteten Schuss trifft." },
-    { "term": "Battle Again", "text": "Outlane-Kugelretter von APRIL." },
-    { "term": "Insert (Einsatz)", "text": "Leuchtfeld im Spielfeld vor einem Schuss. Nicht das Ziel selbst." }
-  ],
-  "limits": [
-    "Regelstand: Rulesheet Code 1.50 und offizielles Regelblatt von 2020. Neuere Pro-Software habe ich nicht geprüft.",
-    "Die Top-Lanes und das obere Pizza-Ziel (Schalter 39) liegen im Foto unter Rampen und sind nicht markiert.",
-    "LAIR- und APRIL-Ziele sind im Foto nicht klar zu sehen; ihre Lage ist aus dem Schalterplan übertragen. Die Einsätze L-A-I-R und A-P-R-I-L sind direkt vermessen.",
-    "Welcher Schalter das 2X-Ziel ist (40) und welche die Pizza-Ziele sind (39, 41), ist aus der Lage neben den Einsätzen „2X Playfield“, „Pizza Topping“ und „Pizza Slice“ abgeleitet – das Handbuch nennt sie nur „Lower/Upper Pop Target“ und „Center Ramp Target“.",
-    "Flipper-Empfehlungen sind aus der Lage abgeleitet. Rampenwege sind nicht eingezeichnet, nur Eingang und Zielrichtung."
-  ]
+  {
+   "id": "photo",
+   "title": "Stern Pinball: TMNT Pro – Produktseite mit Draufsicht und Detailfotos",
+   "url": "https://www.sternpinball.com/game/tmnt/pro/",
+   "use": "Draufsicht (1476 × 2500) als Spielfeldbild; Detailfotos der Rampen-Einläufe zur Unterscheidung von Mittel- und rechter Rampe."
+  }
+ ],
+ "views": {
+  "real": {
+   "label": "Echter Tisch (Pro)",
+   "note": "Herstellerfoto des Pro von oben. Die oberen Bahnen liegen unter Draht- und Klarsicht-Rampen; dort sind die Eingänge aus Foto, Detailfotos und Schalterplan bestimmt. Die Rampenwege selbst sind nicht eingezeichnet."
+  }
+ },
+ "icons": {
+  "leo": {
+   "name": "Leonardo",
+   "img": "img/tmnt-icon-leo.png",
+   "note": "Turtle-Anzeige rechts am Spielfeld (Pro-Foto)"
+  },
+  "don": {
+   "name": "Donatello",
+   "img": "img/tmnt-icon-don.png",
+   "note": "Turtle-Anzeige rechts am Spielfeld (Pro-Foto)"
+  },
+  "raph": {
+   "name": "Raphael",
+   "img": "img/tmnt-icon-raph.png",
+   "note": "Turtle-Anzeige rechts am Spielfeld (Pro-Foto)"
+  },
+  "mike": {
+   "name": "Michelangelo",
+   "img": "img/tmnt-icon-mike.png",
+   "note": "Turtle-Anzeige rechts am Spielfeld (Pro-Foto)"
+  }
+ },
+ "shots": {
+  "left_orbit": {
+   "name": "Linker Orbit (Bebop)",
+   "en": "Left Orbit",
+   "kind": "Orbit",
+   "flipper": "R",
+   "what": "Bahn ganz links oben, hinter dem Pfeil mit Bebop. Davor die Einsätze „Training“ und „Weapon“ des Orbits.",
+   "returns": "Läuft um die obere linke Ecke herum (Schalter 62 „Left Orbit“).",
+   "awards": [
+    "Weapon-Hurry-up, wenn hier gestartet",
+    "Bebop im Team-Up",
+    "Teil vieler Episoden"
+   ],
+   "visibility": "Eingang sichtbar, links neben der linken Rampe.",
+   "sources": [
+    "manual",
+    "rulesheet"
+   ]
+  },
+  "left_ramp": {
+   "name": "Linke Rampe (Raphael)",
+   "en": "Left Ramp",
+   "kind": "Rampe",
+   "flipper": "R",
+   "what": "Silberne Metallrampe links. Davor der große Pfeil „Raphael“, links und rechts davon je ein Dimension-X-Ziel mit „X“-Einsatz.",
+   "returns": "Rampe nach oben (Eingangs-Lichtschranke 50, Ausgang 51), Rückkehr über eine Drahtbahn.",
+   "awards": [
+    "Mit rechter Rampe: Start Episode beleuchten",
+    "Raphaels Turtle-Schuss",
+    "Startet Team-Up und Neutrino Pizza Party, wenn beleuchtet",
+    "1-2-3 Foot: 3. Schuss",
+    "Ninja Pizza Multiball: 3 Foot"
+   ],
+   "visibility": "Eingang (Rampenkante) gut sichtbar.",
+   "sources": [
+    "manual",
+    "stern_rules",
+    "rulesheet"
+   ]
+  },
+  "dimx": {
+   "name": "Dimension-X-Ziele",
+   "en": "Dimension X Targets",
+   "kind": "Ziele",
+   "flipper": "R",
+   "what": "Zwei Standziele links und rechts vom Eingang der linken Rampe, je mit „X“-Einsatz davor.",
+   "returns": "Prallen zurück.",
+   "awards": [
+    "Wählen die nächste Episode (links = in der Liste hoch, rechts = runter)",
+    "Beide nach einem Training: Neutrino Pizza Party an der linken Rampe beleuchten"
+   ],
+   "visibility": "Sichtbar. Schalter 36/37 „Left Ramp Left/Right Target“.",
+   "sources": [
+    "manual",
+    "rulesheet"
+   ]
+  },
+  "pizza_parlor": {
+   "name": "Ninja Pizza Parlor (Michelangelo)",
+   "en": "Ninja Pizza Parlor",
+   "kind": "Lock-Einlauf",
+   "flipper": "R",
+   "what": "Einlauf vorn unter dem Turtle-Van, hinter dem Pfeil „Michelangelo“. Davor die Einsätze „Ninja Pizza Parlor“, „Extra Ball“ und „Pizza Topping“.",
+   "returns": "Die Kugel läuft in den Lock (Schalter 46–48 „Upper Lock“) oder wird freigegeben.",
+   "awards": [
+    "Episode starten (wenn Start Episode leuchtet)",
+    "Kugel locken – 3 Locks = Ninja Pizza Multiball",
+    "Extraball holen, wenn beleuchtet",
+    "Michelangelos Turtle-Schuss"
+   ],
+   "visibility": "Teilweise unter dem Van; Lage aus Pfeil, Lichterplan (Michelangelo 96–98, Ninja Pizza Parlor 101) und Schalterplan.",
+   "sources": [
+    "manual",
+    "stern_rules",
+    "rulesheet"
+   ]
+  },
+  "twox": {
+   "name": "2X-Ziel",
+   "en": "2X Playfield Target",
+   "kind": "Ziel",
+   "flipper": "beide",
+   "what": "Standziel in der Mitte über dem Pfeil „2X Playfield“, rechts neben „Start Episode“.",
+   "returns": "Prallt zurück.",
+   "awards": [
+    "Startet 2X Playfield (30 s), wenn beleuchtet",
+    "Verlängert laufendes 2X um 5 s",
+    "Ohne laufendes Feature: wechselt die Episode (offizielles Regelblatt)"
+   ],
+   "visibility": "Ziel selbst im Foto klein; Lage aus Schalter 40 im Plan und dem Detailfoto. Zuordnung Schalter 40 = 2X-Ziel ist aus der Lage neben dem 2X-Einsatz abgeleitet.",
+   "sources": [
+    "manual",
+    "stern_rules",
+    "rulesheet"
+   ]
+  },
+  "pizza_target": {
+   "name": "Pizza-Ziel (vorn)",
+   "en": "Pizza Target",
+   "kind": "Ziel",
+   "flipper": "L",
+   "what": "Standziel mit Explosions-Aufkleber direkt unter dem türkisen Plastikdreieck, links vom Einlauf der rechten Rampe. Davor der Einsatz „Pizza Slice“.",
+   "returns": "Prallt zurück.",
+   "awards": [
+    "Pizza-Toppings wechseln",
+    "Pizzastücke sammeln – nach 7 Stücken startet hier der Pizza Eating Contest"
+   ],
+   "visibility": "Im Detailfoto klar, in der Draufsicht verdeckt. Das zweite Pizza-Ziel (Schalter 39 „Upper Pop Target“ bei den Bumpern) ist im Foto nicht erkennbar und darum nicht markiert.",
+   "sources": [
+    "manual",
+    "rulesheet",
+    "photo"
+   ]
+  },
+  "center_ramp": {
+   "name": "Mittelrampe (Donatello)",
+   "en": "Center Ramp",
+   "kind": "Rampe",
+   "flipper": "L",
+   "what": "Metall-Einlauf hinter dem Pfeil „Donatello“, links neben dem türkisen Plastikdreieck. Nicht mit der rechten Rampe rechts daneben verwechseln.",
+   "returns": "Rampe nach oben (Ausgangs-Lichtschranke 53), Rückkehr über die Drahtbahn.",
+   "awards": [
+    "Donatellos Turtle-Schuss",
+    "Krang Kombo kassieren",
+    "2. Weapon-Hurry-up",
+    "1-2-3 Foot: 2. Schuss",
+    "Ninja Pizza Multiball: 2 Foot"
+   ],
+   "visibility": "In der Draufsicht unter Drähten; im Stern-Detailfoto zeigt der Donatello-Pfeil eindeutig auf diesen Metall-Einlauf.",
+   "sources": [
+    "manual",
+    "rulesheet",
+    "photo"
+   ]
+  },
+  "krang_loop": {
+   "name": "Krang-Loop (oberer Loop)",
+   "en": "Krang Loop / Center Loop",
+   "kind": "Loop",
+   "flipper": "UL",
+   "what": "Bahn über die Pfeile „Mondo Jackpot“, die gelbe „2“ und „Krang“ in Richtung Krang-Gemälde. Wird vom oberen linken Flipper gespielt.",
+   "returns": "Läuft als Schleife herum (Schalter 64 „Center Loop“).",
+   "awards": [
+    "Krang Kombo aufbauen (3× = Maximum)",
+    "Mondo Jackpot im Multiball (danach Double, Triple)",
+    "Ninja Pizza Multiball: 2 Foot"
+   ],
+   "visibility": "Eingang teils unter Drähten; Lage aus den Pfeilen (Lichterplan 122–128) und dem Detailfoto.",
+   "sources": [
+    "manual",
+    "stern_rules",
+    "rulesheet"
+   ]
+  },
+  "right_ramp": {
+   "name": "Rechte Rampe (Shredder)",
+   "en": "Right Ramp",
+   "kind": "Rampe",
+   "flipper": "L",
+   "what": "Metall-Einlauf rechts vom türkisen Plastikdreieck, hinter dem Pfeil „Shredder“. Davor die Einsätze „1“ (1-2-3 Foot) und „Turtle Power Multiball“.",
+   "returns": "Klarsicht-Rampe nach rechts oben (Schalter 55 Eingang, 56 Ausgang).",
+   "awards": [
+    "Mit linker Rampe: Start Episode beleuchten",
+    "4× = Turtle Power Multiball",
+    "April-Hurry-up kassieren",
+    "1-2-3 Foot: 1. Schuss",
+    "Ninja Pizza Multiball: 1 Foot"
+   ],
+   "visibility": "Einlauf in Draufsicht und Detailfoto sichtbar.",
+   "sources": [
+    "manual",
+    "stern_rules",
+    "rulesheet",
+    "photo"
+   ]
+  },
+  "right_orbit": {
+   "name": "Rechter Orbit (Rocksteady)",
+   "en": "Right Orbit",
+   "kind": "Orbit mit Spinner",
+   "flipper": "L",
+   "what": "Bahn rechts außen links vom roten Blitzlicht, hinter dem Pfeil „Rocksteady“ mit „Training“ und „Weapon“. Im Orbit sitzt der Spinner.",
+   "returns": "Läuft um die obere rechte Ecke (Schalter 63 „Right Orbit“, 43 Spinner).",
+   "awards": [
+    "Weapon-Hurry-up",
+    "Rocksteady im Team-Up",
+    "Spinner erhöht den Foot-Wert (1-2-3 Foot)"
+   ],
+   "visibility": "Eingang sichtbar; Spinner im Foto nicht zu erkennen.",
+   "sources": [
+    "manual",
+    "rulesheet"
+   ]
+  },
+  "lair_lane": {
+   "name": "LAIR-Bahn (unter dem oberen Flipper)",
+   "en": "LAIR Lane",
+   "kind": "Bahn / Lock",
+   "flipper": "R",
+   "what": "Bahn hinter dem oberen linken Flipper, angezeigt durch den Pfeil „Leonardo“ mit „Training“ und „Jackpoto Grande“. Die Kugel läuft unter dem Flipper durch.",
+   "returns": "Läuft links nach unten zum Schalter 29 („Lower Lock 1“).",
+   "awards": [
+    "Training starten, wenn beleuchtet",
+    "Jackpoto Grande (Super Jackpot) nach einem Mondo Jackpot",
+    "Leonardos Turtle-Schuss",
+    "Final Battle: Add-a-Ball nach LAIR"
+   ],
+   "visibility": "Eingang direkt unter dem oberen Flipper, schwer zu sehen; Lage aus Pfeil, Instruction Card („Shoot the ball behind the upper flipper“) und Schalterplan.",
+   "sources": [
+    "manual",
+    "stern_rules",
+    "rulesheet"
+   ]
+  },
+  "lair_target": {
+   "name": "LAIR-Ziele",
+   "en": "LAIR Target",
+   "kind": "Zielbank",
+   "flipper": "R",
+   "what": "Standziel-Bank links neben den Einsätzen L-A-I-R (Pro: zwei Ziele an einem Schalter, „Left Bank Target (2x)“).",
+   "returns": "Prallt zurück.",
+   "awards": [
+    "4 Treffer = LAIR: beim 1., 3. … Mal Training beleuchten, beim 2., 4. … Mal 2X Playfield beleuchten",
+    "Buchstaben laufen ab",
+    "Nach 2 Komplettierungen gesperrt bis zur nächsten Episode"
+   ],
+   "visibility": "Ziele im Foto nicht klar erkennbar. Lage aus dem Schalterplan (Schalter 28) ins Foto übertragen.",
+   "sources": [
+    "manual",
+    "stern_rules",
+    "rulesheet"
+   ]
+  },
+  "april_target": {
+   "name": "APRIL-Ziele",
+   "en": "APRIL Target",
+   "kind": "Zielbank",
+   "flipper": "L",
+   "what": "Standziel-Bank rechts neben den Einsätzen A-P-R-I-L (Pro: „Right Bank Target (2x)“).",
+   "returns": "Prallt zurück.",
+   "awards": [
+    "5 Treffer = APRIL: beim 1., 3. … Mal Battle Again, beim 2., 4. … Mal April-Hurry-up an der rechten Rampe",
+    "Während April-Hurry-up: Wert +62 % und mehr Zeit"
+   ],
+   "visibility": "Ziele unter den Drahtbahnen rechts; Lage aus dem Schalterplan (Schalter 31) übertragen.",
+   "sources": [
+    "manual",
+    "stern_rules",
+    "rulesheet"
+   ]
+  },
+  "pops": {
+   "name": "Bumper (Pict-o-Pops)",
+   "en": "Pop Bumpers",
+   "kind": "Bumper",
+   "flipper": null,
+   "what": "Drei Bumper oben in der Mitte: links mit Kanaldeckel-Kappe, rechts und unten mit roter Kappe.",
+   "returns": "Die Kugel springt zwischen den Bumpern.",
+   "awards": [
+    "Pict-o-Pops: drei gleiche Bildteile = Belohnung (u. a. Extraball beleuchten, Start Episode, Turtle Power, Battle Again, Add-a-Ball)"
+   ],
+   "visibility": "Unter den Drahtbahnen, teils verdeckt.",
+   "sources": [
+    "manual",
+    "rulesheet"
+   ]
+  },
+  "upper_flipper": {
+   "name": "Oberer linker Flipper",
+   "en": "Upper Left Flipper",
+   "kind": "Flipper",
+   "flipper": null,
+   "what": "Kleiner gelber Flipper links in der Mitte. Von hier spielt man vor allem den Krang-Loop.",
+   "returns": "—",
+   "awards": [
+    "Orientierung"
+   ],
+   "visibility": "Sichtbar.",
+   "sources": [
+    "manual"
+   ]
+  },
+  "inlanes": {
+   "name": "Rückläufe (Inlanes)",
+   "en": "Return Lanes",
+   "kind": "Bahnen",
+   "flipper": null,
+   "what": "Links zwei, rechts ein Rücklauf zu den Flippern.",
+   "returns": "Zum Flipper.",
+   "awards": [
+    "Weapon-Bahn (wechselt mit den Flippertasten) startet den Weapon-Hurry-up",
+    "Innerer linker Rücklauf startet 1-2-3 Foot (zu Beginn jeder Kugel beleuchtet)"
+   ],
+   "visibility": "Sichtbar.",
+   "sources": [
+    "manual",
+    "stern_rules",
+    "rulesheet"
+   ]
+  },
+  "outlanes": {
+   "name": "Outlanes (Battle Again)",
+   "en": "Outlanes",
+   "kind": "Bahnen",
+   "flipper": null,
+   "what": "Ganz außen links und rechts. Darüber je ein „Battle Again“-Einsatz.",
+   "returns": "Ins Aus – außer Battle Again leuchtet.",
+   "awards": [
+    "Battle Again: rettet die Kugel. Nur eine Seite leuchtet, die Schleudern wechseln sie."
+   ],
+   "visibility": "Sichtbar.",
+   "sources": [
+    "manual",
+    "stern_rules",
+    "rulesheet"
+   ]
+  },
+  "plunger": {
+   "name": "Abschuss",
+   "en": "Plunger",
+   "kind": "Abschuss",
+   "flipper": null,
+   "what": "Abschussbahn rechts.",
+   "returns": "Über den rechten Orbit nach oben zu den Top-Lanes und Bumpern.",
+   "awards": [
+    "Pro-Skillshot: blinkende Top-Lane (immer die rechte) = Bonus-Multiplikator +1",
+    "Linke Flippertaste halten: die Kugel läuft durch zum oberen Flipper"
+   ],
+   "visibility": "Abschussbahn sichtbar; die Top-Lanes liegen im Foto unter den Rampen und sind nicht markiert.",
+   "sources": [
+    "rulesheet",
+    "stern_rules"
+   ]
+  }
+ },
+ "strategies": [
+  {
+   "id": "solid",
+   "title": "Solide spielen",
+   "subtitle": "Episoden starten, die zwei Multibälle holen",
+   "steps": [
+    {
+     "title": "Turtle wählen",
+     "shots": [
+      "lair_lane",
+      "left_ramp",
+      "pizza_parlor",
+      "center_ramp"
+     ],
+     "prep": "Zu Spielbeginn mit den Flippertasten wählen.",
+     "go": "Raphael ist laut Rulesheet der stärkste Turtle (Stufe 1: Start Episode beleuchtet). Donatello beleuchtet sofort Turtle Power Multiball.",
+     "why": "Jeder Turtle hat einen eigenen Schuss für den Skillshot. Das Symbol zeigt, welcher Schuss zu welchem Turtle gehört.",
+     "sources": [
+      "stern_rules",
+      "rulesheet"
+     ],
+     "badges": {
+      "lair_lane": "leo",
+      "left_ramp": "raph",
+      "pizza_parlor": "mike",
+      "center_ramp": "don"
+     }
+    },
+    {
+     "title": "Skillshot",
+     "shots": [
+      "plunger",
+      "left_ramp"
+     ],
+     "prep": "Kugel in der Abschussbahn.",
+     "go": "1. Sanft in die blinkende rechte Top-Lane (Pro). 2. Danach 15 s Zeit für den blinkenden Schuss deines Turtles.",
+     "why": "Top-Lane: Bonus-X +1. Turtle-Schuss: 250.000 und Weapon an einem Rücklauf.",
+     "sources": [
+      "rulesheet",
+      "stern_rules"
+     ]
+    },
+    {
+     "title": "Start Episode beleuchten",
+     "shots": [
+      "left_ramp",
+      "right_ramp"
+     ],
+     "prep": "Keine Episode läuft.",
+     "go": "Linke Rampe (Left Ramp) und rechte Rampe (Right Ramp) je einmal treffen.",
+     "why": "Beleuchtet „Start Episode“ am Pizza Parlor.",
+     "sources": [
+      "stern_rules",
+      "rulesheet"
+     ]
+    },
+    {
+     "title": "Episode starten",
+     "shots": [
+      "pizza_parlor",
+      "dimx"
+     ],
+     "prep": "Start Episode leuchtet. Mit den Dimension-X-Zielen kannst du vorher die Episode wählen.",
+     "go": "Ninja Pizza Parlor treffen.",
+     "why": "Startet die Episode. Zwei gestartete Episoden beleuchten den Extraball am Pizza Parlor.",
+     "sources": [
+      "rulesheet"
+     ]
+    },
+    {
+     "title": "Ninja Pizza Multiball",
+     "shots": [
+      "pizza_parlor"
+     ],
+     "prep": "Kein Multiball läuft.",
+     "go": "Pizza Parlor dreimal treffen – jeder Treffer lockt eine Kugel.",
+     "why": "Der dritte Lock startet den Multiball.",
+     "sources": [
+      "stern_rules",
+      "rulesheet"
+     ]
+    },
+    {
+     "title": "Turtle Power Multiball",
+     "shots": [
+      "right_ramp"
+     ],
+     "prep": "Kein Multiball läuft.",
+     "go": "Rechte Rampe viermal.",
+     "why": "Die vierte Rampe startet Turtle Power Multiball.",
+     "sources": [
+      "stern_rules",
+      "rulesheet"
+     ]
+    },
+    {
+     "title": "LAIR für Training",
+     "shots": [
+      "lair_target",
+      "lair_lane"
+     ],
+     "prep": "L-A-I-R-Einsätze blinken (nicht gesperrt).",
+     "go": "1. LAIR-Ziele viermal treffen, bevor die Buchstaben ablaufen. 2. Dann die LAIR-Bahn unter dem oberen Flipper.",
+     "why": "Startet Training. Geschafft: +10 % auf alle Punkte für den Rest des Spiels und nächste Turtle-Stufe.",
+     "sources": [
+      "stern_rules",
+      "rulesheet"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "high",
+   "title": "Auf Highscore",
+   "subtitle": "Episoden stapeln, 2X laufen lassen, Super Jackpots",
+   "steps": [
+    {
+     "title": "Episoden mit Multiball stapeln",
+     "shots": [
+      "pizza_parlor",
+      "right_ramp"
+     ],
+     "prep": "Start Episode leuchtet.",
+     "go": "Episode starten und dann einen Multiball dazu holen.",
+     "why": "Quick Strategy Guide des Rulesheets: mehr Kugeln, mehr Zeit für die Episoden-Schüsse.",
+     "sources": [
+      "rulesheet"
+     ]
+    },
+    {
+     "title": "Vier Episoden → Team-Up",
+     "shots": [
+      "left_ramp"
+     ],
+     "prep": "Vier Episoden gespielt (gewonnen oder verloren).",
+     "go": "Linke Rampe startet Team-Up Multiball.",
+     "why": "Team-Up schaltet danach die beiden Haupt-Multibälle wieder frei.",
+     "sources": [
+      "rulesheet"
+     ]
+    },
+    {
+     "title": "2X Playfield laufen lassen",
+     "shots": [
+      "lair_target",
+      "twox"
+     ],
+     "prep": "LAIR zum 2. Mal komplett.",
+     "go": "1. 2X-Ziel in der Mitte starten. 2. Immer wieder treffen: +5 s.",
+     "why": "30 s doppelte Punkte. Am besten im Multiball mit Ball Save starten.",
+     "sources": [
+      "rulesheet"
+     ]
+    },
+    {
+     "title": "Mondo, dann Jackpoto Grande",
+     "shots": [
+      "krang_loop",
+      "lair_lane"
+     ],
+     "prep": "Multiball läuft, Mondo Jackpot ist beleuchtet.",
+     "go": "1. Krang-Loop vom oberen Flipper. 2. Danach die LAIR-Bahn.",
+     "why": "Mondo Jackpot beleuchtet den Super Jackpot (Jackpoto Grande) an der LAIR-Bahn. Wiederholen.",
+     "sources": [
+      "rulesheet"
+     ]
+    },
+    {
+     "title": "Neutrino Pizza Party",
+     "shots": [
+      "dimx",
+      "left_ramp"
+     ],
+     "prep": "Ein Training geschafft, Einzelkugel.",
+     "go": "1. Beide Dimension-X-Ziele, bevor sie ablaufen. 2. Linke Rampe.",
+     "why": "Einmal pro Spiel. Rote Schüsse erhöhen den blauen Schuss bis 5 Mio.; der blaue Schuss kassiert.",
+     "sources": [
+      "rulesheet"
+     ]
+    },
+    {
+     "title": "Acht Episoden → Final Battle",
+     "shots": [
+      "pizza_parlor"
+     ],
+     "prep": "Alle acht Episoden gespielt.",
+     "go": "Final Battle starten (siehe Multibälle).",
+     "why": "Schon der Start bringt bis zu 25 Mio., wenn alle acht Episoden gewonnen sind.",
+     "sources": [
+      "rulesheet"
+     ]
+    }
+   ]
+  }
+ ],
+ "multiballs": [
+  {
+   "id": "pizza",
+   "name": "Ninja Pizza Multiball",
+   "tag": "Haupt-Multiball",
+   "balls": "3 Kugeln (Gummy Bears: bis zu 3 mehr am Pro)",
+   "prep": [
+    {
+     "title": "Toppings wählen",
+     "shots": [
+      "pizza_target"
+     ],
+     "text": "Die Pizza-Ziele schalten die Toppings um. Beim 1. Lock werden die ersten zwei festgelegt, beim 2. die nächsten zwei, beim 3. das fünfte.",
+     "sources": [
+      "rulesheet"
+     ]
+    },
+    {
+     "title": "Zwei Kugeln locken",
+     "shots": [
+      "pizza_parlor"
+     ],
+     "text": "Pizza Parlor zweimal treffen.",
+     "sources": [
+      "stern_rules",
+      "rulesheet"
+     ]
+    }
+   ],
+   "start": {
+    "title": "Dritter Lock",
+    "shots": [
+     "pizza_parlor"
+    ],
+    "text": "Der dritte Treffer am Pizza Parlor startet den Multiball. Die Kugeln kommen über die drehende Pizza.",
+    "sources": [
+     "stern_rules",
+     "rulesheet"
+    ]
+   },
+   "score": [
+    {
+     "title": "Foot-Soldaten besiegen",
+     "shots": [
+      "left_ramp",
+      "krang_loop",
+      "center_ramp",
+      "pizza_parlor",
+      "right_ramp"
+     ],
+     "text": "Linke Rampe 3 Foot, Krang-Loop und Mittelrampe je 2, Pizza Parlor und rechte Rampe je 1.",
+     "sources": [
+      "rulesheet"
+     ]
+    },
+    {
+     "title": "Mondo Jackpot",
+     "shots": [
+      "krang_loop"
+     ],
+     "text": "Nach 6 Foot: Mondo Jackpot am Krang-Loop. Danach Double und Triple Mondo (laufen ab).",
+     "sources": [
+      "rulesheet"
+     ]
+    },
+    {
+     "title": "Jackpoto Grande",
+     "shots": [
+      "lair_lane"
+     ],
+     "text": "Ein Mondo Jackpot beleuchtet den Super Jackpot an der LAIR-Bahn: 3 Mio. + 500.000 je Mondo seit dem letzten Super.",
+     "sources": [
+      "rulesheet"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "power",
+   "name": "Turtle Power Multiball",
+   "tag": "Haupt-Multiball",
+   "balls": "nicht belegt",
+   "prep": [
+    {
+     "title": "Rechte Rampe dreimal",
+     "shots": [
+      "right_ramp"
+     ],
+     "text": "Drei Treffer an der rechten Rampe. Donatello (Stufe 1) beleuchtet den Multiball sofort.",
+     "sources": [
+      "stern_rules",
+      "rulesheet"
+     ]
+    }
+   ],
+   "start": {
+    "title": "Vierte rechte Rampe",
+    "shots": [
+     "right_ramp"
+    ],
+    "text": "Der nächste Treffer an der rechten Rampe startet den Multiball.",
+    "sources": [
+     "stern_rules",
+     "rulesheet"
+    ]
+   },
+   "score": [
+    {
+     "title": "Grüne Schüsse = Jackpots",
+     "shots": [],
+     "text": "Grün leuchtende Schüsse treffen: 100.000, je +25.000 bis 250.000. Welche Schüsse grün sind, zeigt das Spielfeld.",
+     "sources": [
+      "rulesheet"
+     ],
+     "lit": true
+    },
+    {
+     "title": "Mondo, dann Super",
+     "shots": [
+      "krang_loop",
+      "lair_lane"
+     ],
+     "text": "Nach 4 Jackpots Mondo am Krang-Loop, danach Jackpoto Grande an der LAIR-Bahn.",
+     "sources": [
+      "rulesheet"
+     ]
+    },
+    {
+     "title": "Add-a-Ball",
+     "shots": [
+      "lair_lane",
+      "left_ramp",
+      "pizza_parlor",
+      "center_ramp",
+      "right_ramp"
+     ],
+     "text": "Alle vier Turtle-Schüsse treffen: „Turtle Power“ blinkt – rechte Rampe gibt eine Kugel dazu.",
+     "sources": [
+      "rulesheet"
+     ],
+     "badges": {
+      "lair_lane": "leo",
+      "left_ramp": "raph",
+      "pizza_parlor": "mike",
+      "center_ramp": "don"
+     }
+    }
+   ]
+  },
+  {
+   "id": "teamup",
+   "name": "Team-Up Multiball",
+   "tag": "Mini-Wizard",
+   "balls": "nicht belegt (Add-a-Ball je Rettung)",
+   "prep": [
+    {
+     "title": "Vier Episoden spielen",
+     "shots": [
+      "pizza_parlor"
+     ],
+     "text": "Vier beliebige Episoden spielen. Jede gewonnene Episode gibt einen Vorteil im Team-Up.",
+     "sources": [
+      "stern_rules",
+      "rulesheet"
+     ]
+    }
+   ],
+   "start": {
+    "title": "Linke Rampe",
+    "shots": [
+     "left_ramp"
+    ],
+    "text": "Team-Up leuchtet an der linken Rampe.",
+    "sources": [
+     "rulesheet"
+    ]
+   },
+   "score": [
+    {
+     "title": "Sechs Bösewichte",
+     "shots": [
+      "left_orbit",
+      "right_orbit",
+      "left_ramp",
+      "center_ramp",
+      "right_ramp",
+      "krang_loop"
+     ],
+     "text": "Orbits = Bebop und Rocksteady, Rampen und Krang-Loop = Foot-Soldaten. Alle sechs besiegen.",
+     "sources": [
+      "rulesheet"
+     ]
+    },
+    {
+     "title": "Turtle retten",
+     "shots": [],
+     "text": "Dann startet ein Rescue-Hurry-up an einem Turtle-Schuss (ab 500.000) – treffen = Add-a-Ball.",
+     "sources": [
+      "rulesheet"
+     ],
+     "lit": true
+    },
+    {
+     "title": "Shredder, dann letzte Rettung",
+     "shots": [
+      "right_ramp"
+     ],
+     "text": "Nach zwei Rettungen: Shredder-Hurry-up an der rechten Rampe, dann die dritte Rettung. Danach Pizza Party bis zur letzten Kugel.",
+     "sources": [
+      "rulesheet"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "name": "Final Battle",
+   "tag": "Wizard-Modus",
+   "balls": "Phasen mit Multiball und Einzelkugel",
+   "prep": [
+    {
+     "title": "Alle acht Episoden spielen",
+     "shots": [
+      "pizza_parlor"
+     ],
+     "text": "Gewonnen oder verloren – gespielt zählt.",
+     "sources": [
+      "stern_rules",
+      "rulesheet"
+     ]
+    }
+   ],
+   "start": {
+    "title": "Start: Quellen uneinig",
+    "shots": [
+     "pizza_parlor",
+     "left_ramp"
+    ],
+    "text": "Das Rulesheet nennt an einer Stelle den Pizza Parlor, an anderer die linke Rampe. Am Gerät auf den blinkenden Einsatz achten.",
+    "sources": [
+     "rulesheet"
+    ]
+   },
+   "score": [
+    {
+     "title": "Phase 1 (Multiball)",
+     "shots": [
+      "left_ramp",
+      "center_ramp",
+      "right_ramp",
+      "krang_loop",
+      "dimx"
+     ],
+     "text": "Drei der vier leuchtenden Schüsse (Rampen, Loop), dann die Dimension-X-Ziele, dann die linke Rampe.",
+     "sources": [
+      "rulesheet"
+     ]
+    },
+    {
+     "title": "Phase 2 (eine Kugel)",
+     "shots": [
+      "left_orbit",
+      "right_orbit",
+      "left_ramp"
+     ],
+     "text": "4 rote (Bebop) und 4 blaue (Rocksteady) Schüsse. Dann Hurry-ups am linken und rechten Orbit, dann linke Rampe.",
+     "sources": [
+      "rulesheet"
+     ]
+    },
+    {
+     "title": "Phase 3 (Multiball)",
+     "shots": [
+      "left_ramp",
+      "krang_loop",
+      "right_ramp"
+     ],
+     "text": "Linke Rampe (Slash), Loop (Krang), rechte Rampe (Shredder), zum Schluss linke Rampe. LAIR komplett = Add-a-Ball an der LAIR-Bahn.",
+     "sources": [
+      "rulesheet"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cowabunga",
+   "name": "Cowabunga Multiball",
+   "tag": "Finaler Wizard",
+   "balls": "nicht belegt",
+   "prep": [
+    {
+     "title": "Sieben Bedingungen",
+     "shots": [
+      "krang_loop",
+      "center_ramp",
+      "lair_lane"
+     ],
+     "text": "Max Krang Kombo, Jackpoto Grande, Triple Mondo, ein Weapon-Hurry-up, 5 April-Hurry-ups, 1-2-3 Foot komplett, Final Battle gespielt.",
+     "sources": [
+      "rulesheet"
+     ]
+    }
+   ],
+   "start": {
+    "title": "Start nicht belegt",
+    "shots": [],
+    "text": "Wie Cowabunga gestartet wird und abläuft, beschreibt keine der Quellen.",
+    "sources": [],
+    "lit": true
+   },
+   "score": [
+    {
+     "title": "Ablauf nicht belegt",
+     "shots": [],
+     "text": "Das Rulesheet hat zu diesem Modus noch keine Beschreibung.",
+     "sources": [
+      "rulesheet"
+     ],
+     "lit": true
+    }
+   ]
+  }
+ ],
+ "modesIntro": "Acht Episoden. Start: linke und rechte Rampe beleuchten „Start Episode“, dann Pizza Parlor. Die Dimension-X-Ziele wählen die Episode. Episoden laufen meist auf Zeit (30 s). Bestimmte Schüsse treffen, dann leuchten die vier Turtle-Schüsse – einer davon gewinnt die Episode. Episode 7 braucht vorher Episode 4, Episode 8 braucht Episode 3.",
+ "modes": [
+  {
+   "id": "ep1",
+   "name": "Pizza-o-Meter",
+   "film": "Episode 1",
+   "time": "30 s",
+   "steps": [
+    {
+     "title": "3 leuchtende Hauptschüsse",
+     "shots": [
+      "left_orbit",
+      "left_ramp",
+      "krang_loop",
+      "center_ramp",
+      "right_ramp",
+      "right_orbit"
+     ],
+     "text": "Alle sechs Hauptschüsse leuchten. Drei treffen, dann einen Turtle-Schuss. Abschluss 1 Mio."
+    }
+   ]
+  },
+  {
+   "id": "ep2",
+   "name": "Window Shopping",
+   "film": "Episode 2",
+   "time": "30 s",
+   "steps": [
+    {
+     "title": "Dreimal Orbits",
+     "shots": [
+      "left_orbit",
+      "right_orbit"
+     ],
+     "text": "Beide Orbits bleiben beleuchtet. 3 Orbit-Treffer, dann Turtle-Schuss. Orbits zählen weiter mit steigendem Multiplikator."
+    }
+   ]
+  },
+  {
+   "id": "ep3",
+   "name": "I Want a Body",
+   "film": "Episode 3",
+   "time": "30 s",
+   "steps": [
+    {
+     "title": "4 wandernde Schüsse",
+     "shots": [
+      "left_ramp",
+      "right_ramp",
+      "left_orbit",
+      "right_orbit"
+     ],
+     "text": "Beide Rampen leuchten. Ein Treffer schaltet Rampe oder Orbit der anderen Seite an. 4 Treffer, dann Turtle-Schuss."
+    }
+   ]
+  },
+  {
+   "id": "ep4",
+   "name": "Night of the Mousers",
+   "film": "Episode 4",
+   "time": "kein Timer",
+   "steps": [
+    {
+     "title": "6 leuchtende Schüsse",
+     "shots": [
+      "lair_target",
+      "left_ramp",
+      "right_ramp",
+      "april_target",
+      "center_ramp",
+      "left_orbit",
+      "right_orbit"
+     ],
+     "text": "LAIR, linke Rampe, rechte Rampe und APRIL leuchten, danach auch Mittelrampe und Orbits. Schüsse laufen einzeln ab; 10 abgelaufene = verloren. 6 Treffer, dann Turtle-Schuss."
+    }
+   ]
+  },
+  {
+   "id": "ep5",
+   "name": "See You on the Other Side, Ray",
+   "film": "Episode 5",
+   "time": "30 s",
+   "steps": [
+    {
+     "title": "Rampe, dann LAIR – dreimal",
+     "shots": [
+      "left_ramp",
+      "center_ramp",
+      "right_ramp",
+      "lair_target"
+     ],
+     "text": "Eine leuchtende Rampe schaltet das LAIR-Ziel an. LAIR treffen schaltet die Rampen wieder an. Dreimal LAIR, dann Turtle-Schuss."
+    }
+   ]
+  },
+  {
+   "id": "ep6",
+   "name": "Welcome to the Concrete Jungle",
+   "film": "Episode 6",
+   "time": "30 s",
+   "steps": [
+    {
+     "title": "Phase 1",
+     "shots": [
+      "dimx",
+      "left_ramp"
+     ],
+     "text": "Beide Dimension-X-Ziele, dann linke Rampe. Gelbe Orbits geben +10 s."
+    },
+    {
+     "title": "Phase 2",
+     "shots": [
+      "left_orbit",
+      "left_ramp",
+      "krang_loop",
+      "center_ramp",
+      "right_ramp",
+      "right_orbit"
+     ],
+     "text": "Drei leuchtende Hauptschüsse, dann Turtle-Schuss."
+    }
+   ]
+  },
+  {
+   "id": "ep7",
+   "name": "Super Fly",
+   "film": "Episode 7 (nach Episode 4)",
+   "time": "30 s",
+   "steps": [
+    {
+     "title": "Von rechts nach links",
+     "shots": [
+      "right_ramp",
+      "right_orbit",
+      "left_ramp",
+      "left_orbit",
+      "krang_loop",
+      "center_ramp"
+     ],
+     "text": "Rechte Rampe oder rechter Orbit, dann linke Seite, dann Loop oder Mittelrampe. Der 3. Treffer startet einen Hurry-up ab 2,5 Mio. am Turtle-Schuss."
+    }
+   ]
+  },
+  {
+   "id": "ep8",
+   "name": "The Wrath of Krang",
+   "film": "Episode 8 (nach Episode 3)",
+   "time": "30 s",
+   "steps": [
+    {
+     "title": "3 rote Schüsse",
+     "shots": [],
+     "text": "Zwei rote Schüsse wandern hin und her, alle anderen sind gelb (nur 25.000). Drei rote treffen, dann Turtle-Schuss. Abschluss 1,5 Mio.",
+     "lit": true
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "term": "Turtle-Schüsse",
+   "text": "Die vier Schüsse der Turtles: Leonardo = LAIR-Bahn, Raphael = linke Rampe, Michelangelo = Pizza Parlor, Donatello = Mittelrampe. Ihre Pfeile tragen die Namen."
+  },
+  {
+   "term": "Foot",
+   "text": "Shredders Fußsoldaten. Im Ninja Pizza Multiball und bei 1-2-3 Foot besiegt man sie."
+  },
+  {
+   "term": "Mondo Jackpot",
+   "text": "Jackpot am Krang-Loop in beiden Haupt-Multibällen. Danach Double und Triple Mondo."
+  },
+  {
+   "term": "Jackpoto Grande",
+   "text": "Super Jackpot an der LAIR-Bahn, nach einem Mondo Jackpot."
+  },
+  {
+   "term": "Hurry-up",
+   "text": "Wert, der rückwärts läuft, bis man den beleuchteten Schuss trifft."
+  },
+  {
+   "term": "Battle Again",
+   "text": "Outlane-Kugelretter von APRIL."
+  },
+  {
+   "term": "Insert (Einsatz)",
+   "text": "Leuchtfeld im Spielfeld vor einem Schuss. Nicht das Ziel selbst."
+  }
+ ],
+ "limits": [
+  "Regelstand: Rulesheet Code 1.50 und offizielles Regelblatt von 2020. Neuere Pro-Software habe ich nicht geprüft.",
+  "Die Top-Lanes und das obere Pizza-Ziel (Schalter 39) liegen im Foto unter Rampen und sind nicht markiert.",
+  "LAIR- und APRIL-Ziele sind im Foto nicht klar zu sehen; ihre Lage ist aus dem Schalterplan übertragen. Die Einsätze L-A-I-R und A-P-R-I-L sind direkt vermessen.",
+  "Welcher Schalter das 2X-Ziel ist (40) und welche die Pizza-Ziele sind (39, 41), ist aus der Lage neben den Einsätzen „2X Playfield“, „Pizza Topping“ und „Pizza Slice“ abgeleitet – das Handbuch nennt sie nur „Lower/Upper Pop Target“ und „Center Ramp Target“.",
+  "Flipper-Empfehlungen sind aus der Lage abgeleitet. Rampenwege sind nicht eingezeichnet, nur Eingang und Zielrichtung."
+ ]
 }

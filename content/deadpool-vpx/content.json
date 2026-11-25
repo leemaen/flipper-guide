@@ -637,7 +637,8 @@
      "text": "„Shoot green shots to attack Sauron“ – welche Schüsse grün sind, zeigt der Tisch.",
      "sources": [
       "script"
-     ]
+     ],
+     "lit": true
     }
    ]
   },
@@ -713,7 +714,8 @@
     {
      "title": "Blinkende Schüsse",
      "shots": [],
-     "text": "Blinkende Schüsse und Display beachten; Ablauf im Detail nicht ausgewertet."
+     "text": "Blinkende Schüsse und Display beachten; Ablauf im Detail nicht ausgewertet.",
+     "lit": true
     }
    ]
   },
@@ -742,7 +744,8 @@
     {
      "title": "Blinkende Schüsse",
      "shots": [],
-     "text": "Hier ein Battle (am echten Tisch eine Quest). Ablauf nicht ausgewertet."
+     "text": "Hier ein Battle (am echten Tisch eine Quest). Ablauf nicht ausgewertet.",
+     "lit": true
     }
    ]
   },
@@ -755,7 +758,8 @@
     {
      "title": "Blinkende Schüsse",
      "shots": [],
-     "text": "Hier ein Battle (am echten Tisch eine Quest). Ablauf nicht ausgewertet."
+     "text": "Hier ein Battle (am echten Tisch eine Quest). Ablauf nicht ausgewertet.",
+     "lit": true
     }
    ]
   },
@@ -768,7 +772,8 @@
     {
      "title": "Blinkende Schüsse",
      "shots": [],
-     "text": "„Shoot flashing shots to attack Mr. Sinister“. Nach 6 gewonnenen Battles wählbar."
+     "text": "„Shoot flashing shots to attack Mr. Sinister“. Nach 6 gewonnenen Battles wählbar.",
+     "lit": true
     }
    ]
   },

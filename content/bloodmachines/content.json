@@ -1,156 +1,910 @@
 {
  "table": {
-  "id": "bloodmachines", "name": "Blood Machines", "short": "Blood Machines", "manufacturer": "VPW (VPinWorkshop-Original)", "year": 2022,
-  "system": "Visual Pinball X, eigenes Regel-Script (kein ROM)", "design": "iaakki, Dapheni (Layout); Apophis, iaakki (Regeln); nach dem Film von Seth Ickerman",
+  "id": "bloodmachines",
+  "name": "Blood Machines",
+  "short": "Blood Machines",
+  "manufacturer": "VPW (VPinWorkshop-Original)",
+  "year": 2022,
+  "system": "Visual Pinball X, eigenes Regel-Script (kein ROM)",
+  "design": "iaakki, Dapheni (Layout); Apophis, iaakki (Regeln); nach dem Film von Seth Ickerman",
   "editions": "Nur virtuell: „Blood Machines 2.0“ (VPW, Script-Stand „2.0 iaakki – default values“). Kein echter Flipper.",
   "ruleVersion": "Regeln aus dem Tisch-Script 2.0 und der eingebauten Regelkarte (Bild „Rulescard“). Punktwerte = Script-Konstanten vor Multiplikator.",
-  "accent": "#c3263a", "contentDate": "2026-11-08"
+  "accent": "#c3263a",
+  "contentDate": "2026-11-08"
  },
  "sources": [
-  { "id": "script", "title": "Tisch-Script „Blood Machines 2.0.vpx“ (VPW: iaakki, Apophis u. a.)", "url": "", "use": "Schussnummern 1–6, Multibälle Mima/Corey/Tracy, Missionen 1–7, Scavenge, Skillshot, Multiplikator, Kickback, Punktwerte." },
-  { "id": "card", "title": "Eingebaute Regelkarte „How to play Blood Machines“", "url": "", "use": "Kurzregeln: Multibälle, Missionen, Final Chapter, Scavenge, Multiplier." },
-  { "id": "vpx", "title": "Tischdatei: Schalter-, Kicker-, Wand-, Rampen- und Licht-Positionen (vpxtool 0.33.10)", "url": "", "use": "Lage aller Eingänge und Einsätze; Draufsicht aus Artwork und 3D-Objekten." },
-  { "id": "vpw", "title": "VPinWorkshop: Blood Machines (VPW-Original 2022)", "url": "https://vpinworkshop.com", "use": "Autoren und Herkunft (Tisch-Info)." },
-  { "id": "ball", "title": "Kugelbild: Lucasbosch, Wikimedia Commons, CC BY-SA 3.0", "url": "https://commons.wikimedia.org/wiki/File:Stainless_steel_1.4034_X46Cr13_bearing_ball_60mm_G100_removed_camera.jpg", "use": "Animierte Flipperkugel (bearbeitet, CC BY-SA 3.0)." }
+  {
+   "id": "script",
+   "title": "Tisch-Script „Blood Machines 2.0.vpx“ (VPW: iaakki, Apophis u. a.)",
+   "url": "",
+   "use": "Schussnummern 1–6, Multibälle Mima/Corey/Tracy, Missionen 1–7, Scavenge, Skillshot, Multiplikator, Kickback, Punktwerte."
+  },
+  {
+   "id": "card",
+   "title": "Eingebaute Regelkarte „How to play Blood Machines“",
+   "url": "",
+   "use": "Kurzregeln: Multibälle, Missionen, Final Chapter, Scavenge, Multiplier."
+  },
+  {
+   "id": "vpx",
+   "title": "Tischdatei: Schalter-, Kicker-, Wand-, Rampen- und Licht-Positionen (vpxtool 0.33.10)",
+   "url": "",
+   "use": "Lage aller Eingänge und Einsätze; Draufsicht aus Artwork und 3D-Objekten."
+  },
+  {
+   "id": "vpw",
+   "title": "VPinWorkshop: Blood Machines (VPW-Original 2022)",
+   "url": "https://vpinworkshop.com",
+   "use": "Autoren und Herkunft (Tisch-Info)."
+  },
+  {
+   "id": "ball",
+   "title": "Kugelbild: Lucasbosch, Wikimedia Commons, CC BY-SA 3.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Stainless_steel_1.4034_X46Cr13_bearing_ball_60mm_G100_removed_camera.jpg",
+   "use": "Animierte Flipperkugel (bearbeitet, CC BY-SA 3.0)."
+  }
  ],
  "views": {
-  "vpx": { "label": "VPX (Draufsicht)", "note": "Aus der Tischdatei gerechnete Draufsicht: Artwork plus 3D-Objekte von oben. Das Schiff oben links verdeckt den Ring, in dem die Kugel kreist. Rampen sind unsichtbar gezeichnet (in der Datei als Kollisionsflächen), ihre Eingänge sind markiert." }
+  "vpx": {
+   "label": "VPX (Draufsicht)",
+   "note": "Aus der Tischdatei gerechnete Draufsicht: Artwork plus 3D-Objekte von oben. Das Schiff oben links verdeckt den Ring, in dem die Kugel kreist. Rampen sind unsichtbar gezeichnet (in der Datei als Kollisionsflächen), ihre Eingänge sind markiert."
+  }
  },
  "shots": {
-  "left_orbit": { "name": "Linker Orbit (Schuss 1)", "en": "Left Orbit", "kind": "Orbit", "flipper": "R",
+  "left_orbit": {
+   "name": "Linker Orbit (Schuss 1)",
+   "en": "Left Orbit",
+   "kind": "Orbit",
+   "flipper": "R",
    "what": "Bahn links, vor Pfeil 1. Sie führt links hoch und oben herum.",
    "returns": "Oben herum; bei Freischaltung öffnet sich oben rechts ein Tor.",
-   "awards": ["Pfeil blinkt: Mission beleuchten", "Fünfeck/Kreuz 1 fest machen", "Tracy-Multiball: Jackpot 1 Mio.", "Missionen: Hunt, Chase, Betrayal"],
-   "visibility": "Eingang sichtbar. Schalter swLeftOrbTrigger1 + 2.", "sources": ["script", "card", "vpx"] },
-  "ship": { "name": "Schiff / gefangene Kugel (Schuss 2)", "en": "Ship / Captive ball (Mima)", "kind": "Ring mit gefangener Kugel", "flipper": "beide",
+   "awards": [
+    "Pfeil blinkt: Mission beleuchten",
+    "Fünfeck/Kreuz 1 fest machen",
+    "Tracy-Multiball: Jackpot 1 Mio.",
+    "Missionen: Hunt, Chase, Betrayal"
+   ],
+   "visibility": "Eingang sichtbar. Schalter swLeftOrbTrigger1 + 2.",
+   "sources": [
+    "script",
+    "card",
+    "vpx"
+   ]
+  },
+  "ship": {
+   "name": "Schiff / gefangene Kugel (Schuss 2)",
+   "en": "Ship / Captive ball (Mima)",
+   "kind": "Ring mit gefangener Kugel",
+   "flipper": "beide",
    "what": "Öffnung unten im Ring unter dem großen Schiff, vor Pfeil 2. Oben im Ring liegt eine gefangene Kugel unter dem Schiffsmaul.",
    "returns": "Prallt zurück oder kreist im Ring (Ring-Loop). Nach 3 Treffern hebt sich das Maul: Schwerkraftloch, die Kugel wird gelockt.",
-   "awards": ["Gefangene Kugel 3× treffen → Schwerkraftloch offen", "Lock für Mima-Multiball (2,5 Mio.)", "Fünfeck/Kreuz 2 fest machen", "Mima-Multiball: Super Jackpot 3,5 Mio."],
-   "visibility": "Ring und Kugel teils vom Schiff verdeckt. Schalter CaptiveTrigger, MimaLock, swLoopUpTrigger.", "sources": ["script", "card", "vpx"] },
-  "center_lane": { "name": "Mittelbahn (Schuss 3)", "en": "Center Lane → right VUK", "kind": "Bahn zum VUK", "flipper": "beide",
+   "awards": [
+    "Gefangene Kugel 3× treffen → Schwerkraftloch offen",
+    "Lock für Mima-Multiball (2,5 Mio.)",
+    "Fünfeck/Kreuz 2 fest machen",
+    "Mima-Multiball: Super Jackpot 3,5 Mio."
+   ],
+   "visibility": "Ring und Kugel teils vom Schiff verdeckt. Schalter CaptiveTrigger, MimaLock, swLoopUpTrigger.",
+   "sources": [
+    "script",
+    "card",
+    "vpx"
+   ]
+  },
+  "center_lane": {
+   "name": "Mittelbahn (Schuss 3)",
+   "en": "Center Lane → right VUK",
+   "kind": "Bahn zum VUK",
+   "flipper": "beide",
    "what": "Bahn in der Mitte vor Pfeil 3. Sie läuft hoch und endet im rechten VUK.",
    "returns": "Der VUK hält die Kugel und wirft sie wieder aus.",
-   "awards": ["Startet einen bereiten Multiball", "Fünfeck/Kreuz 3 fest machen", "Tracy-Multiball: Super Jackpot 5 Mio.", "Skillshot 2 beim Abschuss mit gehaltenem linken Flipper"],
-   "visibility": "Eingang sichtbar, Weg zum VUK aus Pfeil 3 und VUK2 abgeleitet (siehe Grenzen).", "sources": ["script", "card", "vpx"] },
-  "main_ramp": { "name": "Hauptrampe (Schuss 4)", "en": "Main Ramp", "kind": "Rampe", "flipper": "L",
+   "awards": [
+    "Startet einen bereiten Multiball",
+    "Fünfeck/Kreuz 3 fest machen",
+    "Tracy-Multiball: Super Jackpot 5 Mio.",
+    "Skillshot 2 beim Abschuss mit gehaltenem linken Flipper"
+   ],
+   "visibility": "Eingang sichtbar, Weg zum VUK aus Pfeil 3 und VUK2 abgeleitet (siehe Grenzen).",
+   "sources": [
+    "script",
+    "card",
+    "vpx"
+   ]
+  },
+  "main_ramp": {
+   "name": "Hauptrampe (Schuss 4)",
+   "en": "Main Ramp",
+   "kind": "Rampe",
+   "flipper": "L",
    "what": "Rampe rechts der Mitte, über Pfeil 4.",
    "returns": "Hoch, oben nach links, links herunter auf die Plattform des oberen Flippers.",
-   "awards": ["250.000", "Fünfeck/Kreuz 4 fest machen", "Corey-Multiball: Jackpot 0,5 Mio.", "Danach Skyloop mit dem oberen Flipper"],
-   "visibility": "Eingang sichtbar. Schalter RRAMPUP, swMainRamp.", "sources": ["script", "vpx"] },
-  "right_orbit": { "name": "Rechter Orbit (Schuss 5)", "en": "Right Orbit", "kind": "Orbit mit Spinner", "flipper": "L",
+   "awards": [
+    "250.000",
+    "Fünfeck/Kreuz 4 fest machen",
+    "Corey-Multiball: Jackpot 0,5 Mio.",
+    "Danach Skyloop mit dem oberen Flipper"
+   ],
+   "visibility": "Eingang sichtbar. Schalter RRAMPUP, swMainRamp.",
+   "sources": [
+    "script",
+    "vpx"
+   ]
+  },
+  "right_orbit": {
+   "name": "Rechter Orbit (Schuss 5)",
+   "en": "Right Orbit",
+   "kind": "Orbit mit Spinner",
+   "flipper": "L",
    "what": "Bahn rechts mit Spinner, vor Pfeil 5.",
    "returns": "Rechts hoch und oben herum.",
-   "awards": ["Pfeil blinkt: Mission beleuchten", "Fünfeck/Kreuz 5 fest machen", "Tracy-Multiball: Jackpot 1 Mio.", "Spinner (Super Spinner aus Scavenge)"],
-   "visibility": "Sichtbar. Schalter swRightOrbTrigger1 + 2, Spinner1.", "sources": ["script", "card", "vpx"] },
-  "sky_loop": { "name": "Skyloop (oberer Flipper)", "en": "Sky Loop", "kind": "Rampe vom oberen Flipper", "flipper": "UL",
+   "awards": [
+    "Pfeil blinkt: Mission beleuchten",
+    "Fünfeck/Kreuz 5 fest machen",
+    "Tracy-Multiball: Jackpot 1 Mio.",
+    "Spinner (Super Spinner aus Scavenge)"
+   ],
+   "visibility": "Sichtbar. Schalter swRightOrbTrigger1 + 2, Spinner1.",
+   "sources": [
+    "script",
+    "card",
+    "vpx"
+   ]
+  },
+  "sky_loop": {
+   "name": "Skyloop (oberer Flipper)",
+   "en": "Sky Loop",
+   "kind": "Rampe vom oberen Flipper",
+   "flipper": "UL",
    "what": "Von der erhöhten Plattform links (oberer Flipper) quer über das Spielfeld nach rechts oben.",
    "returns": "Über die rechte Seite und oben herum.",
-   "awards": ["500.000", "Lässt ein Fünfeck blinken (Corey)", "Corey-Multiball: Super Jackpot 1 Mio."],
-   "visibility": "Eingang auf der Plattform. Schalter swSkyRamp.", "sources": ["script", "card", "vpx"] },
-  "vuk2": { "name": "Rechter VUK", "en": "Right VUK", "kind": "VUK", "flipper": null,
-   "what": "Loch rechts oben, Ende der Mittelbahn.", "returns": "Wirft die Kugel wieder aus.",
-   "awards": ["Startet bereite Multibälle"], "visibility": "Sichtbar.", "sources": ["script", "vpx"] },
-  "gun_vuk": { "name": "Kanone (linker VUK)", "en": "Gun VUK", "kind": "VUK", "flipper": null,
+   "awards": [
+    "500.000",
+    "Lässt ein Fünfeck blinken (Corey)",
+    "Corey-Multiball: Super Jackpot 1 Mio."
+   ],
+   "visibility": "Eingang auf der Plattform. Schalter swSkyRamp.",
+   "sources": [
+    "script",
+    "card",
+    "vpx"
+   ]
+  },
+  "vuk2": {
+   "name": "Rechter VUK",
+   "en": "Right VUK",
+   "kind": "VUK",
+   "flipper": null,
+   "what": "Loch rechts oben, Ende der Mittelbahn.",
+   "returns": "Wirft die Kugel wieder aus.",
+   "awards": [
+    "Startet bereite Multibälle"
+   ],
+   "visibility": "Sichtbar.",
+   "sources": [
+    "script",
+    "vpx"
+   ]
+  },
+  "gun_vuk": {
+   "name": "Kanone (linker VUK)",
+   "en": "Gun VUK",
+   "kind": "VUK",
+   "flipper": null,
    "what": "Loch ganz links oben in der äußeren Bahn. Hier startet eine beleuchtete Mission.",
-   "returns": "Schießt die Kugel zurück ins Spiel.", "awards": ["Mission starten (wenn „Mission“ blinkt)", "250.000"],
-   "visibility": "Sichtbar. Die Kugel kommt von oben durch die linke Außenbahn hinein; welcher Schuss sie sicher dorthin bringt, ist nicht eindeutig belegt.", "sources": ["script", "vpx"] },
-  "scavenge_scoop": { "name": "Scavenge-Scoop", "en": "Scavenge Scoop", "kind": "Scoop", "flipper": "L",
-   "what": "Scoop rechts in der Mitte, vor dem Feld „Scavenge“.", "returns": "Wirft die Kugel wieder aus.",
-   "awards": ["Bei „Scavenge“: Super Spinner, Double Scoring oder Mystery (5–20 Mio., auch Extraball)", "Geheimer Skillshot 3"],
-   "visibility": "Sichtbar. Kicker ScavengeKicker.", "sources": ["script", "card", "vpx"] },
-  "scavenge_drops": { "name": "Scavenge-Fallziele", "en": "Scavenge drop targets", "kind": "3 Fallziele", "flipper": "R",
-   "what": "Drei Fallziele links unten.", "returns": "Prallt zurück.",
-   "awards": ["Alle drei = Scavenge leuchtet am rechten Scoop (500.000)"], "visibility": "Sichtbar.", "sources": ["script", "card", "vpx"] },
-  "shield": { "name": "Schild", "en": "Shield (Mima target)", "kind": "Ziel (Bogen)", "flipper": "beide",
-   "what": "Gebogenes Ziel rechts unten am Ring. Erreichbar, wenn die Ringwand unten ist.", "returns": "Prallt zurück.",
-   "awards": ["3 Treffer = Playfield-Multiplikator eine Stufe höher (2×–5×, je 30 s)"], "visibility": "Sichtbar. Wand MimaTargetBig. Flipper aus der Lage abgeleitet.", "sources": ["script", "card", "vpx"] },
-  "harpoon": { "name": "Harpune", "en": "Harpoon kicker", "kind": "Kicker", "flipper": null,
-   "what": "Kicker rechts neben dem Schiff.", "returns": "Wirft aus.",
-   "awards": ["Extraball abholen, wenn „Extra Ball“ leuchtet", "Im Multiball: einmal eine Kugel dazu", "Immer 10 s Ballsicherung, 500.000"],
-   "visibility": "Sichtbar. Welcher Schuss sie erreicht, ist nicht belegt.", "sources": ["script", "vpx"] },
-  "bumpers": { "name": "Bumper", "en": "Pop Bumpers", "kind": "Bumper", "flipper": null,
-   "what": "Drei Bumper oben rechts.", "returns": "—", "awards": ["Alle 10 Treffer blinkt ein Kreuz (Tracy)", "Ab 50 Treffern Super Jets"], "visibility": "Sichtbar.", "sources": ["script", "card", "vpx"] },
-  "top_lanes": { "name": "Obere Bahnen", "en": "Top Lanes", "kind": "Bahnen", "flipper": null,
-   "what": "Zwei Bahnen oben rechts.", "returns": "In die Bumper.", "awards": ["Skillshot: die blinkende Bahn beim Abschuss"], "visibility": "Sichtbar.", "sources": ["script", "vpx"] },
-  "hatch": { "name": "Luke (Portal)", "en": "Hatch", "kind": "Klappe zum Unterflur", "flipper": null,
+   "returns": "Schießt die Kugel zurück ins Spiel.",
+   "awards": [
+    "Mission starten (wenn „Mission“ blinkt)",
+    "250.000"
+   ],
+   "visibility": "Sichtbar. Die Kugel kommt von oben durch die linke Außenbahn hinein; welcher Schuss sie sicher dorthin bringt, ist nicht eindeutig belegt.",
+   "sources": [
+    "script",
+    "vpx"
+   ]
+  },
+  "scavenge_scoop": {
+   "name": "Scavenge-Scoop",
+   "en": "Scavenge Scoop",
+   "kind": "Scoop",
+   "flipper": "L",
+   "what": "Scoop rechts in der Mitte, vor dem Feld „Scavenge“.",
+   "returns": "Wirft die Kugel wieder aus.",
+   "awards": [
+    "Bei „Scavenge“: Super Spinner, Double Scoring oder Mystery (5–20 Mio., auch Extraball)",
+    "Geheimer Skillshot 3"
+   ],
+   "visibility": "Sichtbar. Kicker ScavengeKicker.",
+   "sources": [
+    "script",
+    "card",
+    "vpx"
+   ]
+  },
+  "scavenge_drops": {
+   "name": "Scavenge-Fallziele",
+   "en": "Scavenge drop targets",
+   "kind": "3 Fallziele",
+   "flipper": "R",
+   "what": "Drei Fallziele links unten.",
+   "returns": "Prallt zurück.",
+   "awards": [
+    "Alle drei = Scavenge leuchtet am rechten Scoop (500.000)"
+   ],
+   "visibility": "Sichtbar.",
+   "sources": [
+    "script",
+    "card",
+    "vpx"
+   ]
+  },
+  "shield": {
+   "name": "Schild",
+   "en": "Shield (Mima target)",
+   "kind": "Ziel (Bogen)",
+   "flipper": "beide",
+   "what": "Gebogenes Ziel rechts unten am Ring. Erreichbar, wenn die Ringwand unten ist.",
+   "returns": "Prallt zurück.",
+   "awards": [
+    "3 Treffer = Playfield-Multiplikator eine Stufe höher (2×–5×, je 30 s)"
+   ],
+   "visibility": "Sichtbar. Wand MimaTargetBig. Flipper aus der Lage abgeleitet.",
+   "sources": [
+    "script",
+    "card",
+    "vpx"
+   ]
+  },
+  "harpoon": {
+   "name": "Harpune",
+   "en": "Harpoon kicker",
+   "kind": "Kicker",
+   "flipper": null,
+   "what": "Kicker rechts neben dem Schiff.",
+   "returns": "Wirft aus.",
+   "awards": [
+    "Extraball abholen, wenn „Extra Ball“ leuchtet",
+    "Im Multiball: einmal eine Kugel dazu",
+    "Immer 10 s Ballsicherung, 500.000"
+   ],
+   "visibility": "Sichtbar. Welcher Schuss sie erreicht, ist nicht belegt.",
+   "sources": [
+    "script",
+    "vpx"
+   ]
+  },
+  "bumpers": {
+   "name": "Bumper",
+   "en": "Pop Bumpers",
+   "kind": "Bumper",
+   "flipper": null,
+   "what": "Drei Bumper oben rechts.",
+   "returns": "—",
+   "awards": [
+    "Alle 10 Treffer blinkt ein Kreuz (Tracy)",
+    "Ab 50 Treffern Super Jets"
+   ],
+   "visibility": "Sichtbar.",
+   "sources": [
+    "script",
+    "card",
+    "vpx"
+   ]
+  },
+  "top_lanes": {
+   "name": "Obere Bahnen",
+   "en": "Top Lanes",
+   "kind": "Bahnen",
+   "flipper": null,
+   "what": "Zwei Bahnen oben rechts.",
+   "returns": "In die Bumper.",
+   "awards": [
+    "Skillshot: die blinkende Bahn beim Abschuss"
+   ],
+   "visibility": "Sichtbar.",
+   "sources": [
+    "script",
+    "vpx"
+   ]
+  },
+  "hatch": {
+   "name": "Luke (Portal)",
+   "en": "Hatch",
+   "kind": "Klappe zum Unterflur",
+   "flipper": null,
    "what": "Fünfeckige Luke in der Mitte. Öffnet sich in Mission „Portal Room“ und im Final Chapter; darunter gibt es zwei Mini-Flipper und sechs Vascan-Ziele.",
-   "returns": "Unterflur-Spielfeld.", "awards": ["Portal Room: alle Vascan-Ziele treffen"], "visibility": "Unterflur nicht sichtbar.", "sources": ["script", "vpx"] },
-  "lanes": { "name": "In- und Outlanes (LAGO)", "en": "Inlanes / Outlanes", "kind": "Bahnen", "flipper": null,
-   "what": "Vier Bahnen neben den Flippern.", "returns": "—", "awards": ["Alle vier beleuchtet = Kickback links (bis 2)"], "visibility": "Sichtbar.", "sources": ["script", "vpx"] },
-  "plunger": { "name": "Abschuss", "en": "Plunger", "kind": "Abschuss", "flipper": null,
-   "what": "Abschussbahn rechts.", "returns": "Zu den oberen Bahnen.", "awards": ["Skillshot 1: blinkende obere Bahn", "Linken Flipper beim Abschuss halten: Skillshot 2 im rechten VUK"], "visibility": "Sichtbar.", "sources": ["script"] }
+   "returns": "Unterflur-Spielfeld.",
+   "awards": [
+    "Portal Room: alle Vascan-Ziele treffen"
+   ],
+   "visibility": "Unterflur nicht sichtbar.",
+   "sources": [
+    "script",
+    "vpx"
+   ]
+  },
+  "lanes": {
+   "name": "In- und Outlanes (LAGO)",
+   "en": "Inlanes / Outlanes",
+   "kind": "Bahnen",
+   "flipper": null,
+   "what": "Vier Bahnen neben den Flippern.",
+   "returns": "—",
+   "awards": [
+    "Alle vier beleuchtet = Kickback links (bis 2)"
+   ],
+   "visibility": "Sichtbar.",
+   "sources": [
+    "script",
+    "vpx"
+   ]
+  },
+  "plunger": {
+   "name": "Abschuss",
+   "en": "Plunger",
+   "kind": "Abschuss",
+   "flipper": null,
+   "what": "Abschussbahn rechts.",
+   "returns": "Zu den oberen Bahnen.",
+   "awards": [
+    "Skillshot 1: blinkende obere Bahn",
+    "Linken Flipper beim Abschuss halten: Skillshot 2 im rechten VUK"
+   ],
+   "visibility": "Sichtbar.",
+   "sources": [
+    "script"
+   ]
+  }
  },
  "strategies": [
-  { "id": "solid", "title": "Solide spielen", "subtitle": "Mima-Multiball und Missionen",
+  {
+   "id": "solid",
+   "title": "Solide spielen",
+   "subtitle": "Mima-Multiball und Missionen",
    "steps": [
-    { "title": "Skillshot", "shots": ["top_lanes"], "prep": "Neue Kugel, eine obere Bahn blinkt.", "go": "So abschießen, dass die Kugel durch die blinkende Bahn rollt (top lanes).", "why": "500.000 und mehr; die ersten Skillshots geben auch ein Fünfeck bzw. „Mima Lock bereit“.", "sources": ["script"] },
-    { "title": "Gefangene Kugel 3× treffen", "shots": ["ship"], "prep": "Kein Multiball läuft.", "go": "In den Ring unter dem Schiff schießen (ship), bis das Maul hochgeht.", "why": "Öffnet das Schwerkraftloch für den Mima-Lock.", "sources": ["script", "card"] },
-    { "title": "3 Kugeln locken", "shots": ["ship"], "prep": "Schwerkraftloch offen.", "go": "Wieder ins Schiff schießen. Nach jedem Lock 3× die gefangene Kugel treffen.", "why": "2,5 Mio. je Lock. Nach dem dritten ist Mima bereit.", "sources": ["script", "card"] },
-    { "title": "Multiball starten", "shots": ["center_lane"], "prep": "Multiball bereit.", "go": "Mittelbahn in den rechten VUK (center lane).", "why": "Startet den bereiten Multiball (3 Kugeln, 15 s Ballsicherung).", "sources": ["script", "card"] },
-    { "title": "Mission beleuchten und starten", "shots": ["left_orbit", "right_orbit", "gun_vuk"], "prep": "Ein Orbit-Pfeil blinkt.", "go": "Den blinkenden Orbit treffen. Dann startet die Mission, sobald die Kugel in der Kanone links landet.", "why": "Missionen bringen Punkte; nach 3 und 6 geschafften gibt es einen Extraball.", "sources": ["script", "card"] },
-    { "title": "Scavenge holen", "shots": ["scavenge_drops", "scavenge_scoop"], "prep": "Drei Fallziele links unten.", "go": "Alle drei abräumen, dann den rechten Scoop.", "why": "Super Spinner, Double Scoring oder Mystery (bis 20 Mio., auch Extraball).", "sources": ["script", "card"] }
-   ] },
-  { "id": "high", "title": "Auf Highscore", "subtitle": "Alle drei Multibälle, Multiplikator, Final Chapter",
+    {
+     "title": "Skillshot",
+     "shots": [
+      "top_lanes"
+     ],
+     "prep": "Neue Kugel, eine obere Bahn blinkt.",
+     "go": "So abschießen, dass die Kugel durch die blinkende Bahn rollt (top lanes).",
+     "why": "500.000 und mehr; die ersten Skillshots geben auch ein Fünfeck bzw. „Mima Lock bereit“.",
+     "sources": [
+      "script"
+     ]
+    },
+    {
+     "title": "Gefangene Kugel 3× treffen",
+     "shots": [
+      "ship"
+     ],
+     "prep": "Kein Multiball läuft.",
+     "go": "In den Ring unter dem Schiff schießen (ship), bis das Maul hochgeht.",
+     "why": "Öffnet das Schwerkraftloch für den Mima-Lock.",
+     "sources": [
+      "script",
+      "card"
+     ]
+    },
+    {
+     "title": "3 Kugeln locken",
+     "shots": [
+      "ship"
+     ],
+     "prep": "Schwerkraftloch offen.",
+     "go": "Wieder ins Schiff schießen. Nach jedem Lock 3× die gefangene Kugel treffen.",
+     "why": "2,5 Mio. je Lock. Nach dem dritten ist Mima bereit.",
+     "sources": [
+      "script",
+      "card"
+     ]
+    },
+    {
+     "title": "Multiball starten",
+     "shots": [
+      "center_lane"
+     ],
+     "prep": "Multiball bereit.",
+     "go": "Mittelbahn in den rechten VUK (center lane).",
+     "why": "Startet den bereiten Multiball (3 Kugeln, 15 s Ballsicherung).",
+     "sources": [
+      "script",
+      "card"
+     ]
+    },
+    {
+     "title": "Mission beleuchten und starten",
+     "shots": [
+      "left_orbit",
+      "right_orbit",
+      "gun_vuk"
+     ],
+     "prep": "Ein Orbit-Pfeil blinkt.",
+     "go": "Den blinkenden Orbit treffen. Dann startet die Mission, sobald die Kugel in der Kanone links landet.",
+     "why": "Missionen bringen Punkte; nach 3 und 6 geschafften gibt es einen Extraball.",
+     "sources": [
+      "script",
+      "card"
+     ]
+    },
+    {
+     "title": "Scavenge holen",
+     "shots": [
+      "scavenge_drops",
+      "scavenge_scoop"
+     ],
+     "prep": "Drei Fallziele links unten.",
+     "go": "Alle drei abräumen, dann den rechten Scoop.",
+     "why": "Super Spinner, Double Scoring oder Mystery (bis 20 Mio., auch Extraball).",
+     "sources": [
+      "script",
+      "card"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "high",
+   "title": "Auf Highscore",
+   "subtitle": "Alle drei Multibälle, Multiplikator, Final Chapter",
    "steps": [
-    { "title": "Corey vorbereiten", "shots": ["main_ramp", "sky_loop"], "prep": "Hauptrampe bringt die Kugel zum oberen Flipper.", "go": "Hauptrampe, dann mit dem oberen Flipper den Skyloop.", "why": "Jeder Skyloop lässt ein Fünfeck blinken.", "sources": ["script", "card"] },
-    { "title": "Fünfecke und Kreuze fest machen", "shots": ["left_orbit", "ship", "center_lane", "main_ramp", "right_orbit"], "prep": "Fünfeck/Kreuz blinkt an einem Schuss.", "go": "Genau diesen Schuss treffen. Kreuze kommen von je 10 Bumper-Treffern.", "why": "Alle fünf Fünfecke = Corey bereit, alle fünf Kreuze = Tracy bereit.", "sources": ["script", "card"] },
-    { "title": "Multiplikator am Schild", "shots": ["shield"], "prep": "Ringwand ist unten (nicht direkt nach einem Ring-Loop).", "go": "Schild dreimal treffen.", "why": "2× → 3× → 4× → 5× für je 30 s.", "sources": ["script", "card"] },
-    { "title": "Jackpots im Multiball", "shots": ["ship", "main_ramp", "sky_loop", "left_orbit", "right_orbit", "center_lane"], "prep": "Multiball läuft.", "go": "Mima: 7 Ring-Loops, dann Schiff. Corey: Rampe, dann Skyloop. Tracy: Orbits, dann Mittelbahn.", "why": "Super Jackpots 3,5 / 1 / 5 Mio.", "sources": ["script"] },
-    { "title": "Final Chapter", "shots": [], "prep": "Alle 7 Missionen und alle 3 Multibälle geschafft.", "go": "Startet automatisch.", "why": "Wizard-Modus in mehreren Phasen gegen Galdor.", "sources": ["script", "card"] }
-   ] }
+    {
+     "title": "Corey vorbereiten",
+     "shots": [
+      "main_ramp",
+      "sky_loop"
+     ],
+     "prep": "Hauptrampe bringt die Kugel zum oberen Flipper.",
+     "go": "Hauptrampe, dann mit dem oberen Flipper den Skyloop.",
+     "why": "Jeder Skyloop lässt ein Fünfeck blinken.",
+     "sources": [
+      "script",
+      "card"
+     ]
+    },
+    {
+     "title": "Fünfecke und Kreuze fest machen",
+     "shots": [
+      "left_orbit",
+      "ship",
+      "center_lane",
+      "main_ramp",
+      "right_orbit"
+     ],
+     "prep": "Fünfeck/Kreuz blinkt an einem Schuss.",
+     "go": "Genau diesen Schuss treffen. Kreuze kommen von je 10 Bumper-Treffern.",
+     "why": "Alle fünf Fünfecke = Corey bereit, alle fünf Kreuze = Tracy bereit.",
+     "sources": [
+      "script",
+      "card"
+     ]
+    },
+    {
+     "title": "Multiplikator am Schild",
+     "shots": [
+      "shield"
+     ],
+     "prep": "Ringwand ist unten (nicht direkt nach einem Ring-Loop).",
+     "go": "Schild dreimal treffen.",
+     "why": "2× → 3× → 4× → 5× für je 30 s.",
+     "sources": [
+      "script",
+      "card"
+     ]
+    },
+    {
+     "title": "Jackpots im Multiball",
+     "shots": [
+      "ship",
+      "main_ramp",
+      "sky_loop",
+      "left_orbit",
+      "right_orbit",
+      "center_lane"
+     ],
+     "prep": "Multiball läuft.",
+     "go": "Mima: 7 Ring-Loops, dann Schiff. Corey: Rampe, dann Skyloop. Tracy: Orbits, dann Mittelbahn.",
+     "why": "Super Jackpots 3,5 / 1 / 5 Mio.",
+     "sources": [
+      "script"
+     ]
+    },
+    {
+     "title": "Final Chapter",
+     "shots": [],
+     "prep": "Alle 7 Missionen und alle 3 Multibälle geschafft.",
+     "go": "Startet automatisch.",
+     "why": "Wizard-Modus in mehreren Phasen gegen Galdor.",
+     "sources": [
+      "script",
+      "card"
+     ],
+     "lit": true
+    }
+   ]
+  }
  ],
  "multiballs": [
-  { "id": "mima", "name": "Mima-Multiball", "tag": "Schiff / Schwerkraftloch", "balls": "3 Kugeln",
+  {
+   "id": "mima",
+   "name": "Mima-Multiball",
+   "tag": "Schiff / Schwerkraftloch",
+   "balls": "3 Kugeln",
    "prep": [
-    { "title": "Gefangene Kugel 3×", "shots": ["ship"], "text": "Die gefangene Kugel unter dem Schiff dreimal von unten treffen: das Maul hebt sich.", "sources": ["script", "card"] },
-    { "title": "3 Locks", "shots": ["ship"], "text": "Kugel ins offene Schwerkraftloch (2,5 Mio.). Für jeden Lock wieder 3× die gefangene Kugel.", "sources": ["script", "card"] }
+    {
+     "title": "Gefangene Kugel 3×",
+     "shots": [
+      "ship"
+     ],
+     "text": "Die gefangene Kugel unter dem Schiff dreimal von unten treffen: das Maul hebt sich.",
+     "sources": [
+      "script",
+      "card"
+     ]
+    },
+    {
+     "title": "3 Locks",
+     "shots": [
+      "ship"
+     ],
+     "text": "Kugel ins offene Schwerkraftloch (2,5 Mio.). Für jeden Lock wieder 3× die gefangene Kugel.",
+     "sources": [
+      "script",
+      "card"
+     ]
+    }
    ],
-   "start": { "title": "Mittelbahn", "shots": ["center_lane"], "text": "Bereiter Multiball startet im rechten VUK (1 Mio., 15 s Ballsicherung).", "sources": ["script", "card"] },
+   "start": {
+    "title": "Mittelbahn",
+    "shots": [
+     "center_lane"
+    ],
+    "text": "Bereiter Multiball startet im rechten VUK (1 Mio., 15 s Ballsicherung).",
+    "sources": [
+     "script",
+     "card"
+    ]
+   },
    "score": [
-    { "title": "Jackpot: 7 Ring-Loops", "shots": ["ship"], "text": "Sieben Runden im Ring um das Schiff = Jackpot 0,5 Mio.", "sources": ["script"] },
-    { "title": "Super Jackpot: Schiff", "shots": ["ship"], "text": "Danach ins Schiff (Lock) = 3,5 Mio. und eine Kugel dazu.", "sources": ["script"] }
-   ] },
-  { "id": "corey", "name": "Corey-Multiball", "tag": "Fünfecke", "balls": "3 Kugeln",
+    {
+     "title": "Jackpot: 7 Ring-Loops",
+     "shots": [
+      "ship"
+     ],
+     "text": "Sieben Runden im Ring um das Schiff = Jackpot 0,5 Mio.",
+     "sources": [
+      "script"
+     ]
+    },
+    {
+     "title": "Super Jackpot: Schiff",
+     "shots": [
+      "ship"
+     ],
+     "text": "Danach ins Schiff (Lock) = 3,5 Mio. und eine Kugel dazu.",
+     "sources": [
+      "script"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "corey",
+   "name": "Corey-Multiball",
+   "tag": "Fünfecke",
+   "balls": "3 Kugeln",
    "prep": [
-    { "title": "Skyloops", "shots": ["main_ramp", "sky_loop"], "text": "Jeder Skyloop vom oberen Flipper lässt ein Fünfeck blinken.", "sources": ["script", "card"] },
-    { "title": "Fünfecke einsammeln", "shots": ["left_orbit", "ship", "center_lane", "main_ramp", "right_orbit"], "text": "Den Schuss mit dem blinkenden Fünfeck treffen, bis alle fünf fest leuchten.", "sources": ["script", "card"] }
+    {
+     "title": "Skyloops",
+     "shots": [
+      "main_ramp",
+      "sky_loop"
+     ],
+     "text": "Jeder Skyloop vom oberen Flipper lässt ein Fünfeck blinken.",
+     "sources": [
+      "script",
+      "card"
+     ]
+    },
+    {
+     "title": "Fünfecke einsammeln",
+     "shots": [
+      "left_orbit",
+      "ship",
+      "center_lane",
+      "main_ramp",
+      "right_orbit"
+     ],
+     "text": "Den Schuss mit dem blinkenden Fünfeck treffen, bis alle fünf fest leuchten.",
+     "sources": [
+      "script",
+      "card"
+     ]
+    }
    ],
-   "start": { "title": "Mittelbahn", "shots": ["center_lane"], "text": "Startet im rechten VUK.", "sources": ["script", "card"] },
+   "start": {
+    "title": "Mittelbahn",
+    "shots": [
+     "center_lane"
+    ],
+    "text": "Startet im rechten VUK.",
+    "sources": [
+     "script",
+     "card"
+    ]
+   },
    "score": [
-    { "title": "Jackpot: Hauptrampe", "shots": ["main_ramp"], "text": "0,5 Mio.", "sources": ["script"] },
-    { "title": "Super Jackpot: Skyloop", "shots": ["sky_loop"], "text": "Nach einem Jackpot: Skyloop = 1 Mio.", "sources": ["script"] }
-   ] },
-  { "id": "tracy", "name": "Tracy-Multiball", "tag": "Kreuze", "balls": "3 Kugeln",
+    {
+     "title": "Jackpot: Hauptrampe",
+     "shots": [
+      "main_ramp"
+     ],
+     "text": "0,5 Mio.",
+     "sources": [
+      "script"
+     ]
+    },
+    {
+     "title": "Super Jackpot: Skyloop",
+     "shots": [
+      "sky_loop"
+     ],
+     "text": "Nach einem Jackpot: Skyloop = 1 Mio.",
+     "sources": [
+      "script"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tracy",
+   "name": "Tracy-Multiball",
+   "tag": "Kreuze",
+   "balls": "3 Kugeln",
    "prep": [
-    { "title": "Bumper", "shots": ["bumpers"], "text": "Alle 10 Bumper-Treffer blinkt ein Kreuz.", "sources": ["script", "card"] },
-    { "title": "Kreuze einsammeln", "shots": ["left_orbit", "ship", "center_lane", "main_ramp", "right_orbit"], "text": "Den Schuss mit dem blinkenden Kreuz treffen, bis alle fünf fest leuchten.", "sources": ["script", "card"] }
+    {
+     "title": "Bumper",
+     "shots": [
+      "bumpers"
+     ],
+     "text": "Alle 10 Bumper-Treffer blinkt ein Kreuz.",
+     "sources": [
+      "script",
+      "card"
+     ]
+    },
+    {
+     "title": "Kreuze einsammeln",
+     "shots": [
+      "left_orbit",
+      "ship",
+      "center_lane",
+      "main_ramp",
+      "right_orbit"
+     ],
+     "text": "Den Schuss mit dem blinkenden Kreuz treffen, bis alle fünf fest leuchten.",
+     "sources": [
+      "script",
+      "card"
+     ]
+    }
    ],
-   "start": { "title": "Mittelbahn", "shots": ["center_lane"], "text": "„Shoot center lane to start“ (Regelkarte).", "sources": ["card", "script"] },
+   "start": {
+    "title": "Mittelbahn",
+    "shots": [
+     "center_lane"
+    ],
+    "text": "„Shoot center lane to start“ (Regelkarte).",
+    "sources": [
+     "card",
+     "script"
+    ]
+   },
    "score": [
-    { "title": "Jackpot: Orbits", "shots": ["left_orbit", "right_orbit"], "text": "1 Mio. je Orbit; nach zwei Jackpots ist der Super Jackpot an.", "sources": ["script"] },
-    { "title": "Super Jackpot: Mittelbahn", "shots": ["center_lane"], "text": "5 Mio. im rechten VUK.", "sources": ["script"] }
-   ] },
-  { "id": "final", "name": "Final Chapter", "tag": "Wizard-Modus", "balls": "nicht belegt",
-   "prep": [ { "title": "Alles schaffen", "shots": [], "text": "Alle sieben Missionen und die drei Multibälle.", "sources": ["card", "script"] } ],
-   "start": { "title": "Automatisch", "shots": [], "text": "Startet, sobald die Bedingungen erfüllt sind.", "sources": ["script"] },
-   "score": [ { "title": "Phasen gegen Galdor", "shots": ["ship", "left_orbit", "right_orbit", "hatch"], "text": "Mehrere Phasen (u. a. Orbits, Unterflur-Ziele, Galdor-Schüsse). Genauer Ablauf nicht belegt – Display beachten.", "sources": ["script"] } ] }
+    {
+     "title": "Jackpot: Orbits",
+     "shots": [
+      "left_orbit",
+      "right_orbit"
+     ],
+     "text": "1 Mio. je Orbit; nach zwei Jackpots ist der Super Jackpot an.",
+     "sources": [
+      "script"
+     ]
+    },
+    {
+     "title": "Super Jackpot: Mittelbahn",
+     "shots": [
+      "center_lane"
+     ],
+     "text": "5 Mio. im rechten VUK.",
+     "sources": [
+      "script"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "name": "Final Chapter",
+   "tag": "Wizard-Modus",
+   "balls": "nicht belegt",
+   "prep": [
+    {
+     "title": "Alles schaffen",
+     "shots": [],
+     "text": "Alle sieben Missionen und die drei Multibälle.",
+     "sources": [
+      "card",
+      "script"
+     ],
+     "lit": true
+    }
+   ],
+   "start": {
+    "title": "Automatisch",
+    "shots": [],
+    "text": "Startet, sobald die Bedingungen erfüllt sind.",
+    "sources": [
+     "script"
+    ],
+    "lit": true
+   },
+   "score": [
+    {
+     "title": "Phasen gegen Galdor",
+     "shots": [
+      "ship",
+      "left_orbit",
+      "right_orbit",
+      "hatch"
+     ],
+     "text": "Mehrere Phasen (u. a. Orbits, Unterflur-Ziele, Galdor-Schüsse). Genauer Ablauf nicht belegt – Display beachten.",
+     "sources": [
+      "script"
+     ]
+    }
+   ]
+  }
  ],
  "modesIntro": "Sieben Missionen in fester Reihenfolge. Beleuchten: blinkenden Orbit-Pfeil treffen; starten: Kugel in der Kanone (linker VUK). Zeitlimit 75 s (Mission 1: 100 s). Nach jedem Versuch wechselt die Mission. 3 und 6 geschaffte Missionen = Extraball beleuchtet.",
  "modes": [
-  { "id": "hunt", "name": "The Hunt", "film": "Mission 1", "time": "100 s", "steps": [ { "title": "Kanone laden, KI-Schiff abschießen", "shots": ["left_orbit", "ship", "center_lane", "main_ramp", "right_orbit"], "text": "Erst die Kanone laden, dann die blinkenden Schüsse; 3 Schiffe." } ] },
-  { "id": "resurrection", "name": "Resurrection", "film": "Mission 2", "time": "75 s", "steps": [ { "title": "10 Loops", "shots": ["ship"], "text": "Zehn Loops – im Script über die Ring-Loops am Schiff gezählt." } ] },
-  { "id": "chase", "name": "Chase", "film": "Mission 3", "time": "75 s", "steps": [ { "title": "4 Treffer", "shots": ["left_orbit", "ship", "center_lane", "main_ramp", "right_orbit"], "text": "Vier blinkende Schüsse treffen." } ] },
-  { "id": "cemetery", "name": "Cemetery", "film": "Mission 4", "time": "75 s", "steps": [ { "title": "Rampe und Skyloop", "shots": ["main_ramp", "sky_loop"], "text": "Beginnt an der Hauptrampe; die Anzeige zählt bis „Mission done“." } ] },
-  { "id": "portal", "name": "Portal Room", "film": "Mission 5", "time": "75 s", "steps": [ { "title": "Vascan-Ziele unter der Luke", "shots": ["hatch"], "text": "Die Luke öffnet sich; unten mit den Mini-Flippern alle Vascan-Ziele treffen." } ] },
-  { "id": "heart", "name": "Heart of Steel", "film": "Mission 6", "time": "75 s", "steps": [ { "title": "25 Bumper", "shots": ["bumpers"], "text": "„Save Lago“: 25 Bumper-Treffer." } ] },
-  { "id": "betrayal", "name": "Betrayal", "film": "Mission 7", "time": "75 s", "steps": [ { "title": "Schuss-Kombo", "shots": ["center_lane"], "text": "Beginnt an der Mittelbahn, dann den jeweils blinkenden Schüssen folgen." } ] }
+  {
+   "id": "hunt",
+   "name": "The Hunt",
+   "film": "Mission 1",
+   "time": "100 s",
+   "steps": [
+    {
+     "title": "Kanone laden, KI-Schiff abschießen",
+     "shots": [
+      "left_orbit",
+      "ship",
+      "center_lane",
+      "main_ramp",
+      "right_orbit"
+     ],
+     "text": "Erst die Kanone laden, dann die blinkenden Schüsse; 3 Schiffe."
+    }
+   ]
+  },
+  {
+   "id": "resurrection",
+   "name": "Resurrection",
+   "film": "Mission 2",
+   "time": "75 s",
+   "steps": [
+    {
+     "title": "10 Loops",
+     "shots": [
+      "ship"
+     ],
+     "text": "Zehn Loops – im Script über die Ring-Loops am Schiff gezählt."
+    }
+   ]
+  },
+  {
+   "id": "chase",
+   "name": "Chase",
+   "film": "Mission 3",
+   "time": "75 s",
+   "steps": [
+    {
+     "title": "4 Treffer",
+     "shots": [
+      "left_orbit",
+      "ship",
+      "center_lane",
+      "main_ramp",
+      "right_orbit"
+     ],
+     "text": "Vier blinkende Schüsse treffen."
+    }
+   ]
+  },
+  {
+   "id": "cemetery",
+   "name": "Cemetery",
+   "film": "Mission 4",
+   "time": "75 s",
+   "steps": [
+    {
+     "title": "Rampe und Skyloop",
+     "shots": [
+      "main_ramp",
+      "sky_loop"
+     ],
+     "text": "Beginnt an der Hauptrampe; die Anzeige zählt bis „Mission done“."
+    }
+   ]
+  },
+  {
+   "id": "portal",
+   "name": "Portal Room",
+   "film": "Mission 5",
+   "time": "75 s",
+   "steps": [
+    {
+     "title": "Vascan-Ziele unter der Luke",
+     "shots": [
+      "hatch"
+     ],
+     "text": "Die Luke öffnet sich; unten mit den Mini-Flippern alle Vascan-Ziele treffen."
+    }
+   ]
+  },
+  {
+   "id": "heart",
+   "name": "Heart of Steel",
+   "film": "Mission 6",
+   "time": "75 s",
+   "steps": [
+    {
+     "title": "25 Bumper",
+     "shots": [
+      "bumpers"
+     ],
+     "text": "„Save Lago“: 25 Bumper-Treffer."
+    }
+   ]
+  },
+  {
+   "id": "betrayal",
+   "name": "Betrayal",
+   "film": "Mission 7",
+   "time": "75 s",
+   "steps": [
+    {
+     "title": "Schuss-Kombo",
+     "shots": [
+      "center_lane"
+     ],
+     "text": "Beginnt an der Mittelbahn, dann den jeweils blinkenden Schüssen folgen."
+    }
+   ]
+  }
  ],
  "glossary": [
-  { "term": "Ring-Loop", "text": "Kugel kreist im Ring um das Schiff. Dabei schließt sich die Ringwand kurz." },
-  { "term": "Schwerkraftloch", "text": "Öffnung unter dem Schiffsmaul, die die Kugel für den Mima-Multiball lockt." },
-  { "term": "Scavenge", "text": "Belohnung im rechten Scoop nach den drei Fallzielen links." },
-  { "term": "VUK", "text": "Loch, das die Kugel senkrecht wieder hochschießt." },
-  { "term": "Einsatz (Insert)", "text": "Beleuchtetes Feld im Spielfeld. Nur Anzeige, kein Ziel." }
+  {
+   "term": "Ring-Loop",
+   "text": "Kugel kreist im Ring um das Schiff. Dabei schließt sich die Ringwand kurz."
+  },
+  {
+   "term": "Schwerkraftloch",
+   "text": "Öffnung unter dem Schiffsmaul, die die Kugel für den Mima-Multiball lockt."
+  },
+  {
+   "term": "Scavenge",
+   "text": "Belohnung im rechten Scoop nach den drei Fallzielen links."
+  },
+  {
+   "term": "VUK",
+   "text": "Loch, das die Kugel senkrecht wieder hochschießt."
+  },
+  {
+   "term": "Einsatz (Insert)",
+   "text": "Beleuchtetes Feld im Spielfeld. Nur Anzeige, kein Ziel."
+  }
  ],
  "limits": [
   "VPX-Original ohne ROM: Grundlage sind das Script 2.0 und die Regelkarte. Ein ausführliches Rulesheet habe ich nicht gefunden.",

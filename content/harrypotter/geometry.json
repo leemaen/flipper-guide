@@ -302,6 +302,26 @@
     "len": 434,
     "w": 34
    }
+  },
+  "cauldron": {
+   "entrance": {
+    "type": "circle",
+    "c": [
+     1255,
+     1030
+    ],
+    "r": 30
+   }
+  },
+  "hagrid": {
+   "entrance": {
+    "type": "circle",
+    "c": [
+     864.9,
+     883.5
+    ],
+    "r": 14
+   }
   }
  }
 }

@@ -1,180 +1,1050 @@
 {
-  "table": {
-    "id": "afm", "name": "Attack from Mars", "short": "AFM", "manufacturer": "Bally (Midway)", "year": 1995,
-    "system": "WPC-95", "design": "Brian Eddy",
-    "editions": "Bally 1995 (Handbuch 16-10206 vom Januar 1996), eine Ausführung. Virtuell: „Attack from Mars (Bally 1995) g5k 1.3.11“ mit Original-ROM „afm_113b“ (PinMAME). Gleiche Regeln, deshalb ein Tisch mit zwei Ansichten.",
-    "ruleVersion": "Grundregeln aus Ballys offizieller Spielanleitung (Instruction Card und Regelseiten, © 1996). Werte und Details aus dem Rulesheet von Brian Dominy (ohne Datum und ROM-Nummer; es unterscheidet nur „frühe“ und „neuere“ ROMs). Die VPX läuft mit ROM afm_113b. Ob alle Werte des Rulesheets genau zu diesem Stand passen, ist nicht belegt.",
-    "accent": "#7cc242", "contentDate": "2026-11-08"
+ "table": {
+  "id": "afm",
+  "name": "Attack from Mars",
+  "short": "AFM",
+  "manufacturer": "Bally (Midway)",
+  "year": 1995,
+  "system": "WPC-95",
+  "design": "Brian Eddy",
+  "editions": "Bally 1995 (Handbuch 16-10206 vom Januar 1996), eine Ausführung. Virtuell: „Attack from Mars (Bally 1995) g5k 1.3.11“ mit Original-ROM „afm_113b“ (PinMAME). Gleiche Regeln, deshalb ein Tisch mit zwei Ansichten.",
+  "ruleVersion": "Grundregeln aus Ballys offizieller Spielanleitung (Instruction Card und Regelseiten, © 1996). Werte und Details aus dem Rulesheet von Brian Dominy (ohne Datum und ROM-Nummer; es unterscheidet nur „frühe“ und „neuere“ ROMs). Die VPX läuft mit ROM afm_113b. Ob alle Werte des Rulesheets genau zu diesem Stand passen, ist nicht belegt.",
+  "accent": "#7cc242",
+  "contentDate": "2026-11-08"
+ },
+ "sources": [
+  {
+   "id": "bally",
+   "title": "Bally/Midway: Attack from Mars – Explore the Playfield (offizielle Regelseiten und Instruction Card, © 1996)",
+   "url": "https://www.planetarypinball.com/mm5/Williams/games/atmars/pf_Instructions.html",
+   "use": "Offizielle Regeln: Skill Shot, Super Skill Shot, Attack Waves, Multiball, Martian Attack, Total Annihilation, Hurry-Up, Combos, Super Jets, Stroke of Luck, Extra Ball, Rule the Universe."
   },
-  "sources": [
-    { "id": "bally", "title": "Bally/Midway: Attack from Mars – Explore the Playfield (offizielle Regelseiten und Instruction Card, © 1996)", "url": "https://www.planetarypinball.com/mm5/Williams/games/atmars/pf_Instructions.html", "use": "Offizielle Regeln: Skill Shot, Super Skill Shot, Attack Waves, Multiball, Martian Attack, Total Annihilation, Hurry-Up, Combos, Super Jets, Stroke of Luck, Extra Ball, Rule the Universe." },
-    { "id": "manual", "title": "Bally: Attack from Mars – Operator Handbook 16-10206 (Januar 1996)", "url": "https://arcarc.xmission.com/Pinball/PDF%20Pinball%20Manuals%20and%20Schematics/Attack%20from%20Mars%20Operator%20Handbook.pdf", "use": "Lampenmatrix und Lampennamen (S. 2–3), Schaltermatrix und Schalternamen (S. 4–5)." },
-    { "id": "rules", "title": "Brian Dominy: Attack from Mars Rulesheet (ohne Datum)", "url": "https://www.bmigaming.com/Games/Rulesheets/attack_from_mars.txt", "use": "Werte, Abläufe, Rückläufe der Rampen, Tipps. Kein ROM-Stand genannt." },
-    { "id": "photo", "title": "Bally/Midway: Original-Spielfeldfoto „AtMars_pfl.jpg“ (Explore the Playfield)", "url": "https://www.planetarypinball.com/mm5/Williams/games/atmars/AtMars_pfl.jpg", "use": "Ansicht „Echter Tisch“ (Draufsicht, 556 × 1260 px)." },
-    { "id": "vpx", "title": "g5k: Attack from Mars (Bally 1995) 1.3.11 (lokale Tischdatei, ROM afm_113b)", "url": "https://vpuniverse.com/", "use": "Exakte Schalter-, Flipper-, Wand- und Lichtpositionen; gebackene Draufsicht als VPX-Ansicht; Symbole der M-A-R-T-I-A-N-Einsätze aus der Spielfeldtextur." },
-    { "id": "ball", "title": "Kugelbild: Lucasbosch, Wikimedia Commons, CC BY-SA 3.0", "url": "https://commons.wikimedia.org/wiki/File:Stainless_steel_1.4034_X46Cr13_bearing_ball_60mm_G100_removed_camera.jpg", "use": "Animierte Flipperkugel (bearbeitet, CC BY-SA 3.0)." }
-  ],
-  "views": {
-    "real": { "label": "Echter Tisch", "note": "Offizielles Bally-Foto von oben, kleine Auflösung. Die Spielzeug-Ufos verdecken den Saucer (unter dem großen Ufo in der Mitte) und Teile der oberen Bahnen." },
-    "vpx": { "label": "VPX (g5k 1.3.11)", "note": "Gebackene Draufsicht aus der Tischdatei (ohne Spielzeug-Ufos, Licht aus). Schalter und Bahnen liegen wie am echten Tisch. Einsatz-Markierungen gibt es nur in der Ansicht „Echter Tisch“." }
+  {
+   "id": "manual",
+   "title": "Bally: Attack from Mars – Operator Handbook 16-10206 (Januar 1996)",
+   "url": "https://arcarc.xmission.com/Pinball/PDF%20Pinball%20Manuals%20and%20Schematics/Attack%20from%20Mars%20Operator%20Handbook.pdf",
+   "use": "Lampenmatrix und Lampennamen (S. 2–3), Schaltermatrix und Schalternamen (S. 4–5)."
   },
-  "icons": {
-    "mar": { "name": "M-A-R", "img": "img/afm-icon-mar.png", "note": "Buchstaben-Einsätze M-A-R vor den drei linken Zielen" },
-    "t": { "name": "T", "img": "img/afm-icon-t.png", "note": "Einsatz T vor dem Ziel links vom Kraftfeld" },
-    "i": { "name": "I", "img": "img/afm-icon-i.png", "note": "Einsatz I vor dem Ziel rechts vom Kraftfeld" },
-    "an": { "name": "A-N", "img": "img/afm-icon-an.png", "note": "Buchstaben-Einsätze A-N vor den zwei rechten Zielen" }
+  {
+   "id": "rules",
+   "title": "Brian Dominy: Attack from Mars Rulesheet (ohne Datum)",
+   "url": "https://www.bmigaming.com/Games/Rulesheets/attack_from_mars.txt",
+   "use": "Werte, Abläufe, Rückläufe der Rampen, Tipps. Kein ROM-Stand genannt."
   },
-  "shots": {
-    "left_loop": { "name": "Linker Loop (Capture)", "en": "Left Loop / Capture", "kind": "Loop", "flipper": "R",
-      "what": "Bahn ganz links außen. Eingang direkt hinter dem roten Pfeil ganz links, über den Lampen „Capture 1–3“ und „Jackpot“. Am echten Tisch hängt ein kleines Ufo über dem Eingang.",
-      "returns": "Die Kugel läuft oben herum über die zwei Bonus-X-Bahnen und bleibt dort oder in den Bumpern. Ist das Gate offen, kommt sie über den rechten Loop zurück.",
-      "awards": ["Capture-Lampe (Total Annihilation)", "Jackpot im Multiball", "Combo, wenn der Pfeil leuchtet", "Super Jackpot startet hier"],
-      "visibility": "Eingang sichtbar. Schalter 74 (Left Loop Low) und 73 (Left Loop High).", "sources": ["bally", "rules", "manual", "vpx"] },
-    "left_ramp": { "name": "Linke Rampe (Big-O-Beam)", "en": "Left Ramp / Big-O-Beam", "kind": "Rampe", "flipper": "R",
-      "what": "Breite Rampe links. Eingang ist die dunkle Rampenkante hinter dem zweiten roten Pfeil von links, über „Big-O-Beam 1–3“ und „Jackpot“.",
-      "returns": "Die Rampe führt nach oben links und kommt über die Drahtbahn zum linken Flipper zurück.",
-      "awards": ["Big-O-Beam-Lampe (Total Annihilation)", "Jackpot im Multiball", "Combo"],
-      "visibility": "Eingang sichtbar. Schalter 61 (Left Ramp Enter), 64 (Left Ramp Exit).", "sources": ["bally", "rules", "manual", "vpx"] },
-    "lock_ramp": { "name": "Lock-Rampe (Center Ramp)", "en": "Center Ramp / Lock Ramp („center loop“)", "kind": "Rampe mit Lock", "flipper": "R",
-      "what": "Schmale, steile Bahn zwischen linker Rampe und dem Ziel „T“. Eingang hinter dem roten Pfeil über „Jackpot“, „Lock 1–3“ und „Light Lock“. Bally nennt den Schuss „center loop“.",
-      "returns": "Normal über die rechte Drahtbahn zum rechten Flipper. Leuchtet Lock, öffnet eine Weiche: Die Kugel fällt ins Lock-Loch und kommt über die linke Rampenbahn zum linken Flipper.",
-      "awards": ["Lock beleuchten und Kugeln locken", "Jackpot im Multiball", "Annihilation Jackpot in Total Annihilation", "Combo"],
-      "visibility": "Eingang sichtbar, braucht einen festen Schuss. Schalter 62 (Center Ramp Enter).", "sources": ["bally", "rules", "manual", "vpx"] },
-    "forcefield": { "name": "Kraftfeld (bewegliche 3er-Bank)", "en": "Center 3-Bank / Forcefield (Motor Bank)", "kind": "Ziele (beweglich)", "flipper": "beide",
-      "what": "Drei Ziele nebeneinander in der Mitte, direkt über den drei roten Feldern. Alle drei getroffen: Die Bank fährt nach unten und gibt den Saucer frei.",
-      "returns": "Prallt zurück.",
-      "awards": ["Attack Wave starten (alle 3 treffen)", "Strobe Multiball: jeder Treffer", "Hurry-Up kassieren, solange die Bank oben ist"],
-      "visibility": "Sichtbar. Schalter 45/46/47 (Left/Center/Right Motor Bank).", "sources": ["bally", "rules", "manual", "vpx"] },
-    "saucer": { "name": "Saucer (Victory Shot)", "en": "Center Saucer / Victory Shot (drop target + hole)", "kind": "Fallziel + Loch", "flipper": "beide",
-      "what": "Hinter dem Kraftfeld, nur erreichbar, wenn die Bank unten ist: ein Fallziel vor einem Loch, links und rechts je ein Ziel. Am echten Tisch liegt alles unter dem großen Ufo.",
-      "returns": "Aus dem Loch kommt die Kugel wieder heraus. Wohin genau, ist nicht belegt.",
-      "awards": ["Attack Wave: Saucer treffen, dann ins Loch = Land gerettet", "Conquer Mars: Loch 10-mal", "Hurry-Up kassieren", "Nach Rule the Universe: Victory Laps neu beleuchten"],
-      "visibility": "Im Foto unter dem Ufo verdeckt. Lage aus Schalter 77 (Drop Target) und 78 (Center Trough).", "sources": ["bally", "rules", "manual", "vpx"] },
-    "t_target": { "name": "Ziel „T“", "en": "MAR'T'IAN target", "kind": "Ziel", "flipper": "R",
-      "what": "Einzelnes Ziel links neben dem Kraftfeld, über dem runden Einsatz „T“.",
-      "returns": "Prallt zurück.", "awards": ["Buchstabe T von M-A-R-T-I-A-N", "Martian Attack: Marsmensch oben links"],
-      "visibility": "Sichtbar. Schalter 43.", "sources": ["bally", "rules", "manual", "vpx"] },
-    "i_target": { "name": "Ziel „I“", "en": "MART'I'AN target", "kind": "Ziel", "flipper": "L",
-      "what": "Einzelnes Ziel rechts neben dem Kraftfeld, links vom Stroke-of-Luck-Scoop, über dem Einsatz „I“.",
-      "returns": "Prallt zurück.", "awards": ["Buchstabe I", "Martian Attack: Marsmensch oben rechts"],
-      "visibility": "Sichtbar. Schalter 44.", "sources": ["bally", "rules", "manual", "vpx"] },
-    "mar_targets": { "name": "M-A-R-Ziele", "en": "'M' 'A' 'R' targets", "kind": "Ziele", "flipper": "R",
-      "what": "Drei Ziele links unten, links neben den Einsätzen R, A, M (von oben nach unten).",
-      "returns": "Prallen zurück.", "awards": ["Buchstaben M, A, R", "Martian Attack: Marsmensch unten links"],
-      "visibility": "Sichtbar. Schalter 56/57/58.", "sources": ["bally", "rules", "manual", "vpx"] },
-    "an_targets": { "name": "A-N-Ziele", "en": "MARTI'A' 'N' targets", "kind": "Ziele", "flipper": "L",
-      "what": "Zwei Ziele rechts unten, rechts neben den Einsätzen A und N.",
-      "returns": "Prallen zurück.", "awards": ["Buchstaben A, N", "Martian Attack: Marsmensch unten rechts"],
-      "visibility": "Sichtbar. Schalter 41/42.", "sources": ["bally", "rules", "manual", "vpx"] },
-    "sol_scoop": { "name": "Stroke-of-Luck-Scoop (rechter Auswurf)", "en": "Right Eject / Stroke of Luck scoop", "kind": "Scoop", "flipper": "L",
-      "what": "Schmaler, schräger Scoop rechts neben dem Ziel „I“, oberhalb der rechten Rampe. Von vorn schießen; Kugeln aus den Bumpern fallen auch von hinten hinein.",
-      "returns": "Wirft die Kugel wieder aus.",
-      "awards": ["Stroke of Luck (Zufallspreis)", "Extraball abholen", "Martian Attack starten", "Rule the Universe starten"],
-      "visibility": "Sichtbar. Schalter 37 (Right Popper).", "sources": ["bally", "rules", "manual", "vpx"] },
-    "right_ramp": { "name": "Rechte Rampe (Tractor Beam)", "en": "Right Ramp / Tractor Beam", "kind": "Rampe", "flipper": "L",
-      "what": "Kleinste Rampe rechts. Eingang ist die dunkle Rampenkante hinter dem roten Pfeil rechts der Mitte, über „Tractor Beam 1–3“ und „Jackpot“.",
-      "returns": "Über die rechte Drahtbahn zum rechten Flipper.",
-      "awards": ["Tractor-Beam-Lampe (Total Annihilation)", "Jackpot im Multiball", "Combo"],
-      "visibility": "Eingang sichtbar. Schalter 63 (Right Ramp Enter), 65 (Right Ramp Exit).", "sources": ["bally", "rules", "manual", "vpx"] },
-    "right_loop": { "name": "Rechter Loop (Atomic Blaster)", "en": "Right Loop / Atomic Blaster", "kind": "Loop", "flipper": "L",
-      "what": "Bahn ganz rechts außen (links der Abschussbahn). Eingang hinter dem roten Pfeil ganz rechts, über „Atomic Blaster 1–3“ und „Jackpot“.",
-      "returns": "Oben herum über die Bonus-X-Bahnen; bei offenem Gate über den linken Loop zurück.",
-      "awards": ["Atomic-Blaster-Lampe (Total Annihilation)", "Jackpot im Multiball", "Combo"],
-      "visibility": "Eingang sichtbar. Schalter 72 (Right Loop Low), 71 (Right Loop High).", "sources": ["bally", "rules", "manual", "vpx"] },
-    "jets": { "name": "Bumper", "en": "Jet Bumpers", "kind": "Bumper", "flipper": null,
-      "what": "Drei Bumper oben rechts unter den Bonus-X-Bahnen.",
-      "returns": "Ausgang nach unten in den Stroke-of-Luck-Scoop oder in den rechten Loop.",
-      "awards": ["Super Jets nach der angezeigten Trefferzahl"],
-      "visibility": "Sichtbar.", "sources": ["bally", "rules", "vpx"] },
-    "bonusx_lanes": { "name": "Bonus-X-Bahnen (obere Bahnen)", "en": "Top Lanes / Bonus X lanes", "kind": "Bahnen", "flipper": null,
-      "what": "Zwei Rollover-Bahnen ganz oben über den Bumpern. Beide Loops und der Abschuss führen hierher.",
-      "returns": "In die Bumper.", "awards": ["Skill Shot", "Bonus-Multiplikator und Bumper-Wert"],
-      "visibility": "Sichtbar. Schalter 38 (Left Top Lane), 48 (Right Top Lane).", "sources": ["bally", "rules", "manual", "vpx"] },
-    "rollovers": { "name": "In- und Outlanes", "en": "Bottom rollover lanes (inlanes / outlanes)", "kind": "Bahnen", "flipper": null,
-      "what": "Vier Bahnen neben den Flippern: außen ins Aus, innen zurück zum Flipper. Je eine gelbe Lampe.",
-      "returns": "—", "awards": ["Alle vier: Extraball beleuchten, beim nächsten Mal Stroke of Luck"],
-      "visibility": "Sichtbar. Schalter 16/26/17/27.", "sources": ["bally", "rules", "manual", "vpx"] },
-    "launch": { "name": "Abschuss (Launch-Knopf)", "en": "Autoplunger / Launch Button", "kind": "Abschuss", "flipper": null,
-      "what": "Abschussbahn rechts außen. Der Launch-Knopf schießt die Kugel automatisch in den rechten Loop zu den Bonus-X-Bahnen.",
-      "returns": "Bonus-X-Bahnen. Mit gehaltenem linkem Flipper weiter über den linken Loop herunter.",
-      "awards": ["Skill Shot", "Super Skill Shot"], "visibility": "Sichtbar.", "sources": ["bally", "rules", "vpx"] }
+  {
+   "id": "photo",
+   "title": "Bally/Midway: Original-Spielfeldfoto „AtMars_pfl.jpg“ (Explore the Playfield)",
+   "url": "https://www.planetarypinball.com/mm5/Williams/games/atmars/AtMars_pfl.jpg",
+   "use": "Ansicht „Echter Tisch“ (Draufsicht, 556 × 1260 px)."
   },
-  "strategies": [
-    { "id": "solid", "title": "Solide spielen", "subtitle": "Länder retten und den Multiball holen",
-      "steps": [
-        { "title": "Super Skill Shot", "shots": ["launch", "left_ramp", "right_ramp", "right_loop", "forcefield"], "prep": "Linken Flipper halten und dabei Launch drücken.", "go": "Die Kugel kommt den linken Loop herunter. Einen blinkenden Pfeil-Schuss treffen (Rampe oder Loop) oder ein Kraftfeld-Ziel.", "why": "50M. Rampe/Loop: alle 3 Lampen dieses Schusses voll. Kraftfeld-Ziel: Das Kraftfeld fährt herunter, eine Attack Wave startet.", "sources": ["bally", "rules"] },
-        { "title": "Kraftfeld senken", "shots": ["forcefield"], "prep": "Kraftfeld steht oben.", "go": "Alle drei Ziele der Bank in der Mitte treffen.", "why": "Startet eine Attack Wave, der Saucer wird frei.", "sources": ["bally", "rules"] },
-        { "title": "Land retten", "shots": ["saucer"], "prep": "Attack Wave läuft (Land blinkt).", "go": "Fallziel und Saucer-Ziele so oft treffen wie angezeigt, dann ins Loch dahinter.", "why": "Saucer zerstört, Land gerettet. Welle 1: 4 Treffer, 200M.", "sources": ["bally", "rules"] },
-        { "title": "Lock beleuchten und 3 Kugeln locken", "shots": ["lock_ramp"], "prep": "Light Lock beachten.", "go": "Lock-Rampe vom rechten Flipper treffen, bis Lock leuchtet, dann weiter in die Lock-Rampe.", "why": "Drei Locks starten den 3-Ball-Multiball. Beim ersten Mal beleuchtet ein Schuss alle drei Locks.", "sources": ["bally", "rules"] },
-        { "title": "Fünf Jackpots", "shots": ["left_loop", "left_ramp", "lock_ramp", "right_ramp", "right_loop"], "prep": "Multiball läuft.", "go": "Beide Loops, beide Rampen und die Lock-Rampe treffen, solange ihr Jackpot leuchtet.", "why": "60M, jeder weitere +10M. Alle fünf = Super Jackpot.", "sources": ["bally", "rules"] },
-        { "title": "Extraball abholen", "shots": ["sol_scoop"], "prep": "Extra Ball leuchtet (2. gerettetes Land oder In-/Outlanes komplett).", "go": "Stroke-of-Luck-Scoop rechts neben dem „I“.", "why": "Extraball.", "sources": ["bally", "rules"] }
-      ] },
-    { "id": "high", "title": "Auf Highscore", "subtitle": "Total Annihilation, Mars erobern, Rule the Universe",
-      "steps": [
-        { "title": "Martian Attack zuerst", "shots": ["mar_targets", "t_target", "i_target", "an_targets", "sol_scoop"], "prep": "Alle sieben M-A-R-T-I-A-N-Ziele treffen.", "go": "Scoop schießen, dann in 30 s alle vier Marsmenschen treffen. Am besten vor dem Haupt-Multiball starten.", "why": "Der Martian-Multiball läuft dann mit Multiball oder Strobe zusammen (Rulesheet).", "sources": ["bally", "rules"], "badges": { "mar_targets": "mar", "t_target": "t", "i_target": "i", "an_targets": "an" } },
-        { "title": "Hurry-Ups sammeln", "shots": ["left_loop", "left_ramp", "right_ramp", "right_loop", "forcefield", "saucer"], "prep": "Drei Lampen eines äußeren Schusses voll.", "go": "Sofort in die Mitte: Kraftfeld oder, wenn es unten ist, den Saucer.", "why": "Hurry-Up ab 100M. Zwei gleichzeitig 300M, drei 500M.", "sources": ["bally", "rules"] },
-        { "title": "Total Annihilation", "shots": ["left_loop", "left_ramp", "right_ramp", "right_loop", "lock_ramp"], "prep": "Alle zwölf Lampen voll: Der 4-Ball-Multiball startet.", "go": "Loops und Rampen schießen, zwischendurch die Lock-Rampe.", "why": "Jackpots ab 50M (+5M). Lock-Rampe nach einem anderen Schuss = Annihilation Jackpot.", "sources": ["bally", "rules"] },
-        { "title": "Mars erobern", "shots": ["forcefield", "saucer"], "prep": "Alle fünf Länder gerettet.", "go": "Kraftfeld senken, dann 10-mal ins Saucer-Loch.", "why": "Je 100M, der letzte Schuss 2,5B. Zählt für Rule the Universe.", "sources": ["bally", "rules"] },
-        { "title": "Super Jets und Combos", "shots": ["jets", "left_loop", "left_ramp", "lock_ramp", "right_ramp", "right_loop"], "prep": "Rote Pfeile leuchten (Combo).", "go": "Rampen und Loops direkt nacheinander treffen, bis zum 5-Way-Combo. Bumper bis Super Jets.", "why": "5-Way-Combo und Super Jets sind zwei der sechs Rule-the-Universe-Ziele.", "sources": ["bally", "rules"] },
-        { "title": "Rule the Universe", "shots": ["sol_scoop", "saucer"], "prep": "Alle sechs runden Felder über den Flippern leuchten.", "go": "Scoop schießen (4-Ball-Multiball) und 5 Milliarden erspielen. Danach Victory Laps: die fünf Combo-Schüsse, mit dem Saucer neu beleuchten.", "why": "Größter Punktebrocken. Victory Laps bringen 100M bis 500M je Schuss.", "sources": ["bally", "rules"] }
-      ] }
-  ],
-  "multiballs": [
-    { "id": "mb", "name": "Multiball", "tag": "Haupt-Multiball", "balls": "3 Kugeln",
-      "prep": [ { "title": "Lock beleuchten", "shots": ["lock_ramp"], "text": "Lock-Rampe treffen, bis Lock leuchtet. Beim ersten Multiball beleuchtet ein Schuss alle drei Locks.", "sources": ["bally", "rules"] },
-                { "title": "Locks 1 und 2", "shots": ["lock_ramp"], "text": "Bei leuchtendem Lock in die Lock-Rampe. Die Weiche lenkt die Kugel ins Lock-Loch.", "sources": ["bally", "rules"] } ],
-      "start": { "title": "Dritter Lock", "shots": ["lock_ramp"], "text": "Der dritte Lock startet den 3-Ball-Multiball.", "sources": ["bally", "rules"] },
-      "score": [ { "title": "Fünf Jackpots", "shots": ["left_loop", "left_ramp", "lock_ramp", "right_ramp", "right_loop"], "text": "Jeder der fünf Schüsse einmal: 60M, dann +10M je Jackpot.", "sources": ["bally", "rules"] },
-                 { "title": "Wandernder Super Jackpot", "shots": ["left_loop", "left_ramp", "lock_ramp", "right_ramp", "right_loop"], "text": "Startet am linken Loop und springt etwa alle 5 Sekunden weiter. Den gerade leuchtenden Schuss treffen: 250M, später 500M, 750M.", "sources": ["bally", "rules"] } ] },
-    { "id": "martian", "name": "Martian Attack", "tag": "Marsmenschen-Multiball", "balls": "2 Kugeln",
-      "prep": [ { "title": "M-A-R-T-I-A-N", "shots": ["mar_targets", "t_target", "i_target", "an_targets"], "text": "Alle sieben Buchstaben-Ziele treffen. Danach leuchtet Martian Attack am Scoop.", "sources": ["bally", "rules"], "badges": { "mar_targets": "mar", "t_target": "t", "i_target": "i", "an_targets": "an" } },
-                { "title": "Martian Attack starten", "shots": ["sol_scoop"], "text": "Stroke-of-Luck-Scoop schießen.", "sources": ["bally", "rules"] } ],
-      "start": { "title": "Vier Marsmenschen in 30 s", "shots": ["mar_targets", "t_target", "i_target", "an_targets"], "text": "Die vier Marsmenschen treffen: M-A-R-Gruppe, T, I, A-N-Gruppe. Je 20M. Alle vier starten den 2-Ball-Multiball.", "sources": ["bally", "rules"] },
-      "score": [ { "title": "Marsmenschen weiter treffen", "shots": ["mar_targets", "t_target", "i_target", "an_targets"], "text": "Im Multiball bringt jeder Marsmensch weiter 20M (später bis 50M).", "sources": ["bally", "rules"] } ] },
-    { "id": "ta", "name": "Total Annihilation", "tag": "4-Ball-Multiball", "balls": "4 Kugeln",
-      "prep": [ { "title": "Zwölf Lampen füllen", "shots": ["left_loop", "left_ramp", "right_ramp", "right_loop"], "text": "Capture, Big-O-Beam, Tractor Beam und Atomic Blaster: je drei Lampen. Jeder volle Schuss startet einen Hurry-Up.", "sources": ["bally", "rules"] } ],
-      "start": { "title": "Vierter voller Schuss", "shots": ["left_loop", "left_ramp", "right_ramp", "right_loop"], "text": "Wenn der vierte Schuss voll ist, startet Total Annihilation.", "sources": ["bally", "rules"] },
-      "score": [ { "title": "Rampen und Loops", "shots": ["left_loop", "left_ramp", "right_ramp", "right_loop"], "text": "Alle vier sind Jackpots: 50M, +5M je Treffer.", "sources": ["bally", "rules"] },
-                 { "title": "Annihilation Jackpot", "shots": ["lock_ramp"], "text": "Nach einem anderen Rampen- oder Loop-Schuss die Lock-Rampe treffen.", "sources": ["bally", "rules"] } ] },
-    { "id": "strobe", "name": "Strobe Multiball", "tag": "Stroke-of-Luck-Preis", "balls": "3 Kugeln",
-      "prep": [ { "title": "Stroke of Luck", "shots": ["sol_scoop"], "text": "Nur als Preis aus dem Stroke-of-Luck-Scoop, einmal pro Spiel. Laut Rulesheet ist meist der dritte Preis Strobe Multiball.", "sources": ["bally", "rules"] } ],
-      "start": { "title": "Startet sofort", "shots": [], "text": "Licht aus, Stroboskop an, zwei Kugeln kommen dazu.", "sources": ["rules"] },
-      "score": [ { "title": "Kraftfeld treffen", "shots": ["forcefield"], "text": "Jeder Treffer 50M. 10. Treffer: Extraball, 20. Treffer: 250M.", "sources": ["bally", "rules"] } ] },
-    { "id": "rtu", "name": "Rule the Universe", "tag": "Wizard-Multiball", "balls": "4 Kugeln",
-      "prep": [ { "title": "Sechs Ziele", "shots": [], "text": "Super Jackpot, Super Jets, Martian-Attack-Multiball, Total Annihilation, Conquer Mars und 5-Way-Combo. Die sechs runden Felder über den Flippern zeigen den Stand.", "sources": ["bally", "rules"] } ],
-      "start": { "title": "Scoop", "shots": ["sol_scoop"], "text": "Stroke-of-Luck-Scoop schießen.", "sources": ["bally", "rules"] },
-      "score": [ { "title": "5 Milliarden erspielen", "shots": ["left_loop", "left_ramp", "lock_ramp", "right_ramp", "right_loop", "saucer"], "text": "Fast alles ist beleuchtet. Mit 5B ist das Universum gewonnen (+5B).", "sources": ["bally", "rules"] },
-                 { "title": "Victory Laps", "shots": ["left_loop", "left_ramp", "lock_ramp", "right_ramp", "right_loop", "saucer"], "text": "Danach für den Rest der Kugel: die fünf Combo-Schüsse je 100M bis 500M. Das Saucer-Fallziel beleuchtet sie neu.", "sources": ["rules"] } ] }
-  ],
-  "modes": [
-    { "id": "waves", "name": "Attack Waves", "film": "Länder retten", "time": "–", "steps": [
-      { "title": "Kraftfeld senken", "shots": ["forcefield"], "text": "Alle drei Ziele der Bank. Vorher wählst du mit den Flippern das nächste Land." },
-      { "title": "Saucer treffen, dann Loch", "shots": ["saucer"], "text": "Treffer wie angezeigt (Welle 1: 4, jede Welle 4 mehr), dann ins Loch. Welle 1 = 200M, Welle 5 = 600M." } ] },
-    { "id": "mars", "name": "Conquer Mars", "film": "Nach 5 Ländern", "time": "–", "steps": [
-      { "title": "10-mal ins Loch", "shots": ["forcefield", "saucer"], "text": "Kraftfeld senken, dann das Saucer-Loch 10-mal: je 100M, der letzte 2,5B. Einmal pro Spiel." } ] },
-    { "id": "hurry", "name": "Hurry-Up", "film": "Total-Annihilation-Schüsse", "time": "zählt herunter", "steps": [
-      { "title": "In die Mitte schießen", "shots": ["forcefield", "saucer"], "text": "Start durch 3 volle Lampen an einem äußeren Schuss. 100M, fällt schnell auf 25M. Kassieren am Kraftfeld oder Saucer." } ] },
-    { "id": "superjets", "name": "Super Jets", "film": "Bumper", "time": "bis Kugelende", "steps": [
-      { "title": "Bumper-Treffer sammeln", "shots": ["jets"], "text": "Nach der angezeigten Trefferzahl (laut Rulesheet zuerst 100) bringt jeder Bumper-Treffer deutlich mehr." } ] },
-    { "id": "sol", "name": "Stroke of Luck", "film": "Scoop-Preis", "time": "–", "steps": [
-      { "title": "Beleuchten und abholen", "shots": ["rollovers", "sol_scoop"], "text": "Alle vier In-/Outlanes = Stroke of Luck leuchtet. Scoop schießen: Zufallspreis, u. a. Strobe Multiball, Sneak Attack, Video Mode, Lock, Multiball." } ] },
-    { "id": "video", "name": "Video Mode", "film": "Stroke-of-Luck-Preis", "time": "–", "steps": [
-      { "title": "Ufos abschießen", "shots": [], "text": "Laut Rulesheet nach Super Jets der nächste Scoop-Preis. Mit den Flippern zielen; ab 30 Ufos kann ein Extraball erscheinen." } ] }
-  ],
-  "modesIntro": "Attack Waves sind der rote Faden: Kraftfeld senken, Saucer zerstören, Land retten. Nach allen fünf Ländern folgt Conquer Mars. Die übrigen Modi kommen aus dem Stroke-of-Luck-Scoop oder den Bumpern.",
-  "glossary": [
-    { "term": "Kraftfeld (Forcefield)", "text": "Bewegliche 3er-Bank in der Mitte. Unten = Saucer offen." },
-    { "term": "Saucer", "text": "Fallziel mit Loch hinter dem Kraftfeld, unter dem großen Ufo." },
-    { "term": "Stroke of Luck", "text": "Scoop rechts (Bally: „right eject“). Zufallspreise, Extraball, Martian Attack, Rule the Universe." },
-    { "term": "TA-Lampen", "text": "Je drei Lampen vor den vier äußeren Schüssen (Capture, Big-O-Beam, Tractor Beam, Atomic Blaster)." },
-    { "term": "Combo", "text": "Rampen und Loops direkt nacheinander, solange die roten Pfeile leuchten." },
-    { "term": "Einsatz (Insert)", "text": "Beleuchtetes Feld im Spielfeld. Nur Anzeige, kein Ziel." }
-  ],
-  "limits": [
-    "Kein Rulesheet mit Datum oder ROM-Stand gefunden. Werte aus Dominys Rulesheet können je nach ROM abweichen; die Grundregeln stammen von Bally.",
-    "Die Flipper-Empfehlungen sind aus der Lage abgeleitet (Rampen und Loops jeweils überkreuz).",
-    "Im Foto verdecken die Spielzeug-Ufos den Saucer. Seine Markierung beruht auf den Schaltern der Tischdatei.",
-    "Wohin Saucer und Scoop die Kugel auswerfen, steht in keiner geprüften Quelle.",
-    "Die Linie zeigt die Zielrichtung vom Flipper zum Eingang. Bahnverläufe auf den Rampen sind nicht eingezeichnet."
-  ]
+  {
+   "id": "vpx",
+   "title": "g5k: Attack from Mars (Bally 1995) 1.3.11 (lokale Tischdatei, ROM afm_113b)",
+   "url": "https://vpuniverse.com/",
+   "use": "Exakte Schalter-, Flipper-, Wand- und Lichtpositionen; gebackene Draufsicht als VPX-Ansicht; Symbole der M-A-R-T-I-A-N-Einsätze aus der Spielfeldtextur."
+  },
+  {
+   "id": "ball",
+   "title": "Kugelbild: Lucasbosch, Wikimedia Commons, CC BY-SA 3.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Stainless_steel_1.4034_X46Cr13_bearing_ball_60mm_G100_removed_camera.jpg",
+   "use": "Animierte Flipperkugel (bearbeitet, CC BY-SA 3.0)."
+  }
+ ],
+ "views": {
+  "real": {
+   "label": "Echter Tisch",
+   "note": "Offizielles Bally-Foto von oben, kleine Auflösung. Die Spielzeug-Ufos verdecken den Saucer (unter dem großen Ufo in der Mitte) und Teile der oberen Bahnen."
+  },
+  "vpx": {
+   "label": "VPX (g5k 1.3.11)",
+   "note": "Gebackene Draufsicht aus der Tischdatei (ohne Spielzeug-Ufos, Licht aus). Schalter und Bahnen liegen wie am echten Tisch. Einsatz-Markierungen gibt es nur in der Ansicht „Echter Tisch“."
+  }
+ },
+ "icons": {
+  "mar": {
+   "name": "M-A-R",
+   "img": "img/afm-icon-mar.png",
+   "note": "Buchstaben-Einsätze M-A-R vor den drei linken Zielen"
+  },
+  "t": {
+   "name": "T",
+   "img": "img/afm-icon-t.png",
+   "note": "Einsatz T vor dem Ziel links vom Kraftfeld"
+  },
+  "i": {
+   "name": "I",
+   "img": "img/afm-icon-i.png",
+   "note": "Einsatz I vor dem Ziel rechts vom Kraftfeld"
+  },
+  "an": {
+   "name": "A-N",
+   "img": "img/afm-icon-an.png",
+   "note": "Buchstaben-Einsätze A-N vor den zwei rechten Zielen"
+  }
+ },
+ "shots": {
+  "left_loop": {
+   "name": "Linker Loop (Capture)",
+   "en": "Left Loop / Capture",
+   "kind": "Loop",
+   "flipper": "R",
+   "what": "Bahn ganz links außen. Eingang direkt hinter dem roten Pfeil ganz links, über den Lampen „Capture 1–3“ und „Jackpot“. Am echten Tisch hängt ein kleines Ufo über dem Eingang.",
+   "returns": "Die Kugel läuft oben herum über die zwei Bonus-X-Bahnen und bleibt dort oder in den Bumpern. Ist das Gate offen, kommt sie über den rechten Loop zurück.",
+   "awards": [
+    "Capture-Lampe (Total Annihilation)",
+    "Jackpot im Multiball",
+    "Combo, wenn der Pfeil leuchtet",
+    "Super Jackpot startet hier"
+   ],
+   "visibility": "Eingang sichtbar. Schalter 74 (Left Loop Low) und 73 (Left Loop High).",
+   "sources": [
+    "bally",
+    "rules",
+    "manual",
+    "vpx"
+   ]
+  },
+  "left_ramp": {
+   "name": "Linke Rampe (Big-O-Beam)",
+   "en": "Left Ramp / Big-O-Beam",
+   "kind": "Rampe",
+   "flipper": "R",
+   "what": "Breite Rampe links. Eingang ist die dunkle Rampenkante hinter dem zweiten roten Pfeil von links, über „Big-O-Beam 1–3“ und „Jackpot“.",
+   "returns": "Die Rampe führt nach oben links und kommt über die Drahtbahn zum linken Flipper zurück.",
+   "awards": [
+    "Big-O-Beam-Lampe (Total Annihilation)",
+    "Jackpot im Multiball",
+    "Combo"
+   ],
+   "visibility": "Eingang sichtbar. Schalter 61 (Left Ramp Enter), 64 (Left Ramp Exit).",
+   "sources": [
+    "bally",
+    "rules",
+    "manual",
+    "vpx"
+   ]
+  },
+  "lock_ramp": {
+   "name": "Lock-Rampe (Center Ramp)",
+   "en": "Center Ramp / Lock Ramp („center loop“)",
+   "kind": "Rampe mit Lock",
+   "flipper": "R",
+   "what": "Schmale, steile Bahn zwischen linker Rampe und dem Ziel „T“. Eingang hinter dem roten Pfeil über „Jackpot“, „Lock 1–3“ und „Light Lock“. Bally nennt den Schuss „center loop“.",
+   "returns": "Normal über die rechte Drahtbahn zum rechten Flipper. Leuchtet Lock, öffnet eine Weiche: Die Kugel fällt ins Lock-Loch und kommt über die linke Rampenbahn zum linken Flipper.",
+   "awards": [
+    "Lock beleuchten und Kugeln locken",
+    "Jackpot im Multiball",
+    "Annihilation Jackpot in Total Annihilation",
+    "Combo"
+   ],
+   "visibility": "Eingang sichtbar, braucht einen festen Schuss. Schalter 62 (Center Ramp Enter).",
+   "sources": [
+    "bally",
+    "rules",
+    "manual",
+    "vpx"
+   ]
+  },
+  "forcefield": {
+   "name": "Kraftfeld (bewegliche 3er-Bank)",
+   "en": "Center 3-Bank / Forcefield (Motor Bank)",
+   "kind": "Ziele (beweglich)",
+   "flipper": "beide",
+   "what": "Drei Ziele nebeneinander in der Mitte, direkt über den drei roten Feldern. Alle drei getroffen: Die Bank fährt nach unten und gibt den Saucer frei.",
+   "returns": "Prallt zurück.",
+   "awards": [
+    "Attack Wave starten (alle 3 treffen)",
+    "Strobe Multiball: jeder Treffer",
+    "Hurry-Up kassieren, solange die Bank oben ist"
+   ],
+   "visibility": "Sichtbar. Schalter 45/46/47 (Left/Center/Right Motor Bank).",
+   "sources": [
+    "bally",
+    "rules",
+    "manual",
+    "vpx"
+   ]
+  },
+  "saucer": {
+   "name": "Saucer (Victory Shot)",
+   "en": "Center Saucer / Victory Shot (drop target + hole)",
+   "kind": "Fallziel + Loch",
+   "flipper": "beide",
+   "what": "Hinter dem Kraftfeld, nur erreichbar, wenn die Bank unten ist: ein Fallziel vor einem Loch, links und rechts je ein Ziel. Am echten Tisch liegt alles unter dem großen Ufo.",
+   "returns": "Aus dem Loch kommt die Kugel wieder heraus. Wohin genau, ist nicht belegt.",
+   "awards": [
+    "Attack Wave: Saucer treffen, dann ins Loch = Land gerettet",
+    "Conquer Mars: Loch 10-mal",
+    "Hurry-Up kassieren",
+    "Nach Rule the Universe: Victory Laps neu beleuchten"
+   ],
+   "visibility": "Im Foto unter dem Ufo verdeckt. Lage aus Schalter 77 (Drop Target) und 78 (Center Trough).",
+   "sources": [
+    "bally",
+    "rules",
+    "manual",
+    "vpx"
+   ]
+  },
+  "t_target": {
+   "name": "Ziel „T“",
+   "en": "MAR'T'IAN target",
+   "kind": "Ziel",
+   "flipper": "R",
+   "what": "Einzelnes Ziel links neben dem Kraftfeld, über dem runden Einsatz „T“.",
+   "returns": "Prallt zurück.",
+   "awards": [
+    "Buchstabe T von M-A-R-T-I-A-N",
+    "Martian Attack: Marsmensch oben links"
+   ],
+   "visibility": "Sichtbar. Schalter 43.",
+   "sources": [
+    "bally",
+    "rules",
+    "manual",
+    "vpx"
+   ]
+  },
+  "i_target": {
+   "name": "Ziel „I“",
+   "en": "MART'I'AN target",
+   "kind": "Ziel",
+   "flipper": "L",
+   "what": "Einzelnes Ziel rechts neben dem Kraftfeld, links vom Stroke-of-Luck-Scoop, über dem Einsatz „I“.",
+   "returns": "Prallt zurück.",
+   "awards": [
+    "Buchstabe I",
+    "Martian Attack: Marsmensch oben rechts"
+   ],
+   "visibility": "Sichtbar. Schalter 44.",
+   "sources": [
+    "bally",
+    "rules",
+    "manual",
+    "vpx"
+   ]
+  },
+  "mar_targets": {
+   "name": "M-A-R-Ziele",
+   "en": "'M' 'A' 'R' targets",
+   "kind": "Ziele",
+   "flipper": "R",
+   "what": "Drei Ziele links unten, links neben den Einsätzen R, A, M (von oben nach unten).",
+   "returns": "Prallen zurück.",
+   "awards": [
+    "Buchstaben M, A, R",
+    "Martian Attack: Marsmensch unten links"
+   ],
+   "visibility": "Sichtbar. Schalter 56/57/58.",
+   "sources": [
+    "bally",
+    "rules",
+    "manual",
+    "vpx"
+   ]
+  },
+  "an_targets": {
+   "name": "A-N-Ziele",
+   "en": "MARTI'A' 'N' targets",
+   "kind": "Ziele",
+   "flipper": "L",
+   "what": "Zwei Ziele rechts unten, rechts neben den Einsätzen A und N.",
+   "returns": "Prallen zurück.",
+   "awards": [
+    "Buchstaben A, N",
+    "Martian Attack: Marsmensch unten rechts"
+   ],
+   "visibility": "Sichtbar. Schalter 41/42.",
+   "sources": [
+    "bally",
+    "rules",
+    "manual",
+    "vpx"
+   ]
+  },
+  "sol_scoop": {
+   "name": "Stroke-of-Luck-Scoop (rechter Auswurf)",
+   "en": "Right Eject / Stroke of Luck scoop",
+   "kind": "Scoop",
+   "flipper": "L",
+   "what": "Schmaler, schräger Scoop rechts neben dem Ziel „I“, oberhalb der rechten Rampe. Von vorn schießen; Kugeln aus den Bumpern fallen auch von hinten hinein.",
+   "returns": "Wirft die Kugel wieder aus.",
+   "awards": [
+    "Stroke of Luck (Zufallspreis)",
+    "Extraball abholen",
+    "Martian Attack starten",
+    "Rule the Universe starten"
+   ],
+   "visibility": "Sichtbar. Schalter 37 (Right Popper).",
+   "sources": [
+    "bally",
+    "rules",
+    "manual",
+    "vpx"
+   ]
+  },
+  "right_ramp": {
+   "name": "Rechte Rampe (Tractor Beam)",
+   "en": "Right Ramp / Tractor Beam",
+   "kind": "Rampe",
+   "flipper": "L",
+   "what": "Kleinste Rampe rechts. Eingang ist die dunkle Rampenkante hinter dem roten Pfeil rechts der Mitte, über „Tractor Beam 1–3“ und „Jackpot“.",
+   "returns": "Über die rechte Drahtbahn zum rechten Flipper.",
+   "awards": [
+    "Tractor-Beam-Lampe (Total Annihilation)",
+    "Jackpot im Multiball",
+    "Combo"
+   ],
+   "visibility": "Eingang sichtbar. Schalter 63 (Right Ramp Enter), 65 (Right Ramp Exit).",
+   "sources": [
+    "bally",
+    "rules",
+    "manual",
+    "vpx"
+   ]
+  },
+  "right_loop": {
+   "name": "Rechter Loop (Atomic Blaster)",
+   "en": "Right Loop / Atomic Blaster",
+   "kind": "Loop",
+   "flipper": "L",
+   "what": "Bahn ganz rechts außen (links der Abschussbahn). Eingang hinter dem roten Pfeil ganz rechts, über „Atomic Blaster 1–3“ und „Jackpot“.",
+   "returns": "Oben herum über die Bonus-X-Bahnen; bei offenem Gate über den linken Loop zurück.",
+   "awards": [
+    "Atomic-Blaster-Lampe (Total Annihilation)",
+    "Jackpot im Multiball",
+    "Combo"
+   ],
+   "visibility": "Eingang sichtbar. Schalter 72 (Right Loop Low), 71 (Right Loop High).",
+   "sources": [
+    "bally",
+    "rules",
+    "manual",
+    "vpx"
+   ]
+  },
+  "jets": {
+   "name": "Bumper",
+   "en": "Jet Bumpers",
+   "kind": "Bumper",
+   "flipper": null,
+   "what": "Drei Bumper oben rechts unter den Bonus-X-Bahnen.",
+   "returns": "Ausgang nach unten in den Stroke-of-Luck-Scoop oder in den rechten Loop.",
+   "awards": [
+    "Super Jets nach der angezeigten Trefferzahl"
+   ],
+   "visibility": "Sichtbar.",
+   "sources": [
+    "bally",
+    "rules",
+    "vpx"
+   ]
+  },
+  "bonusx_lanes": {
+   "name": "Bonus-X-Bahnen (obere Bahnen)",
+   "en": "Top Lanes / Bonus X lanes",
+   "kind": "Bahnen",
+   "flipper": null,
+   "what": "Zwei Rollover-Bahnen ganz oben über den Bumpern. Beide Loops und der Abschuss führen hierher.",
+   "returns": "In die Bumper.",
+   "awards": [
+    "Skill Shot",
+    "Bonus-Multiplikator und Bumper-Wert"
+   ],
+   "visibility": "Sichtbar. Schalter 38 (Left Top Lane), 48 (Right Top Lane).",
+   "sources": [
+    "bally",
+    "rules",
+    "manual",
+    "vpx"
+   ]
+  },
+  "rollovers": {
+   "name": "In- und Outlanes",
+   "en": "Bottom rollover lanes (inlanes / outlanes)",
+   "kind": "Bahnen",
+   "flipper": null,
+   "what": "Vier Bahnen neben den Flippern: außen ins Aus, innen zurück zum Flipper. Je eine gelbe Lampe.",
+   "returns": "—",
+   "awards": [
+    "Alle vier: Extraball beleuchten, beim nächsten Mal Stroke of Luck"
+   ],
+   "visibility": "Sichtbar. Schalter 16/26/17/27.",
+   "sources": [
+    "bally",
+    "rules",
+    "manual",
+    "vpx"
+   ]
+  },
+  "launch": {
+   "name": "Abschuss (Launch-Knopf)",
+   "en": "Autoplunger / Launch Button",
+   "kind": "Abschuss",
+   "flipper": null,
+   "what": "Abschussbahn rechts außen. Der Launch-Knopf schießt die Kugel automatisch in den rechten Loop zu den Bonus-X-Bahnen.",
+   "returns": "Bonus-X-Bahnen. Mit gehaltenem linkem Flipper weiter über den linken Loop herunter.",
+   "awards": [
+    "Skill Shot",
+    "Super Skill Shot"
+   ],
+   "visibility": "Sichtbar.",
+   "sources": [
+    "bally",
+    "rules",
+    "vpx"
+   ]
+  }
+ },
+ "strategies": [
+  {
+   "id": "solid",
+   "title": "Solide spielen",
+   "subtitle": "Länder retten und den Multiball holen",
+   "steps": [
+    {
+     "title": "Super Skill Shot",
+     "shots": [
+      "launch",
+      "left_ramp",
+      "right_ramp",
+      "right_loop",
+      "forcefield"
+     ],
+     "prep": "Linken Flipper halten und dabei Launch drücken.",
+     "go": "Die Kugel kommt den linken Loop herunter. Einen blinkenden Pfeil-Schuss treffen (Rampe oder Loop) oder ein Kraftfeld-Ziel.",
+     "why": "50M. Rampe/Loop: alle 3 Lampen dieses Schusses voll. Kraftfeld-Ziel: Das Kraftfeld fährt herunter, eine Attack Wave startet.",
+     "sources": [
+      "bally",
+      "rules"
+     ]
+    },
+    {
+     "title": "Kraftfeld senken",
+     "shots": [
+      "forcefield"
+     ],
+     "prep": "Kraftfeld steht oben.",
+     "go": "Alle drei Ziele der Bank in der Mitte treffen.",
+     "why": "Startet eine Attack Wave, der Saucer wird frei.",
+     "sources": [
+      "bally",
+      "rules"
+     ]
+    },
+    {
+     "title": "Land retten",
+     "shots": [
+      "saucer"
+     ],
+     "prep": "Attack Wave läuft (Land blinkt).",
+     "go": "Fallziel und Saucer-Ziele so oft treffen wie angezeigt, dann ins Loch dahinter.",
+     "why": "Saucer zerstört, Land gerettet. Welle 1: 4 Treffer, 200M.",
+     "sources": [
+      "bally",
+      "rules"
+     ]
+    },
+    {
+     "title": "Lock beleuchten und 3 Kugeln locken",
+     "shots": [
+      "lock_ramp"
+     ],
+     "prep": "Light Lock beachten.",
+     "go": "Lock-Rampe vom rechten Flipper treffen, bis Lock leuchtet, dann weiter in die Lock-Rampe.",
+     "why": "Drei Locks starten den 3-Ball-Multiball. Beim ersten Mal beleuchtet ein Schuss alle drei Locks.",
+     "sources": [
+      "bally",
+      "rules"
+     ]
+    },
+    {
+     "title": "Fünf Jackpots",
+     "shots": [
+      "left_loop",
+      "left_ramp",
+      "lock_ramp",
+      "right_ramp",
+      "right_loop"
+     ],
+     "prep": "Multiball läuft.",
+     "go": "Beide Loops, beide Rampen und die Lock-Rampe treffen, solange ihr Jackpot leuchtet.",
+     "why": "60M, jeder weitere +10M. Alle fünf = Super Jackpot.",
+     "sources": [
+      "bally",
+      "rules"
+     ]
+    },
+    {
+     "title": "Extraball abholen",
+     "shots": [
+      "sol_scoop"
+     ],
+     "prep": "Extra Ball leuchtet (2. gerettetes Land oder In-/Outlanes komplett).",
+     "go": "Stroke-of-Luck-Scoop rechts neben dem „I“.",
+     "why": "Extraball.",
+     "sources": [
+      "bally",
+      "rules"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "high",
+   "title": "Auf Highscore",
+   "subtitle": "Total Annihilation, Mars erobern, Rule the Universe",
+   "steps": [
+    {
+     "title": "Martian Attack zuerst",
+     "shots": [
+      "mar_targets",
+      "t_target",
+      "i_target",
+      "an_targets",
+      "sol_scoop"
+     ],
+     "prep": "Alle sieben M-A-R-T-I-A-N-Ziele treffen.",
+     "go": "Scoop schießen, dann in 30 s alle vier Marsmenschen treffen. Am besten vor dem Haupt-Multiball starten.",
+     "why": "Der Martian-Multiball läuft dann mit Multiball oder Strobe zusammen (Rulesheet).",
+     "sources": [
+      "bally",
+      "rules"
+     ],
+     "badges": {
+      "mar_targets": "mar",
+      "t_target": "t",
+      "i_target": "i",
+      "an_targets": "an"
+     }
+    },
+    {
+     "title": "Hurry-Ups sammeln",
+     "shots": [
+      "left_loop",
+      "left_ramp",
+      "right_ramp",
+      "right_loop",
+      "forcefield",
+      "saucer"
+     ],
+     "prep": "Drei Lampen eines äußeren Schusses voll.",
+     "go": "Sofort in die Mitte: Kraftfeld oder, wenn es unten ist, den Saucer.",
+     "why": "Hurry-Up ab 100M. Zwei gleichzeitig 300M, drei 500M.",
+     "sources": [
+      "bally",
+      "rules"
+     ]
+    },
+    {
+     "title": "Total Annihilation",
+     "shots": [
+      "left_loop",
+      "left_ramp",
+      "right_ramp",
+      "right_loop",
+      "lock_ramp"
+     ],
+     "prep": "Alle zwölf Lampen voll: Der 4-Ball-Multiball startet.",
+     "go": "Loops und Rampen schießen, zwischendurch die Lock-Rampe.",
+     "why": "Jackpots ab 50M (+5M). Lock-Rampe nach einem anderen Schuss = Annihilation Jackpot.",
+     "sources": [
+      "bally",
+      "rules"
+     ]
+    },
+    {
+     "title": "Mars erobern",
+     "shots": [
+      "forcefield",
+      "saucer"
+     ],
+     "prep": "Alle fünf Länder gerettet.",
+     "go": "Kraftfeld senken, dann 10-mal ins Saucer-Loch.",
+     "why": "Je 100M, der letzte Schuss 2,5B. Zählt für Rule the Universe.",
+     "sources": [
+      "bally",
+      "rules"
+     ]
+    },
+    {
+     "title": "Super Jets und Combos",
+     "shots": [
+      "jets",
+      "left_loop",
+      "left_ramp",
+      "lock_ramp",
+      "right_ramp",
+      "right_loop"
+     ],
+     "prep": "Rote Pfeile leuchten (Combo).",
+     "go": "Rampen und Loops direkt nacheinander treffen, bis zum 5-Way-Combo. Bumper bis Super Jets.",
+     "why": "5-Way-Combo und Super Jets sind zwei der sechs Rule-the-Universe-Ziele.",
+     "sources": [
+      "bally",
+      "rules"
+     ]
+    },
+    {
+     "title": "Rule the Universe",
+     "shots": [
+      "sol_scoop",
+      "saucer"
+     ],
+     "prep": "Alle sechs runden Felder über den Flippern leuchten.",
+     "go": "Scoop schießen (4-Ball-Multiball) und 5 Milliarden erspielen. Danach Victory Laps: die fünf Combo-Schüsse, mit dem Saucer neu beleuchten.",
+     "why": "Größter Punktebrocken. Victory Laps bringen 100M bis 500M je Schuss.",
+     "sources": [
+      "bally",
+      "rules"
+     ]
+    }
+   ]
+  }
+ ],
+ "multiballs": [
+  {
+   "id": "mb",
+   "name": "Multiball",
+   "tag": "Haupt-Multiball",
+   "balls": "3 Kugeln",
+   "prep": [
+    {
+     "title": "Lock beleuchten",
+     "shots": [
+      "lock_ramp"
+     ],
+     "text": "Lock-Rampe treffen, bis Lock leuchtet. Beim ersten Multiball beleuchtet ein Schuss alle drei Locks.",
+     "sources": [
+      "bally",
+      "rules"
+     ]
+    },
+    {
+     "title": "Locks 1 und 2",
+     "shots": [
+      "lock_ramp"
+     ],
+     "text": "Bei leuchtendem Lock in die Lock-Rampe. Die Weiche lenkt die Kugel ins Lock-Loch.",
+     "sources": [
+      "bally",
+      "rules"
+     ]
+    }
+   ],
+   "start": {
+    "title": "Dritter Lock",
+    "shots": [
+     "lock_ramp"
+    ],
+    "text": "Der dritte Lock startet den 3-Ball-Multiball.",
+    "sources": [
+     "bally",
+     "rules"
+    ]
+   },
+   "score": [
+    {
+     "title": "Fünf Jackpots",
+     "shots": [
+      "left_loop",
+      "left_ramp",
+      "lock_ramp",
+      "right_ramp",
+      "right_loop"
+     ],
+     "text": "Jeder der fünf Schüsse einmal: 60M, dann +10M je Jackpot.",
+     "sources": [
+      "bally",
+      "rules"
+     ]
+    },
+    {
+     "title": "Wandernder Super Jackpot",
+     "shots": [
+      "left_loop",
+      "left_ramp",
+      "lock_ramp",
+      "right_ramp",
+      "right_loop"
+     ],
+     "text": "Startet am linken Loop und springt etwa alle 5 Sekunden weiter. Den gerade leuchtenden Schuss treffen: 250M, später 500M, 750M.",
+     "sources": [
+      "bally",
+      "rules"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "martian",
+   "name": "Martian Attack",
+   "tag": "Marsmenschen-Multiball",
+   "balls": "2 Kugeln",
+   "prep": [
+    {
+     "title": "M-A-R-T-I-A-N",
+     "shots": [
+      "mar_targets",
+      "t_target",
+      "i_target",
+      "an_targets"
+     ],
+     "text": "Alle sieben Buchstaben-Ziele treffen. Danach leuchtet Martian Attack am Scoop.",
+     "sources": [
+      "bally",
+      "rules"
+     ],
+     "badges": {
+      "mar_targets": "mar",
+      "t_target": "t",
+      "i_target": "i",
+      "an_targets": "an"
+     }
+    },
+    {
+     "title": "Martian Attack starten",
+     "shots": [
+      "sol_scoop"
+     ],
+     "text": "Stroke-of-Luck-Scoop schießen.",
+     "sources": [
+      "bally",
+      "rules"
+     ]
+    }
+   ],
+   "start": {
+    "title": "Vier Marsmenschen in 30 s",
+    "shots": [
+     "mar_targets",
+     "t_target",
+     "i_target",
+     "an_targets"
+    ],
+    "text": "Die vier Marsmenschen treffen: M-A-R-Gruppe, T, I, A-N-Gruppe. Je 20M. Alle vier starten den 2-Ball-Multiball.",
+    "sources": [
+     "bally",
+     "rules"
+    ]
+   },
+   "score": [
+    {
+     "title": "Marsmenschen weiter treffen",
+     "shots": [
+      "mar_targets",
+      "t_target",
+      "i_target",
+      "an_targets"
+     ],
+     "text": "Im Multiball bringt jeder Marsmensch weiter 20M (später bis 50M).",
+     "sources": [
+      "bally",
+      "rules"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ta",
+   "name": "Total Annihilation",
+   "tag": "4-Ball-Multiball",
+   "balls": "4 Kugeln",
+   "prep": [
+    {
+     "title": "Zwölf Lampen füllen",
+     "shots": [
+      "left_loop",
+      "left_ramp",
+      "right_ramp",
+      "right_loop"
+     ],
+     "text": "Capture, Big-O-Beam, Tractor Beam und Atomic Blaster: je drei Lampen. Jeder volle Schuss startet einen Hurry-Up.",
+     "sources": [
+      "bally",
+      "rules"
+     ]
+    }
+   ],
+   "start": {
+    "title": "Vierter voller Schuss",
+    "shots": [
+     "left_loop",
+     "left_ramp",
+     "right_ramp",
+     "right_loop"
+    ],
+    "text": "Wenn der vierte Schuss voll ist, startet Total Annihilation.",
+    "sources": [
+     "bally",
+     "rules"
+    ]
+   },
+   "score": [
+    {
+     "title": "Rampen und Loops",
+     "shots": [
+      "left_loop",
+      "left_ramp",
+      "right_ramp",
+      "right_loop"
+     ],
+     "text": "Alle vier sind Jackpots: 50M, +5M je Treffer.",
+     "sources": [
+      "bally",
+      "rules"
+     ]
+    },
+    {
+     "title": "Annihilation Jackpot",
+     "shots": [
+      "lock_ramp"
+     ],
+     "text": "Nach einem anderen Rampen- oder Loop-Schuss die Lock-Rampe treffen.",
+     "sources": [
+      "bally",
+      "rules"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "strobe",
+   "name": "Strobe Multiball",
+   "tag": "Stroke-of-Luck-Preis",
+   "balls": "3 Kugeln",
+   "prep": [
+    {
+     "title": "Stroke of Luck",
+     "shots": [
+      "sol_scoop"
+     ],
+     "text": "Nur als Preis aus dem Stroke-of-Luck-Scoop, einmal pro Spiel. Laut Rulesheet ist meist der dritte Preis Strobe Multiball.",
+     "sources": [
+      "bally",
+      "rules"
+     ]
+    }
+   ],
+   "start": {
+    "title": "Startet sofort",
+    "shots": [],
+    "text": "Licht aus, Stroboskop an, zwei Kugeln kommen dazu.",
+    "sources": [
+     "rules"
+    ],
+    "lit": true
+   },
+   "score": [
+    {
+     "title": "Kraftfeld treffen",
+     "shots": [
+      "forcefield"
+     ],
+     "text": "Jeder Treffer 50M. 10. Treffer: Extraball, 20. Treffer: 250M.",
+     "sources": [
+      "bally",
+      "rules"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rtu",
+   "name": "Rule the Universe",
+   "tag": "Wizard-Multiball",
+   "balls": "4 Kugeln",
+   "prep": [
+    {
+     "title": "Sechs Ziele",
+     "shots": [],
+     "text": "Super Jackpot, Super Jets, Martian-Attack-Multiball, Total Annihilation, Conquer Mars und 5-Way-Combo. Die sechs runden Felder über den Flippern zeigen den Stand.",
+     "sources": [
+      "bally",
+      "rules"
+     ],
+     "lit": true
+    }
+   ],
+   "start": {
+    "title": "Scoop",
+    "shots": [
+     "sol_scoop"
+    ],
+    "text": "Stroke-of-Luck-Scoop schießen.",
+    "sources": [
+     "bally",
+     "rules"
+    ]
+   },
+   "score": [
+    {
+     "title": "5 Milliarden erspielen",
+     "shots": [
+      "left_loop",
+      "left_ramp",
+      "lock_ramp",
+      "right_ramp",
+      "right_loop",
+      "saucer"
+     ],
+     "text": "Fast alles ist beleuchtet. Mit 5B ist das Universum gewonnen (+5B).",
+     "sources": [
+      "bally",
+      "rules"
+     ]
+    },
+    {
+     "title": "Victory Laps",
+     "shots": [
+      "left_loop",
+      "left_ramp",
+      "lock_ramp",
+      "right_ramp",
+      "right_loop",
+      "saucer"
+     ],
+     "text": "Danach für den Rest der Kugel: die fünf Combo-Schüsse je 100M bis 500M. Das Saucer-Fallziel beleuchtet sie neu.",
+     "sources": [
+      "rules"
+     ]
+    }
+   ]
+  }
+ ],
+ "modes": [
+  {
+   "id": "waves",
+   "name": "Attack Waves",
+   "film": "Länder retten",
+   "time": "–",
+   "steps": [
+    {
+     "title": "Kraftfeld senken",
+     "shots": [
+      "forcefield"
+     ],
+     "text": "Alle drei Ziele der Bank. Vorher wählst du mit den Flippern das nächste Land."
+    },
+    {
+     "title": "Saucer treffen, dann Loch",
+     "shots": [
+      "saucer"
+     ],
+     "text": "Treffer wie angezeigt (Welle 1: 4, jede Welle 4 mehr), dann ins Loch. Welle 1 = 200M, Welle 5 = 600M."
+    }
+   ]
+  },
+  {
+   "id": "mars",
+   "name": "Conquer Mars",
+   "film": "Nach 5 Ländern",
+   "time": "–",
+   "steps": [
+    {
+     "title": "10-mal ins Loch",
+     "shots": [
+      "forcefield",
+      "saucer"
+     ],
+     "text": "Kraftfeld senken, dann das Saucer-Loch 10-mal: je 100M, der letzte 2,5B. Einmal pro Spiel."
+    }
+   ]
+  },
+  {
+   "id": "hurry",
+   "name": "Hurry-Up",
+   "film": "Total-Annihilation-Schüsse",
+   "time": "zählt herunter",
+   "steps": [
+    {
+     "title": "In die Mitte schießen",
+     "shots": [
+      "forcefield",
+      "saucer"
+     ],
+     "text": "Start durch 3 volle Lampen an einem äußeren Schuss. 100M, fällt schnell auf 25M. Kassieren am Kraftfeld oder Saucer."
+    }
+   ]
+  },
+  {
+   "id": "superjets",
+   "name": "Super Jets",
+   "film": "Bumper",
+   "time": "bis Kugelende",
+   "steps": [
+    {
+     "title": "Bumper-Treffer sammeln",
+     "shots": [
+      "jets"
+     ],
+     "text": "Nach der angezeigten Trefferzahl (laut Rulesheet zuerst 100) bringt jeder Bumper-Treffer deutlich mehr."
+    }
+   ]
+  },
+  {
+   "id": "sol",
+   "name": "Stroke of Luck",
+   "film": "Scoop-Preis",
+   "time": "–",
+   "steps": [
+    {
+     "title": "Beleuchten und abholen",
+     "shots": [
+      "rollovers",
+      "sol_scoop"
+     ],
+     "text": "Alle vier In-/Outlanes = Stroke of Luck leuchtet. Scoop schießen: Zufallspreis, u. a. Strobe Multiball, Sneak Attack, Video Mode, Lock, Multiball."
+    }
+   ]
+  },
+  {
+   "id": "video",
+   "name": "Video Mode",
+   "film": "Stroke-of-Luck-Preis",
+   "time": "–",
+   "steps": [
+    {
+     "title": "Ufos abschießen",
+     "shots": [],
+     "text": "Laut Rulesheet nach Super Jets der nächste Scoop-Preis. Mit den Flippern zielen; ab 30 Ufos kann ein Extraball erscheinen.",
+     "lit": "Videomodus auf dem Display – kein Schuss im Spielfeld; zur Orientierung die Hauptschüsse."
+    }
+   ]
+  }
+ ],
+ "modesIntro": "Attack Waves sind der rote Faden: Kraftfeld senken, Saucer zerstören, Land retten. Nach allen fünf Ländern folgt Conquer Mars. Die übrigen Modi kommen aus dem Stroke-of-Luck-Scoop oder den Bumpern.",
+ "glossary": [
+  {
+   "term": "Kraftfeld (Forcefield)",
+   "text": "Bewegliche 3er-Bank in der Mitte. Unten = Saucer offen."
+  },
+  {
+   "term": "Saucer",
+   "text": "Fallziel mit Loch hinter dem Kraftfeld, unter dem großen Ufo."
+  },
+  {
+   "term": "Stroke of Luck",
+   "text": "Scoop rechts (Bally: „right eject“). Zufallspreise, Extraball, Martian Attack, Rule the Universe."
+  },
+  {
+   "term": "TA-Lampen",
+   "text": "Je drei Lampen vor den vier äußeren Schüssen (Capture, Big-O-Beam, Tractor Beam, Atomic Blaster)."
+  },
+  {
+   "term": "Combo",
+   "text": "Rampen und Loops direkt nacheinander, solange die roten Pfeile leuchten."
+  },
+  {
+   "term": "Einsatz (Insert)",
+   "text": "Beleuchtetes Feld im Spielfeld. Nur Anzeige, kein Ziel."
+  }
+ ],
+ "limits": [
+  "Kein Rulesheet mit Datum oder ROM-Stand gefunden. Werte aus Dominys Rulesheet können je nach ROM abweichen; die Grundregeln stammen von Bally.",
+  "Die Flipper-Empfehlungen sind aus der Lage abgeleitet (Rampen und Loops jeweils überkreuz).",
+  "Im Foto verdecken die Spielzeug-Ufos den Saucer. Seine Markierung beruht auf den Schaltern der Tischdatei.",
+  "Wohin Saucer und Scoop die Kugel auswerfen, steht in keiner geprüften Quelle.",
+  "Die Linie zeigt die Zielrichtung vom Flipper zum Eingang. Bahnverläufe auf den Rampen sind nicht eingezeichnet."
+ ]
 }

@@ -1,12 +1,158 @@
 {
  "_note": "Geometrie in Pixeln des Prototyp-Spielfeldfotos aus dem Spooky-Flyer 'Frightful Features' (_quellen/beetlejuice/flyer.png, 1583x2048; Spielfeld ca. 585 px breit). H = Skalierung 0.6, damit 50 Einheiten ~ 30 px = ein Kugeldurchmesser. Nur sicher erkennbare Elemente vermessen; Zuordnung ueber Rulesheet (pinballrulesheets.com) und Schalterliste des Spooky-Handbuchs (Juli 2026).",
- "space": "px:real", "pxToVpx": 1.6667, "flipperSpace": "px",
- "flippers": { "L": { "pivot": [290, 1418], "aim": [338, 1444] }, "R": { "pivot": [492, 1418], "aim": [444, 1444] } },
+ "space": "px:real",
+ "pxToVpx": 1.6667,
+ "flipperSpace": "px",
+ "flippers": {
+  "L": {
+   "pivot": [
+    290,
+    1418
+   ],
+   "aim": [
+    338,
+    1444
+   ]
+  },
+  "R": {
+   "pivot": [
+    492,
+    1418
+   ],
+   "aim": [
+    444,
+    1444
+   ]
+  }
+ },
  "shots": {
-  "left_ramp":   { "entrance": { "type": "lane", "c": [282, 982], "toward": [270, 940], "len": 36, "w": 34 } },
-  "sandworm":    { "entrance": { "type": "circle", "c": [468, 705], "r": 42 } },
-  "center_scoop":{ "entrance": { "type": "circle", "c": [409, 738], "r": 18 } },
-  "upper_pf":    { "entrance": { "type": "circle", "c": [338, 470], "r": 70 } },
-  "captive":     { "entrance": { "type": "circle", "c": [650, 1010], "r": 20 } }
+  "left_ramp": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     282,
+     982
+    ],
+    "toward": [
+     270,
+     940
+    ],
+    "len": 36,
+    "w": 34
+   }
+  },
+  "sandworm": {
+   "entrance": {
+    "type": "circle",
+    "c": [
+     468,
+     705
+    ],
+    "r": 42
+   }
+  },
+  "center_scoop": {
+   "entrance": {
+    "type": "circle",
+    "c": [
+     409,
+     738
+    ],
+    "r": 18
+   }
+  },
+  "upper_pf": {
+   "entrance": {
+    "type": "circle",
+    "c": [
+     338,
+     470
+    ],
+    "r": 70
+   }
+  },
+  "captive": {
+   "entrance": {
+    "type": "circle",
+    "c": [
+     650,
+     1010
+    ],
+    "r": 20
+   }
+  },
+  "handbook": {
+   "entrance": {
+    "type": "circle",
+    "c": [
+     588,
+     948
+    ],
+    "r": 14
+   }
+  },
+  "mystery": {
+   "entrance": {
+    "type": "circle",
+    "c": [
+     585,
+     1102
+    ],
+    "r": 14
+   }
+  },
+  "cameras": {
+   "entrance": {
+    "type": "multi",
+    "items": [
+     {
+      "type": "circle",
+      "c": [
+       344,
+       790
+      ],
+      "r": 11
+     },
+     {
+      "type": "circle",
+      "c": [
+       381,
+       786
+      ],
+      "r": 11
+     }
+    ]
+   }
+  },
+  "right_ramp": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     572,
+     866
+    ],
+    "toward": [
+     556,
+     846
+    ],
+    "len": 34,
+    "w": 30
+   }
+  },
+  "right_orbit": {
+   "entrance": {
+    "type": "lane",
+    "c": [
+     562,
+     978
+    ],
+    "toward": [
+     545,
+     965
+    ],
+    "len": 34,
+    "w": 30
+   }
+  }
  }
 }

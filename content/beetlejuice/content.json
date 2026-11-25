@@ -1,134 +1,764 @@
 {
  "table": {
-  "id": "beetlejuice", "name": "Beetlejuice", "short": "Beetlejuice", "manufacturer": "Spooky Pinball", "year": 2025,
-  "system": "Spooky Pinball", "design": "laut Pinside",
+  "id": "beetlejuice",
+  "name": "Beetlejuice",
+  "short": "Beetlejuice",
+  "manufacturer": "Spooky Pinball",
+  "year": 2025,
+  "system": "Spooky Pinball",
+  "design": "laut Pinside",
   "editions": "Kein Stern-Tisch: Beetlejuice ist von Spooky Pinball (Auslieferung ab Ende 2025). Es gibt keine Pro/Premium-Stufen.",
   "ruleVersion": "Regeln nach dem Wiki-Rulesheet (pinballrulesheets.com, ohne Code-Angabe, in Teilen „TBD“). Offizielle Spielregeln von Spooky waren nicht auffindbar.",
-  "accent": "#9bd14a", "contentDate": "2026-11-22"
+  "accent": "#9bd14a",
+  "contentDate": "2026-11-22"
  },
  "sources": [
-  { "id": "rules", "title": "Wiki-Rulesheet Beetlejuice (pinballrulesheets.com, früher Tilt Forums)", "url": "https://pinballrulesheets.com/spooky/beetlejuice-rulesheet.html", "use": "Einzige gefundene Regelquelle: Multibälle, Modi, Juno, Playfield-Multiplikator, Magna-Save. Teile ausdrücklich unvollständig." },
-  { "id": "manual", "title": "Spooky Pinball: Beetlejuice Maintenance Manual (26. Juli 2026)", "url": "https://www.spookypinball.com/wp-content/uploads/2026/08/Beetlejuice-Manual_26JUL2026.pdf", "use": "Schalterliste (Kap. 5.1) mit den Namen der Schüsse. Kein Schalter-Lageplan von oben." },
-  { "id": "photo", "title": "Spooky Pinball: Flyer „Frightful Features“ (Prototyp-Spielfeld), veröffentlicht bei Kineticist", "url": "https://www.kineticist.com/news/spooky-pinball-reveals-beetlejuice-pinball", "use": "Einzige gefundene Draufsicht. Prototyp – laut Flyer kann das Serienspielfeld leicht abweichen." },
-  { "id": "ball", "title": "Kugelbild: wie in den anderen Tischen der App", "url": "", "use": "Animierte Kugel." }
+  {
+   "id": "rules",
+   "title": "Wiki-Rulesheet Beetlejuice (pinballrulesheets.com, früher Tilt Forums)",
+   "url": "https://pinballrulesheets.com/spooky/beetlejuice-rulesheet.html",
+   "use": "Einzige gefundene Regelquelle: Multibälle, Modi, Juno, Playfield-Multiplikator, Magna-Save. Teile ausdrücklich unvollständig."
+  },
+  {
+   "id": "manual",
+   "title": "Spooky Pinball: Beetlejuice Maintenance Manual (26. Juli 2026)",
+   "url": "https://www.spookypinball.com/wp-content/uploads/2026/08/Beetlejuice-Manual_26JUL2026.pdf",
+   "use": "Schalterliste (Kap. 5.1) mit den Namen der Schüsse. Kein Schalter-Lageplan von oben."
+  },
+  {
+   "id": "photo",
+   "title": "Spooky Pinball: Flyer „Frightful Features“ (Prototyp-Spielfeld), veröffentlicht bei Kineticist",
+   "url": "https://www.kineticist.com/news/spooky-pinball-reveals-beetlejuice-pinball",
+   "use": "Einzige gefundene Draufsicht. Prototyp – laut Flyer kann das Serienspielfeld leicht abweichen."
+  },
+  {
+   "id": "ball",
+   "title": "Kugelbild: wie in den anderen Tischen der App",
+   "url": "",
+   "use": "Animierte Kugel."
+  }
  ],
- "views": { "real": { "label": "Prototyp-Spielfeld (Flyer)", "note": "Draufsicht aus dem Spooky-Flyer, kleine Auflösung, Prototyp. Nur sicher erkennbare Stellen sind markiert: linke Rampe (Inferno-Rampe mit Rad), Sandwurm, mittlere Mulde, Waiting Room mit Couch, gefangene Kugel." } },
+ "views": {
+  "real": {
+   "label": "Prototyp-Spielfeld (Flyer)",
+   "note": "Draufsicht aus dem Spooky-Flyer, kleine Auflösung, Prototyp. Nur sicher erkennbare Stellen sind markiert: linke Rampe (Inferno-Rampe mit Rad), Sandwurm, mittlere Mulde, Waiting Room mit Couch, gefangene Kugel."
+  }
+ },
  "shots": {
-  "left_ramp": { "name": "Linke Rampe (Rad)", "en": "Left Ramp / Wheel (Inferno Room ramp)", "kind": "Rampe", "flipper": "R",
-    "what": "Rote Rampe links mit dem Rad („Spin the Wheel“) oben.", "returns": "Über die Rampe zurück.",
-    "awards": ["Wiederholte Treffer beleuchten das Rad", "Super Skillshot: Teil der Kombination", "Strange and Unusual: Jackpots auf den Rampen", "Beetle Snake: 3 Rampenschüsse"],
-    "visibility": "Rote Rampe im Foto klar; Eingang am unteren Ende geschätzt (±20 px).", "sources": ["rules", "manual", "photo"] },
-  "sandworm": { "name": "Sandwurm", "en": "Sandworm (mouth / targets)", "kind": "Spielfigur/Ziel", "flipper": "beide",
-    "what": "Großer Sandwurm in der Mitte. Mund und Ziele links/rechts (Schalter 43, 52, 54).", "returns": "—",
-    "awards": ["Sandworm Battle (drei Wandziele)", "Sandworm-Multiball: zum Schluss den Wurm für Super Jackpots", "Genug Sandwürmer besiegt = Extraball"],
-    "visibility": "Figur im Foto klar; die einzelnen Ziele daran nicht markiert.", "sources": ["rules", "manual", "photo"] },
-  "center_scoop": { "name": "Mittlere Mulde (Lost Souls)", "en": "Center Scoop / Room of Lost Souls", "kind": "Mulde", "flipper": "beide",
-    "what": "Mulde in der Mitte, davor die Einsätze 1–5 (Playfield-Multiplikator). Hat eine Vorder- und eine Hintertür (unter dem oberen Flipper).", "returns": "Auswurf.",
-    "awards": ["Returning Souls: verlorene Seele zurückbringen = +1X und +30 s (max. 5X)", "Hintertür startet den Multiplikator", "Grave Dig: Mulden-Schüsse"],
-    "visibility": "Einsätze 1–5 klar; Lage der Mulde dahinter geschätzt (±25 px).", "sources": ["rules", "manual", "photo"] },
-  "upper_pf": { "name": "Waiting Room mit Couch", "en": "Upper playfield: Couch Lock, Upper Loop, Now Serving, Juno Scoop", "kind": "Oberes Spielfeld",
-    "what": "Oberes Spielfeld links oben: Couch-Lock, Upper Loop um die Couch, Now-Serving-Ziele, Juno-Mulde, oberer Flipper.", "returns": "—",
-    "awards": ["Upper Loop: „Knock“-Einsätze → Locks", "Couch: Kugeln für den Afterlife-Multiball", "Juno-Mulde: Take a Number", "Now-Serving-Ziele: Zähler"],
-    "visibility": "Bereich klar; einzelne Ziele, Juno-Mulde und Loop-Eingänge nicht einzeln markiert.", "sources": ["rules", "manual", "photo"] },
-  "captive": { "name": "Gefangene Kugel (vermutlich)", "en": "Captive Ball", "kind": "Ziel", "flipper": "L",
-    "what": "Ziel rechts mit eingeschlossener Kugel.", "returns": "Prallt zurück.",
-    "awards": ["As Seen on TV: Lydia stoppen, Jackpots"],
-    "visibility": "Grün leuchtende Kugel rechts im Foto; Zuordnung als gefangene Kugel nicht gesichert (±25 px).", "sources": ["rules", "manual", "photo"] },
-  "left_orbit": { "name": "Linker Orbit", "en": "Left Orbit", "kind": "Orbit", "flipper": "R",
-    "what": "Linker Orbit, führt ins obere Spielfeld; perfekt getroffen eine Acht durch den Upper Loop.", "returns": "Oberes Spielfeld.",
-    "awards": ["Zugang zum Waiting Room"], "visibility": "Im Prototyp-Foto nicht sicher zu bestimmen – nicht markiert.", "sources": ["rules", "manual"] },
-  "spinner": { "name": "Spinner", "en": "Spinner", "kind": "Spinner", "flipper": "R",
-    "what": "Sauber getroffen läuft die Kugel durch die Bumper in die Juno-Mulde.", "returns": "Bumper / Juno-Mulde.",
-    "awards": ["Super Jackpot im Afterlife-Multiball (Spinner/Juno)", "Beetle Snake: 30 Drehungen", "'Til Death: Multiplikator"], "visibility": "Nicht markiert.", "sources": ["rules", "manual"] },
-  "right_ramp": { "name": "Rechte Rampe (Couch-Lock)", "en": "Right Ramp", "kind": "Rampe", "flipper": "L",
-    "what": "Unten: Kugel zum rechten Flipper. Oben: Kugeln werden für den Afterlife-Multiball auf die Couch gelegt.", "returns": "Rechter Flipper bzw. Couch.",
-    "awards": ["Locks für Afterlife Couch Multiball", "Super Skillshot: Teil der Kombination", "'Til Death: Schusswert"], "visibility": "Wire-Rampen im Foto überlagert – nicht markiert.", "sources": ["rules", "manual"] },
-  "right_orbit": { "name": "Rechter Orbit (Vari-Ziel)", "en": "Right Orbit / Vari-target", "kind": "Orbit", "flipper": "L",
-    "what": "Wechselt zwischen Loop und Sackgasse mit Fallziel.", "returns": "Loop oder Sackgasse.",
-    "awards": ["Startet beleuchtete Modi", "It's Showtime starten", "Showtime: Super Jackpot über das Fallziel"], "visibility": "Nicht markiert.", "sources": ["rules", "manual"] },
-  "handbook": { "name": "Handbook-Ziel", "en": "Handbook Target", "kind": "Ziel", "flipper": "L",
-    "what": "Ziel zwischen rechter Rampe und rechtem Orbit.", "returns": "—",
-    "awards": ["Startet Otho's Seance", "Magna-Save neu qualifizieren"], "visibility": "Einsatz „Hand Book“ im Foto sichtbar, Ziel selbst nicht sicher – nicht markiert.", "sources": ["rules", "manual"] },
-  "mystery": { "name": "Mystery-Mulde", "en": "Mystery Scoop", "kind": "Mulde",
-    "what": "Mulde für Mystery-Preise.", "returns": "Auswurf.",
-    "awards": ["Lite Lock, Punkte, Now Serving +2/+4, Lite Ball Save, Shooting Gallery"], "visibility": "Nicht markiert.", "sources": ["rules", "manual"] },
-  "cameras": { "name": "Kamera-Ziele", "en": "Polaroid Camera targets", "kind": "Ziele",
-    "what": "Ziele in der Mitte, beleuchtet durch die Rückkehrbahnen.", "returns": "—",
-    "awards": ["Alle einmal = Strange and Unusual Multiball", "Im Multiball: Sätze = Kugel dazu"], "visibility": "Nicht markiert.", "sources": ["rules", "manual"] }
+  "left_ramp": {
+   "name": "Linke Rampe (Rad)",
+   "en": "Left Ramp / Wheel (Inferno Room ramp)",
+   "kind": "Rampe",
+   "flipper": "R",
+   "what": "Rote Rampe links mit dem Rad („Spin the Wheel“) oben.",
+   "returns": "Über die Rampe zurück.",
+   "awards": [
+    "Wiederholte Treffer beleuchten das Rad",
+    "Super Skillshot: Teil der Kombination",
+    "Strange and Unusual: Jackpots auf den Rampen",
+    "Beetle Snake: 3 Rampenschüsse"
+   ],
+   "visibility": "Rote Rampe im Foto klar; Eingang am unteren Ende geschätzt (±20 px).",
+   "sources": [
+    "rules",
+    "manual",
+    "photo"
+   ]
+  },
+  "sandworm": {
+   "name": "Sandwurm",
+   "en": "Sandworm (mouth / targets)",
+   "kind": "Spielfigur/Ziel",
+   "flipper": "beide",
+   "what": "Großer Sandwurm in der Mitte. Mund und Ziele links/rechts (Schalter 43, 52, 54).",
+   "returns": "—",
+   "awards": [
+    "Sandworm Battle (drei Wandziele)",
+    "Sandworm-Multiball: zum Schluss den Wurm für Super Jackpots",
+    "Genug Sandwürmer besiegt = Extraball"
+   ],
+   "visibility": "Figur im Foto klar; die einzelnen Ziele daran nicht markiert.",
+   "sources": [
+    "rules",
+    "manual",
+    "photo"
+   ]
+  },
+  "center_scoop": {
+   "name": "Mittlere Mulde (Lost Souls)",
+   "en": "Center Scoop / Room of Lost Souls",
+   "kind": "Mulde",
+   "flipper": "beide",
+   "what": "Mulde in der Mitte, davor die Einsätze 1–5 (Playfield-Multiplikator). Hat eine Vorder- und eine Hintertür (unter dem oberen Flipper).",
+   "returns": "Auswurf.",
+   "awards": [
+    "Returning Souls: verlorene Seele zurückbringen = +1X und +30 s (max. 5X)",
+    "Hintertür startet den Multiplikator",
+    "Grave Dig: Mulden-Schüsse"
+   ],
+   "visibility": "Einsätze 1–5 klar; Lage der Mulde dahinter geschätzt (±25 px).",
+   "sources": [
+    "rules",
+    "manual",
+    "photo"
+   ]
+  },
+  "upper_pf": {
+   "name": "Waiting Room mit Couch",
+   "en": "Upper playfield: Couch Lock, Upper Loop, Now Serving, Juno Scoop",
+   "kind": "Oberes Spielfeld",
+   "what": "Oberes Spielfeld links oben: Couch-Lock, Upper Loop um die Couch, Now-Serving-Ziele, Juno-Mulde, oberer Flipper.",
+   "returns": "—",
+   "awards": [
+    "Upper Loop: „Knock“-Einsätze → Locks",
+    "Couch: Kugeln für den Afterlife-Multiball",
+    "Juno-Mulde: Take a Number",
+    "Now-Serving-Ziele: Zähler"
+   ],
+   "visibility": "Bereich klar; einzelne Ziele, Juno-Mulde und Loop-Eingänge nicht einzeln markiert.",
+   "sources": [
+    "rules",
+    "manual",
+    "photo"
+   ]
+  },
+  "captive": {
+   "name": "Gefangene Kugel (vermutlich)",
+   "en": "Captive Ball",
+   "kind": "Ziel",
+   "flipper": "L",
+   "what": "Ziel rechts mit eingeschlossener Kugel.",
+   "returns": "Prallt zurück.",
+   "awards": [
+    "As Seen on TV: Lydia stoppen, Jackpots"
+   ],
+   "visibility": "Grün leuchtende Kugel rechts im Foto; Zuordnung als gefangene Kugel nicht gesichert (±25 px).",
+   "sources": [
+    "rules",
+    "manual",
+    "photo"
+   ]
+  },
+  "left_orbit": {
+   "name": "Linker Orbit",
+   "en": "Left Orbit",
+   "kind": "Orbit",
+   "flipper": "R",
+   "what": "Linker Orbit, führt ins obere Spielfeld; perfekt getroffen eine Acht durch den Upper Loop.",
+   "returns": "Oberes Spielfeld.",
+   "awards": [
+    "Zugang zum Waiting Room"
+   ],
+   "visibility": "Im Prototyp-Foto nicht sicher zu bestimmen – nicht markiert.",
+   "sources": [
+    "rules",
+    "manual"
+   ]
+  },
+  "spinner": {
+   "name": "Spinner",
+   "en": "Spinner",
+   "kind": "Spinner",
+   "flipper": "R",
+   "what": "Sauber getroffen läuft die Kugel durch die Bumper in die Juno-Mulde.",
+   "returns": "Bumper / Juno-Mulde.",
+   "awards": [
+    "Super Jackpot im Afterlife-Multiball (Spinner/Juno)",
+    "Beetle Snake: 30 Drehungen",
+    "'Til Death: Multiplikator"
+   ],
+   "visibility": "Nicht markiert.",
+   "sources": [
+    "rules",
+    "manual"
+   ]
+  },
+  "right_ramp": {
+   "name": "Rechte Rampe (Couch-Lock)",
+   "en": "Right Ramp",
+   "kind": "Rampe",
+   "flipper": "L",
+   "what": "Unten: Kugel zum rechten Flipper. Oben: Kugeln werden für den Afterlife-Multiball auf die Couch gelegt.",
+   "returns": "Rechter Flipper bzw. Couch.",
+   "awards": [
+    "Locks für Afterlife Couch Multiball",
+    "Super Skillshot: Teil der Kombination",
+    "'Til Death: Schusswert"
+   ],
+   "visibility": "Am oberen der beiden Pfeile neben „Hand Book“ markiert. Zuordnung Rampe/Orbit aus dem Rulesheet abgeleitet (Handbook liegt dazwischen) – nicht gesichert.",
+   "sources": [
+    "rules",
+    "manual"
+   ]
+  },
+  "right_orbit": {
+   "name": "Rechter Orbit (Vari-Ziel)",
+   "en": "Right Orbit / Vari-target",
+   "kind": "Orbit",
+   "flipper": "L",
+   "what": "Wechselt zwischen Loop und Sackgasse mit Fallziel.",
+   "returns": "Loop oder Sackgasse.",
+   "awards": [
+    "Startet beleuchtete Modi",
+    "It's Showtime starten",
+    "Showtime: Super Jackpot über das Fallziel"
+   ],
+   "visibility": "Am unteren der beiden Pfeile neben „Hand Book“ markiert. Zuordnung Rampe/Orbit aus dem Rulesheet abgeleitet (Handbook liegt dazwischen) – nicht gesichert.",
+   "sources": [
+    "rules",
+    "manual"
+   ]
+  },
+  "handbook": {
+   "name": "Handbook-Ziel",
+   "en": "Handbook Target",
+   "kind": "Ziel",
+   "flipper": "L",
+   "what": "Ziel zwischen rechter Rampe und rechtem Orbit.",
+   "returns": "—",
+   "awards": [
+    "Startet Otho's Seance",
+    "Magna-Save neu qualifizieren"
+   ],
+   "visibility": "Am Einsatz „Hand Book“ markiert; das Ziel sitzt direkt daneben (Lage geschätzt, ±25 px).",
+   "sources": [
+    "rules",
+    "manual"
+   ]
+  },
+  "mystery": {
+   "name": "Mystery-Mulde",
+   "en": "Mystery Scoop",
+   "kind": "Mulde",
+   "what": "Mulde für Mystery-Preise.",
+   "returns": "Auswurf.",
+   "awards": [
+    "Lite Lock, Punkte, Now Serving +2/+4, Lite Ball Save, Shooting Gallery"
+   ],
+   "visibility": "Am Einsatz „Mystery“ markiert (Lage geschätzt, ±25 px).",
+   "sources": [
+    "rules",
+    "manual"
+   ]
+  },
+  "cameras": {
+   "name": "Kamera-Ziele",
+   "en": "Polaroid Camera targets",
+   "kind": "Ziele",
+   "what": "Ziele in der Mitte, beleuchtet durch die Rückkehrbahnen.",
+   "returns": "—",
+   "awards": [
+    "Alle einmal = Strange and Unusual Multiball",
+    "Im Multiball: Sätze = Kugel dazu"
+   ],
+   "visibility": "An den beiden „Camera“-Einsätzen markiert; die Ziele dahinter geschätzt (±25 px).",
+   "sources": [
+    "rules",
+    "manual"
+   ]
+  }
  },
  "strategies": [
-  { "id": "solid", "title": "Solide spielen", "subtitle": "Multibälle holen und Modi starten", "steps": [
-    { "title": "Skillshot", "shots": [], "prep": "Abschießen, wenn ein Punktwert leuchtet; die Kugel soll zum rechten Flipper laufen.", "why": "Danach schnell linke Rampe, rechte Rampe, Spinner = Super Skillshot.", "sources": ["rules"] },
-    { "title": "Upper Loop für die Locks", "shots": ["upper_pf"], "go": "Den Loop um die Couch schießen (beide Richtungen zählen).", "why": "Beleuchtet die „Knock“-Einsätze und damit die Locks.", "sources": ["rules"] },
-    { "title": "Drei Kugeln auf die Couch", "shots": ["right_ramp"], "go": "Rechte Rampe, wenn Lock leuchtet.", "why": "Startet Afterlife Couch / Now Serving Multiball.", "sources": ["rules"] },
-    { "title": "Kamera-Ziele für den zweiten Multiball", "shots": ["cameras"], "go": "Durch die Rückkehrbahnen rollen, dann jedes Kamera-Ziel einmal.", "why": "Strange and Unusual Multiball (2 Kugeln).", "sources": ["rules"] },
-    { "title": "Modus starten", "shots": ["right_orbit"], "go": "Lila Schüsse dreimal, dann rechter Orbit.", "why": "Startet den beleuchteten Modus.", "sources": ["rules"] },
-    { "title": "Seelen zurückbringen", "shots": ["center_scoop"], "go": "Bumper treffen (Seele erscheint), dann den Seelen-Schuss und die mittlere Mulde.", "why": "+1X Spielfeld-Multiplikator, bis 5X.", "sources": ["rules"] }
-  ] },
-  { "id": "high", "title": "Auf Highscore", "subtitle": "Multiplikator aufbauen, dann Multiball", "steps": [
-    { "title": "Multiplikator auf 3X–5X", "shots": ["center_scoop"], "go": "Mehrere Seelen zurückbringen, dann über die Hintertür starten.", "why": "Ab über 2X läuft der höchste Wert 30 s, danach sinkt er stufenweise.", "sources": ["rules"] },
-    { "title": "Afterlife-Multiball mit Super Jackpot", "shots": ["upper_pf", "right_ramp"], "go": "Im Multiball eine Kugel erneut auf die Couch legen.", "why": "Super Jackpot am Spinner/Juno-Mulde beleuchtet.", "sources": ["rules"] },
-    { "title": "Magna-Save erneuern", "shots": ["handbook"], "go": "Handbook-Ziel, dann die Fliege mit dem Action-Button erwischen.", "why": "Magnet zwischen den Flippern rettet eine Kugel.", "sources": ["rules"] }
-  ] }
+  {
+   "id": "solid",
+   "title": "Solide spielen",
+   "subtitle": "Multibälle holen und Modi starten",
+   "steps": [
+    {
+     "title": "Skillshot",
+     "shots": [],
+     "prep": "Abschießen, wenn ein Punktwert leuchtet; die Kugel soll zum rechten Flipper laufen.",
+     "why": "Danach schnell linke Rampe, rechte Rampe, Spinner = Super Skillshot.",
+     "sources": [
+      "rules"
+     ],
+     "lit": true
+    },
+    {
+     "title": "Upper Loop für die Locks",
+     "shots": [
+      "upper_pf"
+     ],
+     "go": "Den Loop um die Couch schießen (beide Richtungen zählen).",
+     "why": "Beleuchtet die „Knock“-Einsätze und damit die Locks.",
+     "sources": [
+      "rules"
+     ]
+    },
+    {
+     "title": "Drei Kugeln auf die Couch",
+     "shots": [
+      "right_ramp"
+     ],
+     "go": "Rechte Rampe, wenn Lock leuchtet.",
+     "why": "Startet Afterlife Couch / Now Serving Multiball.",
+     "sources": [
+      "rules"
+     ]
+    },
+    {
+     "title": "Kamera-Ziele für den zweiten Multiball",
+     "shots": [
+      "cameras"
+     ],
+     "go": "Durch die Rückkehrbahnen rollen, dann jedes Kamera-Ziel einmal.",
+     "why": "Strange and Unusual Multiball (2 Kugeln).",
+     "sources": [
+      "rules"
+     ]
+    },
+    {
+     "title": "Modus starten",
+     "shots": [
+      "right_orbit"
+     ],
+     "go": "Lila Schüsse dreimal, dann rechter Orbit.",
+     "why": "Startet den beleuchteten Modus.",
+     "sources": [
+      "rules"
+     ]
+    },
+    {
+     "title": "Seelen zurückbringen",
+     "shots": [
+      "center_scoop"
+     ],
+     "go": "Bumper treffen (Seele erscheint), dann den Seelen-Schuss und die mittlere Mulde.",
+     "why": "+1X Spielfeld-Multiplikator, bis 5X.",
+     "sources": [
+      "rules"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "high",
+   "title": "Auf Highscore",
+   "subtitle": "Multiplikator aufbauen, dann Multiball",
+   "steps": [
+    {
+     "title": "Multiplikator auf 3X–5X",
+     "shots": [
+      "center_scoop"
+     ],
+     "go": "Mehrere Seelen zurückbringen, dann über die Hintertür starten.",
+     "why": "Ab über 2X läuft der höchste Wert 30 s, danach sinkt er stufenweise.",
+     "sources": [
+      "rules"
+     ]
+    },
+    {
+     "title": "Afterlife-Multiball mit Super Jackpot",
+     "shots": [
+      "upper_pf",
+      "right_ramp"
+     ],
+     "go": "Im Multiball eine Kugel erneut auf die Couch legen.",
+     "why": "Super Jackpot am Spinner/Juno-Mulde beleuchtet.",
+     "sources": [
+      "rules"
+     ]
+    },
+    {
+     "title": "Magna-Save erneuern",
+     "shots": [
+      "handbook"
+     ],
+     "go": "Handbook-Ziel, dann die Fliege mit dem Action-Button erwischen.",
+     "why": "Magnet zwischen den Flippern rettet eine Kugel.",
+     "sources": [
+      "rules"
+     ]
+    }
+   ]
+  }
  ],
  "multiballs": [
-  { "id": "afterlife", "name": "Afterlife Couch / Now Serving", "tag": "Couch-Multiball", "balls": "3 Kugeln (Couch-Locks)",
-    "prep": [ { "title": "Upper Loop: Knock-Einsätze", "shots": ["upper_pf"], "text": "Den Loop um die Couch schießen, beide Richtungen zählen. Das beleuchtet die Locks.", "sources": ["rules"] } ],
-    "start": { "title": "Rechte Rampe: drei Kugeln locken", "shots": ["right_ramp"], "text": "Drei Kugeln auf der Couch starten den Multiball.", "sources": ["rules"] },
-    "score": [ { "title": "Grüne Schüsse = Jackpots", "shots": [], "text": "Der Knock-Loop erhöht die Jackpot-Werte.", "sources": ["rules"] },
-               { "title": "Super Jackpot", "shots": ["right_ramp", "spinner"], "text": "Eine Kugel erneut auf die Couch legen, dann Super Jackpot am Spinner bzw. an der Juno-Mulde.", "sources": ["rules"] } ] },
-  { "id": "strange", "name": "Strange and Unusual", "tag": "Kamera-Multiball", "balls": "2 Kugeln",
-    "prep": [ { "title": "Rückkehrbahnen", "shots": [], "text": "Durch die Rückkehrbahnen rollen beleuchtet die Kamera-Ziele.", "sources": ["rules"] } ],
-    "start": { "title": "Jedes Kamera-Ziel einmal", "shots": ["cameras"], "text": "Startet den Multiball.", "sources": ["rules"] },
-    "score": [ { "title": "Rampen = Jackpots", "shots": ["left_ramp", "right_ramp"], "text": "Beide Rampen.", "sources": ["rules"] },
-               { "title": "Kamera-Sätze = Kugel dazu", "shots": ["cameras"], "text": "Blinkende Kamera-Ziele komplett.", "sources": ["rules"] } ] },
-  { "id": "showtime", "name": "It's Showtime", "tag": "Beetlejuice-Multiball", "balls": "Kugelzahl nicht belegt",
-    "prep": [ { "title": "S-H-O-W-T-I-M-E buchstabieren", "shots": [], "text": "Gelbe Schüsse; nur verfügbar, wenn ein Beetlejuice-Modus qualifiziert, aber nicht gestartet ist.", "sources": ["rules"] } ],
-    "start": { "title": "Rechter Orbit", "shots": ["right_orbit"], "text": "Beim Start Action-Button drücken (oder dreimal „Beetlejuice“ sagen).", "sources": ["rules"] },
-    "score": [ { "title": "3 (+1) Jackpots", "shots": [], "text": "Danach hält der rechte Orbit (Sackgasse) eine Kugel fest.", "sources": ["rules"] },
-               { "title": "Fallziel am rechten Orbit", "shots": ["right_orbit"], "text": "Fallziel treffen: Die gehaltene Kugel prallt ins Vari-Ziel = Super Jackpot; der erste gibt eine Kugel dazu.", "sources": ["rules"] } ] },
-  { "id": "sandworm", "name": "Sandworm Multiball", "tag": "Sandwurm", "balls": "Kugelzahl nicht belegt",
-    "prep": [ { "title": "Start nicht belegt", "shots": [], "text": "Wie der Sandworm-Multiball qualifiziert wird, steht nicht im Rulesheet.", "sources": ["rules"] } ],
-    "start": { "title": "Start nicht belegt", "shots": [], "text": "—", "sources": ["rules"] },
-    "score": [ { "title": "Orange, Tür, dann Rot", "shots": [], "text": "Orange Schüsse, die Tür finden, dann rote Schüsse.", "sources": ["rules"] },
-               { "title": "Wurm = Super Jackpot", "shots": ["sandworm"], "text": "Zum Schluss den Wurm treffen.", "sources": ["rules"] } ] }
+  {
+   "id": "afterlife",
+   "name": "Afterlife Couch / Now Serving",
+   "tag": "Couch-Multiball",
+   "balls": "3 Kugeln (Couch-Locks)",
+   "prep": [
+    {
+     "title": "Upper Loop: Knock-Einsätze",
+     "shots": [
+      "upper_pf"
+     ],
+     "text": "Den Loop um die Couch schießen, beide Richtungen zählen. Das beleuchtet die Locks.",
+     "sources": [
+      "rules"
+     ]
+    }
+   ],
+   "start": {
+    "title": "Rechte Rampe: drei Kugeln locken",
+    "shots": [
+     "right_ramp"
+    ],
+    "text": "Drei Kugeln auf der Couch starten den Multiball.",
+    "sources": [
+     "rules"
+    ]
+   },
+   "score": [
+    {
+     "title": "Grüne Schüsse = Jackpots",
+     "shots": [],
+     "text": "Der Knock-Loop erhöht die Jackpot-Werte.",
+     "sources": [
+      "rules"
+     ],
+     "lit": true
+    },
+    {
+     "title": "Super Jackpot",
+     "shots": [
+      "right_ramp",
+      "spinner"
+     ],
+     "text": "Eine Kugel erneut auf die Couch legen, dann Super Jackpot am Spinner bzw. an der Juno-Mulde.",
+     "sources": [
+      "rules"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "strange",
+   "name": "Strange and Unusual",
+   "tag": "Kamera-Multiball",
+   "balls": "2 Kugeln",
+   "prep": [
+    {
+     "title": "Rückkehrbahnen",
+     "shots": [
+      "cameras"
+     ],
+     "text": "Durch die Rückkehrbahnen rollen beleuchtet die Kamera-Ziele.",
+     "sources": [
+      "rules"
+     ]
+    }
+   ],
+   "start": {
+    "title": "Jedes Kamera-Ziel einmal",
+    "shots": [
+     "cameras"
+    ],
+    "text": "Startet den Multiball.",
+    "sources": [
+     "rules"
+    ]
+   },
+   "score": [
+    {
+     "title": "Rampen = Jackpots",
+     "shots": [
+      "left_ramp",
+      "right_ramp"
+     ],
+     "text": "Beide Rampen.",
+     "sources": [
+      "rules"
+     ]
+    },
+    {
+     "title": "Kamera-Sätze = Kugel dazu",
+     "shots": [
+      "cameras"
+     ],
+     "text": "Blinkende Kamera-Ziele komplett.",
+     "sources": [
+      "rules"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "showtime",
+   "name": "It's Showtime",
+   "tag": "Beetlejuice-Multiball",
+   "balls": "Kugelzahl nicht belegt",
+   "prep": [
+    {
+     "title": "S-H-O-W-T-I-M-E buchstabieren",
+     "shots": [],
+     "text": "Gelbe Schüsse; nur verfügbar, wenn ein Beetlejuice-Modus qualifiziert, aber nicht gestartet ist.",
+     "sources": [
+      "rules"
+     ],
+     "lit": true
+    }
+   ],
+   "start": {
+    "title": "Rechter Orbit",
+    "shots": [
+     "right_orbit"
+    ],
+    "text": "Beim Start Action-Button drücken (oder dreimal „Beetlejuice“ sagen).",
+    "sources": [
+     "rules"
+    ]
+   },
+   "score": [
+    {
+     "title": "3 (+1) Jackpots",
+     "shots": [],
+     "text": "Danach hält der rechte Orbit (Sackgasse) eine Kugel fest.",
+     "sources": [
+      "rules"
+     ],
+     "lit": true
+    },
+    {
+     "title": "Fallziel am rechten Orbit",
+     "shots": [
+      "right_orbit"
+     ],
+     "text": "Fallziel treffen: Die gehaltene Kugel prallt ins Vari-Ziel = Super Jackpot; der erste gibt eine Kugel dazu.",
+     "sources": [
+      "rules"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sandworm",
+   "name": "Sandworm Multiball",
+   "tag": "Sandwurm",
+   "balls": "Kugelzahl nicht belegt",
+   "prep": [
+    {
+     "title": "Start nicht belegt",
+     "shots": [],
+     "text": "Wie der Sandworm-Multiball qualifiziert wird, steht nicht im Rulesheet.",
+     "sources": [
+      "rules"
+     ],
+     "lit": true
+    }
+   ],
+   "start": {
+    "title": "Start nicht belegt",
+    "shots": [],
+    "text": "—",
+    "sources": [
+     "rules"
+    ],
+    "lit": true
+   },
+   "score": [
+    {
+     "title": "Orange, Tür, dann Rot",
+     "shots": [],
+     "text": "Orange Schüsse, die Tür finden, dann rote Schüsse.",
+     "sources": [
+      "rules"
+     ],
+     "lit": true
+    },
+    {
+     "title": "Wurm = Super Jackpot",
+     "shots": [
+      "sandworm"
+     ],
+     "text": "Zum Schluss den Wurm treffen.",
+     "sources": [
+      "rules"
+     ]
+    }
+   ]
+  }
  ],
  "modesIntro": "Modi: lila Schüsse dreimal, dann rechter Orbit. Juno-Modi über die Juno-Mulde im Waiting Room.",
  "modes": [
-  { "id": "tv", "name": "As Seen on TV", "film": "Beetlejuice-Modus", "time": "–", "steps": [
-    { "title": "7 einfache Schüsse", "shots": [], "text": "Action-Button halten hält den aktuellen Schusswert." },
-    { "title": "Gefangene Kugel: Lydia stoppen", "shots": ["captive"], "text": "Jackpots." } ] },
-  { "id": "grave", "name": "Grave Dig", "film": "Beetlejuice-Modus", "time": "–", "steps": [
-    { "title": "Drei Mulden-Schüsse", "shots": ["center_scoop"], "text": "Laut Rulesheet „3 scoop shots“ – welche Mulden genau, steht nicht da." },
-    { "title": "Grabstein, Rampen, rechter Orbit", "shots": ["left_ramp", "right_ramp", "right_orbit"], "text": "In dieser Reihenfolge." } ] },
-  { "id": "dayo", "name": "Day-O Dinner Party", "film": "Beetlejuice-Modus", "time": "Zeit", "steps": [
-    { "title": "Beleuchtete Schüsse", "shots": [], "text": "Die Maschine steuert die Flipper; Schüsse halten dich im Spiel und geben Kugeln dazu. Bumper, Schleudern, Couch, Sandwurm erhöhen den Multiplikator." } ] },
-  { "id": "shrink", "name": "Head Shrink", "film": "Beetlejuice-Modus", "time": "–", "steps": [
-    { "title": "Schalter sammeln, Sandwurm ablenken, Jackpot", "shots": ["sandworm"], "text": "Wiederholen." } ] },
-  { "id": "charades", "name": "Charades", "film": "Beetlejuice-Modus", "time": "–", "steps": [
-    { "title": "Weiße Schüsse decken Farben auf", "shots": [], "text": "Drei passende Paare, letzter Schuss ist ein Hurry-up." } ] },
-  { "id": "snake", "name": "Beetle Snake", "film": "Beetlejuice-Modus", "time": "–", "steps": [
-    { "title": "3 Bumper, 30 Spinner-Drehungen, 3 Rampen", "shots": ["spinner", "left_ramp", "right_ramp"], "text": "" } ] },
-  { "id": "tildeath", "name": "'Til Death", "film": "Beetlejuice-Modus", "time": "–", "steps": [
-    { "title": "Blaue Schüsse sammeln Zeugen", "shots": ["spinner", "right_ramp"], "text": "Spinner = Multiplikator, rechte Rampe = Schusswert." },
-    { "title": "Unterbrechen", "shots": ["right_orbit"], "text": "Fallziel oder rechter Orbit viermal." } ] },
-  { "id": "seance", "name": "Otho's Seance", "film": "Handbook", "time": "–", "steps": [
-    { "title": "Handbook-Ziel", "shots": ["handbook"], "text": "Startet den Modus." },
-    { "title": "Grüne Schüsse, dann wieder Handbook", "shots": ["handbook"], "text": "Beendet den Modus." } ] },
-  { "id": "juno", "name": "Juno: Scare the Deetz / Ghosts in the Sheets", "film": "Waiting Room", "time": "–", "steps": [
-    { "title": "Take a Number: Juno-Mulde", "shots": ["upper_pf"], "text": "Couch-Ziele erhöhen den Zähler, obere Ziele = Now Serving. Wie der Juno-Modus genau startet, steht nicht im Rulesheet." } ] }
+  {
+   "id": "tv",
+   "name": "As Seen on TV",
+   "film": "Beetlejuice-Modus",
+   "time": "–",
+   "steps": [
+    {
+     "title": "7 einfache Schüsse",
+     "shots": [],
+     "text": "Action-Button halten hält den aktuellen Schusswert.",
+     "lit": true
+    },
+    {
+     "title": "Gefangene Kugel: Lydia stoppen",
+     "shots": [
+      "captive"
+     ],
+     "text": "Jackpots."
+    }
+   ]
+  },
+  {
+   "id": "grave",
+   "name": "Grave Dig",
+   "film": "Beetlejuice-Modus",
+   "time": "–",
+   "steps": [
+    {
+     "title": "Drei Mulden-Schüsse",
+     "shots": [
+      "center_scoop"
+     ],
+     "text": "Laut Rulesheet „3 scoop shots“ – welche Mulden genau, steht nicht da."
+    },
+    {
+     "title": "Grabstein, Rampen, rechter Orbit",
+     "shots": [
+      "left_ramp",
+      "right_ramp",
+      "right_orbit"
+     ],
+     "text": "In dieser Reihenfolge."
+    }
+   ]
+  },
+  {
+   "id": "dayo",
+   "name": "Day-O Dinner Party",
+   "film": "Beetlejuice-Modus",
+   "time": "Zeit",
+   "steps": [
+    {
+     "title": "Beleuchtete Schüsse",
+     "shots": [],
+     "text": "Die Maschine steuert die Flipper; Schüsse halten dich im Spiel und geben Kugeln dazu. Bumper, Schleudern, Couch, Sandwurm erhöhen den Multiplikator.",
+     "lit": true
+    }
+   ]
+  },
+  {
+   "id": "shrink",
+   "name": "Head Shrink",
+   "film": "Beetlejuice-Modus",
+   "time": "–",
+   "steps": [
+    {
+     "title": "Schalter sammeln, Sandwurm ablenken, Jackpot",
+     "shots": [
+      "sandworm"
+     ],
+     "text": "Wiederholen."
+    }
+   ]
+  },
+  {
+   "id": "charades",
+   "name": "Charades",
+   "film": "Beetlejuice-Modus",
+   "time": "–",
+   "steps": [
+    {
+     "title": "Weiße Schüsse decken Farben auf",
+     "shots": [],
+     "text": "Drei passende Paare, letzter Schuss ist ein Hurry-up.",
+     "lit": true
+    }
+   ]
+  },
+  {
+   "id": "snake",
+   "name": "Beetle Snake",
+   "film": "Beetlejuice-Modus",
+   "time": "–",
+   "steps": [
+    {
+     "title": "3 Bumper, 30 Spinner-Drehungen, 3 Rampen",
+     "shots": [
+      "spinner",
+      "left_ramp",
+      "right_ramp"
+     ],
+     "text": ""
+    }
+   ]
+  },
+  {
+   "id": "tildeath",
+   "name": "'Til Death",
+   "film": "Beetlejuice-Modus",
+   "time": "–",
+   "steps": [
+    {
+     "title": "Blaue Schüsse sammeln Zeugen",
+     "shots": [
+      "spinner",
+      "right_ramp"
+     ],
+     "text": "Spinner = Multiplikator, rechte Rampe = Schusswert."
+    },
+    {
+     "title": "Unterbrechen",
+     "shots": [
+      "right_orbit"
+     ],
+     "text": "Fallziel oder rechter Orbit viermal."
+    }
+   ]
+  },
+  {
+   "id": "seance",
+   "name": "Otho's Seance",
+   "film": "Handbook",
+   "time": "–",
+   "steps": [
+    {
+     "title": "Handbook-Ziel",
+     "shots": [
+      "handbook"
+     ],
+     "text": "Startet den Modus."
+    },
+    {
+     "title": "Grüne Schüsse, dann wieder Handbook",
+     "shots": [
+      "handbook"
+     ],
+     "text": "Beendet den Modus."
+    }
+   ]
+  },
+  {
+   "id": "juno",
+   "name": "Juno: Scare the Deetz / Ghosts in the Sheets",
+   "film": "Waiting Room",
+   "time": "–",
+   "steps": [
+    {
+     "title": "Take a Number: Juno-Mulde",
+     "shots": [
+      "upper_pf"
+     ],
+     "text": "Couch-Ziele erhöhen den Zähler, obere Ziele = Now Serving. Wie der Juno-Modus genau startet, steht nicht im Rulesheet."
+    }
+   ]
+  }
  ],
  "glossary": [
-  { "term": "Magna-Save", "text": "Magnet zwischen den Flippern, ausgelöst mit dem Action-Button. Nach Gebrauch über das Handbook-Ziel neu qualifizieren." },
-  { "term": "Returning Souls", "text": "Bumper erzeugen eine verlorene Seele; zurück über den beleuchteten Seelen-Schuss und die mittlere Mulde = +1X (max. 5X)." },
-  { "term": "Vari-Ziel", "text": "Rechter Orbit, der zur Sackgasse mit Fallziel umgebaut werden kann." }
+  {
+   "term": "Magna-Save",
+   "text": "Magnet zwischen den Flippern, ausgelöst mit dem Action-Button. Nach Gebrauch über das Handbook-Ziel neu qualifizieren."
+  },
+  {
+   "term": "Returning Souls",
+   "text": "Bumper erzeugen eine verlorene Seele; zurück über den beleuchteten Seelen-Schuss und die mittlere Mulde = +1X (max. 5X)."
+  },
+  {
+   "term": "Vari-Ziel",
+   "text": "Rechter Orbit, der zur Sackgasse mit Fallziel umgebaut werden kann."
+  }
  ],
  "limits": [
   "Kein Stern-Tisch und keine Pro-Fassung: Beetlejuice ist von Spooky Pinball.",
   "Einzige Draufsicht ist ein Prototyp-Foto aus dem Flyer in kleiner Auflösung. Das Serienspielfeld kann leicht abweichen.",
-  "Nur fünf Stellen sind markiert (linke Rampe, Sandwurm, mittlere Mulde, Waiting Room, gefangene Kugel). Linker/rechter Orbit, Spinner, rechte Rampe, Handbook, Mystery-Mulde und Kamera-Ziele sind im Foto nicht sicher zu bestimmen und deshalb nicht markiert.",
   "Das Rulesheet ist unvollständig (Inferno Room, Scare-o-meter, Start des Sandworm-Multiballs und der Juno-Modi fehlen); offizielle Regeln von Spooky waren nicht auffindbar.",
   "Mittlere Mulde und gefangene Kugel sind mit ±25 px geschätzt.",
-  "Flipper-Empfehlungen aus der Lage abgeleitet."
+  "Flipper-Empfehlungen aus der Lage abgeleitet.",
+  "Rechte Rampe und rechter Orbit sind an den beiden Pfeilen neben „Hand Book“ markiert; welcher Pfeil zu welchem Schuss gehört, ist im Prototyp-Foto nicht gesichert. Linker Orbit und Spinner sind nicht markiert. Handbook, Mystery und Kamera-Ziele sind an ihren Einsätzen geschätzt."
  ]
 }
