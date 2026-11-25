@@ -30,6 +30,18 @@
    "title": "Stern Pinball: The Munsters Pro – Produktseite mit Draufsicht und Detailfotos",
    "url": "https://www.sternpinball.com/game/the-munsters/pro/",
    "use": "Draufsicht (1476 × 2500) als Spielfeldbild; Spielfeldaufdrucke („Spell S-P-O-T to reveal Spot in the staircase“, „Collect 5 modes to lite Munster Madness“, „Kitty advances multipliers when lit“)."
+  },
+  {
+   "id": "kineticist",
+   "title": "Kineticist: The Munsters Tutorial (Noah Crable, Pro, archiviert 17.02.2026)",
+   "url": "http://web.archive.org/web/20260217083107/https://www.kineticist.com/post/the-munsters-tutorial",
+   "use": "Reihenfolge der Bereiche, sichere Schüsse, Super Jackpots mit 6x."
+  },
+  {
+   "id": "sternrs",
+   "title": "Stern Pinball: The Munsters Rule Sheet (PDF)",
+   "url": "https://sternpinball.com/wp-content/uploads/2019/02/Munsters-Rule-Sheet.pdf",
+   "use": "Eddie-Loops, Herman-Multiball, Munster Madness, Super Jackpots."
   }
  ],
  "views": {
@@ -83,7 +95,7 @@
    "kind": "Ziel (Spielzeug)",
    "flipper": "R",
    "what": "Spot taucht unter der linken Rampe auf, direkt im Eingang der Treppe (Aufdruck „Spell S-P-O-T to reveal Spot in the staircase“).",
-   "returns": "Prallt zurück – „riskanter Rücklauf“ laut Rulesheet.",
+   "returns": "Pop-up-Ziel unter der linken Rampe; Rückpraller gehen oft direkt durch die Mitte – lieber als Rückhand spielen.",
    "awards": [
     "Bonusbuchstabe, wenn Spot kurz oben ist",
     "Spot-Modus: viermal treffen für steigende Werte (ab 150.000, +100.000)"
@@ -157,7 +169,7 @@
    "kind": "Rampe",
    "flipper": "L",
    "what": "Metallrampe mit Marilyn-Bild, rechts. Davor der weiße Jackpot-Pfeil und die Einsätze „Spot“ und Marilyn.",
-   "returns": "Rampe nach oben (Schalter 70 „Right Ramp Made“), zurück über die Drahtbahn.",
+   "returns": "Macht eine Kehre und füttert den rechten Flipper sowie die Gegenseite des Orbits – besonders guter Sicherheitsschuss.",
    "awards": [
     "Spot-Buchstabe, wenn rot beleuchtet",
     "Marilyn: Freund verjagen nach dem inneren linken Rücklauf",
@@ -501,6 +513,113 @@
      "why": "Wizard-Modus mit 4 Kugeln, danach Stufe II.",
      "sources": [
       "rulesheet"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pro",
+   "title": "Profi-Spielzüge",
+   "subtitle": "Spot früh, Super Jackpots mit 6x",
+   "steps": [
+    {
+     "title": "Eröffnung: kurz abschießen, dann Herman",
+     "shots": [
+      "plunger",
+      "herman"
+     ],
+     "go": "Kurzer Abschuss zum rechten Flipper, dann Herman – auf den Magneten achten. Super-Skillshot: linken Flipper halten, rechte Rampe.",
+     "why": "Turniergeräte haben keinen Ball-Save, Skillshots geben keinen.",
+     "sources": [
+      "kineticist",
+      "sternrs"
+     ]
+    },
+    {
+     "title": "Sicherheitsschuss: rechte Rampe",
+     "shots": [
+      "right_ramp"
+     ],
+     "go": "Im Zweifel die rechte Rampe – sie kommt zum rechten Flipper zurück. Sicher spielen, nicht auf Fluss.",
+     "why": "Kurze Ballzeiten; der Tisch bestraft riskantes Spiel.",
+     "sources": [
+      "kineticist"
+     ]
+    },
+    {
+     "title": "Spot früh und auslaufen lassen",
+     "shots": [
+      "spot",
+      "right_ramp"
+     ],
+     "go": "Spot auf Kugel 1 starten (Rückhand), dann statt Spot weiter die rechte Rampe loopen, bis der Timer abläuft. SPOT-Buchstaben: linke und rechte Rampe abwechseln.",
+     "why": "Spot ist gefährlich; der Timer pausiert, solange du die Kugel hältst.",
+     "sources": [
+      "kineticist"
+     ]
+    },
+    {
+     "title": "Reihenfolge der Bereiche",
+     "shots": [
+      "herman",
+      "lily_target",
+      "scoop"
+     ],
+     "go": "Herman, Lily, Grandpa (Scoop), Raven, dann Munster Madness – auf Stufe II gleich.",
+     "why": "Empfehlung aus dem Kineticist-Tutorial.",
+     "sources": [
+      "kineticist"
+     ]
+    },
+    {
+     "title": "Eddie-Loops über die Rückkehrbahnen",
+     "shots": [
+      "left_orbit",
+      "right_orbit"
+     ],
+     "go": "Blinkende Rückkehrbahn beleuchtet den gegenüberliegenden Orbit; Orbit zu Orbit loopen.",
+     "why": "Baut Eddie auf.",
+     "sources": [
+      "sternrs",
+      "rulesheet"
+     ]
+    },
+    {
+     "title": "Im Herman-Multiball: Lily statt Jackpots",
+     "shots": [
+      "lily_target"
+     ],
+     "go": "LILY-Ziel bevorzugen; Lilys Frenzy stapelt mit fast allem.",
+     "why": "Herman-Multiball gibt es nur einmal pro Stufe.",
+     "sources": [
+      "kineticist",
+      "sternrs"
+     ]
+    },
+    {
+     "title": "Super Jackpots aufsparen, mit 6x kassieren",
+     "shots": [
+      "kitty",
+      "dragula_lane"
+     ],
+     "go": "Super Jackpots an der Dragula-Bahn sammeln; beim Kassieren ZAP-Knopf 1/3 s halten zum Abbrechen, bis 6x läuft (Kitty). Dann in Raven oder Munster Madness kassieren.",
+     "why": "Gestapelte Supers zählen je mehr.",
+     "sources": [
+      "kineticist",
+      "sternrs"
+     ]
+    },
+    {
+     "title": "Dragula-Bank, dann sofort die Bahn",
+     "shots": [
+      "dragula_target",
+      "dragula_lane"
+     ],
+     "go": "DRAGULA-Ziele komplett, schnell die Dragula-Bahn (5x). Im Multiball D-R-A-G-U-L-A = Kugel dazu.",
+     "why": "Bonus-Multiplikator und Boost eines Bereichs.",
+     "sources": [
+      "kineticist",
+      "sternrs"
      ]
     }
    ]

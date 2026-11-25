@@ -10,7 +10,10 @@
   "editions": "Stern 2020 in Pro, Premium und Limited Edition. Hier gilt die Pro-Ausführung (Modell 500-55Q5): kein Glider-Diverter, kein Mushroom-Topping, Top-Lane-Skillshot nur am Pro. Keine VPX-Fassung.",
   "ruleVersion": "Regeln nach dem offiziellen Stern-Regelblatt „Turtles Roolz“ (2020) und dem Tilt-Forums-Rulesheet (Wiki, Stand Code 1.50). Offizielle Pro-Software-Notizen habe ich bis Pro 1.10 (21.07.2020) gesehen, für Premium/LE bis 1.41 (23.12.2020). Ob es neuere Pro-Stände gibt, habe ich nicht geprüft.",
   "accent": "#3fae49",
-  "contentDate": "2026-11-08"
+  "contentDate": "2026-11-08",
+  "flipperNames": {
+   "UL": "oberer Flipper"
+  }
  },
  "sources": [
   {
@@ -42,6 +45,18 @@
    "title": "Stern Pinball: TMNT Pro – Produktseite mit Draufsicht und Detailfotos",
    "url": "https://www.sternpinball.com/game/tmnt/pro/",
    "use": "Draufsicht (1476 × 2500) als Spielfeldbild; Detailfotos der Rampen-Einläufe zur Unterscheidung von Mittel- und rechter Rampe."
+  },
+  {
+   "id": "kineticist",
+   "title": "Kineticist: TMNT Tutorial (Noah Crable, archiviert 12.03.2026)",
+   "url": "https://web.archive.org/web/20260312010358/https://www.kineticist.com/post/teenage-mutant-ninja-turtles-tutorial",
+   "use": "Kugelwege zum oberen Flipper, Ninja Pizza Multiball zuerst, Mondo-Aufbau, Rückhand auf die rechte Rampe."
+  },
+  {
+   "id": "cards",
+   "title": "pinballcards.net: TMNT (2020)",
+   "url": "https://pinballcards.net/teenage-mutant-ninja-turtles-2020",
+   "use": "Toppings, Turtle-Power-Kugel dazu, Weapon Hurry-up."
   }
  ],
  "views": {
@@ -79,7 +94,7 @@
    "kind": "Orbit",
    "flipper": "R",
    "what": "Bahn ganz links oben, hinter dem Pfeil mit Bebop. Davor die Einsätze „Training“ und „Weapon“ des Orbits.",
-   "returns": "Läuft um die obere linke Ecke herum (Schalter 62 „Left Orbit“).",
+   "returns": "Hinten herum; ist am oberen Loop etwas beleuchtet, geht die Kugel zum oberen Flipper.",
    "awards": [
     "Weapon-Hurry-up, wenn hier gestartet",
     "Bebop im Team-Up",
@@ -135,7 +150,7 @@
    "kind": "Lock-Einlauf",
    "flipper": "R",
    "what": "Einlauf vorn unter dem Turtle-Van, hinter dem Pfeil „Michelangelo“. Davor die Einsätze „Ninja Pizza Parlor“, „Extra Ball“ und „Pizza Topping“.",
-   "returns": "Die Kugel läuft in den Lock (Schalter 46–48 „Upper Lock“) oder wird freigegeben.",
+   "returns": "Lockt Kugeln für Ninja Pizza Multiball und gibt sie auf den oberen Flipper frei. Das Pizza-Ziel davor kann bei schlechtem Timing gefährlich zurückwerfen.",
    "awards": [
     "Episode starten (wenn Start Episode leuchtet)",
     "Kugel locken – 3 Locks = Ninja Pizza Multiball",
@@ -232,7 +247,7 @@
    "kind": "Rampe",
    "flipper": "L",
    "what": "Metall-Einlauf rechts vom türkisen Plastikdreieck, hinter dem Pfeil „Shredder“. Davor die Einsätze „1“ (1-2-3 Foot) und „Turtle Power Multiball“.",
-   "returns": "Klarsicht-Rampe nach rechts oben (Schalter 55 Eingang, 56 Ausgang).",
+   "returns": "Füttert den oberen Flipper (beim Start von Turtle Power und bei APRIL-Hurry-ups hält ein Pfosten die Kugel).",
    "awards": [
     "Mit linker Rampe: Start Episode beleuchten",
     "4× = Turtle Power Multiball",
@@ -254,7 +269,7 @@
    "kind": "Orbit mit Spinner",
    "flipper": "L",
    "what": "Bahn rechts außen links vom roten Blitzlicht, hinter dem Pfeil „Rocksteady“ mit „Training“ und „Weapon“. Im Orbit sitzt der Spinner.",
-   "returns": "Läuft um die obere rechte Ecke (Schalter 63 „Right Orbit“, 43 Spinner).",
+   "returns": "Fast immer zum oberen Flipper; beim Abschuss in diese Bahn in die Bumper.",
    "awards": [
     "Weapon-Hurry-up",
     "Rocksteady im Team-Up",
@@ -597,6 +612,98 @@
      "why": "Schon der Start bringt bis zu 25 Mio., wenn alle acht Episoden gewonnen sind.",
      "sources": [
       "rulesheet"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pro",
+   "title": "Profi-Spielzüge",
+   "subtitle": "Oberer Flipper, Ninja Pizza zuerst",
+   "steps": [
+    {
+     "title": "Rechte Rampe → oberer Flipper → oberer Loop",
+     "shots": [
+      "right_ramp",
+      "krang_loop@UL"
+     ],
+     "go": "Rechte Rampe (am besten als Rückhand vom linken Flipper); die Kugel kommt zum oberen Flipper, von dort den oberen Loop.",
+     "why": "Fehlschüsse auf die Rampe fallen auf die linke Flipperspitze und lassen sich auf rechts fangen; Pfostentreffer vom linken Flipper sind gefährlich.",
+     "sources": [
+      "kineticist"
+     ]
+    },
+    {
+     "title": "Rechter Orbit → oberer Flipper",
+     "shots": [
+      "right_orbit",
+      "krang_loop@UL"
+     ],
+     "go": "Der rechte Orbit gibt die Kugel fast immer an den oberen Flipper.",
+     "why": "Sicherer Weg zu den Schüssen des oberen Flippers.",
+     "sources": [
+      "kineticist"
+     ]
+    },
+    {
+     "title": "Krang-Kombo",
+     "shots": [
+      "krang_loop@UL"
+     ],
+     "go": "Vom oberen Flipper den oberen Loop bis zu dreimal (max. 500k), dann an der Side Ramp kassieren (die Side Ramp ist in dieser Ansicht nicht einzeln markiert). Verfehlt = Wert weg.",
+     "why": "Max-Kombo qualifiziert auch Cowabunga.",
+     "sources": [
+      "kineticist",
+      "rulesheet"
+     ]
+    },
+    {
+     "title": "Ninja Pizza Multiball zuerst",
+     "shots": [
+      "pizza_parlor"
+     ],
+     "go": "Pizza Parlor; beim Start die Kugeln von der Drehscheibe ignorieren und die zum oberen Flipper gespielten nutzen (im Ball-Save).",
+     "why": "Laut Kineticist „Priorität um jeden Preis“.",
+     "sources": [
+      "kineticist"
+     ]
+    },
+    {
+     "title": "Mondo im Multiball",
+     "shots": [
+      "pizza_parlor",
+      "krang_loop@UL"
+     ],
+     "go": "Kugel zum oberen Flipper (Pizza Parlor oder linker Orbit), dann Mondo am oberen Loop (2x/3x wiederholbar), danach Super an der LAIR.",
+     "why": "Größte Multiball-Werte.",
+     "sources": [
+      "kineticist",
+      "rulesheet"
+     ]
+    },
+    {
+     "title": "Episoden im Multiball stapeln",
+     "shots": [
+      "left_ramp"
+     ],
+     "go": "Leichte Episoden (Pizza-o-Meter, Night of the Mousers) im Einzelball, Window Shopping und Concrete Jungle im Multiball.",
+     "why": "4 gespielte Episoden = Team-Up Multiball und beide Haupt-Multibälle wieder beleuchtet.",
+     "sources": [
+      "kineticist",
+      "rulesheet"
+     ]
+    },
+    {
+     "title": "2x Spielfeld halten",
+     "shots": [
+      "lair_target",
+      "twox"
+     ],
+     "go": "LAIR bei leuchtendem Training buchstabieren, dann das 2X-Ziel – am besten im Multiball oder Ball-Save.",
+     "why": "Raphael: bis ca. 9x mit 3x Episode.",
+     "sources": [
+      "rulesheet",
+      "kineticist"
      ]
     }
    ]

@@ -876,8 +876,8 @@
   }
   function srcText(ids) {
     if (!ids || !ids.length) return 'Keine Quelle – ehrlich offen.';
-    const names = { rules: st.data && st.data.table.id === 'harrypotter' ? 'Regel-Flowchart' : 'Rulesheet', manual: 'Hersteller-Handbuch', vpw: 'VPX-Tischdatei', vpx: 'VPX-Tischdatei', photo: 'Foto', rules10: 'Rulesheet 1.0', script: 'Tisch-Script', card: 'Spielanleitung', kineticist: 'Kineticist-Tutorial', cards: 'pinballcards.net', wiki: 'Wiki-Rulesheet' };
-    return 'Quelle: ' + ids.map(i => names[i] || i).join(', ');
+    const names = { rules: st.data && st.data.table.id === 'harrypotter' ? 'Regel-Flowchart' : 'Rulesheet', manual: 'Hersteller-Handbuch', vpw: 'VPX-Tischdatei', vpx: 'VPX-Tischdatei', photo: 'Foto', rules10: 'Rulesheet 1.0', script: 'Tisch-Script', card: 'Spielanleitung', kineticist: 'Kineticist-Tutorial', cards: 'pinballcards.net', wiki: 'Wiki-Rulesheet', stern: 'Stern-Rulesheet', nirvana: 'Larry-Scott-Regelwerk', tilt: 'Tilt Forums', blog: 'LotR-Blog', cheat: 'Club-Cheatsheet' };
+    return 'Quelle: ' + ids.map(i => names[i] || ((st.data.sources || []).find(x => x.id === i) || {}).title || i).join(', ');
   }
 
   // ---------- Info (eigenes Blatt) ----------
@@ -900,7 +900,7 @@
     body.append(h('div', { class: 'sec-h' }, 'So funktioniert die Anleitung'));
     body.append(h('ul', { class: 'card info', style: 'padding:12px 14px 12px 30px' },
       h('li', {}, 'Große Zahlen im Spielfeld = Reihenfolge der Schüsse. Die Kugel spielt sie nacheinander nach; Zahl antippen springt dorthin.'),
-      h('li', {}, 'Gestrichelte Linie = Zielrichtung vom Flipper. Blaue Linie = bekannter Bahnverlauf (Rampe).'),
+      h('li', {}, 'Weiß gestrichelt = Zielrichtung vom Flipper. Blau gepunktet = bekannter Bahnverlauf. Grau gepunktet = Rücklauf zu einem oberen Flipper (schematisch).'),
       h('li', {}, 'Grüne Kreise = Anzeigen (Einsätze), keine Ziele.'),
       h('li', {}, 'Beschriftung antippen zeigt die Erklärung zum Schuss. Doppeltipp zoomt.')));
 

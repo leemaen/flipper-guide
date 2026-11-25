@@ -42,6 +42,12 @@
    "title": "Kugelbild: Lucasbosch, Wikimedia Commons, CC BY-SA 3.0",
    "url": "https://commons.wikimedia.org/wiki/File:Stainless_steel_1.4034_X46Cr13_bearing_ball_60mm_G100_removed_camera.jpg",
    "use": "Animierte Flipperkugel (bearbeitet, CC BY-SA 3.0)."
+  },
+  {
+   "id": "primer",
+   "title": "Pinball Primer: Batman 66",
+   "url": "https://pinballprimer.github.io/batman66_GRoz4.html",
+   "use": "Kugelwege der Rampen/Scoop, Reihenfolge Bookworm → Mr. Freeze, Multiplikatoren über Gordon."
   }
  ],
  "views": {
@@ -57,7 +63,7 @@
    "kind": "Orbit mit Saucer",
    "flipper": "R",
    "what": "Bahn links außen. Markiert ist die Mündung oberhalb des weißen Pfeils links (Riddler-Pfeil).",
-   "returns": "Läuft oben herum in den Saucer am Ende des Orbits (laut Rulesheet „left orbit saucer“).",
+   "returns": "Kräftig geschossen endet die Kugel im Saucer hinten rechts (Mystery, kleine Schurken).",
    "awards": [
     "Riddler qualifizieren (Orbits)",
     "Nebenschurken starten (nach den 3 TV-Zielen)",
@@ -78,7 +84,7 @@
    "kind": "Rampe",
    "flipper": "R",
    "what": "Metallrampe links der Drehscheibe, Mündung über dem Catwoman-Pfeil links.",
-   "returns": "Über die Rampe nach oben (Schalter „Left Ramp Exit“ 33) und zurück zur Rückführbahn.",
+   "returns": "Zur linken Rückkehrbahn (linker Flipper).",
    "awards": [
     "Catwoman qualifizieren (beide Rampen je einmal)",
     "Combos mit der rechten Seite",
@@ -118,7 +124,7 @@
    "kind": "Rampe",
    "flipper": "L",
    "what": "Metallrampe rechts der Drehscheibe, Mündung über dem Catwoman-Pfeil rechts.",
-   "returns": "Nach oben (Schalter „Right Ramp Exit“ 43) und zurück.",
+   "returns": "Zur rechten Rückkehrbahn (rechter Flipper). (Im Pinball Primer „Center Ramp“.)",
    "awards": [
     "Catwoman qualifizieren",
     "Combos"
@@ -153,7 +159,7 @@
    "kind": "Scoop",
    "flipper": "L",
    "what": "Loch rechts unter dem Kranarm (Schalter „Penguin VUK“ 40), vor der Lock-Anzeige.",
-   "returns": "Senkrechter Auswurf.",
+   "returns": "VUK, Kugel kommt über die rechte Rückkehrbahn zum rechten Flipper.",
    "awards": [
     "Penguin qualifizieren (direkt geschossen, nicht über die Bumper)",
     "Super Jackpot der Schurken-Modi (‚Scoop‘)",
@@ -462,6 +468,98 @@
      "prep": "Catwoman, Joker, Penguin, Riddler verhaftet.",
      "go": "Linker Orbit zum Saucer.",
      "why": "Wizard-Modus: 30-s-Aufbau, dann 4-Kugel-Multiball.",
+     "sources": [
+      "rules"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pro",
+   "title": "Profi-Spielzüge",
+   "subtitle": "Bookworm, Mr. Freeze, Multiplikatoren",
+   "steps": [
+    {
+     "title": "Super-Skillshot",
+     "shots": [
+      "plunger",
+      "left_orbit"
+     ],
+     "go": "Beim Abschuss den linken Flipperknopf halten – die Kugel kommt über den linken Orbit zu den Flippern; dann den blinkenden Hauptschuss in ca. 5 s.",
+     "why": "Qualifiziert diesen Schurken oder gibt ein Gadget.",
+     "sources": [
+      "rules",
+      "primer"
+     ]
+    },
+    {
+     "title": "Batcave-Kombi vor dem ersten Modusschuss",
+     "shots": [
+      "penguin",
+      "left_orbit"
+     ],
+     "go": "Penguin-Scoop, dann den orange leuchtenden linken Orbit.",
+     "why": "Verdoppelt den Grundwert des laufenden Modus.",
+     "sources": [
+      "rules"
+     ]
+    },
+    {
+     "title": "Kombos: Rampe, dann Gegenseite",
+     "shots": [
+      "left_ramp",
+      "right_orbit"
+     ],
+     "go": "Eine Rampe oder ein ganzer Orbit, danach ein Schuss auf die andere Spielfeldseite. Die linke Rampe gibt die Kugel an den linken Flipper zurück.",
+     "why": "Kombos ab 125k, steigend; 20/50/100 Kombos = Extraball.",
+     "sources": [
+      "rules",
+      "primer"
+     ]
+    },
+    {
+     "title": "Früh: Bookworm, dann Mr. Freeze",
+     "shots": [
+      "turntable"
+     ],
+     "go": "Bookworm (Staffel 1) zuerst, dann Mr. Freeze (Staffel 2); misslingt einer, Mad Hatter spielt fehlgeschlagene Mini-Modi erneut.",
+     "why": "Bookworm behält Schurken-Belohnungen fürs ganze Spiel, Mr. Freeze friert alle Timer ein.",
+     "sources": [
+      "primer",
+      "rules"
+     ]
+    },
+    {
+     "title": "2x Spielfeld über die Spinner-Ziele",
+     "shots": [
+      "spinner"
+     ],
+     "go": "Beide Ziele neben dem Batmobil-Spinner, dann der Atomic-Pile-Schuss dahinter (30 s 2x, wiederholen für 3x).",
+     "why": "Multiplikatoren treiben die Punkte.",
+     "sources": [
+      "rules"
+     ]
+    },
+    {
+     "title": "Gordon: Multiplikatoren setzen",
+     "shots": [
+      "gordon",
+      "penguin"
+     ],
+     "go": "Gordon-Ziel (3 Treffer) setzt Schuss-Multiplikatoren: kleine auf den rechten Orbit, den höchsten auf den Penguin-Scoop. Vor einem großen Modus Gordon zweimal = +2x Bonus und +1x für den nächsten Villain-Multiball.",
+     "why": "Am Penguin-Scoop werden Super Jackpots kassiert.",
+     "sources": [
+      "primer",
+      "rules"
+     ]
+    },
+    {
+     "title": "Villain-Multiball während eines großen Modus",
+     "shots": [
+      "right_orbit"
+     ],
+     "go": "Beide Ziele an der Drehscheibe beleuchten 3 Locks am rechten Orbit; im großen Modus locken.",
+     "why": "Modus und Multiball laufen zusammen.",
      "sources": [
       "rules"
      ]
